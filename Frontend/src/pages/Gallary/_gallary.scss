@@ -1,0 +1,19 @@
+
+.gallaryBox { margin-top: 50px;
+    @include breakpoint(sm){ margin-top: 30px;}
+    .sub_title { margin-bottom: 50px;
+        @include breakpoint(sm){ margin-bottom: 30px;}
+    }
+    .gallaryBlock{ position: relative;
+        .machine_name { width: 100%; padding: 15px 30px; font-size: 20px; color: $white; font-weight: 700; background: $blue-bg1; position: absolute;left: 0px; bottom: 0px;}
+        img { width: 100%;}
+    }
+
+    .viewMoreBtn { @include btn_blue;}
+
+}
+
+.reveal { position: relative; transform: translateY(150px); opacity: 0; transition: all 0.5s ease;
+
+    &.active { transform: translateY(0px); opacity: 1;}
+}

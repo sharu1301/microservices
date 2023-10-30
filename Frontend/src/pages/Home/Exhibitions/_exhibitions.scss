@@ -1,0 +1,30 @@
+#exhibitionsCntr { padding: 70px 0; width: 100%;
+    @include breakpoint(md){ padding: 30px 0;}
+    .block{ width: 100%; text-align: center; position: relative;
+        &::after { width: 100%; height: 100%; content: ""; position: absolute; left: 0px; top: 0px; background: $white-trans6; transition: all 0.8s;}
+        figure{ border-radius: 30px; overflow: hidden;
+            img{ width: 100%;} 
+            &:hover img {animation: zoom-in-zoom-out 1s ease infinite;}
+            
+        }
+    }
+
+    .swiper-slide-visible { margin-right: 0px!important; transform: scale(.8)!important;}
+    .swiper-slide-active { transform: scale(1)!important;}
+    .swiper-slide-active .block::after {display: none;}
+    .swiper-slide-shadow-left, .swiper-slide-shadow-right {display: none!important;}
+    .swiper-button-next, .swiper-button-prev { width: 38px; height: 35px;}
+    .swiper-button-prev::after { width: 100%; height: 100%; content: ""; opacity: 0.1; transform: rotate(180deg) ; background: url(../../../resources/images/icons/exhibitions_nav.svg) left top no-repeat; background-size: cover;
+        @include breakpoint(sm){ opacity: 0.5;}
+    }
+    .swiper-button-prev:hover::after { opacity: 1;}
+    .swiper-button-next::after { width: 100%; height: 100%; content: ""; opacity: 0.1; background: url(../../../resources/images/icons/exhibitions_nav.svg) left top no-repeat; background-size: cover;
+        @include breakpoint(sm){ opacity: 0.5;}
+    }
+    .swiper-button-next:hover::after {opacity: 1;}
+    .swiper { padding-left: 20px;
+        @include breakpoint(sm){ padding-left: 0px;}
+    }
+    .swiper-notification { display: none;}
+
+}

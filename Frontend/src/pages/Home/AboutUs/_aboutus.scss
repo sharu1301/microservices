@@ -1,0 +1,46 @@
+#aboutusCntr { padding: 70px 0 0 0; width: 100%;
+    @include breakpoint(md){ padding-top: 50px;}
+    @include breakpoint(sm){ padding-top: 20px;}
+
+    .imageBox { width: 50%; position: relative; 
+        @include breakpoint(sm){ margin-left: 25px; margin-bottom: 30px; width: 100%;}
+    }
+
+    figure { margin-bottom: 0px; width: 100%; position: relative;
+        img { width: 100%; position: relative; z-index: 1;}
+        &::after { @include shape_square; z-index: 0;}
+    }
+
+   
+    .aboutusBox { padding-left: 40px; width: 50%; display: flex; align-items: center;
+        @include breakpoint(sm){ padding-left: 0px; text-align: center; width: 100%;}
+        h2 { text-align: left; margin-bottom: 20px;
+            @include breakpoint(md){ margin-bottom: 0px;}
+        }
+        h3{ margin-bottom: 20px; font-size: 30px; color: $black-bg1; font-weight: 700;
+            @include breakpoint(md){ font-size: 20px; margin-bottom: 5px}
+            
+        }
+        p{@include p_text;}
+        .aboutBtn { margin-top: 20px; @include btn_blue;
+            @include breakpoint(md){ margin-top: 0px;}
+        }
+    }
+
+    &.latestNews {
+        .aboutusBox {padding-left: 0px; padding-right: 40px;
+            @include breakpoint(md){ padding-right: 0px;}
+            h2{ text-align: center;}
+        }
+        .imageBox{ margin-left: 0px;
+            @include breakpoint(sm){ margin-right: 20px;}
+            figure{
+                &::after { width: 100%; height: 100%; display: block; content: ""; background: $red-bg1; position: absolute; left: inherit; right: -20px; top: 20px; z-index: 0;}
+            }
+        }
+    }
+
+    .viewMorebtn { margin: 50px 0 20px 0; padding: 20px 40px; @include btn_blue;
+        @include breakpoint(md){ margin: 20px 0 20px 0;}
+    }
+}

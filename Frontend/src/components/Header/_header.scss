@@ -1,0 +1,385 @@
+
+#headerCntr {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 134px;
+    box-shadow: 0px 0px 3px rgba(20, 34, 50, 0.3);
+    position:fixed;
+    top: 0px;
+    z-index: 99;
+    
+
+    @include breakpoint (md){
+        display: block;
+      height: 110px;
+    }
+
+    .contactbtn {
+        height: 60px;
+        @include btn_red;
+        @include breakpoint(md){padding: 16px 30px; width: 142px; height: 51px; font-size: 15px; position: relative; right: 45px;}
+        @include breakpoint(sm){padding: 0px; width: 30px; height: 30px; text-indent: -99999999px; background: url(../../../src/resources/images/icons/phone.gif) center center no-repeat; background-size: cover; position: relative; right: 45px;}
+
+        }
+
+
+    .container {
+    position: relative;
+    }
+    .fixed-top {
+    background: #fff;
+    width: 100%;
+    top: 49px;
+
+      @include breakpoint(md){ top: 43px;}
+    }
+    
+
+    .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 9;
+
+    .navbar-nav a {
+        padding: 28px 15px;
+        font-size: 16px;
+        color: #404040;
+        font-weight: 600;
+        position: relative;
+        cursor: pointer;
+        /* margin-right: 45px; */
+        &:hover { color: $red-text;}
+          .nav-highlight::after {
+            width: 100%;
+            height: 5px;
+            z-index: -1;
+          }
+      }
+      .navbar-nav button {
+        padding: 28px 15px;
+        font-size: 16px;
+        color: #404040;
+        font-weight: 600;
+        position: relative;
+        cursor: pointer;
+        /* margin-right: 45px; */
+        &:hover { color: $red-text;}
+          .nav-highlight::after {
+            width: 100%;
+            height: 5px;
+            z-index: -1;
+          }
+      }
+    }
+    .navbar-brand {
+    width: 105px;
+    .logo_img {
+        width: 100%;
+        }
+        .logo_icon {
+        display: none;
+        }
+    }
+
+    /* menu accordian css start here */
+    .offcanvas-body { padding-top: 50px; background: #E21D23;}
+    .offcanvas .btn-close { opacity: 1; background: url(../../../public/icons/menu/x-square-fill.svg) left top no-repeat;}
+    .accordion { border: none; border-radius: 0px;
+    .accordion__heading { border-bottom: 1px solid rgba(255,255,255,0.5);}
+    .accordion__button { background-color: inherit;}
+    .accordion__panel { padding: 0px 20px 20px 20px;}
+    .accordion__panel .accordion { padding-left: 20px;}
+    .accordion__button { color: #fff;}
+    .accordion__panel .accordion a { padding: 10px 0 10px 25px; display: block; font-size: 12px; color: #fff; font-weight: 300; text-decoration: none; position: relative; border-bottom: 1px solid #ccc;}
+    .accordion__panel .accordion a::before { width: 20px; height: 20px; content: ""; position: absolute; left: 0px; top: 10px; background: url(../../../public/icons/menu/arrow-return-right.svg) left top no-repeat;}
+    .accordion__panel .accordion .accordion__button { padding: 20px 0px 20px 0px;}
+    }
+     /* menu accordian css ends here */
+  }
+
+  .blankheader {
+    height: 134px;
+    @include breakpoint(md){
+      height: 110px;
+    }
+  }
+
+  
+
+ 
+  @media (max-width: 1023px) {
+    .offcanvas.offcanvas-start {
+      transform: translateX(100%);
+    }
+    .offcanvas .btn-close {
+      position: relative;
+      right: 13px;
+      float: right;
+    }
+    #headerCntr .offcanvas {
+      width: 100%;
+    }
+    #headerCntr .navbar-toggler {
+      padding: 0;
+      font-size: 1rem;
+      right: 50px;
+    }
+    #headerCntr .navbar-light .navbar-toggler {
+      border: none;
+      position: absolute;
+      right: 15px; top: 20px;
+    }
+    #headerCntr .navbar-light .navbar-toggler-icon {
+      width: 25px;
+      height: 25px;
+      background-image: none;
+      font-size: 35px;
+      position: relative;
+    }
+    #headerCntr .navbar-light .navbar-toggler-icon i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: $active-state;
+    }
+    #headerCntr .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    #headerCntr .accordion-button:focus {
+      box-shadow: none;
+    }
+    #headerCntr .accordion-button {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      color: $active-state;
+      background: #fff;
+    }
+    #headerCntr .accordion-button.collapsed {
+      color: #404040;
+    }
+    #headerCntr .accordion-button::after {
+      width: 1rem;
+      height: 1rem;
+      background-size: 1rem;
+    }
+    #headerCntr .accordion-body .nav-link {
+      text-decoration: none;
+      font-size: 13px;
+      color: #404040;
+    }
+    #headerCntr .accordion-body .nav-link:hover {
+      color: $active-state;
+    }
+  }
+  @media (max-width: 1023px) {
+    
+    #headerCntr .dropmenu {
+      display: block;
+    }
+    #headerCntr .navbar-brand.responsive-hide .logo_img {
+      width: 100%;
+      display: none;
+    }
+    #headerCntr .navbar-brand .logo_icon {
+      display: none;
+    }
+    #headerCntr .navbar-brand.responsive-hide .logo_icon {
+      height: 33px;
+      display: block;
+    }
+    #headerCntr .navbar .navbar-nav a {
+      padding: 13px;
+    }
+  }
+ 
+  .dropdown-content {
+    padding: 10px 20px 50px 20px;
+    color: black;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9;
+    max-height: 500px;
+    overflow-y: scroll;
+    line-height: 27px;
+
+    .maintitle {
+        padding: 20px 0 10px 20px;
+        display: block;
+        margin-bottom: 20px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #404040;
+        font-weight: 900;
+        border-bottom: 1px solid #ccc;
+
+        &:hover {
+            color: $active-state;
+          }
+      }
+
+      .subtitle {
+        font-size: 15px;
+        font-weight: 600;
+        color: #404040;
+      }
+
+      .sub_link {
+        color: #404040;
+        text-decoration: none;
+        &:hover {
+            color: $active-state;
+          }
+      }
+
+      p {
+        font-size: 12px;
+        color: #404040;
+      }
+      .step_third {
+        padding-left: 10px;
+        font-size: 12px;
+
+        .subtitle {
+            font-size: 13px;
+            font-weight: 500;
+          }
+      }
+
+      .submenu ul {
+        padding-left: 10px;
+      }
+  }
+ 
+  
+  .modal-backdrop.show {
+    z-index: 1018;
+  }
+  
+  #headerSearch{
+    position: relative;
+    border: none;
+
+    &.hover .searchBar {
+        width: 300px;
+      }
+
+    .searchbtn {
+        width: 44px;
+        height: 44px;
+      }
+   .searchBar {
+    width: 0px;
+    height: 450px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 9;
+    border-radius: 0 0px 5px 5px;
+    transition: all 0.9s;
+    background: #fff;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+
+    input {
+        width: 100%;
+        height: 59px;
+        padding: 0px 60px 0px 20px;
+        border: none;
+        font-size: 14px;
+        background: none;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        &::-moz-placeholder {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        &::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.3);
+          }
+      }
+  }
+  .searchbtn {
+    width: 62px;
+    height: 61px;
+    text-align: center;
+    font-size: 25px;
+    color: $blue-bg1;
+    z-index: 10;
+    position: relative;
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+  }
+}
+
+
+#commandbar-inline-root {
+  width: 290px;
+  margin-right: 20px;
+}
+.commandbar-option {
+  color: #fff;
+}
+#commandbar-inline-root input {
+  padding: 10px 14px;
+  border: none;
+  color: #333;
+}
+#commandbar__control_wrapper {
+  border: none;
+}
+#commandbar-menu__wrapper {
+  background: #fff;
+}
+#commandbar__control {
+  padding-right: 20px;
+  padding: 0px !important;
+  background: #fff;
+  border: 0px;
+}
+#commandbar-inline-root input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.commandbar-bar-ohxty5 * {
+  color: #333;
+}
+.commandbar-bar-1opcmb2 {
+  padding: 0px;
+}
+.commandbar-content-container {
+  border: none !important;
+}
+
+.commandbar-content-container small {
+  padding: 0px 20px;
+  color: #000 !important;
+}
+#commandbar-home {
+  height: 450px !important;
+}
+
+
+.marqueeCntr{ z-index: 9999!important; height: 40px; position: fixed!important; top: 0px; background: $red-bg1;
+  .title { padding: 8px 0 0 0; width: 150px; height: 100%; text-align: center; font-size: 18px; color: $white; position: absolute; z-index: 3; position: absolute; display: inline-block;
+    &::after { width: 160px; height: 100%; content: ""; background: $blue-bg1; display: block; position: absolute; left: -10px; top: 0px; z-index: -1; transform: skewX(25deg);
+      @include breakpoint(sm){ display: none; transform: skew(-25deg);}
+    }
+
+    @include breakpoint(sm){ width: 50px; height: 50px; text-indent: -999999px; background: url(../../../public/icons/menu/mic.svg) center center no-repeat; background-size: contain;}
+  }
+  .marqueeBox { padding: 10px 0 0 0;
+    
+    .child1 { margin: 0 30px; color: $white; font-weight: 600; display: flex; align-items: center; 
+      a{ text-decoration: none; color: $white;}  
+      span{ margin-right: 3px; padding-top: 1px; width: 20px; height: 20px; border-radius: 100px; text-align: center; color: $black; background: $white;}
+    }
+  }
+}

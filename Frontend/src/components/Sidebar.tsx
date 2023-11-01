@@ -1,7 +1,7 @@
 import React from "react";
 
-const Sidebar = ({ onItemClick, selectedItem }) => {
-  const handleItemClick = (item) => {
+const Sidebar = ({ onItemClick, selectedItem }: any) => {
+  const handleItemClick = (item: any) => {
     onItemClick(item);
   };
 

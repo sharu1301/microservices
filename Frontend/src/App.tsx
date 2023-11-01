@@ -14,7 +14,7 @@ import getRoutes from "./routes";
 
 init("72888fac");
 
-function App({ children }) {
+function App({ children }: any) {
   const navigate = useNavigate();
   const [commandBarReady, setCommandBarReady] = useState(false);
 
@@ -32,7 +32,7 @@ function App({ children }) {
 
   var routesArray = reactRouterToArray(routes);
 
-  routesArray = routesArray.map((route) => route.replace("/", ""));
+  routesArray = routesArray.map((route: any) => route.replace("/", ""));
 
   // useEffect(() => {
   //   ReactGA.pageview(window.location.pathname + window.location.search);
@@ -66,7 +66,7 @@ function App({ children }) {
       if (routesArray.length > 0) {
         window.CommandBar.addRecords(
           "Pages",
-          routesArray.map((route) => {
+          routesArray.map((route: any) => {
             return { label: `${route}`, id: `${route}` };
           })
         );
@@ -100,3 +100,4 @@ function App({ children }) {
 }
 
 export default App;
+

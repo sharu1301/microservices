@@ -1,42 +1,26 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import menu_data from "../../resources/content/menu.json";
+import menu_data from "../../../resources/content/menu.json";
+import { SolutionsMenuProps } from "../../../interfaces";
+import { MenuData } from "../../../interfaces/menu";
+import label from '../../../resources/content/labels.json'
 
 
+export default function CommonMenu(propsy) {
 
+    // const {content, prop, setMenuImage}:{ content, setMenuImage} = props;
 
-export default function AboutUsMenu(props) {
-  
-  return (
-    <div
-      id="aboutus-dropdown-content"
-      className="dropdown-content responsive-hide border"
-      onMouseLeave={() => props.hideDropdownContent("aboutus")}
-    >
-      <div className="row">
-        <div className="col-8">
-          <div className="row">
-            <div className="col-12">
-              <Link to="/About-Us" className="maintitle">
-                About Us
-              </Link>
-            </div>
-          </div>
-          <div className="row">
-            {menu_data
-              .filter((menu_data) => menu_data.menu === "about_us")
-              .map((menu) => {
-                return menu.content.map((content, index) => {
                   return (
-                    <div className="col-md-6" key={index}>
+                    
                       <div className="submenu">
                         <Link
                           className="sub_link"
                           to={content.url}
                           onMouseEnter={() =>
-                            props.setAboutUsMenuImage(content.image_path)
+                            setMenuImage(content.image_path)
                           }
                           onMouseLeave={() =>
-                            props.setAboutUsMenuImage(
+                            setMenuImage(
                               content.default_image_path
                             )
                           }
@@ -58,12 +42,12 @@ export default function AboutUsMenu(props) {
                                     className="sub_link"
                                     to={sub_menu.url}
                                     onMouseEnter={() =>
-                                      props.setAboutUsMenuImage(
+                                        setMenuImage(
                                         sub_menu.image_path
                                       )
                                     }
                                     onMouseLeave={() =>
-                                      props.setAboutUsMenuImage(
+                                        setMenuImage(
                                         sub_menu.default_image_path
                                       )
                                     }
@@ -84,21 +68,8 @@ export default function AboutUsMenu(props) {
                           <p>{content.description}</p>
                         )}
                       </div>
-                    </div>
+                   
                   );
-                });
-              })}
-          </div>
-        </div>
-        <div className="col-4">
-          <img
-            src={props.aboutUsMenuImage}
-            alt="about_us_img"
-            id="about-us-dropdown-image"
-            style={{ maxWidth: "450px" }}
-          />
-        </div>
-      </div>
-    </div>
-  );
+               
+
 }

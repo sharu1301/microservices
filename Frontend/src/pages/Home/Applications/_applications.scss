@@ -1,0 +1,39 @@
+#applicationsCntr { width: 100%; 
+    @include breakpoint(sm){ text-align: center;}
+    h2{ margin-bottom: 20px; text-align: left;
+        @include breakpoint(sm){ text-align: center;}
+    }
+    p{@include p_text;}
+    .rightBlock{ padding: 30px; padding-right: 0px; width: 100%; position: relative;
+        &::after { width: 3000px; height: 100%; display: block; content: ""; position: absolute; left: 0px; top: 0px; border-radius: 10px; background: $red_bg1;
+            @include breakpoint(sm){ width: 100%;}
+        }
+        a{ text-decoration: none; color: $white;}
+
+        .slideBlock { padding-left: 20px; border-left: 2px solid $white;
+            @include breakpoint(sm){ border-left: 0px;}
+            .icon{ width: 60px; height: 60px;
+                img { width: 100%;}
+            }
+            figure {
+                @include breakpoint(lg){ width: 80px; height: 80px;
+                    img { width: 100%;}
+                }
+                @include breakpoint(md){ width: 50px; height: 50px;
+                    img { width: 100%;}
+                }
+            }
+            h3 { margin: 15px 0; font-size: 30px;font-weight: 700;
+                @include breakpoint(md){ margin: 10px 0; font-size: 25px}
+            }
+            p{ color: $white;}
+        }
+    }
+    .swiper { padding-right: 70px;}
+    .swiper-button-next { width: 38px; height: 35px;}
+    .swiper-button-prev { display: none;
+        
+    }
+    .swiper-button-next::after { width: 100%; height: 100%; content: ""; opacity: 0.5; background: url(../../../resources/images/icons/applications_nav.svg) left top no-repeat; background-size: cover;}
+    .swiper-button-next:hover::after { opacity: 1;}    
+}

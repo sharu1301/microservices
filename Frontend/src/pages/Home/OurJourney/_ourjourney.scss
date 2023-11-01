@@ -1,0 +1,66 @@
+#ourjourneyCntr { padding-top: 100px; width: 100%;
+    @include breakpoint(md){ padding-top: 50px;}
+    @include breakpoint(sm){ padding-top: 20px;}
+
+    h2{ margin-bottom: 0px;
+        @include breakpoint(md){ margin-bottom: 30px;}
+    }
+    .ourjourneyBox{ width: 100%; position: relative;
+        @include breakpoint(md) { display: flex; flex-wrap: wrap;}
+        
+
+        .block{ padding: 0 60px; margin-bottom: 131px; width: calc(100% / 4); float: left;display: flex; text-align: center; flex-direction: column; align-items: center; position: relative;
+          
+            @include breakpoint(xl){ padding: 0 30px;}
+            @include breakpoint(md){ padding: 0 10px; width: calc(100% / 2); float: none; margin-bottom: 50px;}
+            @include breakpoint(sm){ width: 100%;}
+
+            &:after{ width: 345px; height: 131px; display: block; content: ""; position: absolute; left: 50%; bottom: -86px; transform: rotate(-6deg);  background: url(../../../resources/images/home/arc.svg) left top no-repeat; background-size: contain;
+                @include breakpoint(xl){ width: 318px;}
+                @include breakpoint(lg){ width: 269px;}
+                @include breakpoint(md){ display: none; }
+            }
+            .icon { width: 72px; height: 72px; border-radius: 100%; margin: 0px auto; }
+            h3{ padding: 20px 0; font-size: 19px; color: $black; font-weight: 600;}
+            p { @include p_text;}
+            .year {padding: 10px 20px; margin-top: 20px; font-family: $sub_font_face; line-height: 28px; font-size: 32px; color: $white; font-weight: 600; position: relative; z-index: 3;}
+
+            &:nth-of-type(4) {
+                &:after{  display: none; }
+            }
+
+            &:nth-of-type(1){ margin-top: 150px;
+                @include breakpoint(md){ margin-top: 0px;}
+            }
+            &:nth-of-type(2){ margin-top: 100px;
+                @include breakpoint(md){ margin-top: 0px;}
+            }
+            &:nth-of-type(3){ margin-top: 50px;
+                @include breakpoint(md){ margin-top: 0px;}
+            }
+            &:nth-of-type(4){ margin-top: 0px;}
+
+            &:nth-child(odd) .icon{ background: $red_bg1;}
+            &:nth-child(even) .icon{ background: $blue_bg1;}
+
+            &:nth-child(odd) .year{ background: $blue_bg1;}
+            &:nth-child(even) .year{ background: $red_bg1;}
+
+            .innerblock { 
+                @include breakpoint(md){
+                width: 201px; display: flex; text-align: center; flex-direction: column; align-items: center; position: relative;}
+                
+                @include breakpoint(md){ width: 100%;}
+                &:after{ width: 345px; height: 131px; display: block; content: ""; position: absolute; left: 50%; bottom: -86px; transform: rotate(-6deg);  background: url(../../../resources/images/home/arc.svg) left top no-repeat; background-size: contain;
+                
+                @include breakpoint(xl){ width: 318px;}
+                @include breakpoint(lg){ width: 269px;}
+                @include breakpoint(md){ display:  none;}
+            }
+            }
+            &:nth-of-type(4) .innerblock {
+                &:after{  display: none; }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+#ourmachinesCntr { padding: 70px 0; width: 100%; background: $gray_bg1;
+    @include breakpoint(md){ padding: 30px 0;}
+    @include breakpoint(sm){ padding: 20px 0;}
+
+    .block{ width: 100%; text-align: center;
+        a{ text-decoration: none;}
+        img{ width: 100%;} 
+        p{ font-size: 30px; color: $blue-text; font-weight: 600;
+            @include breakpoint(md){ font-size: 20px;}
+        }
+    }
+}

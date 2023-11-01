@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+// colour variable start 
+
+// background colour
+$white: #ffffff;
+
+$gray_bg1: #F4F4F4;
+
+$blue-bg1: #0E89CC;
+$blue-bg2: #eff9ff;
+$blue-bg3: #0A6495;
+$blue-bg4: #034275;
+
+
+$red-bg1: #E21D23;
+$black: #000000;
+$black-bg1: #333333;
+$black-bg2: #2b2a29;
+$black-bg3: #898989;
+
+// transparent background colour
+$red-trans: rgba(226, 29, 35, 0.85);
+$red-trans1: rgba(226, 29, 35, 0.3);
+$red-trans2: rgba(226, 29, 35, 0.1);
+$white-trans6: rgba(255,255,255,0.6);
+$white-trans9: rgba(255,255,255,0.9);
+
+// Text colour
+$blue-text: #0E89CC;
+$blue-text1: #08557E;
+$blue-text2: #0A6495;
+$red-text: #E21D23;
+$black-text: #2b2a29;
+$black-text1: #333333;
+
+// Actice colour
+$active-state: #E21D23;
+
+// colour variable ends
+
+// fonts variable start
+$font-face: 'Raleway', sans-serif;
+$sub_font_face: 'Roboto', sans-serif;
+// fonts variable ends

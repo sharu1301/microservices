@@ -1,0 +1,771 @@
+[
+  {
+    "menu": "home",
+    "content": [
+      {
+        "url": "/Success-Stories",
+        "image_path": "images/menu/success_at_insignia/success_stories.jpg",
+        "default_image_path": "images/menu/success_at_insignia/index.jpg",
+        "icon_path": "icons/menu/success_at_insignia/success_stories.svg",
+        "title": "Success Stories",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Testimonials",
+        "image_path": "images/menu/success_at_insignia/testimonials.jpg",
+        "default_image_path": "images/menu/success_at_insignia/index.jpg",
+        "icon_path": "icons/menu/success_at_insignia/testimonials.svg",
+        "title": "Testimonials",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Why-Insignia",
+        "image_path": "images/menu/success_at_insignia/why_insignia.jpg",
+        "default_image_path": "images/menu/success_at_insignia/index.jpg",
+        "icon_path": "icons/menu/success_at_insignia/why_insignia.png",
+        "title": "Why Insignia",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Partner-Network",
+        "image_path": "images/menu/success_at_insignia/partner_network.jpg",
+        "default_image_path": "images/menu/success_at_insignia/index.jpg",
+        "icon_path": "icons/menu/success_at_insignia/partner_network.svg",
+        "title": "Partner Network",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Co-development",
+        "image_path": "images/menu/success_at_insignia/co_development.jpg",
+        "default_image_path": "images/menu/success_at_insignia/index.jpg",
+        "icon_path": "icons/menu/success_at_insignia/co_development.svg",
+        "title": "Co-development",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/InsigniaAffiliate",
+        "image_path": "images/menu/success_at_insignia/insignia_affiliate.jpg",
+        "default_image_path": "images/menu/success_at_insignia/index.jpg",
+        "icon_path": "icons/menu/success_at_insignia/insignia_affiliate.svg",
+        "title": "InsigniaAffiliate",
+        "description": "Insignia is dedicated to helping businesses"
+      }
+    ]
+  },
+  {
+    "menu": "about_us",
+    "content": [
+      {
+        "url": "/Team",
+        "image_path": "images/menu/about_us/team.jpg",
+        "default_image_path": "images/menu/about_us/index.jpg",
+        "icon_path": "icons/menu/about_us/team.svg",
+        "title": "Team",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Careers",
+        "image_path": "images/menu/about_us/careers.jpg",
+        "default_image_path": "images/menu/about_us/index.jpg",
+        "icon_path": "icons/menu/about_us/careers.svg",
+        "title": "Careers",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Industries",
+        "image_path": "images/menu/about_us/industries.jpg",
+        "default_image_path": "images/menu/about_us/index.jpg",
+        "icon_path": "icons/menu/about_us/industries.svg",
+        "title": "Industries",
+        "sub_menus": [
+          {
+            "url": "/IT",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "IT"
+          },
+          {
+            "url": "/HR",
+            "image_path": "images/menu/about_us/hr.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/hr.svg",
+            "title": "HR"
+          },
+          {
+            "url": "/Recruitment",
+            "image_path": "images/menu/about_us/recruitment.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/recruitment.svg",
+            "title": "Recruitment"
+          },
+          {
+            "url": "/Finance",
+            "image_path": "images/menu/about_us/finance.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/finance.svg",
+            "title": "Finance"
+          },
+          {
+            "url": "/Retail",
+            "image_path": "images/menu/about_us/retail.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/retail.svg",
+            "title": "Retail"
+          },
+          {
+            "url": "/Manufacturing",
+            "image_path": "images/menu/about_us/manufacturing.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/manufacturing.svg",
+            "title": "Manufacturing"
+          },
+          {
+            "url": "/Telecommunication",
+            "image_path": "images/menu/about_us/telecommunication.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/telecommunication.svg",
+            "title": "Telecommunication"
+          },
+          {
+            "url": "/Media",
+            "image_path": "images/menu/about_us/media.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/media.svg",
+            "title": "Media"
+          },
+          {
+            "url": "/Education",
+            "image_path": "images/menu/about_us/education.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/education.svg",
+            "title": "Education"
+          },
+          {
+            "url": "/Creatives",
+            "image_path": "images/menu/about_us/creatives.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/creatives.svg",
+            "title": "Creatives"
+          }
+        ]
+      },
+      {
+        "url": "/Legal",
+        "image_path": "images/menu/about_us/legal.jpg",
+        "default_image_path": "images/menu/about_us/index.jpg",
+        "icon_path": "icons/menu/about_us/legal.svg",
+        "title": "Legal",
+        "sub_menus": [
+          {
+            "url": "/Anti-spam-Policy",
+            "image_path": "images/menu/about_us/anti_spam_policy.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/anti_spam_policy.svg",
+            "title": "Anti-Spam Policy"
+          },
+          {
+            "url": "/Complaints",
+            "image_path": "images/menu/about_us/complaints.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/complaints.svg",
+            "title": "Complaints"
+          },
+          {
+            "url": "/Confidentiality",
+            "image_path": "images/menu/about_us/confidentiality.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/confidentiality.svg",
+            "title": "Confidentiality"
+          },
+          {
+            "url": "/Cookie-Policy",
+            "image_path": "images/menu/about_us/cookie_policy.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/cookie_policy.svg",
+            "title": "Cookie Policy"
+          },
+          {
+            "url": "/Corporate-Social-Responsibility",
+            "image_path": "images/menu/about_us/corporate_social_responsibility.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/corporate_social_responsibility.svg",
+            "title": "Corporate Social Responsibility"
+          },
+          {
+            "url": "/Encryption-Security",
+            "image_path": "images/menu/about_us/encryption_security.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/encryption_security.svg",
+            "title": "Encryption & Security"
+          },
+          {
+            "url": "/Equal-Opportunity-Employer",
+            "image_path": "images/menu/about_us/equal_opportunity_employer.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/equal_opportunity_employer.svg",
+            "title": "Equal Opportunity Employer"
+          },
+          {
+            "url": "/GDPR-Compliance",
+            "image_path": "images/menu/about_us/gdpr_compliance.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/gdpr_compliance.svg",
+            "title": "GDPR Compliance"
+          },
+          {
+            "url": "/Jurisdictions",
+            "image_path": "images/menu/about_us/jurisdictions.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/jurisdictions.svg",
+            "title": "Jurisdictions"
+          },
+          {
+            "url": "/Personally-Identifiable-Information",
+            "image_path": "images/menu/about_us/personally_identifiable_information.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/personally_identifiable_information.svg",
+            "title": "Personally Identifiable Information"
+          },
+          {
+            "url": "/Privacy-Policy",
+            "image_path": "images/menu/about_us/privacy_policy.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/privacy_policy.svg",
+            "title": "Privacy Policy"
+          },
+          {
+            "url": "/Support",
+            "image_path": "images/menu/about_us/support.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/support.svg",
+            "title": "Support"
+          },
+          {
+            "url": "/Website-Usage",
+            "image_path": "images/menu/about_us/website_usage.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/website_usage.svg",
+            "title": "Website Usage"
+          }
+        ]
+      },
+      {
+        "url": "/Resources",
+        "image_path": "images/menu/about_us/resources.jpg",
+        "default_image_path": "images/menu/about_us/index.jpg",
+        "icon_path": "icons/menu/about_us/resources.svg",
+        "title": "Resources",
+        "sub_menus": [
+          {
+            "url": "/Blogs",
+            "image_path": "images/menu/about_us/blogs.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/blogs.svg",
+            "title": "Blogs"
+          },
+          {
+            "url": "/Whitepapers",
+            "image_path": "images/menu/about_us/whitepapers.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/whitepapers.svg",
+            "title": "Whitepapers"
+          },
+          {
+            "url": "/Events",
+            "image_path": "images/menu/about_us/events.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/events.svg",
+            "title": "Events"
+          },
+          {
+            "url": "/Webinars",
+            "image_path": "images/menu/about_us/webinars.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/webinars.svg",
+            "title": "Webinars"
+          },
+          {
+            "url": "/FAQs",
+            "image_path": "images/menu/about_us/faq.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/faq.svg",
+            "title": "FAQs"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menu": "product",
+    "content": [
+      {
+        "url": "/Insignia-HubHQ",
+        "image_path": "images/menu/product/insignia_hubhq.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/insignia_hubhq.svg",
+        "title": "Latest Machines",
+        "description": "HINDS Machineries founded in 1999",
+        "sub_menus": [
+          {
+            "url": "/IT",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Lorem Ipsum"
+          },
+          {
+            "url": "/IT",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Lorem Ipsum"
+          },
+          {
+            "url": "/IT",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Lorem Ipsum"
+          },
+          {
+            "url": "/IT",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Lorem Ipsum"
+          }
+          
+        ]
+      },
+      {
+        "url": "/HydraulicPressesPowerpackCylinders",
+        "image_path": "images/menu/product/househero.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/househero.svg",
+        "title": "Hydraulic Presses, Power pack and Cylinders",
+        "description": "Insignia is dedicated to helping businesses",
+        "sub_menus": [
+          {
+            "url": "/PressBreak",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Press Break"
+          },
+          {
+            "url": "/HydraulicPresses",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Hydraulic Presses"
+          },
+          {
+            "url": "/IronWorker",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Iron Worker"
+          }
+          
+        ]
+      },
+      
+      {
+        "url": "/SpecialPurposeMachine",
+        "image_path": "images/menu/product/insignia_hr.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/insignia_hr.svg",
+        "title": "Special Purpose Machine",
+        "description": "HINDS Machineries founded in 1999",
+        "sub_menus": [
+          {
+            "url": "/CrimpingPressMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Crimping Press Machine"
+          },
+          {
+            "url": "/LeakTestingMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Leak Testing Machine"
+          },
+          {
+            "url": "/SpacerInsertMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Spacer Insert Machine"
+          },
+          {
+            "url": "/UBoltBendMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "U Bolt Bend Machine"
+          },
+          {
+            "url": "/DrillingTappingMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Drilling & Tapping Machine"
+          },
+          {
+            "url": "/ChamferingMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Chamfering Machine"
+          },
+          {
+            "url": "/HydraulicPressMachine",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Hydraulic Press Machine"
+          }
+        ]
+      },
+      {
+        "url": "/InjectionMoldingMachine",
+        "image_path": "images/menu/product/insignia_recruit.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/insignia_recruit.svg",
+        "title": "Injection Modelling Machine",
+        "description": "HINDS Machineries founded in 1999",
+        "sub_menus": [
+          {
+            "url": "/EuroServoSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro Servo Series"
+          },
+          {
+            "url": "/EuroPacSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro PAC Series"
+          },
+          {
+            "url": "/EuroPetSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro PET Series"
+          },
+          {
+            "url": "/EuroStarSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro Star Series"
+          },
+          {
+            "url": "/EuroCpvcSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro CPVC Series"
+          },
+          {
+            "url": "/EuroPvcSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro PVC Series"
+          },
+          {
+            "url": "/EuroRSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro R Series"
+          },
+          {
+            "url": "/EuroSeries",
+            "image_path": "images/menu/about_us/it.jpg",
+            "default_image_path": "images/menu/about_us/index.jpg",
+            "icon_path": "icons/menu/about_us/it.svg",
+            "title": "Euro Series"
+          }
+          
+          
+        ]
+      }
+     
+    ]
+  },
+  {
+    "menu": "applications",
+    "content": [
+      {
+        "url": "/ThinWallMoulding",
+        "image_path": "images/menu/services/implementation.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/implementation.svg",
+        "title": "Thin Wall Moulding",
+        "sub_menus": [
+          {
+            "url": "/EuroPacSeries",
+            "image_path": "images/menu/services/salesforce.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/salesforce.svg",
+            "title": "Euro PAC Series"
+          },
+          {
+            "url": "/EuroRPacSeries",
+            "image_path": "images/menu/services/snowflake.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/snowflake.svg",
+            "title": "Euro R PAC Series"
+          }
+        ]
+      },
+      {
+        "url": "/CapsClosures",
+        "image_path": "images/menu/services/data_science_engineering.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/data_science_engineering.svg",
+        "title": "Caps & Closures",
+        "sub_menus": [
+          {
+            "url": "/EuroTsSeries",
+            "image_path": "images/menu/services/data_intelligence.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/data_intelligence.svg",
+            "title": "Euro TS Series"
+          },
+          {
+            "url": "/EuroRsSeries",
+            "image_path": "images/menu/services/data_engineering.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/data_engineering.svg",
+            "title": "Euro RS Series"
+          }
+        ]
+      },
+      {
+        "url": "/AutomobileEngineeringComponent",
+        "image_path": "images/menu/services/ai_ml_ops.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/ai_ml_ops.svg",
+        "title": "Automobile & Engineering Component",
+        "sub_menus": [
+          {
+            "url": "/EuroRSeries",
+            "image_path": "images/menu/services/artificial_intelligence.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/artificial_intelligence.svg",
+            "title": "Euro R Series"
+          },
+          {
+            "url": "/EuroServoSeries",
+            "image_path": "images/menu/services/machine_learning.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/machine_learning.svg",
+            "title": "Euro Servo Series"
+          }
+        ]
+      },
+      {
+        "url": "/PetPreform",
+        "image_path": "images/menu/services/transformation.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/transformation.svg",
+        "title": "PET Preform",
+        "sub_menus": [
+          {
+            "url": "/EuroPetSeries",
+            "image_path": "images/menu/services/tech_stack_modernization.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/tech_stack_modernization.svg",
+            "title": "Euro PET Series"
+          },
+          {
+            "url": "/EuroRPetSeries",
+            "image_path": "images/menu/services/cloud_adoption_migration.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/cloud_adoption_migration.svg",
+            "title": "Euro  R PET Series"
+          }
+        ]
+      },
+      {
+        "url": "/SmallPrecisionComponent",
+        "image_path": "images/menu/services/security.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/security.svg",
+        "title": "Small Precision Component",
+        "sub_menus": [
+          {
+            "url": "/EuroStarSeries",
+            "image_path": "images/menu/services/cybersecurity.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/cybersecurity.svg",
+            "title": "Euro Star Series"
+          }
+        ]
+      },
+      {
+        "url": "/CunstructionFittingPvc",
+        "image_path": "images/menu/services/digital_marketing.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/digital_marketing.svg",
+        "title": "Cunstruction Fitting - PVC",
+        "sub_menus": [
+          {
+            "url": "/PvcLineInjectionMoulding",
+            "image_path": "images/menu/services/website_transformation.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/website_transformation.svg",
+            "title": "PVC Line Injection Moulding"
+          }
+        ]
+      },
+      {
+        "url": "/CunstructionFittingCpvc",
+        "image_path": "images/menu/services/digital_marketing.jpg",
+        "default_image_path": "images/menu/services/index.jpg",
+        "icon_path": "icons/menu/services/digital_marketing.svg",
+        "title": "Cunstruction Fitting - CPVC",
+        "sub_menus": [
+          {
+            "url": "/CpvcLineInjectionMoulding",
+            "image_path": "images/menu/services/website_transformation.jpg",
+            "default_image_path": "images/menu/services/index.jpg",
+            "icon_path": "icons/menu/services/website_transformation.svg",
+            "title": "PVC Line Injection Moulding"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menu": "updates",
+    "content": [
+      {
+        "url": "/Digital-Transformation",
+        "image_path": "images/menu/solutions/digital_transformation.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/digital_transformation.svg",
+        "title": "Digital Transformation",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Data-Science-Analytics",
+        "image_path": "images/menu/solutions/data_science_analytics.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/data_science_analytics.svg",
+        "title": "Data Science & Analytics",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/AI-Machine-Learning",
+        "image_path": "images/menu/solutions/ai_machine_learning.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/ai_machine_learning.svg",
+        "title": "AI & Machine Learning",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Industry-4.0",
+        "image_path": "images/menu/solutions/industry_4_0.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/industry_4_0.svg",
+        "title": "Industry 4.0",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Cloud-Strategy",
+        "image_path": "images/menu/solutions/cloud_strategy.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/cloud_strategy.svg",
+        "title": "Cloud Strategy",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Technology-Consulting",
+        "image_path": "images/menu/solutions/technology_consulting.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/technology_consulting.svg",
+        "title": "Technology Consulting",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Branding-Marketing",
+        "image_path": "images/menu/solutions/branding_marketing.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/branding_marketing.svg",
+        "title": "Branding Marketing",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/FinTech",
+        "image_path": "images/menu/solutions/fintech.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/fintech.svg",
+        "title": "FinTech",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Management-Consulting",
+        "image_path": "images/menu/solutions/management_consulting.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/management_consulting.svg",
+        "title": "Management Consulting",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/EduTech",
+        "image_path": "images/menu/solutions/edutech.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/edutech.svg",
+        "title": "EduTech",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Digital-Twin",
+        "image_path": "images/menu/solutions/digital_twin.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/digital_twin.svg",
+        "title": "Digital Twin",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Customer-Success",
+        "image_path": "images/menu/solutions/customer_success.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/customer_success.svg",
+        "title": "Customer Success",
+        "description": "Insignia is dedicated to helping businesses"
+      }
+    ]
+  },
+  {
+    "menu": "gallary",
+    "content": [
+      {
+        "url": "/Digital-Transformation",
+        "image_path": "images/menu/solutions/digital_transformation.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/digital_transformation.svg",
+        "title": "Image gallary",
+        "description": "Insignia is dedicated to helping businesses"
+      },
+      {
+        "url": "/Data-Science-Analytics",
+        "image_path": "images/menu/solutions/data_science_analytics.jpg",
+        "default_image_path": "images/menu/solutions/index.jpg",
+        "icon_path": "icons/menu/solutions/data_science_analytics.svg",
+        "title": "Video gallary",
+        "description": "Insignia is dedicated to helping businesses"
+      }
+    ]
+  }
+]

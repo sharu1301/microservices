@@ -1,0 +1,121 @@
+#aboutpageCntr { width: 100%;
+
+.missionBox { padding: 50px 0; width: 100%;
+    @include breakpoint(md){ padding: 50px 0 0px 0;}
+    @include breakpoint(sm){ padding: 20px 0 0px 0;}
+
+    .commit { margin: 15px 0; font-size: 25px; color: $blue-text2; font-weight: 700; text-transform: uppercase; 
+        @include breakpoint(sm){ font-size: 15px; margin: 15px 0 5px 0;}
+    } 
+    .redtext { font-size: 25px; color: $red-text; font-weight: 600;
+        @include breakpoint(sm){ font-size: 15px;}
+    }
+
+    .blockholder { padding: 0 70px; margin: 100px 0 30px 0; display: flex; flex-wrap: wrap; justify-content: center;
+        @include breakpoint(md){ margin: 50px 0 0px 0;}
+
+        .block { width: calc(33.3% - 30px); margin: 0 15px 70px 15px;  display: flex; align-items: center; flex-direction: column; text-align: center;
+            @include breakpoint(sm){ width: calc(100% - 30px);}
+            @include breakpoint(md){ margin: 0 15px 30px 15px;}
+
+            .circle { margin-bottom: 20px; width: 215px; height: 215px; border-radius: 100%; border: 3px dashed $red-bg1; display: flex; justify-content: center; align-items: center;
+                @include breakpoint(md){ width: 150px; height: 150px;
+                    img { width: 50%;}
+                }
+            }
+
+            span { font-size: 25px; color: $blue-text2; font-weight: 600;
+                @include breakpoint(md){ font-size: 18px;}
+            }
+        }
+    }
+}
+
+.meritsBox { padding:  50px 0; width: 100%; background: $red-trans1;
+    @include breakpoint(md){ padding:  20px 0;}
+
+    h3{ margin: 30px 0; font-size: 25px; color: $blue-text2; font-weight: 600;
+        @include breakpoint(sm){ margin: 10px 0;}
+    }
+
+    ul{ list-style: disc; font-size: 16px; line-height: 28px;
+        @include breakpoint(sm){ font-size: 13px;}
+    }
+}
+
+.manufacturingBox { padding: 70px 0; width: 100%;
+
+    @include breakpoint(md) { padding: 50px 0 50px 0;}
+    @include breakpoint(sm) { padding: 30px 0 50px 0;
+        h2 { margin-bottom: 30px;}
+    }
+    
+
+    .slideBlock { width: 100%;
+        figure { width: 60%; position: relative; z-index: 1;
+            @include breakpoint(md){ width: 70%;}
+            @include breakpoint(sm){ width: 100%;}
+            img { width: 100%;}
+        }
+        .content { padding: 50px; font-size: 30px; color: $white; font-weight: 700; position: absolute; right: -50%; bottom: 70px;
+            @include breakpoint(lg) { padding: 30px;}
+            @include breakpoint(md) { padding: 20px; right: -180px; font-size: 20px;}
+            @include breakpoint(sm) { padding: 20px; right: inherit; left: 30px; bottom: 20px; font-size: 20px;}
+
+            &::after { width: 100%; height: 100%; content: ""; position: absolute; left: -10px; top: 10px; background: $red-bg1; z-index: 1;} 
+            &::before {  width: 100%; height: 100%; content: ""; position: absolute;background: $blue-bg4;  left: 0px; top: 0px; z-index: 2;}
+            span { position: relative; z-index: 9;} 
+        }
+    }
+    
+    .swiper-slide { padding-bottom: 30px;}
+    .swiper-button-prev { width: 36px; height: 32px; left: inherit; right: 130px; bottom: 0px; top: inherit; transform: rotate(180deg);
+        @include breakpoint(sm){width: 21px; height: 19px; right: 80px;}
+    }
+    .swiper-button-prev::after { width: 100%; height: 100%; content: ""; opacity: 0.5; background: url(../../resources/images/icons/manufacturing_paging.svg) left top no-repeat; background-size: cover;}
+    .swiper-button-prev:hover::after { opacity: 1;} 
+
+    .swiper-button-next { width: 36px; height: 32px;  right: 50px; bottom: 0px; top: inherit; 
+        @include breakpoint(sm){width: 21px; height: 19px;}
+    }
+    .swiper-button-next::after { width: 100%; height: 100%; content: ""; opacity: 0.5; background: url(../../resources/images/icons/manufacturing_paging.svg) left top no-repeat; background-size: cover;}
+    .swiper-button-next:hover::after { opacity: 1; } 
+
+    }
+
+    .aboutappliBox { width: 100%; 
+        
+        .holder{ padding: 100px 50px; position: relative; width: 100%;
+            @include breakpoint(md){ padding: 50px 20px;}
+            @include breakpoint(sm){ padding: 20px 0px;}
+
+            &::before{ width: 50%; height: 100%; background: $blue-bg1; content: ""; position: absolute; left: 0px; top: 0px;
+                @include breakpoint(sm){ display: none; }
+            }
+            &::after{ width: 50%; height: 100%; background: $red-bg1; content: ""; position: absolute; right: 0px; top: 0px;
+                @include breakpoint(sm){ width: 100%; }
+            }
+
+            .app_row  {width: 100%; margin-bottom: 30px; font-size: 25px; line-height: 35px; color: $white; font-weight: 600; display: flex; flex-wrap: wrap; position: relative; z-index: 2;
+                @include breakpoint(lg){ font-size: 20px;}
+                @include breakpoint(md){ font-size: 14px; margin-bottom: 15px;}
+                @include breakpoint(sm){ margin-bottom: 30px; line-height: 20px;}
+
+                .test_left { width: 50%; position: relative;
+                    @include breakpoint(sm){ padding: 15px 20px; width: 100%; background: $blue-bg3; }
+
+                    &::after{width: 28px; height: 24px; display: block; content: ""; position: absolute; right: -15px; top: 5px; background: url(../../resources/images/icons/white_arrow.svg) left top no-repeat;
+                        @include breakpoint(md){ width: 20px; height: 15px; background-size: cover; right: -10px; }
+                        @include breakpoint(sm){ display: none; }
+                    }
+                }
+                .test_right { padding-left: 50px; width: 50%; position: relative;
+                    @include breakpoint(sm){ padding: 10px 0 10px 30px; width: 100%; 
+                        &::after{  width: 15px; height: 13px; display: block; content: ""; position: absolute; left: 5px; top: 15px; background: url(../../resources/images/icons/white_arrow.svg) left top no-repeat; background-size: cover;}
+                    }
+                }
+            }
+        }
+    }
+
+}

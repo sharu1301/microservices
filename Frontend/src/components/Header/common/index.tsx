@@ -1,14 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import menu_data from "../../../resources/content/menu.json";
-import { SolutionsMenuProps } from "../../../interfaces";
-import { MenuData } from "../../../interfaces/menu";
-import label from '../../../resources/content/labels.json'
 
+export default function CustomHeaderComponent(props: any) {
 
-export default function CommonMenu(propsy) {
-
-    // const {content, prop, setMenuImage}:{ content, setMenuImage} = props;
+    const {content, prop, setMenuImage}:{ content: any, prop: any, setMenuImage: any} = props;
 
                   return (
                     
@@ -34,7 +29,7 @@ export default function CommonMenu(propsy) {
                           <strong>{content.title}</strong>
                         </Link>
                         {content.sub_menus ? (
-                          content.sub_menus.map((sub_menu) => {
+                          content.sub_menus.map((sub_menu: any) => {
                             return (
                               <div className="step_third">
                                 <div className="subtitle">

@@ -7,46 +7,28 @@ import {
 } from "react-accessible-accordion";
 import { Link } from "react-router-dom";
 import MenuData from "../../../resources/content/menu.json";
+import { MenuDataInterface } from "../../../interfaces/menu";
+import { AboutUsMenuProps } from "../../../interfaces";
+import CommonResponsiveMenu from "./common";
 
 export default function AboutUsMenu() {
+  const aboutUsMenu:MenuDataInterface=require('../../../resources/content/about_us_menu.json')
   return (
     <AccordionItem>
       <AccordionItemHeading>
         <AccordionItemButton>About Us</AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel>
+
+
+
         <Accordion allowZeroExpanded>
           <>
             <div>
               <Link to="/About-Us">About Us</Link>
             </div>
-            {MenuData.filter((data) => data.menu === "about_us").map((data) => {
-              return data.content.map((content, index) => {
-                return content.sub_menus ? (
-                  <AccordionItem key={index}>
-                    <AccordionItemHeading>
-                      <AccordionItemButton>{content.title}</AccordionItemButton>
-                    </AccordionItemHeading>
-                    <AccordionItemPanel>
-                      <div>
-                        <Link to={content.url}>{content.title}</Link>
-                      </div>
-                      {content.sub_menus.map((sub_menu, index) => {
-                        return (
-                          <div key={index}>
-                            <Link to={sub_menu.url}>{sub_menu.title}</Link>
-                          </div>
-                        );
-                      })}
-                    </AccordionItemPanel>
-                  </AccordionItem>
-                ) : (
-                  <div>
-                    <Link to={content.url}>{content.title}</Link>
-                  </div>
-                );
-              });
-            })}
+           <CommonResponsiveMenu data={aboutUsMenu}/>
+                
           </>
         </Accordion>
       </AccordionItemPanel>

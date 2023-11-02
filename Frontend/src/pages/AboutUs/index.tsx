@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 import metadata from "../../resources/content/meta.json";
 
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide,  } from "swiper/react";
 import { Navigation, Autoplay, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+
+type NavigationOptions = /*unresolved*/ any
 
 export default function AboutUs() {
   const [metaTitle, setMetaTitle] = useState("");
@@ -155,7 +157,7 @@ export default function AboutUs() {
                       <div className="sliderBlock">
                           <Swiper
                             modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
-                            navigation={{ clickable: true, delay:0, }}
+                            navigation={{ clickable: true, delay:0 }as  NavigationOptions}
                             spaceBetween={10}
                             slidesPerView={1}
                             loop={true}

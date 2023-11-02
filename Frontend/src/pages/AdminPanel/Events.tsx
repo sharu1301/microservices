@@ -7,7 +7,7 @@ export default function Events() {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [eventsData, setEventsData] = useState("");
+  const [eventsData, setEventsData] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -16,7 +16,7 @@ export default function Events() {
   const [refresh, setRefresh] = useState(false);
 
   const [isEditMode, setIsEditMode] = useState(false);
-  const [editItem, setEditItem] = useState(null);
+  const [editItem, setEditItem] = useState<{id?: string| number, field?: { title: string, date: string, description: string}}| null >(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function Events() {
     payload = {
       records: [
         {
-          id: editItem.id,
+          id: editItem?.id,
           field: {
             date,
             title,
@@ -83,7 +83,7 @@ export default function Events() {
     setDescription("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
     if (isEditMode && editItem) {
@@ -131,7 +131,7 @@ export default function Events() {
     }
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: string) => {
     setIsLoading(true);
 
     axios
@@ -142,7 +142,7 @@ export default function Events() {
       .then((res) => {
         if (res.status === 200) {
           setRefresh(true);
-          setEventsData((prevData) => prevData.filter((data) => data.id !== id));
+          setEventsData((prevData) => prevData.filter((data: any) =>  data.id !== id));
         }
       })
       .catch((err) => {
@@ -153,14 +153,14 @@ export default function Events() {
       });
   };
 
-  const setEditMode = (item) => {
+  const setEditMode = (item: {}) => {
     setIsEditMode(true);
     setEditItem(item);
     openModal();
   };
 
   useEffect(() => {
-    if (isEditMode && editItem) {
+    if (isEditMode && editItem && editItem.field) {
       console.log(editItem);
       setTitle(editItem.field.title);
       setDate(editItem.field.date);

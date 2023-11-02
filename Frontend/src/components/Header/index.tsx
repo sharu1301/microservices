@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
 import FleshNews from "./FleshNews";
 import HomeMenu from "./HomeMenu";
-import AboutUsMenu from "./AboutUsMenu";
+ import AboutUsMenu from "./AboutUsMenu";
 import ServicesMenu from "./ServicesMenu";
 import ProductMenu from "./ProductMenu";
 import ApplicationsMenu from "./ApplicationsMenu";
@@ -13,15 +13,29 @@ import GallaryMenu from "./GallaryMenu";
 
 
 export default function Header() {
-  const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
-  const [isAboutUsDropdownOpen, setIsAboutUsDropdownOpen] = useState(false);
-  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
-  const [isApplicationsDropdownOpen, setIsApplicationsDropdownOpen] = useState(false);
-  const [isUpdatesDropdownOpen, setIsUpdatesDropdownOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isGallaryDropdownOpen, setIsGallaryDropdownOpen] = useState(false);
 
-  // const [isSearchbarOpen, setIsSearchbarOpen] = useState(false);
+
+  const [dropDownData, setDropDownData] = useState({
+    isHomeDropdownOpen: false,
+    isAboutUsDropdownOpen: false,
+    isServicesDropdownOpen: false,
+    isUpdatesDropdownOpen: false,
+    isProductDropdownOpen: false,
+    isApplicationsDropdownOpen: false,
+    isGallaryDropdownOpen: false,
+  })
+
+
+  const initialDropDown = {
+    isHomeDropdownOpen: false,
+    isAboutUsDropdownOpen: false,
+    isServicesDropdownOpen: false,
+    isUpdatesDropdownOpen: false,
+    isProductDropdownOpen: false,
+    isApplicationsDropdownOpen: false,
+    isGallaryDropdownOpen: false,
+  }
+
 
   const [homeMenuImage, setHomeMenuImage] = useState(
     "images/menu/success_at_insignia/index.jpg"
@@ -45,107 +59,56 @@ export default function Header() {
     "images/menu/gallary/index.jpg"
   );
 
-  const showDropdownContent = (nav) => {
-    if (nav === "home") {
-      setIsAboutUsDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsApplicationsDropdownOpen(false);
-      setIsGallaryDropdownOpen(false);
-      setIsUpdatesDropdownOpen(false);
-      //setIsHomeDropdownOpen(true);
-    }
-    if (nav === "aboutus") {
-      setIsHomeDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsApplicationsDropdownOpen(false);
-      setIsGallaryDropdownOpen(false);
-      setIsUpdatesDropdownOpen(false);
-      // setIsAboutUsDropdownOpen(true);
-    }
-    if (nav === "product") {
-      setIsHomeDropdownOpen(false);
-      setIsAboutUsDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsApplicationsDropdownOpen(false);
-      setIsGallaryDropdownOpen(false);
-      setIsUpdatesDropdownOpen(false);
-      setIsProductDropdownOpen(true);
-    }
-    if (nav === "services") {
-      setIsHomeDropdownOpen(false);
-      setIsAboutUsDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsApplicationsDropdownOpen(false);
-      setIsGallaryDropdownOpen(false);
-      setIsUpdatesDropdownOpen(false);
-      //setIsServicesDropdownOpen(true);
-    }
-    if (nav === "applications") {
-      setIsHomeDropdownOpen(false);
-      setIsAboutUsDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsGallaryDropdownOpen(false);
-      setIsUpdatesDropdownOpen(false);
-      setIsApplicationsDropdownOpen(true);
-    }
-    if (nav === "updates") {
-      setIsHomeDropdownOpen(false);
-      setIsAboutUsDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsGallaryDropdownOpen(false);
-      setIsApplicationsDropdownOpen(false);
-      //setIsUpdatesDropdownOpen(true);
-    }
-    if (nav === "Gallary") {
-      setIsHomeDropdownOpen(false);
-      setIsAboutUsDropdownOpen(false);
-      setIsProductDropdownOpen(false);
-      setIsServicesDropdownOpen(false);
-      setIsApplicationsDropdownOpen(false);
-      setIsUpdatesDropdownOpen(false);
-      setIsGallaryDropdownOpen(true);
+
+  const showDropdownContent = (nav: string) => {
+    switch (nav) {
+
+      case "product":
+        setDropDownData({ ...initialDropDown, isProductDropdownOpen: true })
+        break;
+      case "applications":
+        setDropDownData({ ...initialDropDown, isApplicationsDropdownOpen: true })
+        break;
+      case "Gallary":
+        setDropDownData({ ...initialDropDown, isGallaryDropdownOpen: true })
+        break;
+      default:
+        break;
     }
   };
 
-  const hideDropdownContent = (nav) => {
-    if (nav === "home") {
-      setIsHomeDropdownOpen(false);
+  const hideDropdownContent = (nav: string) => {
+    switch (nav) {
+      case "home":
+        setDropDownData({ ...dropDownData, isHomeDropdownOpen: false })
+        break;
+      case "aboutus":
+        setDropDownData({ ...dropDownData, isAboutUsDropdownOpen: false })
+
+        break;
+      case "product":
+        setDropDownData({ ...dropDownData, isProductDropdownOpen: false })
+        break;
+      case "services":
+        setDropDownData({ ...dropDownData, isServicesDropdownOpen: false })
+        break;
+      case "applications":
+        setDropDownData({ ...dropDownData, isApplicationsDropdownOpen: false })
+        break;
+      case "updates":
+        setDropDownData({ ...dropDownData, isUpdatesDropdownOpen: false })
+        break;
+      case "gallary":
+        setDropDownData({ ...dropDownData, isGallaryDropdownOpen: false })
+        break;
+      default:
+        break;
     }
-    if (nav === "aboutus") {
-      setIsAboutUsDropdownOpen(false);
-    }
-    if (nav === "product") {
-      setIsProductDropdownOpen(false);
-    }
-    if (nav === "services") {
-      setIsServicesDropdownOpen(false);
-    }
-    if (nav === "applications") {
-      setIsApplicationsDropdownOpen(false);
-    }
-    if(nav === "updates"){
-      setIsUpdatesDropdownOpen(false)
-    }
-    if (nav === "gallary") {
-      setIsGallaryDropdownOpen(false);
-    }
+
+
   };
 
-  // const hideSearchbar = () => {
-  //   setIsSearchbarOpen(false);
-  // };
 
-  // useEffect(() => {
-  //   if (isSearchbarOpen === false) {
-  //     window.CommandBar.close();
-  //   }
-  // }, [isSearchbarOpen]);
 
   return (
     <>
@@ -154,9 +117,9 @@ export default function Header() {
         <FleshNews />
         <ResponsiveMenu />
         <nav className="navbar fixed-top navbar-expand-lg navbar-light">
-          
+
           <div className="container">
-          
+
             <Link className="navbar-brand" id="logo" to="/" reloadDocument>
               <img
                 className="logo_img"
@@ -170,7 +133,7 @@ export default function Header() {
               />
             </Link>
             <div className="ml-auto d-flex">
-              
+
               <button
                 className="navbar-toggler"
                 type="button"
@@ -194,7 +157,7 @@ export default function Header() {
                   <Link
                     to="/" reloadDocument
                     className={
-                      isHomeDropdownOpen
+                      dropDownData.isHomeDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -210,7 +173,7 @@ export default function Header() {
                   <Link
                     to="/About-Us"
                     className={
-                      isAboutUsDropdownOpen
+                      dropDownData.isAboutUsDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -226,7 +189,7 @@ export default function Header() {
                   <Link
                     to="/Product"
                     className={
-                      isProductDropdownOpen
+                      dropDownData.isProductDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -242,7 +205,7 @@ export default function Header() {
                   <Link
                     to="/Services"
                     className={
-                      isServicesDropdownOpen
+                      dropDownData.isServicesDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -258,7 +221,7 @@ export default function Header() {
                   <Link
                     to="/Application"
                     className={
-                      isApplicationsDropdownOpen
+                      dropDownData.isApplicationsDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -274,7 +237,7 @@ export default function Header() {
                   <Link
                     to="/Updates"
                     className={
-                      isUpdatesDropdownOpen
+                      dropDownData.isUpdatesDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -288,9 +251,9 @@ export default function Header() {
                   onMouseEnter={() => showDropdownContent("Gallary")}
                 >
                   <Link to="/Gallary"
-                    
+
                     className={
-                      isGallaryDropdownOpen
+                      dropDownData.isGallaryDropdownOpen
                         ? "nav-link nav-highlight"
                         : "nav-link"
                     }
@@ -301,80 +264,68 @@ export default function Header() {
                 </li>
               </ul>
             </div>
+
             <div className="dropmenu">
-              {isHomeDropdownOpen && (
+              {/* {isHomeDropdownOpen && (
                 <HomeMenu
                   homeMenuImage={homeMenuImage}
                   setHomeMenuImage={setHomeMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
-              )}
-              {isAboutUsDropdownOpen && (
+              )} */}
+              {dropDownData.isAboutUsDropdownOpen && (
                 <AboutUsMenu
                   aboutUsMenuImage={aboutUsMenuImage}
                   setAboutUsMenuImage={setAboutUsMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}
-              {isProductDropdownOpen && (
+              {dropDownData.isProductDropdownOpen && (
                 <ProductMenu
                   productMenuImage={productMenuImage}
                   setProductMenuImage={setProductMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}
-              {isServicesDropdownOpen && (
+              {dropDownData.isServicesDropdownOpen && (
                 <ServicesMenu
-                  servicesMenuImage={servicesMenuImage}
-                  setServicesMenuImage={setServicesMenuImage}
+                  serviceMenuImage={servicesMenuImage}
+                  setServiceMenuImage={setServicesMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}
-              {isApplicationsDropdownOpen && (
+              {dropDownData.isApplicationsDropdownOpen && (
                 <ApplicationsMenu
                   applicationsMenuImage={applicationsMenuImage}
                   setApplicationsMenuImage={setApplicationsMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}
-              {isUpdatesDropdownOpen && (
+              {dropDownData.isUpdatesDropdownOpen && (
                 <UpdatesMenu
                   updatesMenuImage={updatesMenuImage}
                   setUpdatesMenuImage={setUpdatesMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}
-              {isGallaryDropdownOpen && (
+              {dropDownData.isGallaryDropdownOpen && (
                 <GallaryMenu
-                  gallaryMenuImage={gallaryMenuImage}
-                  setGallaryMenuImage={setGallaryMenuImage}
+                  galleryMenuImage={gallaryMenuImage}
+                  setgalleryMenuImage={setGallaryMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}
             </div>
-{/* 
-            <div
-              id="headerSearch"
-              className={isSearchbarOpen ? "hover" : ""}
-              onMouseEnter={() => setIsSearchbarOpen(true)}
-              onMouseLeave={() => hideSearchbar()}
-            >
-              <button className="searchbtn">
-                <i className="bi bi-search" />
-              </button>
-              <div className="searchBar">
-                <div id="commandbar-inline-root" />
-              </div>
-            </div> */}
+
 
             <div className="nav-item">
               <Link className="nav-link contactbtn" to="/ContactUs">
-                 Contact Us
+                Contact Us
               </Link>
             </div>
           </div>
         </nav>
-        
+
       </header>
       <div className="blankheader"></div>
       {/* header container end */}

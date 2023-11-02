@@ -1,0 +1,205 @@
+{
+    "menu": "product",
+    "content": [
+      {
+        "url": "/LatestMachines",
+        "image_path": "images/menu/product/LatestMachines.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/machine_icon.svg",
+        "title": "Latest Machines",
+        "description": "HINDS Machineries founded in 1999",
+        "sub_menus": [
+          {
+            "url": "/CrimpingPressMachine",
+            "image_path": "images/menu/product/CrimpingPressMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Crimping Press Machine"
+          },
+          {
+            "url": "/LeakTestingMachine",
+            "image_path": "images/menu/product/LeakTestingMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Leak Testing Machine"
+          },
+          {
+            "url": "/SpacerInsertMachine",
+            "image_path": "images/menu/product/SpacerInsertMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Spacer Insert Machine"
+          },
+          {
+            "url": "/UBoltBendMachine",
+            "image_path": "images/menu/product/UBoltBendMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "U Bolt Bend Machine"
+          }
+          
+        ]
+      },
+      {
+        "url": "/HydraulicPressesPowerpackCylinders",
+        "image_path": "images/menu/product/HydraulicPressesPowerpackCylinders.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/HydraulicPressesCylinders.svg",
+        "title": "Hydraulic Presses, Power pack and Cylinders",
+        "description": "Insignia is dedicated to helping businesses",
+        "sub_menus": [
+          {
+            "url": "/PressBreak",
+            "image_path": "images/menu/product/PressBreak.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Press Break"
+          },
+          {
+            "url": "/HydraulicPresses",
+            "image_path": "images/menu/product/HydraulicPresses.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Hydraulic Presses"
+          },
+          {
+            "url": "/IronWorker",
+            "image_path": "images/menu/product/IronWorker.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Iron Worker"
+          }
+          
+        ]
+      },
+      
+      {
+        "url": "/SpecialPurposeMachine",
+        "image_path": "images/menu/product/SpecialPurposeMachine.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/SpecialPurposeMachine.svg",
+        "title": "Special Purpose Machine",
+        "description": "HINDS Machineries founded in 1999",
+        "sub_menus": [
+          {
+            "url": "/CrimpingPressMachine",
+            "image_path": "images/menu/product/CrimpingPressMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Crimping Press Machine"
+          },
+          {
+            "url": "/LeakTestingMachine",
+            "image_path": "images/menu/product/LeakTestingMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Leak Testing Machine"
+          },
+          {
+            "url": "/SpacerInsertMachine",
+            "image_path": "images/menu/product/SpacerInsertMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Spacer Insert Machine"
+          },
+          {
+            "url": "/UBoltBendMachine",
+            "image_path": "images/menu/product/UBoltBendMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "U Bolt Bend Machine"
+          },
+          {
+            "url": "/DrillingTappingMachine",
+            "image_path": "images/menu/product/DrillingTappingMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Drilling & Tapping Machine"
+          },
+          {
+            "url": "/ChamferingMachine",
+            "image_path": "images/menu/product/ChamferingMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Chamfering Machine"
+          },
+          {
+            "url": "/HydraulicPressMachine",
+            "image_path": "images/menu/product/HydraulicPressMachine.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Hydraulic Press Machine"
+          }
+        ]
+      },
+      {
+        "url": "/InjectionMoldingMachine",
+        "image_path": "images/menu/product/InjectionMoldingMachine.jpg",
+        "default_image_path": "images/menu/product/index.jpg",
+        "icon_path": "icons/menu/product/InjectionModellingMachine.svg",
+        "title": "Injection Modelling Machine",
+        "description": "HINDS Machineries founded in 1999",
+        "sub_menus": [
+          {
+            "url": "/EuroServoSeries",
+            "image_path": "images/menu/product/EuroServoSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro Servo Series"
+          },
+          {
+            "url": "/EuroPacSeries",
+            "image_path": "images/menu/product/EuroPacSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro PAC Series"
+          },
+          {
+            "url": "/EuroPetSeries",
+            "image_path": "images/menu/product/EuroPetSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro PET Series"
+          },
+          {
+            "url": "/EuroStarSeries",
+            "image_path": "images/menu/product/EuroStarSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro Star Series"
+          },
+          {
+            "url": "/EuroCpvcSeries",
+            "image_path": "images/menu/product/EuroCpvcSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro CPVC Series"
+          },
+          {
+            "url": "/EuroPvcSeries",
+            "image_path": "images/menu/product/EuroPvcSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro PVC Series"
+          },
+          {
+            "url": "/EuroRSeries",
+            "image_path": "images/menu/product/EuroRSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro R Series"
+          },
+          {
+            "url": "/EuroSeries",
+            "image_path": "images/menu/product/EuroSeries.jpg",
+            "default_image_path": "images/menu/product/index.jpg",
+            "icon_path": "icons/menu/product/arrow_right_short.svg",
+            "title": "Euro Series"
+          }
+          
+          
+        ]
+      }
+     
+    ]
+  }

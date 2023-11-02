@@ -7,8 +7,11 @@ import {
 } from "react-accessible-accordion";
 import { Link } from "react-router-dom";
 import MenuData from "../../../resources/content/menu.json";
+import { MenuDataInterface } from "../../../interfaces/menu";
+import CustomResponsiveMenu from './common'
 
 export default function ServicesMenu() {
+  const serviceMenuData:MenuDataInterface=require('../../../resources/content/services_menu.json')
   return (
     <AccordionItem>
       <AccordionItemHeading>
@@ -20,33 +23,8 @@ export default function ServicesMenu() {
             <div>
               <Link to="/Services">Services</Link>
             </div>
-            {MenuData.filter((data) => data.menu === "services").map((data) => {
-              return data.content.map((content, index) => {
-                return content.sub_menus ? (
-                  <AccordionItem key={index}>
-                    <AccordionItemHeading>
-                      <AccordionItemButton>{content.title}</AccordionItemButton>
-                    </AccordionItemHeading>
-                    <AccordionItemPanel>
-                      <div>
-                        <Link to={content.url}>{content.title}</Link>
-                      </div>
-                      {content.sub_menus.map((sub_menu, index) => {
-                        return (
-                          <div key={index}>
-                            <Link to={sub_menu.url}>{sub_menu.title}</Link>
-                          </div>
-                        );
-                      })}
-                    </AccordionItemPanel>
-                  </AccordionItem>
-                ) : (
-                  <div>
-                    <Link to={content.url}>{content.title}</Link>
-                  </div>
-                );
-              });
-            })}
+            <CustomResponsiveMenu data={serviceMenuData}/>
+      
           </>
         </Accordion>
       </AccordionItemPanel>

@@ -50,7 +50,7 @@ function App({ children }: any) {
     if (commandBarReady) {
       window.CommandBar.setFormFactor({
         type: "inline",
-        rootElement: document.querySelector("#commandbar-inline-root"),
+        rootElement: document.querySelector<HTMLInputElement>("#commandbar-inline-root")!.value,
       });
 
       window.CommandBar.setCustomComponent(

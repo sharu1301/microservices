@@ -23,7 +23,7 @@ export default function Updates() {
   const [metaDescription, setMetaDescription] = useState("");
   const [metaKeywords, setMetaKeywords] = useState("");
 
-  const[selectedIndex, setSelectedIndex] = useState(null)
+  const[selectedIndex, setSelectedIndex] = useState<null|string>(null)
 
     useEffect(() => {
     for (let i = 0; i < metadata.length; i++) {
@@ -38,7 +38,7 @@ export default function Updates() {
   }, []);
 
   //news showmore start here
-    const handleReadmore = (index) => {
+    const handleReadmore = (index: string| null) => {
       setSelectedIndex(prevIndex => (prevIndex === index? null:index))
     }
   //news showmore ends here
@@ -87,8 +87,6 @@ useEffect(() => {
     .then((res) => res.data && setExhibitionData(res.data))
     .catch((err) => console.log(err));
 },[isNewDataAdded])
-
-
 
   return (
     <HelmetProvider>

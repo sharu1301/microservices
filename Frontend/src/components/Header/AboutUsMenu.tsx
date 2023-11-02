@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import menu_data from "../../resources/content/menu.json";
 
+export interface AboutUsMenuProps {
+  aboutUsMenuImage: string;
+  setAboutUsMenuImage: (image: string) => void;
+  hideDropdownContent: (content: string) => void;
+}
 
 
-
-export default function AboutUsMenu(props) {
+export default function AboutUsMenu(props: AboutUsMenuProps) {
   
   return (
     <div

@@ -64,15 +64,15 @@ export default function Footer() {
                         <div className="col-md-4">
                           <h4>Get in touch </h4>
                           <ul className="gettouch">
-                            <li><i class="bi bi-geo-alt-fill"></i><address className="address">Plot No. 139, Sec-8, IMT Manesar, Gurgaon </address></li>
+                            <li><i className="bi bi-geo-alt-fill"></i><address className="address">Plot No. 139, Sec-8, IMT Manesar, Gurgaon </address></li>
                             <li>
-                              <i class="bi bi-envelope-fill"></i>
+                              <i className="bi bi-envelope-fill"></i>
                               <a href="mailto:hinds@rediffmail.com">
                                 hinds@rediffmail.com
                               </a>
                             </li>
                             <li>
-                              <i class="bi bi-telephone-fill"></i>
+                              <i className="bi bi-telephone-fill"></i>
                               <a href="tel:+91 9312657397">+91 9312657397</a>
                             </li>
                           </ul>

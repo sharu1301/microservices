@@ -1,5 +1,5 @@
 import Header from "../../../components/Header";
-import Footer from "../../../components/footer/Footer";
+import Footer from "../../../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useEffect, useState } from "react";
 

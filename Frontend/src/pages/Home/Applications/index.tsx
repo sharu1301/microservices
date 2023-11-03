@@ -23,7 +23,8 @@ export default function Applications() {
                   <div className="rightBlock">
                       <Swiper
                         modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
-                        navigation={{ clickable: true, delay:0, }}
+                        navigation={true}
+                        pagination={{ clickable: true }}
                         spaceBetween={10}
                         slidesPerView={3}
                         loop={true}

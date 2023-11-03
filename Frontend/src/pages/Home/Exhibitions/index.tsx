@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,7 +16,8 @@ export default function Exhibitions() {
           <h2>Exhibitions</h2>
           <Swiper
                 modules={[EffectCoverflow, Navigation, Pagination, Scrollbar, A11y]}
-                navigation={{ clickable: true, delay:0, }}
+                navigation={true}
+          pagination={{ clickable: true }}
                 spaceBetween={10}
                 slidesPerView={3}
                 loop={true}

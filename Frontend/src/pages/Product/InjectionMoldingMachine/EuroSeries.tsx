@@ -33,7 +33,7 @@ export default function EuroSeries() {
   const [metaKeywords, setMetaKeywords] = useState("");
 
   //const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [imagesNavSlider, setImagesNavSlider] = useState(null);
+  const [imagesNavSlider, setImagesNavSlider] = useState();
 
   useEffect(() => {
     for (let i = 0; i < metadata.length; i++) {
@@ -86,7 +86,7 @@ export default function EuroSeries() {
 
                     <div className="slider__thumbs">
                       <Swiper
-                        onSwiper={setImagesNavSlider}
+                        onSwiper={imagesNavSlider}
                         direction="vertical"
                         spaceBetween={24}
                         slidesPerView={3}

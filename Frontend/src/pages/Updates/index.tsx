@@ -17,13 +17,36 @@ import metadata from "../../resources/content/meta.json";
 //import { Link } from "react-router-dom";
 
 
+interface NewsDataInterface{
+  field:{
+    image:[{
+      url:string
+    }
+  ],
+  title:string,
+  description:string
+  }
+}
+interface EventDataInterface{
+  field:{
+    image:[{
+      url:string
+    }
+  ],
+  title:string,
+  description:string,
+  date:string
+
+  }
+}
+
 
 export default function Updates() {
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
   const [metaKeywords, setMetaKeywords] = useState("");
 
-  const[selectedIndex, setSelectedIndex] = useState<null|string>(null)
+  const [selectedIndex, setSelectedIndex] = useState<null | string>(null)
 
   useEffect(() => {
     for (let i = 0; i < metadata.length; i++) {
@@ -38,14 +61,14 @@ export default function Updates() {
   }, []);
 
   //news showmore start here
-    const handleReadmore = (index: string| null) => {
-      setSelectedIndex(prevIndex => (prevIndex === index? null:index))
-    }
+  const handleReadmore = (index: string | null) => {
+    setSelectedIndex(prevIndex => (prevIndex === index ? null : index))
+  }
   //news showmore ends here
 
 
   //news API start here
-  const [newsData, setNewsData] = useState("");
+  const [newsData, setNewsData] = useState([]);
   const [isNewDataAdded] = useState(false);
 
   useEffect(() => {
@@ -59,9 +82,9 @@ export default function Updates() {
       .catch((err) => console.log(err));
   }, [isNewDataAdded])
 
-
+  console.log('62===>', newsData)
   //event API start here
-  const [eventsData, setEventsData] = useState("");
+  const [eventsData, setEventsData] = useState([]);
 
   useEffect(() => {
     axios
@@ -73,20 +96,21 @@ export default function Updates() {
       .then((res) => res.data && setEventsData(res.data))
       .catch((err) => console.log(err));
   }, [isNewDataAdded])
+  console.log('76', eventsData)
 
   //exhibition API start here
-  const [exhibitionData, setExhibitionData] = useState("");
+  const [exhibitionData, setExhibitionData] = useState([]);
 
   useEffect(() => {
     axios
       .get(
         "https://stackby.com/api/betav1/rowlist/sthY4FT7hDG3xsbqTl/upcoming_exhibitions",
 
-      { headers: { "api-key": "q2dxQPAIMmQcK2aS" } }
-    )
-    .then((res) => res.data && setExhibitionData(res.data))
-    .catch((err) => console.log(err));
-},[isNewDataAdded])
+        { headers: { "api-key": "q2dxQPAIMmQcK2aS" } }
+      )
+      .then((res) => res.data && setExhibitionData(res.data))
+      .catch((err) => console.log(err));
+  }, [isNewDataAdded])
 
   return (
     <HelmetProvider>
@@ -154,17 +178,20 @@ export default function Updates() {
                     }}
                   >
 
-                    {newsData && newsData.map((data, index) => {
+                    {newsData && newsData.map((data:NewsDataInterface, index) => {
                       return (
-                        <SwiperSlide key={index} className={selectedIndex === index && "showmore"}>
+                        <SwiperSlide key={index} className={selectedIndex == index.toString() ? "showmore" : ""}>
                           <div className="block newsblock">
-
+                            
                             <figure>
-                              <img src={data.field.image && data.field.image[0].url} alt="updates_img" />
+                              <img src={data.field?.image && data.field.image[0].url} alt="updates_img" />
                             </figure>
                             <h2>{data.field.title}</h2>
                             <p>{data.field.description}</p>
-                            <button className="readmoreBtn" onClick={() => handleReadmore(index)}></button>
+                            <button className="readmoreBtn" 
+                            onClick={() => handleReadmore(index.toString())}>
+                              
+                            </button>
                           </div>
                         </SwiperSlide>
                       )
@@ -221,7 +248,7 @@ export default function Updates() {
                 }}
               >
 
-                {eventsData && eventsData.map((data, index) => {
+                {eventsData && eventsData.map((data:EventDataInterface, index) => {
                   let eventDay = moment(data.field.date).format("DD");
                   let eventMonth = moment(data.field.date).format("MMMM");
                   let eventYear = moment(data.field.date).format("YYYY");
@@ -298,7 +325,7 @@ export default function Updates() {
                       }}
                     >
 
-                      {exhibitionData && exhibitionData.map((data, index) => {
+                      {exhibitionData && exhibitionData.map((data:EventDataInterface, index) => {
 
                         const exhibitionDate = moment(data.field.date).format("dddd MMM DD YYYY");
 

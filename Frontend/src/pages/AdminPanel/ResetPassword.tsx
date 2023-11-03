@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { SHA256 } from "crypto-js";
@@ -12,7 +12,7 @@ export default function ResetPassword() {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
     matchPassword()
@@ -88,7 +88,7 @@ export default function ResetPassword() {
   };
 
   function password_show_hide() {
-    var x = document.getElementById("password");
+    var x = document.getElementById("password") as HTMLInputElement;
     var show_eye = document.getElementById("show_eye");
     var hide_eye = document.getElementById("hide_eye");
 
@@ -105,7 +105,7 @@ export default function ResetPassword() {
   }
 
   function newPasswordShowHide() {
-    var x = document.getElementById("resetPassword");
+    var x = document.getElementById("resetPassword") as HTMLInputElement;
     var newShow_eye = document.getElementById("newShow_eye");
     var newHide_eye = document.getElementById("newHide_eye");
 
@@ -170,7 +170,7 @@ export default function ResetPassword() {
                     className="input form-control"
                     id="password"
                     placeholder="Current Password"
-                    required="true"
+                    required={true}
                     aria-label="password"
                     aria-describedby="basic-addon1"
                     autoComplete="off"
@@ -207,7 +207,7 @@ export default function ResetPassword() {
                     className="input form-control"
                     id="resetPassword"
                     placeholder="New Password"
-                    required="true"
+                    required={true}
                     aria-label="password"
                     aria-describedby="basic-addon1"
                     autoComplete="off"

@@ -7,7 +7,7 @@ export default function Exhibitions() {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [exhibitionsData, setExhibitionsData] = useState("");
+  const [exhibitionsData, setExhibitionsData] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -83,7 +83,7 @@ export default function Exhibitions() {
       setDescription("");
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.SyntheticEvent) => {
       e.preventDefault();
   
       if (isEditMode && editItem) {
@@ -131,7 +131,7 @@ export default function Exhibitions() {
       }
     };
   
-    const handleDelete = (id) => {
+    const handleDelete = (id: string) => {
       setIsLoading(true);
   
       axios
@@ -142,7 +142,7 @@ export default function Exhibitions() {
         .then((res) => {
           if (res.status === 200) {
             setRefresh(true);
-            setExhibitionsData((prevData) => prevData.filter((data) => data.id !== id));
+            setExhibitionsData((prevData: any) => prevData.filter((data: any) => data.id !== id));
           }
         })
         .catch((err) => {
@@ -153,7 +153,7 @@ export default function Exhibitions() {
         });
     };
   
-    const setEditMode = (item) => {
+    const setEditMode = (item: {}) => {
       setIsEditMode(true);
       setEditItem(item);
       openModal();
@@ -183,14 +183,14 @@ export default function Exhibitions() {
 
         
           <div className="rightheader">
-          <button onClick={sideMenu} className="burger_icon"><i class="bi bi-list"></i></button>
+          <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
           <button className="createBtn" type="button" onClick={openModal}>
               Create
             </button>
             <div
               className={`modal fade ${isModalOpen ? "show" : ""}`}
               id="exampleModal"
-              tabIndex="-1"
+              tabIndex={-1}
               aria-labelledby="exampleModalLabel"
               aria-hidden={!isModalOpen}
               style={{ display: isModalOpen ? "block" : "none" }}
@@ -199,11 +199,11 @@ export default function Exhibitions() {
                 <div className="modal-content">
                   <div className="formBox">
                     <form onSubmit={handleSubmit}>
-                      <div class="mb-3">
-                        <label for="date">Date</label>
+                      <div className="mb-3">
+                        <label htmlFor="date">Date</label>
                         <input
                           type="date"
-                          class="form-control"
+                          className="form-control"
                           id=""
                           placeholder="Date"
                           required
@@ -212,11 +212,11 @@ export default function Exhibitions() {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="title"> Title</label>
+                      <div className="mb-3">
+                        <label htmlFor="title"> Title</label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="Title"
                           placeholder="Title"
                           required
@@ -225,11 +225,11 @@ export default function Exhibitions() {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="description">Description</label>
+                      <div className="mb-3">
+                        <label htmlFor="description">Description</label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="description"
                           placeholder="Description"
                           required

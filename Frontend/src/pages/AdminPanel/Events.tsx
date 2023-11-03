@@ -7,7 +7,7 @@ export default function Events() {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [eventsData, setEventsData] = useState("");
+  const [eventsData, setEventsData] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -16,7 +16,7 @@ export default function Events() {
   const [refresh, setRefresh] = useState(false);
 
   const [isEditMode, setIsEditMode] = useState(false);
-  const [editItem, setEditItem] = useState(null);
+  const [editItem, setEditItem] = useState<{id?: string| number, field?: { title: string, date: string, description: string}}| null >(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function Events() {
     payload = {
       records: [
         {
-          id: editItem.id,
+          id: editItem?.id,
           field: {
             date,
             title,
@@ -83,7 +83,7 @@ export default function Events() {
     setDescription("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
     if (isEditMode && editItem) {
@@ -131,7 +131,7 @@ export default function Events() {
     }
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: string) => {
     setIsLoading(true);
 
     axios
@@ -142,7 +142,7 @@ export default function Events() {
       .then((res) => {
         if (res.status === 200) {
           setRefresh(true);
-          setEventsData((prevData) => prevData.filter((data) => data.id !== id));
+          setEventsData((prevData) => prevData.filter((data: any) =>  data.id !== id));
         }
       })
       .catch((err) => {
@@ -153,14 +153,14 @@ export default function Events() {
       });
   };
 
-  const setEditMode = (item) => {
+  const setEditMode = (item: {}) => {
     setIsEditMode(true);
     setEditItem(item);
     openModal();
   };
 
   useEffect(() => {
-    if (isEditMode && editItem) {
+    if (isEditMode && editItem && editItem.field) {
       console.log(editItem);
       setTitle(editItem.field.title);
       setDate(editItem.field.date);
@@ -172,7 +172,6 @@ export default function Events() {
   function sideMenu() {
     var element = document.getElementById("adminpanel") as HTMLElement;
     element.classList.toggle("show");
-
   }
 
 
@@ -182,14 +181,14 @@ export default function Events() {
         {/* <SideAdminMenu/> */}
 
           <div className="rightheader">
-          <button onClick={sideMenu} className="burger_icon"><i class="bi bi-list"></i></button>
+          <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
             <button className="createBtn" type="button" onClick={openModal}>
               Create
             </button>
             <div
               className={`modal fade ${isModalOpen ? "show" : ""}`}
               id="exampleModal"
-              tabIndex="-1"
+              tabIndex={-1}
               aria-labelledby="exampleModalLabel"
               aria-hidden={!isModalOpen}
               style={{ display: isModalOpen ? "block" : "none" }}
@@ -198,11 +197,11 @@ export default function Events() {
                 <div className="modal-content">
                   <div className="formBox">
                     <form onSubmit={handleSubmit}>
-                      <div class="mb-3">
-                        <label for="eventDate">Event Date</label>
+                      <div className="mb-3">
+                        <label htmlFor="eventDate">Event Date</label>
                         <input
                           type="date"
-                          class="form-control"
+                          className="form-control"
                           id="eventDate"
                           placeholder="Event Date"
                           required
@@ -211,11 +210,11 @@ export default function Events() {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="eventTitle">Event Title</label>
+                      <div className="mb-3">
+                        <label htmlFor="eventTitle">Event Title</label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="eventTitle"
                           placeholder="Event Title"
                           required
@@ -224,11 +223,11 @@ export default function Events() {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="eventDescription">Event Description</label>
+                      <div className="mb-3">
+                        <label htmlFor="eventDescription">Event Description</label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="eventDescription"
                           placeholder="Event Description"
                           required

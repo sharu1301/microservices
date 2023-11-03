@@ -3,7 +3,7 @@ import News from "../pages/AdminPanel/News";
 import Events from "../pages/AdminPanel/Events";
 import Exhibitions from "../pages/AdminPanel/Exhibitions";
 
-const ContentArea = ({ selectedItem }:{selectedItem: string}) => {
+const ContentArea = ({ selectedItem }:{ selectedItem:string|{}}) => {
   let content;
 
   switch (selectedItem) {

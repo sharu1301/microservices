@@ -13,7 +13,7 @@ export default function SideAdminMenu() {
       <>
         <div className="sidbar">
           <figure className="logo"><img src="images/pages/home/logo.png" alt="logo" /></figure>
-          <button onClick={sideMenu} className="burger_icon"><i class="bi bi-list"></i></button>
+          <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
           <ul>
             <li><Link to="/News">Latest News</Link></li>
             <li><Link to="/Events">Upcoming Events</Link></li>

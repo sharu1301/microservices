@@ -1,6 +1,7 @@
 import React from "react";
+import { NavbarProps} from "../interfaces"
 
-const Navbar = ({ isLoggedIn, handleLogout }) => {
+const Navbar = ({ isLoggedIn, handleLogout }:  NavbarProps ) => {
 
   
   return (

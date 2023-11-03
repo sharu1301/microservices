@@ -15,9 +15,9 @@ const AdminPanel = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
     sessionStorage.getItem("isLoggedIn") === "true"
   );
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState<{}>({});
 
-  const handleLogin = (e) => {
+  const handleLogin = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
     axios
@@ -53,25 +53,29 @@ const AdminPanel = () => {
     setIsLoggedIn(false);
   };
 
-  const handleSidebarItemClick = (item) => {
+  const handleSidebarItemClick = (item: {}) => {
     setSelectedItem(item);
   };
 
   function password_show_hide() {
-    var x = document.getElementById("password");
+    var x = document.getElementById("password") as HTMLInputElement | null;
     var show_eye = document.getElementById("show_eye");
     var hide_eye = document.getElementById("hide_eye");
 
     hide_eye.classList.remove("d-none");
-    if (x.type === "password") {
-      x.type = "text";
-      show_eye.style.display = "none";
-      hide_eye.style.display = "block";
-    } else {
-      x.type = "password";
-      show_eye.style.display = "block";
-      hide_eye.style.display = "none";
+
+    if(x != null){
+      if (x.type === "password") {
+        x.type = "text";
+        show_eye.style.display = "none";
+        hide_eye.style.display = "block";
+      } else {
+        x.type = "password";
+        show_eye.style.display = "block";
+        hide_eye.style.display = "none";
+      }
     }
+    
   }
 
   return (
@@ -134,7 +138,7 @@ const AdminPanel = () => {
                       className="input form-control"
                       id="password"
                       placeholder="Password"
-                      required="true"
+                      required={true}
                       aria-label="password"
                       aria-describedby="basic-addon1"
                       autoComplete="off"

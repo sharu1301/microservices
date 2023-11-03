@@ -3,11 +3,9 @@ import menu_data from "../../resources/content/menu.json";
 import { MenuDataInterface } from "../../interfaces/menu";
 import CustomHeaderComponent from "./common";
 
-const updateMenu = {
+type updateMenu = {
   "menu": "about_us",
-  "content": [
-
-  ]
+  "content": []
 }
 export default function UpdatesMenu(props: any) {
   let updateMenuData: MenuDataInterface = require('../../resources/content/about_us_menu.json')

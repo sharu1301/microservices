@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination, Scrollbar, A11y } from "swiper";
+import {Navigation, Autoplay, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import { NavigationOptions } from "swiper/types";
 
 export default function Applications() {
   return (
@@ -23,7 +24,7 @@ export default function Applications() {
                   <div className="rightBlock">
                       <Swiper
                         modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
-                        navigation={{ clickable: true, delay:0, }}
+                        navigation={{ clickable: true, delay:0, } as NavigationOptions}
                         spaceBetween={10}
                         slidesPerView={3}
                         loop={true}

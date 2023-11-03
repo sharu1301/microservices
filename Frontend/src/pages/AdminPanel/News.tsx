@@ -86,7 +86,7 @@ export default function News() {
     setDescription("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
     if (isEditMode && editItem) {
@@ -135,7 +135,7 @@ export default function News() {
     }
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: string) => {
     setIsLoading(true);
 
     axios
@@ -157,7 +157,7 @@ export default function News() {
       });
   };
 
-  const setEditMode = (item) => {
+  const setEditMode = (item: {}) => {
     setIsEditMode(true);
     setEditItem(item);
     openModal();
@@ -188,14 +188,14 @@ export default function News() {
           {/* <SideAdminMenu /> */}
         
           <div className="rightheader">
-            <button onClick={sideMenu} className="burger_icon"><i class="bi bi-list"></i></button>
+            <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
             <button className="createBtn" type="button" onClick={openModal}>
               Create
             </button>
             <div
               className={`modal fade ${isModalOpen ? "show" : ""}`}
               id="exampleModal"
-              tabIndex="-1"
+              tabIndex={-1}
               aria-labelledby="exampleModalLabel"
               aria-hidden={!isModalOpen}
               style={{ display: isModalOpen ? "block" : "none" }}

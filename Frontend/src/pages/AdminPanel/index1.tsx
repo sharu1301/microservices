@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import {  Link, useNavigate } from "react-router-dom";
 //import { Link } from "react-router-dom";
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 
 export default function AdminPanel() {
   
@@ -14,10 +14,10 @@ export default function AdminPanel() {
   
   //const [refresh, setRefresh] = useState(false);
   //const [isAdding, setIsAdding] = useState(false);
-  
+
   const navigate = useNavigate()
 
-  const submiteForm = (e) => {
+  const submiteForm = (e: React.SyntheticEvent) => {
     
     e.preventDefault();
      console.log(email, password)

@@ -45,7 +45,7 @@ export default function Updates() {
 
 
   //news API start here
-  const [newsData, setNewsData] = useState("");
+  const [newsData, setNewsData] = useState([]);
   const [isNewDataAdded] = useState(false);
 
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function Updates() {
 
 
   //event API start here
-  const [eventsData, setEventsData] = useState("");
+  const [eventsData, setEventsData] = useState([]);
 
   useEffect(() => {
     axios
@@ -75,7 +75,7 @@ export default function Updates() {
   }, [isNewDataAdded])
 
   //exhibition API start here
-  const [exhibitionData, setExhibitionData] = useState("");
+  const [exhibitionData, setExhibitionData] = useState([]);
 
   useEffect(() => {
     axios
@@ -156,7 +156,7 @@ export default function Updates() {
 
                     {newsData && newsData.map((data, index) => {
                       return (
-                        <SwiperSlide key={index} className={selectedIndex === index && "showmore"}>
+                        <SwiperSlide key={index} className={selectedIndex === index.toString() && "showmore"}>
                           <div className="block newsblock">
 
                             <figure>
@@ -164,7 +164,7 @@ export default function Updates() {
                             </figure>
                             <h2>{data.field.title}</h2>
                             <p>{data.field.description}</p>
-                            <button className="readmoreBtn" onClick={() => handleReadmore(index)}></button>
+                            <button className="readmoreBtn" onClick={() => handleReadmore(index.toString())}></button>
                           </div>
                         </SwiperSlide>
                       )

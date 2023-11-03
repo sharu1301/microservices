@@ -172,7 +172,6 @@ export default function Events() {
   function sideMenu() {
     var element = document.getElementById("adminpanel");
     element.classList.toggle("show");
-
   }
 
 
@@ -182,14 +181,14 @@ export default function Events() {
         {/* <SideAdminMenu/> */}
 
           <div className="rightheader">
-          <button onClick={sideMenu} className="burger_icon"><i class="bi bi-list"></i></button>
+          <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
             <button className="createBtn" type="button" onClick={openModal}>
               Create
             </button>
             <div
               className={`modal fade ${isModalOpen ? "show" : ""}`}
               id="exampleModal"
-              tabIndex="-1"
+              tabIndex={-1}
               aria-labelledby="exampleModalLabel"
               aria-hidden={!isModalOpen}
               style={{ display: isModalOpen ? "block" : "none" }}
@@ -198,11 +197,11 @@ export default function Events() {
                 <div className="modal-content">
                   <div className="formBox">
                     <form onSubmit={handleSubmit}>
-                      <div class="mb-3">
-                        <label for="eventDate">Event Date</label>
+                      <div className="mb-3">
+                        <label htmlFor="eventDate">Event Date</label>
                         <input
                           type="date"
-                          class="form-control"
+                          className="form-control"
                           id="eventDate"
                           placeholder="Event Date"
                           required
@@ -211,11 +210,11 @@ export default function Events() {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="eventTitle">Event Title</label>
+                      <div className="mb-3">
+                        <label htmlFor="eventTitle">Event Title</label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="eventTitle"
                           placeholder="Event Title"
                           required
@@ -224,11 +223,11 @@ export default function Events() {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="eventDescription">Event Description</label>
+                      <div className="mb-3">
+                        <label htmlFor="eventDescription">Event Description</label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="eventDescription"
                           placeholder="Event Description"
                           required

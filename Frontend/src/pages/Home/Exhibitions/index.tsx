@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { NavigationOptions } from "swiper/types";
 
 export default function Exhibitions() {
   return (
@@ -15,7 +16,7 @@ export default function Exhibitions() {
           <h2>Exhibitions</h2>
           <Swiper
                 modules={[EffectCoverflow, Navigation, Pagination, Scrollbar, A11y]}
-                navigation={{ clickable: true, delay:0, }}
+                navigation={{ clickable: true, delay:0, } as NavigationOptions}
                 spaceBetween={10}
                 slidesPerView={3}
                 loop={true}

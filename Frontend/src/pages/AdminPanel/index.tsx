@@ -59,8 +59,8 @@ const AdminPanel = () => {
 
   function password_show_hide() {
     var x = document.getElementById("password") as HTMLInputElement | null;
-    var show_eye = document.getElementById("show_eye");
-    var hide_eye = document.getElementById("hide_eye");
+    var show_eye = document.getElementById("show_eye") as HTMLElement;
+    var hide_eye = document.getElementById("hide_eye") as HTMLElement;
 
     hide_eye.classList.remove("d-none");
 

@@ -1,13 +1,16 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import axios from "axios";
+import { NewsInterface ,EditItemInterface} from "../../interfaces";
+
+
 
 export default function News() {
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
-  const [newsData, setNewsData] = useState([]);
+  const [newsData, setNewsData] = useState<NewsInterface []>([]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -16,7 +19,7 @@ export default function News() {
   const [refresh, setRefresh] = useState(false);
 
   const [isEditMode, setIsEditMode] = useState(false);
-  const [editItem, setEditItem] = useState(null);
+  const [editItem, setEditItem] = useState<EditItemInterface  >();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -28,6 +31,7 @@ export default function News() {
         { headers: { "api-key": "q2dxQPAIMmQcK2aS" } }
       )
       .then((res) => {
+        console.log('New data respone',res.data)
         setNewsData(res.data);
         setIsLoading(false);
       })
@@ -44,7 +48,7 @@ export default function News() {
   const closeModal = () => {
     setIsModalOpen(false);
     setIsEditMode(false);
-    setEditItem(null);
+    // setEditItem();
     resetForm();
   };
 
@@ -112,7 +116,7 @@ export default function News() {
         });
     } else {
       setIsAdding(true);
-      
+
       axios
         .post(
           "https://stackby.com/api/betav1/rowcreate/sthY4FT7hDG3xsbqTl/news_section",
@@ -157,7 +161,7 @@ export default function News() {
       });
   };
 
-  const setEditMode = (item: {}) => {
+  const setEditMode = (item:EditItemInterface) => {
     setIsEditMode(true);
     setEditItem(item);
     openModal();
@@ -176,7 +180,7 @@ export default function News() {
   }, [isEditMode, editItem]);
 
   function sideMenu() {
-    var element = document.getElementById("adminpanel");
+    var element = document.getElementById("adminpanel") as HTMLElement;
     element.classList.toggle("show");
 
   }
@@ -184,148 +188,148 @@ export default function News() {
 
   return (
     <>
-      
-          {/* <SideAdminMenu /> */}
-        
-          <div className="rightheader">
-            <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
-            <button className="createBtn" type="button" onClick={openModal}>
-              Create
-            </button>
-            <div
-              className={`modal fade ${isModalOpen ? "show" : ""}`}
-              id="exampleModal"
-              tabIndex={-1}
-              aria-labelledby="exampleModalLabel"
-              aria-hidden={!isModalOpen}
-              style={{ display: isModalOpen ? "block" : "none" }}
-            >
-              <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content">
-                  <div className="formBox">
-                    <form onSubmit={handleSubmit}>
-                      <div className="mb-3">
-                        <label htmlFor="image">News Image URL</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="image"
-                          placeholder="News image"
-                          required
-                          value={image}
-                          onChange={(e) => setImage(e.target.value)}
-                        />
-                      </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="NewsTitle">News Title</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="NewsTitle"
-                          placeholder="News Title"
-                          required
-                          value={title}
-                          onChange={(e) => setTitle(e.target.value)}
-                        />
-                      </div>
+      {/* <SideAdminMenu /> */}
 
-                      <div className="mb-3">
-                        <label htmlFor="description">News Description</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="Description"
-                          placeholder="Description"
-                          required
-                          value={description}
-                          onChange={(e) => setDescription(e.target.value)}
-                        />
-                      </div>
-
-                      <div className="mb-3">
-                        <label htmlFor="url">News URL</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="url"
-                          placeholder="https://example.com"
-                          required
-                          value={url}
-                          onChange={(e) => setUrl(e.target.value)}
-                        />
-                      </div>
-                      {isAdding ? (
-                        <p>Adding...</p>
-                      ) : isUpdating ? (
-                        <p>Updating...</p>
-                      ) : (
-                        <div>
-                          <button type="submit" className="btn submitBtn">
-                            {isEditMode ? "Update" : "Add"}
-                          </button>
-                          <button
-                            type="button"
-                            className="btn cancelBtn"
-                            onClick={closeModal}
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      )}
-                    </form>
+      <div className="rightheader">
+        <button onClick={sideMenu} className="burger_icon"><i className="bi bi-list"></i></button>
+        <button className="createBtn" type="button" onClick={openModal}>
+          Create
+        </button>
+        <div
+          className={`modal fade ${isModalOpen ? "show" : ""}`}
+          id="exampleModal"
+          tabIndex={-1}
+          aria-labelledby="exampleModalLabel"
+          aria-hidden={!isModalOpen}
+          style={{ display: isModalOpen ? "block" : "none" }}
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="formBox">
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="image">News Image URL</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="image"
+                      placeholder="News image"
+                      required
+                      value={image}
+                      onChange={(e) => setImage(e.target.value)}
+                    />
                   </div>
-                </div>
+
+                  <div className="mb-3">
+                    <label htmlFor="NewsTitle">News Title</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="NewsTitle"
+                      placeholder="News Title"
+                      required
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label htmlFor="description">News Description</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="Description"
+                      placeholder="Description"
+                      required
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label htmlFor="url">News URL</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="url"
+                      placeholder="https://example.com"
+                      required
+                      value={url}
+                      onChange={(e) => setUrl(e.target.value)}
+                    />
+                  </div>
+                  {isAdding ? (
+                    <p>Adding...</p>
+                  ) : isUpdating ? (
+                    <p>Updating...</p>
+                  ) : (
+                    <div>
+                      <button type="submit" className="btn submitBtn">
+                        {isEditMode ? "Update" : "Add"}
+                      </button>
+                      <button
+                        type="button"
+                        className="btn cancelBtn"
+                        onClick={closeModal}
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  )}
+                </form>
               </div>
             </div>
           </div>
-          <div className="admintable">
-            {isLoading ? (
-              <p>Loading...</p>
-            ) : (
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th scope="col">S. No.</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">URL</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {newsData.map((data, index) => (
-                    <tr key={data.id}>
-                      <th scope="row">{index + 1}</th>
-                      <td>{data.field.image && data.field.image[0].url}</td>
-                      <td>{data.field.title}</td>
-                      <td>{data.field.url}</td>
-                      <td>{data.field.description}</td>
-                      <td className="align_center">
-                        <button
-                          className="bTn"
-                          onClick={() => setEditMode(data)}
-                        >
-                          <i className="bi bi-pencil-square"></i>
-                        </button>
-                      </td>
-                      <td className="align_center">
-                        <button
-                          className="bTn delete"
-                          onClick={() => handleDelete(data.id)}
-                        >
-                          <i className="bi bi-trash-fill"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
-          </div>
-        
+        </div>
+      </div>
+      <div className="admintable">
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">URL</th>
+                <th scope="col">Description</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {newsData.map((data, index) => (
+                <tr key={data.id}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{data.field.image && data.field.image[0].url}</td>
+                  <td>{data.field.title}</td>
+                  <td>{data.field.url}</td>
+                  <td>{data.field.description}</td>
+                  <td className="align_center">
+                    <button
+                      className="bTn"
+                      onClick={() => setEditMode(data)}
+                    >
+                      <i className="bi bi-pencil-square"></i>
+                    </button>
+                  </td>
+                  <td className="align_center">
+                    <button
+                      className="bTn delete"
+                      onClick={() => handleDelete(data.id)}
+                    >
+                      <i className="bi bi-trash-fill"></i>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+
     </>
   );
 }

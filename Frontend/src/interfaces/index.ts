@@ -36,3 +36,51 @@ export interface NavbarProps {
   isLoggedIn: boolean;
   handleLogout: () => void;
 }
+
+
+export interface NewsInterface {
+  id: string,
+  field: {
+    url: string,
+    title: string,
+    description: string,
+    image: [{
+      url: string
+    }
+    ],
+    date: string
+  }
+}
+
+export interface EventDataInterface {
+
+  id: string,
+
+  field: {
+    url: string,
+    image: [{
+      url: string
+    }
+    ],
+    title: string,
+    description: string,
+    date: string
+
+  }
+}
+
+
+export interface EditItemInterface {
+  id: string,
+  field: {
+    title: string,
+    url: string,
+    description: string
+    image: [
+      {
+        url: string
+      }
+    ],
+    date: string
+  }
+}

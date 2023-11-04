@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { EditItemInterface,EventDataInterface,NewsInterface } from "../../interfaces";
+
+
 
 export default function Exhibitions() {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [exhibitionsData, setExhibitionsData] = useState([]);
+  const [exhibitionsData, setExhibitionsData] = useState<EditItemInterface []>([]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -16,7 +19,7 @@ export default function Exhibitions() {
   const [refresh, setRefresh] = useState(false);
 
   const [isEditMode, setIsEditMode] = useState(false);
-  const [editItem, setEditItem] = useState(null);
+  const [editItem, setEditItem] = useState<EditItemInterface>();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -44,7 +47,7 @@ export default function Exhibitions() {
     const closeModal = () => {
       setIsModalOpen(false);
       setIsEditMode(false);
-      setEditItem(null);
+      // setEditItem(null);
       resetForm();
     };
   
@@ -153,7 +156,7 @@ export default function Exhibitions() {
         });
     };
   
-    const setEditMode = (item: {}) => {
+    const setEditMode = (item: EditItemInterface) => {
       setIsEditMode(true);
       setEditItem(item);
       openModal();
@@ -170,7 +173,7 @@ export default function Exhibitions() {
 
     
     function sideMenu() {
-      var element = document.getElementById("adminpanel");
+      var element = document.getElementById("adminpanel") as HTMLElement;
       element.classList.toggle("show");
   
     }

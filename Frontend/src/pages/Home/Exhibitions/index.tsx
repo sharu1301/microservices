@@ -53,7 +53,7 @@ export default function Exhibitions() {
                   <div className="block">
                     <Link to="/">
                     <figure>
-                      <img data-twic-src="image:home/exhibitions_img1.jpg" alt="Exhibitions"/>
+                      <img data-twic-src="image:home/exhibitions_img1.jpg" alt="Exhibitions" width="100%"/>
                     </figure>
                     
                     </Link>

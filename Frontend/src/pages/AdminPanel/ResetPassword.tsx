@@ -89,8 +89,8 @@ export default function ResetPassword() {
 
   function password_show_hide() {
     var x = document.getElementById("password") as HTMLInputElement;
-    var show_eye = document.getElementById("show_eye");
-    var hide_eye = document.getElementById("hide_eye");
+    var show_eye = document.getElementById("show_eye") as HTMLElement;
+    var hide_eye = document.getElementById("hide_eye") as HTMLElement;
 
     hide_eye.classList.remove("d-none");
     if (x.type === "password") {
@@ -106,8 +106,8 @@ export default function ResetPassword() {
 
   function newPasswordShowHide() {
     var x = document.getElementById("resetPassword") as HTMLInputElement;
-    var newShow_eye = document.getElementById("newShow_eye");
-    var newHide_eye = document.getElementById("newHide_eye");
+    var newShow_eye = document.getElementById("newShow_eye") as HTMLElement;
+    var newHide_eye = document.getElementById("newHide_eye") as HTMLElement;
 
     newHide_eye.classList.remove("d-none");
     if (x.type === "password") {

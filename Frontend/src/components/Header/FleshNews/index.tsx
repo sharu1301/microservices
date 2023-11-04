@@ -4,17 +4,11 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { NewsInterface } from "../../../interfaces";
 
-interface NewInterface{
-  map(arg0: (data: any, index: any) => import("react/jsx-runtime").JSX.Element): React.ReactNode;
-  field:{
-    url:string,
-    title:string
-  }
-}
 export default function FleshNews() {
 
-  const [newsData, setNewsData] = useState<NewInterface>();
+  const [newsData, setNewsData] = useState<NewsInterface []>();
   const [isNewDataAdded] = useState(false);
 
   useEffect(() => {

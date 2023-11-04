@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { EventDataInterface,EditItemInterface } from "../../interfaces";
 
 export default function Events() {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [eventsData, setEventsData] = useState([]);
+  const [eventsData, setEventsData] = useState<EventDataInterface []>([]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -16,7 +17,7 @@ export default function Events() {
   const [refresh, setRefresh] = useState(false);
 
   const [isEditMode, setIsEditMode] = useState(false);
-  const [editItem, setEditItem] = useState<{id?: string| number, field?: { title: string, date: string, description: string}}| null >(null);
+  const [editItem, setEditItem] = useState<EditItemInterface >();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function Events() {
   const closeModal = () => {
     setIsModalOpen(false);
     setIsEditMode(false);
-    setEditItem(null);
+    // setEditItem(null);
     resetForm();
   };
 
@@ -153,7 +154,7 @@ export default function Events() {
       });
   };
 
-  const setEditMode = (item: {}) => {
+  const setEditMode = (item: EditItemInterface) => {
     setIsEditMode(true);
     setEditItem(item);
     openModal();

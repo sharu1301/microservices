@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 
+
+interface ElementInterface{
+  classList: any;
+  
+  
+  
+}
 export default function SideAdminMenu() {
 
     function sideMenu() {
-        var element = document.getElementById("adminpanel");
+        var element  = document.getElementById("adminpanel") as HTMLElement;
         element.classList.toggle("show");
         
      }

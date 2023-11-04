@@ -124,7 +124,7 @@ export default function EuroSeries() {
                     <Swiper
                       thumbs={{
                         swiper:
-                          imagesNavSlider && !imagesNavSlider.destroyed
+                          imagesNavSlider && !imagesNavSlider
                             ? imagesNavSlider
                             : null,
                       }}

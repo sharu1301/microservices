@@ -25,7 +25,7 @@ export default function GallaryMenu(props: GalleryMenuProps) {
           <div className="row">
             {galleryMenuData.content.map((content, index) => (
               <div className="col-md-6" key={index}>
-                <CustomHeaderComponent prop={props} content={content} />
+                <CustomHeaderComponent prop={props} content={content} setMenuImage={(img: string) => props.setgalleryMenuImage(img) } />
 
               </div>
             ))}

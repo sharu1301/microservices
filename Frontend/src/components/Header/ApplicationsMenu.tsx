@@ -29,7 +29,7 @@ export default function ApplicationsMenu(props: ApplicationMenuProps) {
             {applicationData.content.map((content, index) => (
 
               <div className="col-md-4" key={index}>
-                <CustomHeaderComponent prop={props} content={content} />
+                <CustomHeaderComponent prop={props} content={content} setMenuImage={(img: string) => props.setApplicationsMenuImage(img) }/>
               </div>
 
             ))}

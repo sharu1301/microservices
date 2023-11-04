@@ -26,6 +26,7 @@ export default function ProductMenu(props: ProductMenuProps) {
             {productMenu.content.map((content, index) => (
               <div className="col-md-6" key={index}>
                 <CustomHeaderComponent prop={props}
+                setMenuImage={(img: string) => props.setProductMenuImage(img) }
                   content={content} />
               </div>
             ))}

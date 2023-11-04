@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import menu_data from "../../resources/content/menu.json";
 import { MenuDataInterface } from "../../interfaces/menu";
 import CustomHeaderComponent from "./common";
+import { UpdateMenuProps } from "../../interfaces";
 
 type updateMenu = {
   "menu": "about_us",
   "content": []
 }
-export default function UpdatesMenu(props: any) {
+export default function UpdatesMenu(props: UpdateMenuProps) {
   let updateMenuData: MenuDataInterface = require('../../resources/content/about_us_menu.json')
   return (
     <div
@@ -37,7 +38,7 @@ export default function UpdatesMenu(props: any) {
         </div>
         <div className="col-4">
           <img
-            src={props.productMenuImage}
+            src={props.updateMenuImage}
             alt="product_img"
             id="product-dropdown-image"
             style={{ maxWidth: "450px" }}

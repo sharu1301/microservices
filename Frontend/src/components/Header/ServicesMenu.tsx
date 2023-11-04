@@ -28,7 +28,7 @@ export default function ServicesMenu(props: ServiceMenuProps) {
             {serviceMenuData.content.map((content, index) => (
 
               <div className="col-md-6" key={index}>
-                <CustomHeaderComponent prop={props} content={content} />
+                <CustomHeaderComponent prop={props} content={content} setMenuImage={(img: string) => props.setServiceMenuImage(img) }/>
 
               </div>))}
           </div>

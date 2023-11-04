@@ -25,7 +25,7 @@ export default function AboutUsMenu(props: AboutUsMenuProps) {
             {aboutUsMenu.content.map((content, index) => (
 
               <div className="col-md-6" key={index}>
-                <CustomHeaderComponent prop={props} content={content} />
+                <CustomHeaderComponent prop={props} content={content} setMenuImage={(img: string) => props.setAboutUsMenuImage(img) }/>
               </div>
 
             ))}

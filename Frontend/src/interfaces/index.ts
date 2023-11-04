@@ -31,6 +31,11 @@ export interface GalleryMenuProps {
   setgalleryMenuImage: (image: string) => void;
   hideDropdownContent: (content: string) => void;
 }
+export interface UpdateMenuProps {
+  updateMenuImage: string;
+  setUpdateMenuImage: (image: string) => void;
+  hideDropdownContent: (content: string) => void;
+}
 
 export interface NavbarProps {
   isLoggedIn: boolean;

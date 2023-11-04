@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
 import FleshNews from "./FleshNews";
 import HomeMenu from "./HomeMenu";
- import AboutUsMenu from "./AboutUsMenu";
+import AboutUsMenu from "./AboutUsMenu";
 import ServicesMenu from "./ServicesMenu";
 import ProductMenu from "./ProductMenu";
 import ApplicationsMenu from "./ApplicationsMenu";
@@ -13,7 +13,6 @@ import GallaryMenu from "./GallaryMenu";
 
 
 export default function Header() {
-
 
   const [dropDownData, setDropDownData] = useState({
     isHomeDropdownOpen: false,
@@ -52,7 +51,7 @@ export default function Header() {
   const [applicationsMenuImage, setApplicationsMenuImage] = useState(
     "images/menu/applications/index.jpg"
   );
-  const[updatesMenuImage, setUpdatesMenuImage]=useState(
+  const [updatesMenuImage, setUpdatesMenuImage] = useState(
     "images/menu/updates/index.jpg"
   );
   const [gallaryMenuImage, setGallaryMenuImage] = useState(
@@ -62,12 +61,27 @@ export default function Header() {
 
   const showDropdownContent = (nav: string) => {
     switch (nav) {
-
+      case "home":
+        setDropDownData({ ...initialDropDown })
+        break;
+      case "aboutus":
+        setDropDownData({ ...initialDropDown })
+        break;
       case "product":
         setDropDownData({ ...initialDropDown, isProductDropdownOpen: true })
         break;
+
+      case "services":
+        setDropDownData({ ...initialDropDown })
+        break;
+
+
       case "applications":
         setDropDownData({ ...initialDropDown, isApplicationsDropdownOpen: true })
+        break;
+
+      case "updates":
+        setDropDownData({ ...initialDropDown })
         break;
       case "Gallary":
         setDropDownData({ ...initialDropDown, isGallaryDropdownOpen: true })
@@ -98,7 +112,7 @@ export default function Header() {
       case "updates":
         setDropDownData({ ...dropDownData, isUpdatesDropdownOpen: false })
         break;
-      case "gallary":
+      case "Gallary":
         setDropDownData({ ...dropDownData, isGallaryDropdownOpen: false })
         break;
       default:
@@ -266,13 +280,13 @@ export default function Header() {
             </div>
 
             <div className="dropmenu">
-              {/* {isHomeDropdownOpen && (
+              {dropDownData.isHomeDropdownOpen && (
                 <HomeMenu
                   homeMenuImage={homeMenuImage}
                   setHomeMenuImage={setHomeMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
-              )} */}
+              )}
               {dropDownData.isAboutUsDropdownOpen && (
                 <AboutUsMenu
                   aboutUsMenuImage={aboutUsMenuImage}
@@ -303,8 +317,8 @@ export default function Header() {
               )}
               {dropDownData.isUpdatesDropdownOpen && (
                 <UpdatesMenu
-                  updatesMenuImage={updatesMenuImage}
-                  setUpdatesMenuImage={setUpdatesMenuImage}
+                  updateMenuImage={updatesMenuImage}
+                  setUpdateMenuImage={setUpdatesMenuImage}
                   hideDropdownContent={hideDropdownContent}
                 />
               )}

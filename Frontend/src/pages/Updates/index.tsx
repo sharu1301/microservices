@@ -82,7 +82,7 @@ export default function Updates() {
       .catch((err) => console.log(err));
   }, [isNewDataAdded])
 
-  console.log('62===>', newsData)
+  // console.log('62===>', newsData)
   //event API start here
   const [eventsData, setEventsData] = useState([]);
 
@@ -96,7 +96,7 @@ export default function Updates() {
       .then((res) => res.data && setEventsData(res.data))
       .catch((err) => console.log(err));
   }, [isNewDataAdded])
-  console.log('76', eventsData)
+  // console.log('76', eventsData)
 
   //exhibition API start here
   const [exhibitionData, setExhibitionData] = useState([]);

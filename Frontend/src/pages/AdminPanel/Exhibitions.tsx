@@ -164,7 +164,7 @@ export default function Exhibitions() {
   
     useEffect(() => {
       if (isEditMode && editItem) {
-        console.log(editItem);
+        // console.log(editItem);
         setTitle(editItem.field.title);
         setDate(editItem.field.date);
         setDescription(editItem.field.description);

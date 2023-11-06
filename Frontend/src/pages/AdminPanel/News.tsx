@@ -31,7 +31,7 @@ export default function News() {
         { headers: { "api-key": "q2dxQPAIMmQcK2aS" } }
       )
       .then((res) => {
-        console.log('New data respone',res.data)
+        // console.log('New data respone',res.data)
         setNewsData(res.data);
         setIsLoading(false);
       })

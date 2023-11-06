@@ -27,9 +27,9 @@ const AdminPanel = () => {
         { headers: { "api-key": "q2dxQPAIMmQcK2aS" } }
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.status === 200) {
-          console.log(res.data);
+          // console.log(res.data);
 
           const hashedPassword = SHA256(password).toString();
 

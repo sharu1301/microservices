@@ -162,7 +162,7 @@ export default function Events() {
 
   useEffect(() => {
     if (isEditMode && editItem && editItem.field) {
-      console.log(editItem);
+      // console.log(editItem);
       setTitle(editItem.field.title);
       setDate(editItem.field.date);
       setDescription(editItem.field.description);

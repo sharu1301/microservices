@@ -11,14 +11,13 @@ export default function DataScienceEngineering() {
   const [metaKeywords, setMetaKeywords] = useState("");
 
     useEffect(() => {
-    for (let i = 0; i < metadata.length; i++) {
-      if (metadata[i].url === window.location.pathname) {
-        setMetaTitle(metadata[i].title);
-        setMetaDescription(metadata[i].description);
-        setMetaKeywords(metadata[i].keywords);
+      const matchingMetadata = metadata.filter(item => item.url === window.location.pathname);
 
-        break;
-      }
+    if (matchingMetadata.length > 0) {
+      const matchedItem = matchingMetadata[0];
+      setMetaTitle(matchedItem.title);
+      setMetaDescription(matchedItem.description);
+      setMetaKeywords(matchedItem.keywords);
     }
   }, []);
 

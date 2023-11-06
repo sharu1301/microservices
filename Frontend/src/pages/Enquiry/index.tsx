@@ -14,14 +14,12 @@ export default function Enquiry() {
   const [metaKeywords, setMetaKeywords] = useState("");
  
   useEffect(() => {
-    for (let i = 0; i < metadata.length; i++) {
-      if (metadata[i].url === window.location.pathname) {
-        setMetaTitle(metadata[i].title);
-        setMetaDescription(metadata[i].description);
-        setMetaKeywords(metadata[i].keywords);
-
-        break;
-      }
+    const matchingMetadata = metadata.filter(item => item.url === window.location.pathname);
+    if (matchingMetadata.length > 0) {
+      const matchedItem = matchingMetadata[0];
+      setMetaTitle(matchedItem.title);
+      setMetaDescription(matchedItem.description);
+      setMetaKeywords(matchedItem.keywords);
     }
   }, []);
 

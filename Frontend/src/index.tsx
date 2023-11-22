@@ -3,24 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import { installTwicPics } from "@twicpics/components/react";
-import "@twicpics/components/style.css";
-
-installTwicPics({
-  // domain is mandatory
-  domain: "https://hindm-insigniaconsultancy.twic.pics",
-});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-       <BrowserRouter>
-         <App />
-       </BrowserRouter>
-   
+    <App />
   </React.StrictMode>
 );
 

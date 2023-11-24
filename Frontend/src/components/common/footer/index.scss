@@ -1,0 +1,91 @@
+@import "../../../assets/sass/main.scss";
+
+/* Footer Section */
+.footer-section {
+  background-color:$footer-background;
+  padding: 40px 20px 10px 20px;
+//  flex-shrink: 0;
+ display: flex-box;
+ justify-content: flex-start;
+ flex-direction: row;
+  
+
+  p {
+    color: $white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Footer Logo */
+.footer-logo {
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+    // margin-top: 60px;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 10px;
+
+      a {
+        color: $white;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* Footer Link */
+.footer-link {
+  h4 {
+    color: $white;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  ul li {
+    list-style-type: none;
+    margin-bottom: 14px;
+
+    a {
+      text-transform: capitalize;
+      color: $white;
+    }
+  }
+
+  input {
+    border: 1px solid #bebebe;
+    background: transparent;
+    width: 80%;
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+
+.footer-section .line {
+  border-top: 1px solid $white !important;
+  p{
+    font-size: 14px;
+  }
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 20px;
+
+  li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 30px;
+    color: $white;
+    font-size: 14px;
+
+    a {
+      color: $white;
+    }
+  }
+}

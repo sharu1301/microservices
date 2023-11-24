@@ -6,7 +6,7 @@ const routes = (
     <>
     <Routes>
 
-        <Route path="/" element={<Footer/>}/>
+        <Route path="/" element={<Home/>}/>
     </Routes>
     </>
 )

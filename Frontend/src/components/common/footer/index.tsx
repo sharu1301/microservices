@@ -1,17 +1,15 @@
 import "./index.scss";
-// import Services from "./Services";
 
 const Footer = () => {
   return (
     <>
-      {/* <Services /> */}
-
+    
       <div className="footer-section">
-        {/* <div className="container"> */}
+        
         <div className="row lg">
           <div className="col-md-3">
           <div className="footer-logo">
-            <img src="images/pages/footer/logo.svg" alt="" />
+            <img src="images/pages/footer/logo.svg" alt="Logo" />
 
             <ul>
               <p>Contact</p>
@@ -105,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
         </div>
-        {/* </div> */}
+       
       </div>
     </>
   );

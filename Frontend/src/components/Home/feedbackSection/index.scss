@@ -3,7 +3,12 @@
 .feedback {
 
     background: $feedback-background;
-    padding: 40px 10px 40px 40px;
+    padding: 40px 0px 40px 40px;
+    margin-right: 0px;
+    .secondaryfeedback{
+        display: flex;
+        flex-direction: row;
+    }
 
     h4 {
         color: #000;
@@ -11,7 +16,7 @@
     }
 
     p {
-        font-size: 16px;
+        font-size: 13px;
         padding-top: 15px;
     }
 
@@ -22,10 +27,11 @@
     }
 
     .iso {
-        flex-direction: row;
-        display: flex;
+        // flex-direction: row;
+         display: flex;
         margin-bottom: 20px;
-        margin-right: 10px;
+        padding-right: 10px;
+        margin-right: 0px;
 
         .icon {
             padding-right: 10px;

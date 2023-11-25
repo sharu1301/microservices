@@ -1,11 +1,12 @@
 import React from "react";
-import Header from "../../components/common/header";
-import Footer from "../../components/common/footer";
+
+import { FeedbackSection, Header, Footer } from "../../components";
 export default function Home() {
     return (
         <>
-            <Header/>
-            <Footer/>
+            <Header />
+            <FeedbackSection/>
+            <Footer />
         </>
     )
 }

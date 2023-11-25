@@ -19,6 +19,7 @@ const FeedbackSection = () => {
                         </button>
                     </div>
                     <div className="col-md-6">
+                        <div className="row">
                         <div className="iso">
                             <img alt="" src={IsoCertified} className="icon" />
                             <div>
@@ -29,25 +30,29 @@ const FeedbackSection = () => {
                         <div className="iso">
                             <img alt="" src={IsoCertified} className="icon" />
                             <div>
-                                <h6>ISO Certified Company</h6>
+                                <h6>Wide Range of Products</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
                         </div>
-                        <div className="iso">
-                            <img alt="" src={IsoCertified} className="icon" />
-                            <div>
-                                <h6>ISO Certified Company</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                            </div>
-                        </div>
-                        <div className="iso">
-                            <img alt="" src={IsoCertified} className="icon" />
-                            <div>
-                                <h6>ISO Certified Company</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                            </div>
                         </div>
 
+
+                        <div className="row">
+                        <div className="iso">
+                            <img alt="" src={IsoCertified} className="icon" />
+                            <div>
+                                <h6>Top-Notch Quality</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+                        <div className="iso">
+                            <img alt="" src={IsoCertified} className="icon" />
+                            <div>
+                                <h6>Dedicated Support Team</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+</div>
                     </div>
                 </div>
                 <div>

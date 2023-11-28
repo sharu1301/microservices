@@ -5,6 +5,7 @@ import GetinTouch from "./home/getInTouchSection";
 import Description from "./home/description";
 import Exhibition from "./home/exhibition";
 import AllMachinery from "./home/allMachinery";
+import Achievements from "./home/achievements";
 
 export {
     FeedbackSection,
@@ -13,5 +14,6 @@ export {
     GetinTouch,
     Description,
     Exhibition,
-    AllMachinery
+    AllMachinery,
+    Achievements
 };

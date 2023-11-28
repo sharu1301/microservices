@@ -24,10 +24,11 @@ const GetinTouch = () => {
                 <p>+91 +91 9312657397</p>
                 {/* <div className='socialLinks'> */}
                 <p className="socialLinks">Find Us</p>
-                <div className="imgDiv">
+
+                <div className=" imgDiv">
                     <img  alt="" src={x} />
 
-                    <img className={'e3ac851901b7444af8c2c6XLogoIcon1'} alt="" src={facebook} />
+                    <img  alt="" src={facebook} />
 
 
                     <img  alt="" src={instagram} />

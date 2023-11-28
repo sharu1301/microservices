@@ -1,4 +1,4 @@
-@import "../../../assets/sass/main.scss";
+// @import "../../../assets/sass/main.scss";
 .containerAllMachinery {
     display: flex;
     flex-direction: column;
@@ -7,6 +7,7 @@
     height: 684px;
    
     .oneStopSourceFor1 {
+        padding-top: 40px;
         font-size: 32px;
         text-transform: capitalize;
         font-family: Inter;
@@ -19,6 +20,7 @@
             padding: 0;
           display: flex;
           flex-direction: row;
+
          
          justify-content: center;
          flex-wrap:wrap;
@@ -28,6 +30,7 @@
 
         .rectangleParent {
         position: relative;
+        padding-top: 40px;
         // width: %;
         // height: 230px;
         text-align: center;
@@ -36,6 +39,7 @@
         font-family: Inter;
 
         .instanceChild {
+            padding-top: 40px;
             top: 0px;
             left: 0px;
             border-radius: 4px;

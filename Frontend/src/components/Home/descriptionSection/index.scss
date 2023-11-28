@@ -1,6 +1,7 @@
-
 @import "../../../assets/sass/main.scss";
+
 .descContainer{
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,15 +11,26 @@
    .weAreThe1 {
     margin-block-start: 0;
     margin-block-end: 5px;
+    font-size: 44px;
+    font-weight: 600;
+    padding: 10px;
     }
     .industrialMachinery {
+        padding: 10px;
+        font-size: 44px;
+        font-weight: 600;
     color: #be0e14;
     }
     .comesToIndustrialMachinery {
+        
+
+        font-size: 44px;
+        font-weight: 600;
     margin: 0;
     }
     .weAreTheContainer {
     position: relative;
+    
     font-size: 44px;
     font-weight: 600;
     font-family: Inter;
@@ -30,6 +42,8 @@
     
     .hindsMachinesA1 {
         position: relative;
+        padding-top: 20px;
+        width: 80%;
         font-size: 18px;
         font-weight: 500;
         font-family: Inter;

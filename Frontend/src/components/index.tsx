@@ -1,10 +1,10 @@
-import FeedbackSection from "./Home/feedbackSection";
+import FeedbackSection from "./home/feedbackSection";
 import Header from "./common/header";
 import Footer from "./common/footer";
-import GetinTouch from "./Home/GetInTouchSection";
-import Description from "./Home/description";
-import Exhibition from "./Home/exhibition";
-import AllMachinery from "./Home/allMachinery";
+import GetinTouch from "./home/getInTouchSection";
+import Description from "./home/description";
+import Exhibition from "./home/exhibition";
+import AllMachinery from "./home/allMachinery";
 
 export {
     FeedbackSection,

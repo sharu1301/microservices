@@ -3,11 +3,9 @@ import './index.scss';
 
 export default function Description() {
   return (
-    <>
     <div className="descContainer"> 
-
-      <div className={'textContainer'}>
-        <p className={'weAreTheText'}>We Are the Name of the Trust When It</p>
+      <div className={'weAreTheContainer'}>
+        <p className={'weAreThe1'}>We Are the Name of the Trust When It</p>
         <p className={'comesToIndustrialMachinery'}>
           <span>{`Comes to `}</span>
           <span className={'industrialMachinery'}>
@@ -15,7 +13,6 @@ export default function Description() {
           </span>
         </p>
       </div>
-
       <div className={'hindsMachinesA1'}>
         Hinds Machines, a prominent name in the field of industrial machinery,
         has been a pioneer in the development and manufacturing of cutting-edge
@@ -27,6 +24,5 @@ export default function Description() {
         <div className={'moreAboutUs1'}>more about us</div>
       </div>
     </div>
-    </>
   );
 }

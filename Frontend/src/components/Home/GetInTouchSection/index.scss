@@ -44,9 +44,17 @@
 
         .socialLinks {
             // margin: 10px 30px 10px 10px;
+            // margin: 20px 0px 0px 20px;
+            border-top: 0.5px #E5E4E2 solid;
+            .imgDiv{
+                margin: 20px 0px 0px 20px;
+                display: flex;
+                justify-content: space-between;
+            }
             img{
-                margin: 10px 0px 10px 20px;
-             
+                margin: 10px 10px 20px 40px;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

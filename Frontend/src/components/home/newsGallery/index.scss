@@ -23,11 +23,44 @@ text-transform: capitalize;
             justify-content:space-between;
             align-items: center;
         .rectangleDiv {
-          margin: 10px;
+           margin: 10px;
             border-radius: 12px;
             background-color: #f5f7f7;
             height: 347px;
+            display: flex;
+            padding-top: 20px;
+            flex-direction: column;
+            align-self: start;
+            justify-content: unset;
+
+            .title{
+                padding-top: 30px;
+                align-self: flex-start;
+                color: #363636;
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: capitalize;
             }
+
+            .subtitle{
+                padding-top: 10px ;
+                align-self: flex-start;
+                color: #666;
+text-align: center;
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+            }
+            }
+
+
         }}
 
     .ourNews{

@@ -15,9 +15,13 @@ export default function NewsGallery(){
                     <div className='horizontalContainer'>
                       <div className='rectangleDiv'>
                           <img  src={galleryImg1} width='100%'/>
+                          <p className='title'>at massa nulla quisque posuere.</p>
+                          <p className='subtitle'>Lorem ipsum dolor sit amet </p>
                        </div>
                        <div className='rectangleDiv'>
                           <img  src={galleryImg2} width='100%'/>
+                          <p className='title' >at massa nulla quisque posuere.</p>
+                          <p className='subtitle'>Lorem ipsum dolor sit amet </p>
                        </div>
                     </div>
                     
@@ -34,7 +38,7 @@ export default function NewsGallery(){
                 </div>
 
                 <div className='newsCard'>
-                           <img src={newsImg1} className='newsImage'/>
+                           <img src={newsImg2} className='newsImage'/>
                            <div>
                               <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
                               <p className='subtitle'>2mins read . 12 Aug 2023</p>   
@@ -42,7 +46,7 @@ export default function NewsGallery(){
                 </div> 
 
                 <div className='newsCard'>
-                           <img src={newsImg1} className='newsImage'/>
+                           <img src={newsImg3} className='newsImage'/>
                            <div>
                               <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
                               <p className='subtitle'>2mins read . 12 Aug 2023</p>   

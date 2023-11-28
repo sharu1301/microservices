@@ -6,6 +6,7 @@ import Description from "./home/description";
 import Exhibition from "./home/exhibition";
 import AllMachinery from "./home/allMachinery";
 import Achievements from "./home/achievements";
+import CustomerTestimonial from "./home/customerTestimonial";
 
 export {
     FeedbackSection,
@@ -15,5 +16,6 @@ export {
     Description,
     Exhibition,
     AllMachinery,
-    Achievements
+    Achievements,
+    CustomerTestimonial
 };

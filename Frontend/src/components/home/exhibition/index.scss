@@ -14,7 +14,7 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 text-transform: capitalize;
-margin: 60px;
+margin: 20px;
      }
      .description{
         width: 936px;
@@ -26,8 +26,8 @@ margin: 60px;
         // justify-content: center;
         // align-items: center;
         width: 100%;
-
-        padding: 60px;
+       
+       padding: 40px;
     
             margin: auto;
 
@@ -37,10 +37,9 @@ margin: 60px;
      .image{
    
         border-radius: 12px;
-        height: auto ;
-    
-        width: 80% ;
-        margin: 40px;
+      //   height: 80% ;
+     
+       width: 100%;
         filter:  lightgray -32.736px -254.434px / 103.05% 159.1%;
      }
 }

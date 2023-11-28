@@ -1,5 +1,5 @@
 import React from "react";
-import { FeedbackSection, Header, Footer ,GetinTouch,Description,AllMachinery,Exhibition} from "../../components";
+import { FeedbackSection, Header, Footer ,GetinTouch,Description,AllMachinery,Exhibition, NewsGallery} from "../../components";
 
 export default function Home() {
     return (
@@ -8,6 +8,7 @@ export default function Home() {
             <Description/>
             <AllMachinery/>
             <Exhibition/>
+            <NewsGallery/>
             <GetinTouch/>
             <FeedbackSection/>
             <Footer />

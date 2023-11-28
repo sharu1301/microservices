@@ -1,5 +1,5 @@
 
-@import "../../../assets/sass/main.scss";
+ @import "../../../assets/sass/main.scss";
 .descContainer{
     display: flex;
     flex-direction: column;
@@ -7,7 +7,14 @@
     align-items: center;
     
 
-   .weAreThe1 {
+    .textContainer{
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Inter;
+    text-align: center;
+    color: #363636;
+   .weAreTheText {
     margin-block-start: 0;
     margin-block-end: 5px;
     }
@@ -17,13 +24,6 @@
     .comesToIndustrialMachinery {
     margin: 0;
     }
-    .weAreTheContainer {
-    position: relative;
-    font-size: 44px;
-    font-weight: 600;
-    font-family: Inter;
-    text-align: center;
-    color: #363636;
     }
 
     

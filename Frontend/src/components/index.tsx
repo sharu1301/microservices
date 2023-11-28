@@ -6,6 +6,7 @@ import Description from "./home/description";
 import Exhibition from "./home/exhibition";
 import AllMachinery from "./home/allMachinery";
 import NewsGallery from "./home/newsGallery";
+import HeroSection from "./home/heroSection";
 
 export {
     FeedbackSection,
@@ -16,4 +17,6 @@ export {
     Exhibition,
     AllMachinery,
     NewsGallery,
-};
+    HeroSection,
+
+}

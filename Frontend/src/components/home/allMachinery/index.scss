@@ -6,7 +6,6 @@
     height: 684px;
    
     .oneStopSourceFor1 {
-
         font-size: 32px;
         text-transform: capitalize;
         font-family: Inter;
@@ -14,18 +13,28 @@
         text-align: center;
         }
 
-    
+        .cardContainer{
+            margin: 0;
+            padding: 0;
+          display: flex;
+          flex-direction: row;
+         
+         justify-content: center;
+         flex-wrap:wrap;
+          gap: 20px;
+         width: 100%;
+       
+
         .rectangleParent {
         position: relative;
-        width: 100%;
-        height: 230px;
+        // width: %;
+        // height: 230px;
         text-align: center;
         font-size: 20px;
         color: #363636;
         font-family: Inter;
 
         .instanceChild {
-    
             top: 0px;
             left: 0px;
             border-radius: 4px;
@@ -33,14 +42,13 @@
             width: 230px;
             height: 230px;
 
-            .maskGroupIcon {
-               
+            .maskGroupIcon { 
                 width: 72px;
                 height: 72px;
                 object-fit: cover;
                 }
             }
-            
+        }
         
         }
 

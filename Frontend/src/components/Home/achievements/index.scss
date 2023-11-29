@@ -1,0 +1,36 @@
+@import "../../../assets/sass/main.scss";
+
+.achievements {
+    background: $footer-background ;
+    padding: 30px 10px 30px 10px;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+        color: $white;
+        text-align: center;
+    }
+    p{
+        color: $white;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .imgSection{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    img{
+        padding-right: 20px;
+    }
+    .buttondiv{
+      
+        justify-content: center;
+        display: flex;
+    .button{
+        background: $white;
+        
+
+    }
+}
+}

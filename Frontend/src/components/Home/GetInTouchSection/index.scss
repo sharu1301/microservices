@@ -1,0 +1,66 @@
+@import "../../../assets/sass/main.scss";
+
+
+.mainDiv {
+
+    padding: 20px 10px 0px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // border: 1px solid black;
+
+    p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .form {
+        display: flex;
+
+    }
+
+    .paper-form {
+        // max-height: 300px;
+    }
+
+
+    .contactCard {
+        background-color: $footer-background;
+        border-radius: 10px;
+        margin: 30px;
+
+        h4 {
+            font-family: 'Times New Roman', Times, serif;
+            color: $white;
+            padding: 10px 10px 10px 10px;
+            // font-size: 16px;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            color: $white;
+            padding: 10px 10px 0px 10px;
+            margin-bottom: 10px;
+        }
+
+        .socialLinks {
+           
+            border-top: 0.5px #E5E4E2 solid;
+        }
+            .imgDiv{
+                margin: 20px 0px 0px 20px;
+                display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 18px;
+                
+            }
+            img{
+               height: 20px;
+               width: 20px;
+                
+            }
+        
+    }
+}

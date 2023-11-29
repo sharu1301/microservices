@@ -1,0 +1,82 @@
+@import "../../../assets/sass/main.scss";
+
+.Customers {
+    // display: flex;
+    justify-content: center;
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        color: black;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .messageScroll {
+        background: #E2E8F0;
+        padding: 10px 10px 10px 20px;
+        // display: flex;
+        align-items: center;
+        margin: 10px 50px 10px 50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.8s;
+        overflow: hidden;
+        // overflow-x:hidden;
+        height: 400px;
+
+        // .slide {
+        //     animation: scroll 15s linear infinite;
+        //     overflow: hidden;
+
+        //     @keyframes scroll {
+        //         0% {
+        //             transform: translateY(400px);
+        //         }
+
+        //         100% {
+        //             transform: translateY(-400px);
+        //         }
+        //     }
+
+        //     hover {
+        //         display: inline;
+        //     }
+
+        //     hover::after {
+        //         width: 100%;
+        //         transition: all 0.5s;
+        //     }
+        // }
+
+        .rowUi {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+            // position: absolute;
+            padding-bottom: 10px;
+            align-items: flex-end;
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 30px;
+            position: absolute;
+        }
+
+        p {
+            background: $white;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            margin: 10px 10px 10px 50px;
+            padding: 5px 15px 5px 10px;
+            color: $black;
+            flex-wrap: wrap;
+
+        }
+    }
+}

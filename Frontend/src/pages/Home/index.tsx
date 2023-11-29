@@ -1,12 +1,22 @@
 import React from "react";
+import { FeedbackSection, Header, Footer, GetinTouch, Description, AllMachinery, Exhibition, NewsGallery, HeroSection, Achievements, CustomerTestimonial } from "../../components";
 
-import { FeedbackSection, Header, Footer } from "../../components";
 export default function Home() {
     return (
         <>
             <Header />
-            <FeedbackSection/>
+            <HeroSection />
+            <Description />
+            <AllMachinery />
+            <Exhibition />
+            <CustomerTestimonial />
+            <Achievements />
+
+            <NewsGallery />
+            <GetinTouch />
+            <FeedbackSection />
             <Footer />
+
         </>
     )
 }

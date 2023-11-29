@@ -1,0 +1,78 @@
+@import "../../../assets/sass/main.scss";
+
+.descContainer{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+   .weAreThe1 {
+    margin-block-start: 0;
+    margin-block-end: 5px;
+    font-size: 44px;
+    font-weight: 600;
+    padding: 10px;
+    }
+    .industrialMachinery {
+        padding: 10px;
+        font-size: 44px;
+        font-weight: 600;
+    color: #be0e14;
+    }
+    .comesToIndustrialMachinery {
+        
+
+        font-size: 44px;
+        font-weight: 600;
+    margin: 0;
+    }
+    .weAreTheContainer {
+    position: relative;
+    
+    font-size: 44px;
+    font-weight: 600;
+    font-family: Inter;
+    text-align: center;
+    color: #363636;
+    }
+
+    
+    
+    .hindsMachinesA1 {
+        position: relative;
+        padding-top: 20px;
+        width: 80%;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: Inter;
+        color: #666;
+        text-align: center;
+        display: inline-block;
+    
+        }
+            .moreAboutUsParent {
+            position: relative;
+            border-radius: 4px;
+            background-color: #be0e14;
+            width: 250px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 48px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            font-family: Inter;
+            margin: 20px;
+
+            .moreAboutUs1 {
+                position: relative;
+                text-transform: capitalize;
+                font-weight: 600;
+                }
+            }
+        }

@@ -88,7 +88,7 @@ export default function CustomerTestimonial() {
         <div className='Customers' >
             <h3>Our Happy Customers</h3>
             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br /> Consectetur sit enim facilisi faucibus elementum feugiat.</p>
-            <div className='row rowStyle'>
+            <div className='rowStyle'>
                 <div className='col-md-5 messageScroll'>
 
                     <div className='slide'>

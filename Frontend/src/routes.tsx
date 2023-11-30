@@ -1,13 +1,14 @@
-import {Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Footer from './components/common/footer';
+import FAQScreen from './pages/FAQ';
 
 const routes = (
     <>
-    <Routes>
+        <Routes>
 
-        <Route path="/" element={<Home/>}/>
-    </Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/FAQ" element={<FAQScreen />} />
+        </Routes>
     </>
 )
 

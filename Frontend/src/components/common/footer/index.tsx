@@ -44,7 +44,7 @@ const Footer = () => {
                   <a href="/buy">Careers</a>
                 </li>
                 <li>
-                  <a href="/buy">FAQ</a>
+                  <a href="/FAQ">FAQ</a>
                 </li>
               </ul>
             </div>

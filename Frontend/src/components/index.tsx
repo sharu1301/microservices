@@ -9,6 +9,7 @@ import Achievements from "./home/achievements";
 import CustomerTestimonial from "./home/customerTestimonial";
 import NewsGallery from "./home/newsGallery";
 import HeroSection from "./home/heroSection";
+import ZoomModal from "./home/customerTestimonial/zoomModal";
 
 export {
     FeedbackSection,
@@ -22,6 +23,7 @@ export {
     CustomerTestimonial,
     NewsGallery,
     HeroSection,
+    ZoomModal
 };
     
 

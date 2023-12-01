@@ -15,7 +15,7 @@ const Achievements = () => {
             <h4>Our Achievements</h4>
             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br />
                 Consectetur sit enim facilisi faucibus elementum feugiat. </p>
-            <div className="row imgSection">
+            <div className="imgSection">
                 <img src={Achievement1} />
                 <img src={Achievement2} />
                 <img src={Achievement3} />

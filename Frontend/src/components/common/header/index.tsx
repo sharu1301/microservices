@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import {Link} from 'react-router-dom';
 
 import facebook from '../../../assets/icons/facebook.png';
 import x from '../../../assets/icons/x.png';
@@ -11,7 +12,7 @@ import logo from '../../../assets/logo/logo.png';
 export default function Header () {
     return(
         <>
-          <div >
+          <div>
               <div className='rectangleDiv'>
                 <p className='welcomeToHinds1'>Welcome to hinds machine (ISO Certified company)</p>
                 <div className={'icons'}>
@@ -35,12 +36,14 @@ export default function Header () {
 
                  <div>
                  <ul>
-                    <li>Home</li>
+                    <li>
+                     <Link to="/"> Home </Link>
+                    </li>
                     <li>About Us</li>
                     <li>Services</li>
                     <li>Products</li>
                     <li>Applications</li>
-                    <li>Gallery</li>
+                    <li> <Link to="/gallery">Gallery</Link></li>
                     <li>Career</li>
                 </ul>
                  </div>

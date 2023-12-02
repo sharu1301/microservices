@@ -1,0 +1,29 @@
+@import "../../../assets/sass/main.scss";
+.call-to-action {
+  .primary-heading {
+    font-size: 35px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px; /* 130% */
+    padding-top: 16px;
+    max-width: 591px;
+    margin: auto;
+  }
+  .custom-btn {
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+    padding: 12px 32px;
+    background: #e21d23;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: #fff;
+    border-radius: 0;
+    margin-top: 20px;
+  }
+}

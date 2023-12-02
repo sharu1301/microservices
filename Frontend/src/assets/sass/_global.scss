@@ -1,11 +1,12 @@
 body {
-  // font-family: $inter;
+  font-family: $inter;
   font-size: $f16;
-  font-weight: 400;
   line-height: 24px;
+  font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
-  line-height: normal;
+  font-style: normal;
+  color: $gray;
 }
 
 h1,
@@ -14,55 +15,141 @@ h3,
 h4,
 h5,
 h6 {
-  // font-family: $playFlair;
-}
-.font-play {
-  // font-family: $playFlair !important;
-}
-.font-inter {
-  // font-family: $inter !important;
-}
-.txt-white {
-  color: $white;
-}
-.txt-black {
+  font-weight: 600;
+  line-height: normal;
   color: $black;
 }
+
+h1 {
+  font-size: 58px;
+  line-height: 105.023%; /* 60.913px */
+  letter-spacing: 0.87px;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 60px; /* 120% */
+}
+h3 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+  @include breakpoint(xs) {
+    font-size: 34px;
+  }
+}
+h4 {
+  font-size: 40px;
+}
+h5 {
+  font-size: 36px;
+  line-height: 48px; /* 133.333% */
+}
+
 a {
   text-decoration: none !important;
 }
+
 section {
   position: relative;
 }
 .section {
   width: $w100;
-  padding: 88px 64px;
+  padding: 80px 84px;
+  @media (max-width: 768px) {
+    padding: 49px 10px;
+  }
+}
+.bg-light {
+  background: #f5f5f5;
+}
+// Page Banner section Start
+
+.pageBanner {
+  width: 100%;
+  min-height: 334px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      0deg,
+      rgba(8, 91, 136, 0.6) 0%,
+      rgba(8, 91, 136, 0.6) 100%
+    ),
+    url(../../../public/images/pages/page-title-bg.png);
+  backdrop-filter: blur(4px);
+  background-position: center;
+  background-repeat: no-repeat;
+  .pageTitle {
+    text-align: center;
+    color: $white;
+    font-size: 56px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 60px;
+  }
+  nav {
+    .breadcrumb {
+      padding: 0.3rem 1rem;
+      background-color: #e9ecef00;
+      width: fit-content;
+      margin: auto;
+    }
+    .breadcrumb-item {
+      color: $white;
+      a {
+        color: $white;
+      }
+      & + .breadcrumb-item::before {
+        display: inline-block;
+        padding-right: 0.5rem;
+        color: $white;
+        content: $breadcrumb-divider;
+      }
+    }
+  }
 }
 
+// Page Banner section Start end
+
 .primary-heading {
-  // font-family: $playFlair;
-  font-size: 48px;
-  font-weight: $fw600;
-  line-height: 58px;
-  letter-spacing: 0em;
+  color: $black;
+  font-family: $inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 52px; /* 144.444% */
+  text-transform: capitalize;
 }
 .sub-heading {
-  color: #d9ae66;
-  // font-family: Adinda Melia;
-  font-size: $f28;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 35px; /* 125% */
-  letter-spacing: 1.12px;
+  color: $black;
+  /* Text/Regular/Semi Bold */
+  font-family: $roboto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
 }
+
 p {
-  // font-family: $inter;
   font-size: $f18;
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 0em;
   color: $gray;
+  margin-bottom: 20px;
 }
+
+.btn-custom {
+  height: 56px;
+  padding: 16px 21px;
+  background: #085b88;
+  border-radius: 0;
+  color: $white;
+  font-size: 18px;
+  line-height: 16px; /* 88.889% */
+  font-weight: 600;
+}
+
 .mt-40 {
   margin-top: 40px;
 }
@@ -76,8 +163,17 @@ p {
 }
 
 // padding
+.pt-94 {
+  padding-top: 94px;
+}
 .plr-77 {
   padding: 0 77px;
+}
+.ptb-70 {
+  padding: 70px 0;
+}
+.ptb-56 {
+  padding: 56px 0;
 }
 
 ol,

@@ -1,15 +1,17 @@
+$breadcrumb-divider: quote(">");
 // colors
 $white: #fff;
 $black: #363636;
 $gray: #666666;
 $zblack: #000;
-$footer-background:#283742;
-$feedback-background:#F6F8FA;
+$footer-background: #283742;
+$feedback-background: #f6f8fa;
 
 // Font
+
+$inter: "Inter", sans-serif;
 // $playFlair: "Playfair Display", serif;
-// $inter: "Inter", sans-serif;
-// $roboto: "Roboto", sans-serif;
+$roboto: "Roboto", sans-serif;
 
 // Font Sizes
 $f12: 12px;
@@ -46,11 +48,7 @@ $pt-5: 50px;
 $pt-6: 60px;
 $pt-7: 70px;
 
-$breakpoint-mobile:576px;
-$breakpoint-tablet:768px;
-$breakpoint-smallscreen:992px;
-$breakpoint-bigScreen:1200px;
-
-
-
-
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-smallscreen: 992px;
+$breakpoint-bigScreen: 1200px;

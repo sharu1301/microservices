@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3c6ab7f6.css",
+    "main.js": "/static/js/main.794c13a8.js",
+    "static/js/787.9e9f4ffd.chunk.js": "/static/js/787.9e9f4ffd.chunk.js",
+    "static/media/exhibition_img_1.png": "/static/media/exhibition_img_1.79ba59e162431953b28b.png",
+    "static/media/Sample1.mp4": "/static/media/Sample1.867b6ab1c9db83359f6b.mp4",
+    "static/media/heroImage.png": "/static/media/heroImage.f3a79bb2ac36fa1d420e.png",
+    "static/media/page-title-bg.png": "/static/media/page-title-bg.6ff451401408625497a1.png",
+    "static/media/img5.jpeg": "/static/media/img5.60b1578aea2986a42510.jpeg",
+    "static/media/hero-img.jpeg": "/static/media/hero-img.ee63b2cb810c98f75294.jpeg",
+    "static/media/img2.jpeg": "/static/media/img2.7266b70310556ed3109b.jpeg",
+    "static/media/img1.jpeg": "/static/media/img1.d55a1078cbbca3afa14c.jpeg",
+    "static/media/img3.jpeg": "/static/media/img3.e20897f107ad05ca6945.jpeg",
+    "static/media/gallery_img_2.png": "/static/media/gallery_img_2.16539470ea80da79fe7b.png",
+    "static/media/Achievement1.png": "/static/media/Achievement1.ec023a961cce8e317db2.png",
+    "static/media/Achievement3.png": "/static/media/Achievement3.ec023a961cce8e317db2.png",
+    "static/media/gallery_img_1.png": "/static/media/gallery_img_1.fb14cd93c7bdcd940096.png",
+    "static/media/img2.png": "/static/media/img2.1fc8b07071b514163297.png",
+    "static/media/Achievement2.png": "/static/media/Achievement2.28fcb4f6255f7c90fc22.png",
+    "static/media/img4.png": "/static/media/img4.4d5ffe82278b692d36a1.png",
+    "static/media/img3.png": "/static/media/img3.2f1f5adfad0ee2acfe8d.png",
+    "static/media/img1.png": "/static/media/img1.ff6c9b3f0b12c2fb4a36.png",
+    "static/media/img4.jpeg": "/static/media/img4.1cdf82a5639a65e7f2af.jpeg",
+    "static/media/news_img_2.png": "/static/media/news_img_2.125f61ef42074448ed8d.png",
+    "static/media/news_img_1.png": "/static/media/news_img_1.0fd325aaa8e6eb315678.png",
+    "static/media/news_img_3.png": "/static/media/news_img_3.50f2bc0b8bb7e3fd3c04.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "index.html": "/index.html",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "main.3c6ab7f6.css.map": "/static/css/main.3c6ab7f6.css.map",
+    "main.794c13a8.js.map": "/static/js/main.794c13a8.js.map",
+    "787.9e9f4ffd.chunk.js.map": "/static/js/787.9e9f4ffd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c6ab7f6.css",
+    "static/js/main.794c13a8.js"
+  ]
+}

@@ -8,7 +8,7 @@ import image4 from '../../../assets/images/gallery/exhibition/img4.png';
 
 
 
-export default function Exhibition (){
+export default function ExhibitionGallery (){
     return(
         <>
         <div className='container'>

@@ -10,6 +10,10 @@ import CustomerTestimonial from "./home/customerTestimonial";
 import NewsGallery from "./home/newsGallery";
 import HeroSection from "./home/heroSection";
 import ZoomModal from "./home/customerTestimonial/zoomModal";
+import AllGallery from "./gallery/allGallery";
+import ExhibitionGallery from "./gallery/exhibition";
+import PageTitle from "./common/pageTitle";
+import SubFooter from "./common/subFooter";
 
 export {
     FeedbackSection,
@@ -23,7 +27,11 @@ export {
     CustomerTestimonial,
     NewsGallery,
     HeroSection,
-    ZoomModal
+    ZoomModal,
+    AllGallery,
+    ExhibitionGallery,
+    PageTitle,
+    SubFooter
 };
     
 

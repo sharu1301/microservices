@@ -4,7 +4,7 @@ import { FeedbackSection, Header, Footer, GetinTouch, Description, AllMachinery,
 export default function Home() {
     return (
         <>
-            <Header />
+            <Header/>
             <HeroSection />
             <Description />
             <AllMachinery />

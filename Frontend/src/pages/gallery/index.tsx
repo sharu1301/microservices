@@ -27,8 +27,8 @@ export default function Gallery(){
           <Header />
          {/* <h2> Gallery</h2> */}
 
-         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-      <Tabs value={value} onChange={handleChange} centered aria-label="wrapped label tabs example">
+         <Box sx={{ borderBottom: 1, borderColor: 'divider',  marginLeft:"100px", marginRight: "100px"  }}>
+      <Tabs value={value} onChange={handleChange} centered aria-label="">
         <Tab label="All Gallery" />
         <Tab label="Exhibition Gallery" />
         <Tab label="Machine Gallery" />

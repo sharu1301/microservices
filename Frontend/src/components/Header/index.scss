@@ -102,6 +102,9 @@ cursor: pointer;
       li:hover {
         color: red; /* Change the color on hover */
       }
+      .active{
+        color: red;
+      }
     .contactUsParent {
         position: relative;
         background-color: #e21d23;

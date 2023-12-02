@@ -12,6 +12,8 @@ import HeroSection from "./home/heroSection";
 import ZoomModal from "./home/customerTestimonial/zoomModal";
 import AllGallery from "./gallery/allGallery";
 import ExhibitionGallery from "./gallery/exhibition";
+import PageTitle from "./common/pageTitle";
+import SubFooter from "./common/subFooter";
 
 export {
     FeedbackSection,
@@ -27,7 +29,9 @@ export {
     HeroSection,
     ZoomModal,
     AllGallery,
-    ExhibitionGallery
+    ExhibitionGallery,
+    PageTitle,
+    SubFooter
 };
     
 

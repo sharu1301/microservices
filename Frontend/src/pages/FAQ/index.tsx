@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Footer } from "../../components";
+import { Header, Footer ,SubFooter,PageTitle} from "../../components";
 import 'react-accessible-accordion/dist/fancy-example.css';
 import FAQData from "../../data/faqdata.json";
 import Faq from 'react-faq-component';
@@ -17,6 +17,7 @@ const FAQScreen = () => {
     return (
         <div>
             <Header />
+            <PageTitle title={"FAQ"} />
             <div className="faqSection">
                 <h3>Frequently Asked Questions</h3>
                 <p>Need help with something? Here are our most frequently asked questions.
@@ -25,6 +26,7 @@ const FAQScreen = () => {
                     <Faq data={FAQData} config={config} />
                 </div>
             </div>
+            <SubFooter/>
             <Footer />
         </div>
     )

@@ -6,7 +6,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 // import AllGallery from "../../components/gallery/allGallery";
 // import Exhibition from "../../components/gallery/exhibition";
-import {Footer,AllGallery,ExhibitionGallery} from "../../components";
+import { Footer, AllGallery, ExhibitionGallery, SubFooter, PageTitle } from "../../components";
 
 
 const TabPanel = ({ value, index, children }) => (
@@ -27,7 +27,7 @@ export default function Gallery() {
     <>
       <Header />
       {/* <h2> Gallery</h2> */}
-
+      <PageTitle title={"Gallery"} />
       <Box sx={{ borderBottom: 1, borderColor: 'divider', marginLeft: "100px", marginRight: "100px" }}>
         <Tabs value={value} onChange={handleChange} centered aria-label="">
           <Tab label="All Gallery" />
@@ -50,6 +50,7 @@ export default function Gallery() {
       <TabPanel value={value} index={3}>
         <ExhibitionGallery />
       </TabPanel>
+      <SubFooter/>
       <Footer />
     </>
   )

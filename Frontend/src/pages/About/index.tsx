@@ -1,8 +1,9 @@
-import React from "react";
-import { Footer, Header } from "../../components";
 import "./index.scss";
-import SubFooter from "../../components/common/subFooter";
-import PageTitle from "../../components/common/pageTitle";
+import SubFooter from "../../components/subFooter";
+import PageTitle from "../../components/pageTitle";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
 function About() {
   return (
     <>

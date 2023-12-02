@@ -4,7 +4,7 @@ import Achievement1 from '../../../assets/images/Achievement1.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ZoomModal from './zoomModal';
+import ZoomModal from './ZoomModal';
 const Sample1 = require('../../../assets/videos/Sample1.mp4')
 // import Video2 from "../../../assets/videos/Sample2.mp4";
 

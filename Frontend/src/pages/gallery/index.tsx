@@ -1,13 +1,13 @@
 import React from "react";
-import { Header } from "../../components";
-
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-// import AllGallery from "../../components/gallery/allGallery";
-// import Exhibition from "../../components/gallery/exhibition";
-import { Footer, AllGallery, ExhibitionGallery, SubFooter, PageTitle } from "../../components";
-
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import Header from "../../components/Header";
+import PageTitle from "../../components/pageTitle";
+import AllGallery from "./allGallery";
+import ExhibitionGallery from "./exhibition";
+import SubFooter from "../../components/subFooter";
+import Footer from "../../components/Footer";
 
 const TabPanel = ({ value, index, children }) => (
   <div hidden={value !== index}>
@@ -16,7 +16,6 @@ const TabPanel = ({ value, index, children }) => (
 );
 
 export default function Gallery() {
-
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -28,7 +27,14 @@ export default function Gallery() {
       <Header />
       {/* <h2> Gallery</h2> */}
       <PageTitle title={"Gallery"} />
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', marginLeft: "100px", marginRight: "100px" }}>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          marginLeft: "100px",
+          marginRight: "100px",
+        }}
+      >
         <Tabs value={value} onChange={handleChange} centered aria-label="">
           <Tab label="All Gallery" />
           <Tab label="Exhibition Gallery" />
@@ -50,8 +56,8 @@ export default function Gallery() {
       <TabPanel value={value} index={3}>
         <ExhibitionGallery />
       </TabPanel>
-      <SubFooter/>
+      <SubFooter />
       <Footer />
     </>
-  )
+  );
 }

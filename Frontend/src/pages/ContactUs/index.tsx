@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../components";
+import { Header, Footer,PageTitle,SubFooter } from "../../components";
 import './index.scss'
 
 
@@ -8,6 +8,7 @@ export default function ContactUs() {
     return (
         <div>
             <Header />
+            <PageTitle title="Contact us"/>
             <div className="row contact">
                 <div className="getInTouch col-md-5">
                     <h4> Get in touch</h4>
@@ -42,7 +43,8 @@ export default function ContactUs() {
 
                 </div>
             </div>
-
+            <SubFooter/>
+            <Footer />
         </div>
     )
 }

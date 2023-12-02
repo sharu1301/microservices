@@ -22,7 +22,7 @@ const Achievements = () => {
 
             </div>
             <div className="buttondiv">
-                <button type="button" className="btn btn-formSubmit button" color='white'>
+                <button type="button" className="btn btn-formSubmit button">
                     See All Achievements <BsArrowRight size={22} />
                 </button>
             </div>

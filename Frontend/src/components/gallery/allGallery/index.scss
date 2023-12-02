@@ -1,31 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+
+        .image {
+            height: auto;
+            width: 100%;
+        }
 
 
-.container{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-width: 100%;
-gap: 10px;
+        .row-2 {
+            grid-column: span 2;
 
-   .gallery{
-     display: grid;
-     grid-template-columns: auto auto auto;
-     grid-gap: 10px;
-    .image{
-        height: auto;
-         width: 100%;
+        }
+
+        .col-2 {
+            grid-row: 2/3;
+        }
     }
-
-
-    .row-2{
-        grid-column: span 2;
-    
-    }
-    .col-2{
-        grid-row: 2/3;
-    }
-   }
 
 }
-

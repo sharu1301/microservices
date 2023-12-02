@@ -23,7 +23,7 @@ const images = [
 
 export default function Exhibition() {
 
-    const ref = useRef();
+    const ref:any = useRef();
 
 
     const ArrowLeft =() =>{

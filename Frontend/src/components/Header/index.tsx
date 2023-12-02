@@ -56,7 +56,7 @@ export default function Header() {
               <li onClick={() => navigate("/about")}>About Us</li>
               <li>Services</li>
               <li>Products</li>
-              <li>Applications</li>
+              <li onClick={() => navigate("/applications")} >Applications</li>
               <li onClick={() => navigate("/gallery")}>Gallery</li>
               <li>Career</li>
             </ul>

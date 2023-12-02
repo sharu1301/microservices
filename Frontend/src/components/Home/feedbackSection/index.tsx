@@ -22,7 +22,7 @@ const FeedbackSection = () => {
                         </button>
                     </div>
                     <div className="col-md-6">
-                        <div className="row xs">
+                        <div className="row">
                             <div className="iso">
                                 <img alt="" src={IsoCertified} className="icon" />
                                 <div>

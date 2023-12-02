@@ -1,18 +1,10 @@
 import React from "react";
-import { Header } from "../../components";
-
-
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemHeading,
-    AccordionItemButton,
-    AccordionItemPanel,
-} from 'react-accessible-accordion';
+import { Header, Footer } from "../../components";
 import 'react-accessible-accordion/dist/fancy-example.css';
 import FAQData from "../../data/faqdata.json";
 import Faq from 'react-faq-component';
 import './index.scss';
+
 
 const FAQScreen = () => {
     const config = {
@@ -30,11 +22,10 @@ const FAQScreen = () => {
                 <p>Need help with something? Here are our most frequently asked questions.
                 </p>
                 <div className="container faqData">
-
                     <Faq data={FAQData} config={config} />
-
                 </div>
             </div>
+            <Footer />
         </div>
     )
 };

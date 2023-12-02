@@ -1,7 +1,6 @@
 import React from 'react';
 import './index.scss';
-import {Link} from 'react-router-dom';
-
+import {Link, useNavigate} from 'react-router-dom';
 import facebook from '../../../assets/icons/facebook.png';
 import x from '../../../assets/icons/x.png';
 import linkedIn from '../../../assets/icons/linkedin.png';
@@ -10,6 +9,7 @@ import  instagram from '../../../assets/icons/instagram.png';
 import logo from '../../../assets/logo/logo.png';
 
 export default function Header () {
+  const navigate=useNavigate()
     return(
         <>
           <div>
@@ -49,7 +49,7 @@ export default function Header () {
                  </div>
 
                  <div className='contactUsParent'>
-                   <b className='contactUs'> Contact Us</b>  
+                   <b className='contactUs' onClick={()=>navigate('/contactus')}> Contact Us</b>  
                  </div>
               </div>
 

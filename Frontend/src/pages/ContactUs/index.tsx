@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../components";
+import { Header, Footer } from "../../components";
 import './index.scss'
 
 
@@ -42,7 +42,7 @@ export default function ContactUs() {
 
                 </div>
             </div>
-
+            <Footer />
         </div>
     )
 }

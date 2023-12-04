@@ -3,6 +3,9 @@ stages:
 
 build:
     stage: build
+    image: nginx:1.12-alpine
     script:
-        - npm run build
-        
+        - ./npm run build
+artifacts:
+    paths:
+        - ./build        

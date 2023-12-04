@@ -5,6 +5,7 @@ import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/gallery";
 import About from "./pages/About";
 import Applications from "./pages/applications";
+import ProductSpecification from "./pages/ProductSpecification";
 
 const routes = (
   <>
@@ -15,6 +16,7 @@ const routes = (
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
       <Route path="/applications" element={<Applications/>}/>
+      <Route path="/product-specification" element={<ProductSpecification/>}/>
     </Routes>
   </>
 );

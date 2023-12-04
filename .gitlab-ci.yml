@@ -5,7 +5,13 @@ build:
     stage: build
     image: nginx:1.12-alpine
     script:
-        - ./npm run build
+        - git clone
+        - shaik@insigniaconsultancy.com
+        - wOutLogin
+        - cd ics-ics-hind-machine
+        - git branch
+        - git checkout dev
+        - npm run build
 artifacts:
     paths:
         - ./build        

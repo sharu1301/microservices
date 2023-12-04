@@ -4,13 +4,10 @@ stages:
 build:
     stage: build
     script:
-        - ./git clone
-        - ./shaik@insigniaconsultancy.com
-        - ./wOutLogin
-        - ./cd ics-ics-hind-machine
-        - ./git branch
-        - ./git checkout dev
-        - ./npm run build
-artifacts:
-    paths:
-        - ./build        
+        - git clone
+        - shaik@insigniaconsultancy.com
+        - wOutLogin
+        - cd ics-ics-hind-machine
+        - git branch
+        - git checkout dev
+        - npm run build        

@@ -4,6 +4,7 @@ import FAQScreen from "./pages/FAQ";
 import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/gallery";
 import About from "./pages/About";
+import Service from "./pages/Services";
 
 const routes = (
   <>
@@ -13,6 +14,7 @@ const routes = (
       <Route path="/contactus" element={<ContactUs />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
+      <Route path="/service" element={<Service />} />
     </Routes>
   </>
 );

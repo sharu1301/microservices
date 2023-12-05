@@ -41,10 +41,15 @@ h3 {
 }
 h4 {
   font-size: 40px;
+  line-height: 50px;
 }
 h5 {
-  font-size: 36px;
+  font-size: 42px;
   line-height: 48px; /* 133.333% */
+}
+h6 {
+  font-size: 32px;
+  line-height: 38px;
 }
 
 a {
@@ -174,6 +179,12 @@ p {
 }
 .ptb-56 {
   padding: 56px 0;
+}
+
+// margins
+
+.mt-65 {
+  margin-top: 65px;
 }
 
 ol,

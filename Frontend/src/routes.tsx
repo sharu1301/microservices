@@ -7,6 +7,8 @@ import About from "./pages/About";
 import ProductList from "./pages/Products";
 import ProductEnquiry from "./pages/Enquiry";
 
+import Applications from "./pages/applications";
+import ProductSpecification from "./pages/ProductSpecification";
 
 const routes = (
   <>
@@ -18,6 +20,8 @@ const routes = (
       <Route path="/about" element={<About />} />
       <Route path="/productlist" element={<ProductList />} />
       <Route path="/productenquiry" element={<ProductEnquiry />} />
+      <Route path="/applications" element={<Applications/>}/>
+      <Route path="/product-specification" element={<ProductSpecification/>}/>
     </Routes>
   </>
 );

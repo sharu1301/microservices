@@ -9,7 +9,7 @@ export default function ContactUs() {
     <div>
       <Header />
       <PageTitle title="Contact us" />
-      <div className="row contact">
+      <div className="contact">
         <div className="getInTouch col-md-5">
           <h4> Get in touch</h4>
           <p>We’d love to hear from you. Please fill out this form.</p>

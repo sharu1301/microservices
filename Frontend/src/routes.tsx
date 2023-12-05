@@ -9,6 +9,7 @@ import ProductEnquiry from "./pages/Enquiry";
 
 import Applications from "./pages/applications";
 import ProductSpecification from "./pages/ProductSpecification";
+import Service from "./pages/Services";
 
 const routes = (
   <>
@@ -22,6 +23,7 @@ const routes = (
       <Route path="/productenquiry" element={<ProductEnquiry />} />
       <Route path="/applications" element={<Applications/>}/>
       <Route path="/product-specification" element={<ProductSpecification/>}/>
+      <Route path="/service" element={<Service />} />
     </Routes>
   </>
 );

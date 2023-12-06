@@ -5,6 +5,7 @@ import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/gallery";
 import About from "./pages/About";
 import Service from "./pages/Services";
+import Process from "./pages/ProcessOptimisation";
 
 const routes = (
   <>
@@ -15,6 +16,7 @@ const routes = (
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
       <Route path="/service" element={<Service />} />
+      <Route path="/process" element={<Process />} />
     </Routes>
   </>
 );

@@ -3,6 +3,8 @@ import './index.scss';
 import EuroPacImg from '../../../assets/images/productimages/EuroPac.png'
 import { BsArrowRight } from "react-icons/bs";
 
+import { useNavigate } from 'react-router-dom';
+
 
 interface LeftImgComponentInterface {
     title: string
@@ -14,6 +16,9 @@ interface LeftImgComponentInterface {
     l4?: string
 }
 export default function LeftImgComponent({ title, img, description, l1, l2, l3, l4 }: LeftImgComponentInterface) {
+
+    const navigate = useNavigate();
+
     return (
         <div className="row leftComponent">
             <div className='col-md-5 leftimgSection'>
@@ -22,6 +27,7 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
             <div className='col-md-5 rightDescription'>
                 <h4>{title}</h4>
                 <p>{description}</p>
+                <img className='responsiveImg' src={img} />
                 <div className="row">
                     <p className='highlighed'>Low Power Consumption</p>
                     <p className='highlighed'>Hydraulic motor</p>
@@ -38,7 +44,7 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
                     </ul>
                     <p className='highlighed'>Industry : Packaging, Cup & Closure</p>
 
-                <div className='button'><p>View Details <BsArrowRight size={22} /></p> </div>
+                <div className='button' onClick={() => navigate(`/product-specification/${title}`)}><p>View Details <BsArrowRight size={22} /></p> </div>
             </div>
         </div>
 

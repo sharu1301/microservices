@@ -20,8 +20,11 @@ import bottomSlider1 from '../../assets/images/product-specification/bottomSlide
 import bottomSlider2 from '../../assets/images/product-specification/bottomSlider2.png';
 import bottomSlider3 from '../../assets/images/product-specification/bottomSlider3.png';
 import bottomSlider4 from '../../assets/images/product-specification/bottomSlider4.png';
+import { useParams } from 'react-router-dom';
 
 export default function ProductSpecification(){
+
+    const { productname } = useParams();
 
     const [footerImg, setFooterImg] = useState(bottomSlider1);
 
@@ -40,7 +43,7 @@ export default function ProductSpecification(){
 
         <>
            <Header/>
-          <PageTitle title="Euro Pac Series"/>
+          <PageTitle title={productname || "Euro Pac Series"}/>
 
           <div className='mainSectionContainer'>
              <img src={ mainImg }  className='image'/>

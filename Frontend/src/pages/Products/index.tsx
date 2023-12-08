@@ -11,7 +11,10 @@ import EuroCPVCImg from "../../assets/images/productimages/EuroCPVC.png";
 import EuroRImg from "../../assets/images/productimages/EuroR.png";
 
 
+
 const ProductList = () => {
+
+  
     return (
         <div>
             <Header />
@@ -28,7 +31,8 @@ const ProductList = () => {
                 l4={`  LPMT for posion measuring for moving platen, screw travel & Ejection.`}
             />
 
-            <RightImgComponent />
+            <RightImgComponent
+            />
             <LeftImgComponent
                 title="Euro Servo Series"
                 img={EuroServoImg}

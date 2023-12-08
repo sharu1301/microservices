@@ -8,12 +8,23 @@
     align-items: center;
 
     .rightimgSection {
-        padding: 10px 5px 10px 40px;
+        padding: 10px 5px 10px ;
+        @media (max-width: 400px) {
+            display: none;
+          }
     }
 
     .rightDescription {
         // border: 1px solid black;
+        margin: 15px;
         align-items: flex-end;
+
+        .responsiveImg{
+            width: 100%;
+            @media (min-width: 400px) {
+                display: none;
+              }
+        }
 
         h4 {
             padding-top: 10px;

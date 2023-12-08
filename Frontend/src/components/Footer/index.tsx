@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
 
-          <div className="col-md-3">
+          <div className="col-md-3 col-6">
             <div className="footer-link pl-2">
               <h4>Quick Links</h4>
               <ul>
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-md-2">
+          <div className="col-md-2 col-6">
             <div className="footer-link">
               <h4>Others</h4>
               <ul>

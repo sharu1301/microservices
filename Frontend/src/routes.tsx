@@ -10,6 +10,7 @@ import ProductEnquiry from "./pages/Enquiry";
 import Applications from "./pages/applications";
 import ProductSpecification from "./pages/ProductSpecification";
 import Service from "./pages/Services";
+import Process from "./pages/ProcessOptimisation";
 
 const routes = (
   <>
@@ -24,6 +25,7 @@ const routes = (
       <Route path="/applications" element={<Applications/>}/>
       <Route path="/product-specification" element={<ProductSpecification/>}/>
       <Route path="/service" element={<Service />} />
+      <Route path="/process" element={<Process />} />
     </Routes>
   </>
 );

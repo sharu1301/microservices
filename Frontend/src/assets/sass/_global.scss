@@ -93,6 +93,15 @@ section {
     font-weight: 600;
     text-transform: capitalize;
     line-height: 60px;
+    @include breakpoint(xs) {
+      font-size: 28px;
+    }
+    @include breakpoint(sm) {
+      font-size: 28px;
+    }
+    @include breakpoint(md) {
+      font-size: 28px;
+    }
   }
   nav {
     .breadcrumb {

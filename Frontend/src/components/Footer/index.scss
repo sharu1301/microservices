@@ -3,13 +3,12 @@
 /* Footer Section */
 .footer-section {
   background-color: $footer-background;
-  padding: 40px 20px 10px 20px;
+  padding: 40px 20px 20px 20px;
   //  flex-shrink: 0;
   display: flex-box;
   justify-content: flex-start;
   flex-direction: row;
   margin-bottom: 0px;
-  padding-bottom: 0px;
 
 
   p {
@@ -21,11 +20,18 @@
 
 /* Footer Logo */
 .footer-logo {
+  @include breakpoint(sm) {
+    display: flex;
+  }
   ul {
     padding-left: 0;
     margin-left: 0;
     // margin-top: 60px;
-
+    @include breakpoint(sm) {
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 2px solid #7B7B7B;
+    }
     li {
       list-style-type: none;
       margin-bottom: 10px;
@@ -43,6 +49,9 @@
 
 /* Footer Link */
 .footer-link {
+  @include breakpoint(sm) {
+    margin-bottom: $f20;
+  }
   h4 {
     color: $white;
     margin-bottom: 20px;
@@ -73,13 +82,19 @@
 
   p {
     font-size: 14px;
+    @include breakpoint(sm) {
+      text-align: center;
+    }
   }
 }
 
 /* Copyright */
 .copyright {
   margin-top: 20px;
-
+  @include breakpoint(sm) {
+    text-align: center;
+    margin-top: $mt-1;
+  }
   li {
     list-style-type: none;
     display: inline;

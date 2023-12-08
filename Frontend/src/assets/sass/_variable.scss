@@ -3,6 +3,7 @@ $breadcrumb-divider: quote(">");
 $white: #fff;
 $black: #363636;
 $gray: #666666;
+$light-gray: #e9eaeb;
 $zblack: #000;
 $footer-background: #283742;
 $feedback-background: #f6f8fa;
@@ -19,9 +20,12 @@ $f13: 13px;
 $f14: 14px;
 $f16: 16px;
 $f18: 18px;
+$f19: 19px;
 $f20: 20px;
 $f22: 22px;
 $f24: 24px;
+$f25: 25px;
+$f26: 26px;
 $f28: 28px;
 $f32: 32px;
 
@@ -47,6 +51,16 @@ $pt-4: 40px;
 $pt-5: 50px;
 $pt-6: 60px;
 $pt-7: 70px;
+
+// margins
+
+$mt-1: 10px;
+$mt-2: 20px;
+$mt-3: 30px;
+$mt-4: 40px;
+$mt-5: 50px;
+$mt-6: 60px;
+$mt-7: 70px;
 
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 768px;

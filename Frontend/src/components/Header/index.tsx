@@ -5,10 +5,12 @@ import x from "../../assets/icons/x.png";
 import linkedIn from "../../assets/icons/linkedin.png";
 import instagram from "../../assets/icons/instagram.png";
 import logo from "../../assets/logo/logo.png";
+import { useState } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
+  const openMenu = useState(true);
   const pathname = location.pathname
   return (
     <>
@@ -52,12 +54,12 @@ export default function Header() {
         <div className="navbar">
           <img src={logo} className="logoIcon" />
 
-          <div>
+          <div className="navList">
             <ul>
               <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
-              <li onClick={() => navigate("/about")}>About Us</li>
+              <li   className={pathname === "/about" ? 'active' : ''}  onClick={() => navigate("/about")}>About Us</li>
               <li>Services</li>
-              <li onClick={() => navigate("/productlist")}>Products</li>
+              <li className={pathname === "/productlist" ? 'active' : ''} onClick={() => navigate("/productlist")}>Products</li>
 
               <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
               <li className={pathname === "/gallery" ? 'active' : ''} onClick={() => navigate("/gallery")}>Gallery</li>
@@ -73,6 +75,12 @@ export default function Header() {
             onClick={() => navigate("/contactus")}
           >
             <b className="contactUs"> Contact Us</b>
+          </div>
+
+          <div id="mobile">
+             <i className={
+              openMenu ? 'fas fa-bars' :'fas fa-times'
+             }> </i> 
           </div>
         </div>
       </div>

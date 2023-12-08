@@ -22,7 +22,7 @@ const routes = (
       <Route path="/productlist" element={<ProductList />} />
       <Route path="/productenquiry" element={<ProductEnquiry />} />
       <Route path="/applications" element={<Applications/>}/>
-      <Route path="/product-specification" element={<ProductSpecification/>}/>
+      <Route path="/product-specification/:productname" element={<ProductSpecification/>}/>
       <Route path="/service" element={<Service />} />
     </Routes>
   </>

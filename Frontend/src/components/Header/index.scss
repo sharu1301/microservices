@@ -73,6 +73,12 @@
     padding-right: 64px ;
     padding: 25px;
 
+    .navList{
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+
     .logoIcon {
         position: relative;
         
@@ -120,9 +126,21 @@ cursor: pointer;
         font-size: 16px;
         color: #fff;
         font-family: Inter;
+
+        @media (max-width: 500px) {
+          display: none;
+        }
         .contactUs {
             position: relative;
         }
         }
+ 
+    #mobile{
+      i{
+        color: #e21d23;
+      }
+       
+      }
+
   }
    

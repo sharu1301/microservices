@@ -10,11 +10,11 @@ import { useState } from "react";
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-  const openMenu = useState(true);
+  const [openMenu, setOpenMenu] = useState(false);
   const pathname = location.pathname
   return (
     <>
-      <div>
+      <div className="headerContainer">
         <div className="rectangleDiv">
           <p className="welcomeToHinds1">
             Welcome to hinds machine (ISO Certified company)
@@ -54,7 +54,7 @@ export default function Header() {
         <div className="navbar">
           <img src={logo} className="logoIcon" />
 
-          <div className="navList">
+          <div className={ openMenu ? 'navList active': 'navList'} >
             <ul>
               <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
               <li   className={pathname === "/about" ? 'active' : ''}  onClick={() => navigate("/about")}>About Us</li>
@@ -68,18 +68,22 @@ export default function Header() {
 
               <li>Career</li>
             </ul>
-          </div>
 
-          <div
+            <div
             className="contactUsParent"
             onClick={() => navigate("/contactus")}
           >
             <b className="contactUs"> Contact Us</b>
           </div>
 
-          <div id="mobile">
+          </div>
+
+         
+          <div  id="mobile"
+           onClick={() => setOpenMenu(!openMenu)}
+          >
              <i className={
-              openMenu ? 'fas fa-bars' :'fas fa-times'
+              openMenu ? 'fas fa-times': 'fas fa-bars'
              }> </i> 
           </div>
         </div>

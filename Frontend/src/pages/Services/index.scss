@@ -1,5 +1,11 @@
 @import "../../assets/sass/main.scss";
 .introWrapper {
+  @include breakpoint(sm){
+    padding: $pt-3 !important;
+    padding-bottom: $pt-1 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
 .servicesWrapper {
   label {
@@ -9,6 +15,26 @@
       font-size: 16.502px;
       font-weight: $fw500;
       line-height: 29.114px; /* 176.429% */
+    }
+  }
+  .col-md-7{
+    h2{
+      @include breakpoint(md) {
+        font-size: $f28;
+        line-height: 30px;
+      }
+    }
+  }
+  .box{
+    @include breakpoint(sm) {
+     display: flex !important;
+     flex-direction: column-reverse;
+     .service-content{
+      order: 1;
+     }
+     .service-img{
+      order: 2;
+     }
     }
   }
 }
@@ -24,14 +50,23 @@
       font-weight: 500;
       line-height: 98.8px; /* 130% */
       letter-spacing: -4px;
+      @include breakpoint(md) {
+        font-size: 66px;
+      }
+      @include breakpoint(sm) {
+        font-size: 60px;
+      }
     }
     .counterLabel {
       p {
         color: $white;
-
-        font-size: 18px;
+        font-size: $f18;
         font-weight: 400;
         line-height: 23.4px; /* 130% */
+        @include breakpoint(md) {
+          font-size: $f16;
+        }
+        
       }
     }
   }
@@ -40,5 +75,12 @@
     margin-bottom: 1rem;
     border: 0;
     border-top: 1px solid rgb(255 255 255);
+  }
+  h4{
+    color: $white;
+    font-size: $f32;
+  }
+  p{
+    color: $white;
   }
 }

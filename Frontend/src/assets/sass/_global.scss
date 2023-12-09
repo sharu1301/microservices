@@ -134,6 +134,10 @@ section {
   font-weight: 600;
   line-height: 52px; /* 144.444% */
   text-transform: capitalize;
+  @include breakpoint(sm){
+    font-size: $f26 !important;
+    line-height: 40px;
+  }
 }
 .sub-heading {
   color: $black;

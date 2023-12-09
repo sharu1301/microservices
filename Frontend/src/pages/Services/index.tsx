@@ -40,7 +40,7 @@ const Service = () => {
 
         <section className="section servicesWrapper">
           <div className="container-fluid">
-            <div className="row">
+            <div className="row box">
               <div className="col-md-5 col-lg-5">
                 <div className="service-img">
                   <img
@@ -51,6 +51,7 @@ const Service = () => {
                 </div>
               </div>
               <div className="col-md-7 col-lg-7">
+                <div className="service-content">
                 <h2>Lorem ipsum dolor sit amet consectur </h2>
                 <p className="pt-4">
                   Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
@@ -124,6 +125,7 @@ const Service = () => {
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
             </div>
           </div>
@@ -132,17 +134,19 @@ const Service = () => {
         <section className="section feature-counter">
           <div className="container-fluid">
             <div className="row justify-content-between">
-              <div className="col-md-4">Lorem ipsum dolor sit</div>
+              <div className="col-md-4">
+                <h4>Lorem ipsum dolor sit</h4>
+              </div>
               <div className="col-md-7">
-                Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
+                <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
                 vulputate tristique molestie non. Consectetur sit enim facilisi
                 faucibus elementum feugiat. Iaculis urna vestibulum sed velit
                 neque non eu. Id vitae ullamcorper praesent in ipsum. Leo
-                pretium posuere vulputate feugiat non id.
+                pretium posuere vulputate feugiat non id.</p>
               </div>
             </div>
             <div className="row mt-65">
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">100+</div>
                   <div className="counterLabel">
@@ -150,7 +154,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">2K+</div>
                   <div className="counterLabel">
@@ -158,7 +162,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">10+</div>
                   <div className="counterLabel">
@@ -166,7 +170,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">15</div>
                   <div className="counterLabel">

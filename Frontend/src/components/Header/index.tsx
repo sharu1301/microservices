@@ -5,14 +5,16 @@ import x from "../../assets/icons/x.png";
 import linkedIn from "../../assets/icons/linkedin.png";
 import instagram from "../../assets/icons/instagram.png";
 import logo from "../../assets/logo/logo.png";
+import { useState } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [openMenu, setOpenMenu] = useState(false);
   const pathname = location.pathname
   return (
     <>
-      <div>
+      <div className="headerContainer">
         <div className="rectangleDiv">
           <p className="welcomeToHinds1">
             Welcome to hinds machine (ISO Certified company)
@@ -52,27 +54,37 @@ export default function Header() {
         <div className="navbar">
           <img src={logo} className="logoIcon" />
 
-          <div>
+          <div className={ openMenu ? 'navList active': 'navList'} >
             <ul>
               <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
-              <li onClick={() => navigate("/about")}>About Us</li>
-              <li>Services</li>
-              <li onClick={() => navigate("/productlist")}>Products</li>
+              <li   className={pathname === "/about" ? 'active' : ''}  onClick={() => navigate("/about")}>About Us</li>
+              <li className={pathname === "/service" ? 'active' : ''} onClick={() => navigate("/service")}>Services</li>
+              <li className={pathname === "/productlist" ? 'active' : ''} onClick={() => navigate("/productlist")}>Products</li>
 
               <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
               <li className={pathname === "/gallery" ? 'active' : ''} onClick={() => navigate("/gallery")}>Gallery</li>
 
 
 
-              <li>Career</li>
+              <li className={pathname === "/" ? 'active' : ''}>Career</li>
             </ul>
-          </div>
 
-          <div
+            <div
             className="contactUsParent"
             onClick={() => navigate("/contactus")}
           >
             <b className="contactUs"> Contact Us</b>
+          </div>
+
+          </div>
+
+         
+          <div  id="mobile"
+           onClick={() => setOpenMenu(!openMenu)}
+          >
+             <i className={
+              openMenu ? 'fas fa-times': 'fas fa-bars'
+             }> </i> 
           </div>
         </div>
       </div>

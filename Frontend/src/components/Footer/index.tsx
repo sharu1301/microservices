@@ -1,32 +1,34 @@
 import "./index.scss";
+import { useNavigate } from "react-router";
 
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <>
-    
+
       <div className="footer-section">
-        
+
         <div className="row lg">
           <div className="col-md-3">
-          <div className="footer-logo">
-            <img src="images/pages/footer/logo.svg" alt="Logo" />
+            <div className="footer-logo">
+              <img src="images/pages/footer/logo.svg" alt="Logo" />
 
-            <ul>
-              <p>Contact</p>
-              <li>
-                <a href="mailto:hinds@rediffmail.com">
-                  <i className="fa-solid fa-envelope"></i>
-                  hinds@rediffmail.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+9722390728">
-                  <i className="fa-solid fa-phone"></i>+91 9312657397
-                </a>
-              </li>
+              <ul>
+                <p>Contact</p>
+                <li>
+                  <a href="mailto:hinds@rediffmail.com">
+                    <i className="fa-solid fa-envelope"></i>
+                    hinds@rediffmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+9722390728">
+                    <i className="fa-solid fa-phone"></i>+91 9312657397
+                  </a>
+                </li>
 
-            </ul>
-          </div>
+              </ul>
+            </div>
           </div>
 
 
@@ -34,8 +36,8 @@ const Footer = () => {
             <div className="footer-link pl-2">
               <h4>Quick Links</h4>
               <ul>
-                <li>
-                  <a href="/about">Products</a>
+                <li >
+                  <a href="/productlist">Products</a>
                 </li>
                 <li>
                   <a href="/contactus">Contact us</a>
@@ -55,16 +57,16 @@ const Footer = () => {
               <h4>Others</h4>
               <ul>
                 <li>
-                  <a href="/help">Gallery</a>
+                  <a href="/gallery">Gallery</a>
                 </li>
                 <li>
-                  <a href="/shipping">Application</a>
+                  <a href="/applications">Application</a>
                 </li>
                 <li>
                   <a href="/returns">Updates </a>
                 </li>
                 <li>
-                  <a href="/buy">Enquiry</a>
+                  <a href="/productenquiry">Enquiry</a>
                 </li>
               </ul>
             </div>
@@ -82,28 +84,28 @@ const Footer = () => {
           </div>
         </div>
         <div className="line">
-        <div className="row">
-          <div className="col-md-6">
-            <p>Plot No. 139, Sec-8, IMT Maneshwar, Gurgaon, India-6000214</p>
-          </div>
-          <div className="col-md-6 text-right">
-            <ul className="copyright">
-              <li>
-                <a href="/privacy">Privacy</a>
-              </li>
-              <li>|</li>
-              <li>
-                <a href="/terms">Terms of use</a>
-              </li>
-              <li>|</li>
-              <li>
-                <a href="/privacy">Copyright 2023 @HindsMachine</a>
-              </li>
-            </ul>
+          <div className="row">
+            <div className="col-md-6">
+              <p>Plot No. 139, Sec-8, IMT Maneshwar, Gurgaon, India-6000214</p>
+            </div>
+            <div className="col-md-6 text-right">
+              <ul className="copyright">
+                <li>
+                  <a href="/privacy">Privacy</a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="/terms">Terms of use</a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="/privacy">Copyright 2023 @HindsMachine</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        </div>
-       
+
       </div>
     </>
   );

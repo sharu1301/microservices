@@ -1,8 +1,12 @@
 
+.headerContainer{
+  position: sticky;
+  top:0;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+}
 .rectangleDiv {
-
-    position: relative;
     background-color: #085b88;
     width: 100%;
     height: 40px;
@@ -15,14 +19,15 @@
 
 
     .welcomeToHinds1 {
-        position: relative;
+        justify-self: center;
         font-size: 15px;
         text-transform: capitalize;
         font-weight: 600;
         font-family: Inter;
         color: #fff;
         text-align: left;
-        width: 50%;
+         padding-top: 20px;
+
         }
 
     
@@ -64,14 +69,22 @@
     }
     
   .navbar{
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
     padding-left: 64px ;
     padding-right: 64px ;
-    padding: 25px;
+     padding: 20px;
+
+
+    
+    .navList{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .logoIcon {
         position: relative;
@@ -89,7 +102,7 @@
       li{
         display: inline;
         padding: 10px;
-        margin: 1o;
+        margin: 10px;
         position: relative;
 font-size: 18px;
 font-weight: 500;
@@ -108,7 +121,8 @@ cursor: pointer;
     .contactUsParent {
         position: relative;
         background-color: #e21d23;
-    
+        margin-left: 100px ;
+        margin-right: 100px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -124,5 +138,60 @@ cursor: pointer;
             position: relative;
         }
         }
+ 
+    #mobile{
+      display: none;
+      @media screen and (max-width:750px){
+        display: block;
+        font-weight: bold;
+        font-size: x-large;
+        i{
+          color: #e21d23;
+        }
+      }
+       
+      }
+
   }
    
+  @media screen and (max-width:750px){
+
+    .rectangleDiv{
+      display: none;
+    }
+    
+    .logoIcon {
+      position: relative;
+      height: 60px;
+      object-fit: cover;
+      }
+    .navList{
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      z-index: 999;
+      top: 150px;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background-color: #f2e6e6;
+      box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+      transition: 0.3s ease-in-out;
+    li{
+        display: block;
+        margin-bottom: 10px;
+        // position: fixed;
+
+
+      }
+      .contactUsParent{
+        margin:0;
+      } 
+      
+      }
+
+     .active{
+         right: 0px;
+     }
+
+  }

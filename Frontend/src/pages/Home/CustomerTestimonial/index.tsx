@@ -14,6 +14,7 @@ const testimonialData = [
         "id": 1,
         "image": Achievement1,
         "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur. Lorem ips
+        um dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti molestias rem blanditiis accusamus natus numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur. Lorem ips
         um dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti molestias rem blanditiis accusamus natus numquam?`
     },
     {
@@ -46,6 +47,11 @@ export default function CustomerTestimonial() {
     const [onHover, setOnHover] = useState("")
     const [showZoomModal, setShowZoomModal] = useState(false)
     const [dataOnHover, setDataOnHover] = useState<any>({})
+    const [onClickId, setOnClickId] = useState('')
+
+
+
+
 
     const settings = {
         dots: false,
@@ -91,20 +97,28 @@ export default function CustomerTestimonial() {
             <div className='rowStyle'>
                 <div className='col-md-5 messageScroll'>
 
-                    <div className='slide'>
-                        <Slider {...settings}>
-                            {testimonialData.map((testimonials, id) => (
-                                <div key={id} className='row rowUi'
-                                    onMouseEnter={() => onMouseHover(testimonials, id)}
-                                >
-                                    <img src={testimonials.image} />
-                                    <p>{testimonials.data}</p>
-                                </div>
-                            ))}
+                    <div>
+                        <div className='slide'>
+                            <Slider {...settings}>
+                                {testimonialData.map((testimonials, id) => (
+                                    <div key={id} className='row rowUi'
+                                        onClick={() => onMouseHover(testimonials, id)}
+
+                                    >
+                                        <img src={testimonials.image} />
+                                        <p>{testimonials.data}</p>
+                                    </div>
+                                ))}
 
 
-                        </Slider>
+                            </Slider>
+
+                        </div>
+                        {showZoomModal && (
+                            <ZoomModal isOpen={showZoomModal} data={dataOnHover} />
+                        )}
                     </div>
+
                 </div>
 
                 <div className="col-md-5 videoDiv">
@@ -116,10 +130,7 @@ export default function CustomerTestimonial() {
 
             </div>
 
-            <ZoomModal
-                data={dataOnHover}
-                isOpen={showZoomModal}
-            />
+
 
         </div>
     )

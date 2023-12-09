@@ -58,7 +58,7 @@ export default function Header() {
             <ul>
               <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
               <li   className={pathname === "/about" ? 'active' : ''}  onClick={() => navigate("/about")}>About Us</li>
-              <li>Services</li>
+              <li className={pathname === "/service" ? 'active' : ''} onClick={() => navigate("/service")}>Services</li>
               <li className={pathname === "/productlist" ? 'active' : ''} onClick={() => navigate("/productlist")}>Products</li>
 
               <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
@@ -66,7 +66,7 @@ export default function Header() {
 
 
 
-              <li>Career</li>
+              <li className={pathname === "/" ? 'active' : ''}>Career</li>
             </ul>
 
             <div

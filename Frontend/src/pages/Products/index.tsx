@@ -9,12 +9,13 @@ import EuroPacImg from "../../assets/images/productimages/EuroPac.png";
 import EuroServoImg from "../../assets/images/productimages/EuroServoR.png";
 import EuroCPVCImg from "../../assets/images/productimages/EuroCPVC.png";
 import EuroRImg from "../../assets/images/productimages/EuroR.png";
+import EuroPetImg from '../../assets/images/productimages/EuroPet.png'
 
 
 
 const ProductList = () => {
 
-  
+
     return (
         <div>
             <Header />
@@ -32,6 +33,11 @@ const ProductList = () => {
             />
 
             <RightImgComponent
+                title={'Euro Pet Series'} img={EuroPetImg} description={`Heavy duty five point toggle mechanism.Higher torque radial piston
+                hydraulic motor for screw drive.`}
+                l1={`Dedicated for PET preform with higher output at low cos`}
+                l2={""}
+                l3={""}
             />
             <LeftImgComponent
                 title="Euro Servo Series"
@@ -44,7 +50,7 @@ const ProductList = () => {
                 l4={`Two stage speed with soft eject`}
             />
 
-            <RightImgComponent />
+            <RightImgComponent title={""} img={""} description={""} l1={""} l2={""} l3={""} />
 
             <LeftImgComponent
                 title="Euro (CPVC) Series"
@@ -54,10 +60,10 @@ const ProductList = () => {
                 l1={`Dedicated CPVC Machine`}
                 l2={`Unscrew feature for electric motor`}
                 l3={`Separate manifolds for injection unit and clamping unit`}
-               
+
             />
 
-            <RightImgComponent />
+            <RightImgComponent title={""} img={""} description={""} l1={""} l2={""} l3={""} />
 
             <LeftImgComponent
                 title="Euro R Series"
@@ -71,7 +77,7 @@ const ProductList = () => {
                 performance`}
             />
 
-            <RightImgComponent />
+            <RightImgComponent title={""} img={""} description={""} l1={""} l2={""} l3={""} />
 
             <SubFooter />
             <Footer />

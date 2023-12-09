@@ -6,14 +6,24 @@ import { BsArrowRight } from "react-icons/bs";
 
 import { useNavigate,} from 'react-router-dom';
 
-export default function RightImgComponent() {
+
+interface RightImgComponentInterface {
+    title: string
+    img: string
+    description: string,
+    l1: string,
+    l2: string,
+    l3: string,
+    l4?: string
+}
+export default function RightImgComponent({ title, img, description, l1, l2, l3, l4 }: RightImgComponentInterface) {
 
 
     const navigate = useNavigate();
     return (
         <div className="row rightComponent">
             <div className='col-md-5 rightDescription'>
-                <h4>Euro Pac Series</h4>
+                <h4>{title}</h4>
                 <p>High speed hydraulic motor on screw drive for high plascizing rate. Energy efficient DFE series electronic variable pump for high output</p>
                 <img className='responsiveImg' src={EuroPacImg} />
                 <div className="row">

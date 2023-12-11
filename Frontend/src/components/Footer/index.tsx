@@ -8,7 +8,6 @@ const Footer = () => {
   
   return (
     <>
-
       <div className="footer-section">
 
         <div className="row lg">

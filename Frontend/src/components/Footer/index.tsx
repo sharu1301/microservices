@@ -1,8 +1,11 @@
 import "./index.scss";
-import { useNavigate } from "react-router";
+import facebook from '../../assets/icons/facebook.png';
+import x from '../../assets/icons/x.png';
+import instagram from '../../assets/icons/instagram.png';
+import linkedIn from '../../assets/icons/linkedin.png'
 
 const Footer = () => {
-  const navigate = useNavigate()
+  
   return (
     <>
 
@@ -28,6 +31,17 @@ const Footer = () => {
                 </li>
 
               </ul>
+              <div className=" imgDiv">
+                    <img  alt="" src={x} />
+
+                    <img  alt="" src={facebook} />
+
+
+                    <img  alt="" src={instagram} />
+
+                    <img  alt="" src={linkedIn} />
+
+                </div>
             </div>
           </div>
 

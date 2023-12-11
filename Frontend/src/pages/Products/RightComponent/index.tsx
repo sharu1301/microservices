@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.scss';
-import EuroPacImg from '../../../assets/images/productimages/EuroPac.png';
 import { BsArrowRight } from "react-icons/bs";
 
 
@@ -15,8 +14,11 @@ interface RightImgComponentInterface {
     l2: string,
     l3: string,
     l4?: string
+    highlight1:string,
+    highlight2:string,
+    highlight3:string
 }
-export default function RightImgComponent({ title, img, description, l1, l2, l3, l4 }: RightImgComponentInterface) {
+export default function RightImgComponent({ title, img, description, l1, l2, l3, l4,highlight1,highlight2,highlight3 }: RightImgComponentInterface) {
 
 
     const navigate = useNavigate();
@@ -24,25 +26,25 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
         <div className="row rightComponent">
             <div className='col-md-5 rightDescription'>
                 <h4>{title}</h4>
-                <p>High speed hydraulic motor on screw drive for high plascizing rate. Energy efficient DFE series electronic variable pump for high output</p>
-                <img className='responsiveImg' src={EuroPacImg} />
+                <p></p>
+                <img className='responsiveImg' src={img} />
                 <div className="row">
-                    <p className='highlighed'>Low Power Consumption</p>
-                    <p className='highlighed'>Hydraulic motor</p>
-                    <p className='highlighed'>User Friendly</p>
+                    <p className='highlighed'>{highlight1}</p>
+                    <p className='highlighed'>{highlight2}</p>
+                    <p className='highlighed'>{highlight3}</p>
                     <p className='highlighed'>+ 3 more</p>
                     <ul>
-                        <li>Five point toggle. </li>
-                        <li>Wide platen area & Robust design with wide state on moving platen.</li>
-                        <li>Centralised lubricaon system with piston cylinder. </li>
-                        <li>LPMT for posion measuring for moving platen, screw travel & Ejection. </li>
+                        <li>{l1}</li>
+                        <li>{l2}</li>
+                        <li>{l3}</li>
+                        {l4 && (<li className='highlighed'>{l4}</li>)}
                     </ul>
                     <p className='highlighed'>Industry : Packaging, Cup & Closure</p>
                 </div>
                 <div className='button' onClick={() => navigate(`/product-specification`)}><p>View Details <BsArrowRight size={22} /></p> </div>
             </div>
             <div className='col-md-5 rightimgSection'>
-                <img src={EuroPacImg} />
+                <img src={img} />
             </div>
 
             

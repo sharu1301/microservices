@@ -6,11 +6,13 @@
     padding: 40px 0px 40px 40px;
     margin-right: 0px;
 
-    .secondaryfeedback{
+    .secondaryfeedback {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        h5{
+        flex-wrap: wrap;
+
+        h5 {
             font-size: 19px;
             font-weight: 800;
         }
@@ -35,7 +37,7 @@
 
     .iso {
         // flex-direction: row;
-         display: flex;
+        // display: flex;
         margin-bottom: 20px;
         padding-right: 10px;
         margin-right: 0px;
@@ -45,7 +47,8 @@
             height: 60px;
             width: 60px;
         }
-        h6{
+
+        h6 {
             font-size: 15px;
         }
     }

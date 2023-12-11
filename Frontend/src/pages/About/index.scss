@@ -5,6 +5,9 @@
     width: 100%;
     min-height: fit-content;
   }
+  @include breakpoint(sm){
+    text-align: center;
+  }
 }
 
 .aboutFeaturesWrapper {
@@ -14,6 +17,9 @@
       padding-top: 15px;
     }
     .icon-box-wrapper {
+      .icon{
+        margin-bottom: 10px;
+      }
       h4 {
         color: $black;
 
@@ -34,15 +40,33 @@
 }
 
 .aboutProductsWrapper {
+  @include breakpoint(sm){
+    text-align: center;
+  }
   @media (max-width: 768px) {
     .productImage {
-      margin-bottom: 40px;
+      padding-top: $pt-1 !important;
     }
   }
 
   p {
     font-size: 16px;
     line-height: 150%; /* 24px */
+  }
+  .about-res{
+    @include breakpoint(sm){
+      display: flex;
+      flex-direction: column-reverse;
+      .right-content{
+        display: block !important;
+      }
+      .left-content{
+        display: none;
+      }
+    }
+    .right-content{
+      display: none;
+    }
   }
 }
 
@@ -52,6 +76,10 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 120%; /* 48px */
+  @include breakpoint(sm){
+    font-size: $f26;
+    margin-bottom: 14px;
+  }
 }
 
 .companyInformation {
@@ -60,6 +88,17 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 150%; /* 30px */
+  }
+  .company-head{
+    @include breakpoint(sm){
+      text-align: center;
+    }
+    h4{
+      @include breakpoint(sm){
+        font-size: $f28;
+        margin-bottom: 14px;
+      }
+    }
   }
 
   .companyInfoWrapper {
@@ -186,6 +225,9 @@
           z-index: 0;
           left: -19px;
           top: 4px;
+          @include breakpoint(sm) {
+            margin-left: 10px;
+          }
         }
       }
     }

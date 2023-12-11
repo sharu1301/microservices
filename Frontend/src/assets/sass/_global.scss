@@ -35,8 +35,12 @@ h3 {
   font-size: 48px;
   font-weight: 700;
   line-height: 120%;
+  @include breakpoint(sm){
+    font-size: $f28;
+    margin-bottom: 14px;
+  }
   @include breakpoint(xs) {
-    font-size: 34px;
+    font-size: $f24;
   }
 }
 h4 {

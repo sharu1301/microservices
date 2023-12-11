@@ -31,6 +31,9 @@
      flex-direction: column-reverse;
      .service-content{
       order: 1;
+      p{
+      text-align: justify;
+      }
      }
      .service-img{
       order: 2;

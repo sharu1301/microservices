@@ -16,11 +16,9 @@ const Service = () => {
               <div className="col-md-8 text-center">
                 <h5>Hinds services</h5>
                 <p className="pt-2">
-                  Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
-                  vulputate tristique molestie non. Consectetur sit enim
-                  facilisi faucibus elementum feugiat. Iaculis urna vestibulum
-                  sed velit neque non eu. Id vitae ullamcorper praesent in
-                  ipsum. Leo pretium posuere vulputate feugiat non id.
+                Unique and creative solutions that meet the clients’ expectations not only by realizing the clients’ business objectives, but particularly by our strict adherence to the ethical principles of public relations.
+
+
                 </p>
               </div>
             </div>
@@ -52,19 +50,21 @@ const Service = () => {
               </div>
               <div className="col-md-7 col-lg-7">
                 <div className="service-content">
-                <h2>Lorem ipsum dolor sit amet consectur </h2>
+                <h2>Your Satisfaction is Our Goal! </h2>
                 <p className="pt-4">
-                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
+                Whether your Machine is two months or 02 years old, ensuring long term product satisfaction is our goal.
+                  {/* Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
                   Praesent vitae venenatis. MaecenasLorem ipsum dolor sit amet,
                   consec tetur adipi scing elit. Praesent vitae venenatis.
                   MaecenasLorem ipsum dolor sit amet, consec tetur adipi scing
-                  elit. Praesent vitae venenatis. Maecenas
+                  elit. Praesent vitae venenatis. Maecenas */}
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
+                Once your Injection Moulding Machine arrives, an experienced Hinds  service engineer will be at your door step to guide you for machine start-up & training. Our after sales service function with spare support service is staffed by Professional, Responsive & Customer Focused Personnel, offering dedicated support to Customer Network. It offers various Aftermarket Solutions & Support Activities for increasing your Profitability.
+                  {/* Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
                   Praesent vitae venenatis. MaecenasLorem ipsum dolor sit amet,
                   consec tetur adipi scing elit. Praesent vitae venenatis.
-                  Maecenas
+                  Maecenas */}
                 </p>
 
                 <div className="row">
@@ -191,13 +191,9 @@ const Service = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-7 col-lg-7">
-                <h2>Lorem ipsum dolor sit amet consectur </h2>
+                <h2>Retrofit Solutions </h2>
                 <p className="pt-4">
-                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
-                  Praesent vitae venenatis. MaecenasLorem ipsum dolor sit amet,
-                  consec tetur adipi scing elit. Praesent vitae venenatis.
-                  MaecenasLorem ipsum dolor sit amet, consec tetur adipi scing
-                  elit. Praesent vitae venenatis. Maecenas
+                We, Hinds Plastic Machines Pvt Ltd., provide controlled Retrofitment solutions for our machines. Our service can increase the productivity level throughout the life of your machines.
                 </p>
                 <p>
                   Lorem ipsum dolor sit amet, consec tetur adipi scing elit.

@@ -14,12 +14,20 @@
     font-size: 44px;
     font-weight: 600;
     padding: 10px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 20px; 
+    }
     }
     .industrialMachinery {
         padding: 10px;
         font-size: 44px;
         font-weight: 600;
     color: #be0e14;
+    @media screen and (max-width: 500px) {
+        font-size: 20px; 
+        line-height: 5px;
+    }
     }
     .comesToIndustrialMachinery {
         
@@ -27,6 +35,11 @@
         font-size: 44px;
         font-weight: 600;
     margin: 0;
+
+      @media screen and (max-width: 500px) {
+        font-size: 20px; 
+        // line-height: 5px;
+    }
     }
     .weAreTheContainer {
     position: relative;
@@ -50,6 +63,10 @@
         color: #666;
         text-align: center;
         display: inline-block;
+        @media screen and (max-width: 500px) {
+            font-size: 14px; 
+            width: 90%;
+        }
     
         }
             .moreAboutUsParent {

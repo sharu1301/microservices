@@ -13,9 +13,13 @@ interface LeftImgComponentInterface {
     l1: string,
     l2: string,
     l3: string,
-    l4?: string
+    l4?: string,
+    highlight1:string,
+    highlight2:string,
+    highlight3:string
+    
 }
-export default function LeftImgComponent({ title, img, description, l1, l2, l3, l4 }: LeftImgComponentInterface) {
+export default function LeftImgComponent({ title, img, description, l1, l2, l3, l4 ,highlight1,highlight2,highlight3}: LeftImgComponentInterface) {
 
     const navigate = useNavigate();
 
@@ -29,11 +33,10 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
                 <p>{description}</p>
                 <img className='responsiveImg' src={img} />
                 <div className="row">
-                    <p className='highlighed'>Low Power Consumption</p>
-                    <p className='highlighed'>Hydraulic motor</p>
-                    <p className='highlighed'>User Friendly</p>
+                    <p className='highlighed'>{highlight1}</p>
+                    <p className='highlighed'>{highlight2}</p>
+                    <p className='highlighed'>{highlight3}</p>
                     <p className='highlighed'>+ 3 more</p>
-
                 </div>
                 
                 <ul>

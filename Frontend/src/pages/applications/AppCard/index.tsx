@@ -22,14 +22,17 @@ export default function AppCard({image, icon, title, description, reverse}) {
            <div className="container">
 
              <div  className='cardContainer' style={{ flexDirection: reverse ? 'row-reverse': 'row' }}>
-                <img  className='cardImg' src={image}/>
+               <img className='cardImg' src={image}/>
                  <div className='textCard'>
                      <img src={icon}/>
                      <p className='title'>{title}</p>
 
                      <p className='description'>{description}</p>
                  </div>
+
+                
              </div>
+             <img className='cardImg2' src={image}/>
            </div>
     )
 }

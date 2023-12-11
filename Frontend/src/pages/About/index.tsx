@@ -20,28 +20,24 @@ function About() {
               <div className="col-lg-6">
                 <div>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce varius faucibus massa sollicitudin amet augue. Nibh
-                    metus a semper purus mauris duis. Lorem eu neque, tristique
-                    quis duis. Nibh scelerisque ac adipiscing velit non nulla in
-                    amet pellentesque.
+                  Founded in 1999, by Mr. PARVEEN SHARMA, a Mechanical engineer, HINDS machineries 
+                  started with a small workshop at Subhash nagar New Delhi. In 2003 company introduced 
+                  the Euro Series of Injection molding during the PLASTINDIA 2003.
                   </p>
                   <p>
-                    Sit turpis pretium eget maecenas. Vestibulum dolor mattis
-                    consectetur eget commodo vitae. Amet pellentesque sit
-                    pulvinar lorem mi a, euismod risus rhoncus. Elementum
-                    ullamcorper nec, habitasse vulputate. Eget dictum quis est
-                    sed egestas tellus, a lectus. Quam ullamcorper in fringilla
-                    arcu aliquet fames arcu.Lacinia eget faucibus urna, nam
-                    risus nec elementum cras porta.
+                  With overwhelming response from PLASTINDIA 2003. The company expanded itself to meet 
+                  the growing demand of customers, and set up a new factory at Manesar in 2005. With the 
+                  launch of new Euro R series of injection molding machine Hydraulic clamping type during 
+                  PLASTINDIA 2006, company expanded further its manufacturing set up with 2nd unit in 
+                  manesar at sec-8.
                   </p>
                   <p>
-                    Sed elementum, sed dolor purus dolor dui. Ut dictum nulla
-                    pulvinar vulputate sit sagittis in eleifend dignissim.
-                    Natoque mauris cras molestie velit. Maecenas eget adipiscing
-                    quisque viverra lectus arcu, tincidunt ultrices
-                    pellentesque.
+                  With the Start up of New Plant with a New Name M/s. Hinds Plastic Machines Pvt Ltd. 
+                  at Sector 8, Near Maruti Gate no.2, The Company Now Caters the other Automotive Sectors 
+                  also with Manufacturing the Special Purpose Machines & Also taking Complete Project 
+                  base services as per the customer needs.
                   </p>
+                  <p>We at Hinds assures the best services & best solutions to our Customers.</p>
                 </div>
               </div>
             </div>
@@ -113,16 +109,18 @@ function About() {
           </section>
 
           <section className="section bg-light aboutProductsWrapper">
-            <div className="row">
+            <div className="row about-res">
               <div className="col-md-6">
-                <div className="section_head">
-                  Lorem ipsum dolor sit amet consectetur. Sed id id.
+                <div className="left-content">
+                  <div className="section_head">
+                    Lorem ipsum dolor sit amet consectetur. Sed id id.
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor
+                  </p>
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor
-                </p>
                 <div className="productImage pt-94">
                   <img
                     src="../../../images/pages/about-p1.png"
@@ -132,6 +130,16 @@ function About() {
                 </div>
               </div>
               <div className="col-md-6">
+              <div className="right-content">
+                  <div className="section_head">
+                    Lorem ipsum dolor sit amet consectetur. Sed id id.
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor
+                  </p>
+                </div>
                 <div className="productImage ">
                   <img
                     src="../../../images/pages/about-p2.png"
@@ -155,11 +163,11 @@ function About() {
           </section>
 
           <section className="section companyInformation">
-            <div className="row justify-content-between">
-              <div className="col-sm-6 col-md-6">
+            <div className="row justify-content-between company-head">
+              <div className="col-md-6">
                 <h4> Lorem ipsum dolor sit amet consectetur. Sed id id.</h4>
               </div>
-              <div className="col-sm-6 col-md-5">
+              <div className="col-md-5">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis

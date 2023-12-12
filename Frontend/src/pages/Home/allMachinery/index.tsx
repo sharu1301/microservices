@@ -22,56 +22,56 @@ export default function AllMachinery(){
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={automotive} />
-                <p style={{padding:'20px'}}>Automotive components</p>
+                <p className='title'>Automotive components</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={car} />
-                <p style={{ padding:'20px' }}>Toy Industry</p>
+                <p  className='title'>Toy Industry</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={electrical} />
-                <p style={{ padding:'20px' }}>Electrical & Electronics</p>
+                <p  className='title'>Electrical & Electronics</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={pet} />
-                <p style={{padding:'20px'}}>Pet Perform</p>
+                <p  className='title'>Pet Perform</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={packaging} />
-                <p style={{padding:'20px'}}>Packaging</p>
+                <p  className='title'>Packaging</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={house} />
-                <p style={{padding:'20px'}}>House hold</p>
+                <p   className='title'>House hold</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={construction} />
-                <p style={{padding:'20px'}}>construction</p>
+                <p  className='title'>construction</p>
               </div>
            </div> 
 
            <div className={'rectangleParent'}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={plastic} />
-                <p style={{padding:'20px'}}>Precision Plastic industry</p>
+                <p  className='title'>Precision Plastic industry</p>
               </div>
            </div> 
 

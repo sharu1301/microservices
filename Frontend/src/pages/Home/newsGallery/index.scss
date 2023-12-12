@@ -5,6 +5,10 @@
     align-items: start;
     padding: 40px;
 
+    @media screen and (max-width: 500px) {
+       flex-direction: column;
+    }
+
     .mainTitle{
         padding-left: 20px;
         color: #363636;
@@ -18,10 +22,20 @@ text-transform: capitalize;
     .ourGallery{
         width: 60%;
         height: 100%;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+         }
         .horizontalContainer{
             display: flex;
             justify-content:space-between;
             align-items: center;
+
+            @media screen and (max-width: 500px) {
+                flex-direction: column;
+                width: 100%;
+             }
+         
         .rectangleDiv {
            margin: 10px;
             border-radius: 12px;
@@ -32,6 +46,10 @@ text-transform: capitalize;
             flex-direction: column;
             align-self: start;
             justify-content: unset;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+                
+             }
 
             .title{
                 padding-top: 30px;
@@ -66,6 +84,11 @@ text-transform: capitalize;
     .ourNews{
       width: 40%;
       height: 100%;
+
+      @media screen and (max-width: 500px) {
+       width: 100%;
+     }
+
       .vertialContainer{
         display: flex;
         flex-direction: column;
@@ -82,6 +105,11 @@ text-transform: capitalize;
             flex-direction: row;
            gap: 5px;
 
+           @media screen and (max-width: 500px) {
+           margin: 0;
+           padding: 10px;
+         }
+
             .title{
                 color: #363636;
                 width: 300px;
@@ -91,6 +119,11 @@ text-transform: capitalize;
                 font-weight: 600;
                 line-height: normal;
                 text-transform: capitalize; 
+
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                    font-size: 13px;
+                 }
             }
 
             .subtitle{
@@ -102,6 +135,9 @@ text-transform: capitalize;
                 line-height: normal;
                 text-transform: capitalize;
                 margin-top: 20px;
+                @media screen and (max-width: 500px) {
+                    margin-top: 10px;
+                 }
             }
 
             .newsImage{

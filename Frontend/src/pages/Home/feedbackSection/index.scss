@@ -3,13 +3,15 @@
 .feedback {
 
     background: $feedback-background;
-    padding: 40px 0px 40px 40px;
+     padding: 40px 0px 40px 40px;
     margin-right: 0px;
+   
+    
 
     .secondaryfeedback {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+         flex-direction: row;
+         justify-content: space-around;
         flex-wrap: wrap;
 
         h5 {
@@ -39,8 +41,10 @@
         // flex-direction: row;
         // display: flex;
         margin-bottom: 20px;
-        padding-right: 10px;
-        margin-right: 0px;
+        margin-right: 20px;
+        
+        display: flex;
+        justify-content: space-between;
 
         .icon {
             padding-right: 10px;

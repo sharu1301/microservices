@@ -5,33 +5,67 @@
     padding: 30px 10px 30px 10px;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     h4 {
         color: $white;
         text-align: center;
     }
-    p{
+
+    p {
         color: $white;
         text-align: center;
         padding-top: 20px;
     }
-    .imgSection{
+
+    .imgSection {
         display: flex;
         justify-content: center;
         padding: 20px;
+
+        @include breakpoint(sm) {
+            display: none;
+
+        }
     }
-    img{
+
+    .responsiveImgSection {
+        display: none;
+
+        @include breakpoint(sm) {
+            .slider {
+                // height: 200px;
+                width: 100%;
+                padding: 0px 15px 0px 15px;
+            }
+
+            padding: 0px 15px 0px 15px;
+            display: flex;
+
+            img {
+                // height: 250px;
+                width: 100%;
+                position: relative;
+                margin: 10px 5px 0px 5px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    img {
         padding-right: 20px;
     }
-    .buttondiv{
-      
+
+    .buttondiv {
+
         justify-content: center;
         display: flex;
-    .button{
-        background: $white;
-        color: $black;
-        
 
+        .button {
+            background: $white;
+            color: $black;
+
+
+        }
     }
-}
 }

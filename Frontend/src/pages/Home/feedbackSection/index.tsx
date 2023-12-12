@@ -11,7 +11,7 @@ const FeedbackSection = () => {
         <>
             <div className="feedback">
                 <div className="secondaryfeedback">
-                    <div className="col-md-6">
+                    <div className="col-md-5">
                         <h5>We value your feedback.</h5>
                         <p>
                             Please take a moment to share your thoughts with us, so we can continue <br />
@@ -21,7 +21,7 @@ const FeedbackSection = () => {
                             Write a Feedback <BsArrowRight size={22} />
                         </button>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-5">
                         <div className="row">
                             <div className="iso">
                                 <img alt="" src={IsoCertified} className="icon" />

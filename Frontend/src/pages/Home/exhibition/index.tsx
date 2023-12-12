@@ -62,19 +62,17 @@ export default function Exhibition() {
 
             <div className="slide-container">
             <ArrowLeft />
-            <div style={{width: '90%', padding:'20px'}}>
+            <div style={{width: '100%', padding:'0px'}}>
             <Slider ref={ref} {...Settings}>
-         {images.map((image, index)=> (
-            <div>
-                 <img key={index} className='image' src={image } width="100%"  />
+                {images.map((image, index)=> (
+                  <div>
+                      <img key={index} className='image' src={image } width="100%"  />
+                   </div>
+                ))}  
+             </Slider>
             </div>
-         ))}  
-        </Slider>
-            </div>
-            
-      
-        <ArrowRight />
-      </div>
+            <ArrowRight />
+         </div>
          </div>
         </>
     )

@@ -99,6 +99,17 @@ const Footer = () => {
         <div className="line">
           <div className="row">
             <div className="col-md-6">
+            <div className="imgDiv responsive">
+                    <img  alt="" src={x} />
+
+                    <img  alt="" src={facebook} />
+
+
+                    <img  alt="" src={instagram} />
+
+                    <img  alt="" src={linkedIn} />
+
+                </div>
               <p>Plot No. 139, Sec-8, IMT Maneshwar, Gurgaon, India-6000214</p>
             </div>
             <div className="col-md-6 text-right">

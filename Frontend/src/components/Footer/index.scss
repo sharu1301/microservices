@@ -23,15 +23,18 @@
   @include breakpoint(sm) {
     display: flex;
   }
+
   ul {
     padding-left: 0;
     margin-left: 0;
+
     // margin-top: 60px;
     @include breakpoint(sm) {
       margin-left: 20px;
       padding-left: 20px;
       border-left: 2px solid #7B7B7B;
     }
+
     li {
       list-style-type: none;
       margin-bottom: 10px;
@@ -45,6 +48,19 @@
       }
     }
   }
+
+  .imgDiv {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    @include breakpoint(sm) {
+    display: none;
+    }
+  }
+
 }
 
 /* Footer Link */
@@ -52,6 +68,7 @@
   @include breakpoint(sm) {
     margin-bottom: $f20;
   }
+
   h4 {
     color: $white;
     margin-bottom: 20px;
@@ -80,21 +97,38 @@
 .footer-section .line {
   border-top: 1px solid $white !important;
 
+  .imgDiv {
+    display: none;
+    
+    @include breakpoint(sm) {
+      margin: 20px 0px 0px 0px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+
   p {
     font-size: 14px;
+
     @include breakpoint(sm) {
       text-align: center;
     }
   }
+
 }
 
 /* Copyright */
 .copyright {
   margin-top: 20px;
+
   @include breakpoint(sm) {
     text-align: center;
     margin-top: $mt-1;
   }
+
   li {
     list-style-type: none;
     display: inline;
@@ -106,4 +140,5 @@
       color: $white;
     }
   }
+
 }

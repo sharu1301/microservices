@@ -1,0 +1,40 @@
+.testimonial-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-testimonials {
+  display: flex;
+  flex-direction: column;
+  animation: scrollTestimonials 20s linear infinite;
+}
+
+.scrolling-testimonials.paused {
+  animation-play-state: paused;
+}
+
+.testimonial-bubble {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 10px 15px;
+  margin: 10px;
+  max-width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+@keyframes scrollTestimonials {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

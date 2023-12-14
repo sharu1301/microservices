@@ -10,7 +10,7 @@ const GetinTouch = () => {
     return (
         <div className="mainDiv">
             {/* <div className="row"> */}
-            <div className="col-md-7">
+            <div className="col-md-7 col-12">
                 <p>For all inquiries, please feel free to reach out to us using the contact form below.</p>
                 <div data-paperform-id="xmcap1xs" className="paper-form" >
                 </div>

@@ -1,54 +1,80 @@
 @import "../../../assets/sass/main.scss";
-.container{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
 
-     .heading{
-        color: #363636;
-text-align: center;
-font-family: Inter;
-font-size: 44px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-text-transform: capitalize;
-margin: 20px;
-@media screen and (max-width: 568px) {
-   font-size: 25px;
-}
-     }
-     .description{
-      @media screen and (max-width: 568px) {
-         font-size: 16px;
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   .heading {
+      color: #363636;
+      text-align: center;
+      font-family: Inter;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+      margin: auto;
+
+      @include breakpoint(sm) {
+         font-size: 34px;
       }
-        width: 936px;
-        // text-align: center;
-     }
+   }
 
-     .slide-container{
+   .description {
+      width: 936px;
+      margin: auto;
+      text-align: center;
 
-        width: 100%;
-        display: flex;
-         flex-direction: row;
-         align-items: center;
-          padding: 20px;
-          padding-top: 40px;
-          padding-bottom: 40px;
-    
+      @include breakpoint(sm) {
+         font-size: $f16;
+      }
+   }
+
+   .slide-container {
+
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin: auto;
+
+      .slick-slider {
+         margin: 0 20px;
+
+         @include breakpoint(sm) {
             margin: auto;
+         }
+      }
 
-       
-     }
-    
-     .image{
-   
-        border-radius: 12px;
-        width: '100%';
-        height: 489px;
-        border-radius: 12px;
+      @include breakpoint(sm) {
+         justify-content: center;
+         padding-left: 0;
+         padding-right: 0;
+      }
+
+      .arrows {
+         @include breakpoint(sm) {
+            display: none;
+         }
+      }
+   }
+
+   .image {
+
+      border-radius: 12px;
+      width: '100%';
+      height: 489px;
+      border-radius: 12px;
       //  width: 100%;
-        filter:  lightgray -32.736px -254.434px / 103.05% 159.1%;
-     }
+      filter: lightgray -32.736px -254.434px / 103.05% 159.1%;
+
+      @include breakpoint(sm) {
+         height: 260px;
+      }
+   }
 }

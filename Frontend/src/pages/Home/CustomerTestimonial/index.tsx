@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import './index.scss';
 import Achievement1 from '../../../assets/images/Achievement1.png';
 import Slider from "react-slick";
@@ -43,7 +43,7 @@ interface dataInterface {
     data: string
 }
 export default function CustomerTestimonial() {
-    const [onHover, setOnHover] = useState("")
+    
     const [showZoomModal, setShowZoomModal] = useState(false)
     const [dataOnHover, setDataOnHover] = useState<any>({})
 
@@ -70,7 +70,7 @@ export default function CustomerTestimonial() {
 
     }
     const onMouseHover = (data: dataInterface, id: number) => {
-        if (data.id == (id + 1)) {
+        if (data.id === (id + 1)) {
             console.log('74', data.id, id)
             setDataOnHover(data)
             setShowZoomModal(true)
@@ -98,7 +98,7 @@ export default function CustomerTestimonial() {
                                 <div key={id} className='row rowUi'
                                     onMouseEnter={() => onMouseHover(testimonials, id)}
                                 >
-                                    <img src={testimonials.image} />
+                                    <img src={testimonials.image} alt=""/>
                                     <p>{testimonials.data}</p>
                                 </div>
                             ))}

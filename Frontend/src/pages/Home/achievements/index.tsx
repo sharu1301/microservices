@@ -27,9 +27,9 @@ const Achievements = () => {
             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br />
                 Consectetur sit enim facilisi faucibus elementum feugiat. </p>
             <div className="imgSection">
-                <img src={Achievement1} />
-                <img src={Achievement2} />
-                <img src={Achievement3} />
+                <img src={Achievement1} alt=""/>
+                <img src={Achievement2} alt=""/>
+                <img src={Achievement3} alt=""/>
             </div>
             {/* <div className="slide"> */}
             <div className="responsiveImgSection">
@@ -37,11 +37,11 @@ const Achievements = () => {
                 <Slider {...settings}>
                     <div>
                     
-                    <img src={Achievement1} />
+                    <img src={Achievement1} alt="" />
                     </div>
-                    <div><img src={Achievement2} /></div>
+                    <div><img src={Achievement2} alt=""/></div>
                     <div>
-                    <img src={Achievement3} />
+                    <img src={Achievement3} alt=""/>
                     </div>
                    
                 </Slider>

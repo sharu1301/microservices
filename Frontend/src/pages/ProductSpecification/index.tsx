@@ -46,7 +46,7 @@ export default function ProductSpecification() {
       <PageTitle title={productname || "Euro Pac Series"} />
 
       <div className='mainSectionContainer'>
-        <img src={mainImg} className='image' />
+        <img src={mainImg} className='image' alt=''/>
 
         <div className='detailcard'>
           <div>
@@ -63,16 +63,16 @@ export default function ProductSpecification() {
 
             <Slider {...settings}>
               <div>
-                <img src={sliderImg1} />
+                <img src={sliderImg1} alt='' />
               </div>
               <div>
-                <img src={sliderImg1} />
+                <img src={sliderImg1} alt=''/>
               </div>
               <div>
-                <img src={sliderImg1} />
+                <img src={sliderImg1} alt=''/>
               </div>
               <div>
-                <img src={sliderImg1} />
+                <img src={sliderImg1} alt=''/>
               </div>
             </Slider>
           </div>
@@ -91,7 +91,7 @@ export default function ProductSpecification() {
           </div>
 
           <div className={'btnContainer'} style={{ background: 'blue' }}>
-            <img src={downArrow} />
+            <img src={downArrow} alt=''/>
             <b>Download Broucher</b>
           </div>
         </div>
@@ -135,23 +135,23 @@ export default function ProductSpecification() {
 
 
       <div className='bottomSlider'>
-        <img src={footerImg} />
+        <img src={footerImg} alt=''/>
 
         <div className={'smallContainer'} >
           <div onClick={() => setFooterImg(bottomSlider1)}>
-            <img className={footerImg === bottomSlider1 ? 'active' : 'image'} src={bottomSlider1} />
+            <img className={footerImg === bottomSlider1 ? 'active' : 'image'} src={bottomSlider1}alt='' />
           </div>
 
           <div onClick={() => setFooterImg(bottomSlider2)}>
-            <img className={footerImg === bottomSlider2 ? 'active' : 'image'} src={bottomSlider2} />
+            <img className={footerImg === bottomSlider2 ? 'active' : 'image'} src={bottomSlider2} alt='' />
           </div>
 
           <div onClick={() => setFooterImg(bottomSlider3)}>
-            <img className={footerImg === bottomSlider3 ? 'active' : 'image'} src={bottomSlider3} />
+            <img className={footerImg === bottomSlider3 ? 'active' : 'image'} src={bottomSlider3} alt=''/>
           </div>
 
           <div onClick={() => setFooterImg(bottomSlider4)}>
-            <img className={footerImg === bottomSlider4 ? 'active' : 'image'} src={bottomSlider4} />
+            <img className={footerImg === bottomSlider4 ? 'active' : 'image'} src={bottomSlider4} alt=''/>
           </div>
         </div>
 

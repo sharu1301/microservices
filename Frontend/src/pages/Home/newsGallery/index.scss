@@ -1,154 +1,160 @@
-.newsContainer{
+.newsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 40px;
 
     @media screen and (max-width: 500px) {
-       flex-direction: column;
+        flex-direction: column;
     }
 
-    .mainTitle{
+    .mainTitle {
         padding-left: 20px;
         color: #363636;
-font-family: Inter;
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-text-transform: capitalize;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
     }
-    .ourGallery{
+
+    .ourGallery {
         width: 60%;
         height: 100%;
 
         @media screen and (max-width: 500px) {
             width: 100%;
-         }
-        .horizontalContainer{
+        }
+
+        .horizontalContainer {
             display: flex;
-            justify-content:space-between;
+            justify-content: space-between;
             align-items: center;
 
             @media screen and (max-width: 500px) {
                 flex-direction: column;
                 width: 100%;
-             }
-         
-        .rectangleDiv {
-           margin: 10px;
-            border-radius: 12px;
-            background-color: #f5f7f7;
-            height: 347px;
-            display: flex;
-            padding-top: 20px;
-            flex-direction: column;
-            align-self: start;
-            justify-content: unset;
-            @media screen and (max-width: 500px) {
-                width: 100%;
-                
-             }
+            }
 
-            .title{
-                padding-top: 30px;
+            .rectangleDiv {
+                margin: 10px;
+                border-radius: 12px;
+                background-color: #f5f7f7;
+                height: 347px;
+                display: flex;
+                padding-top: 20px;
+                flex-direction: column;
                 align-self: flex-start;
-                color: #363636;
-text-align: center;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-text-transform: capitalize;
-            }
-
-            .subtitle{
-                padding-top: 10px ;
-                align-self: flex-start;
-                color: #666;
-text-align: center;
-font-family: Inter;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-transform: capitalize;
-            }
-            }
-
-
-        }}
-
-    .ourNews{
-      width: 40%;
-      height: 100%;
-
-      @media screen and (max-width: 500px) {
-       width: 100%;
-     }
-
-      .vertialContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
-        align-items: start;
-        gap: 5px;
-        .newsCard{
-            margin: 10px;
-            border-radius: 12px;
-            background-color: #f5f7f7;
-            height: 30%;
-            padding: 10px;
-            display: flex;
-            flex-direction: row;
-           gap: 5px;
-
-           @media screen and (max-width: 500px) {
-           margin: 0;
-           padding: 10px;
-         }
-
-            .title{
-                color: #363636;
-                width: 300px;
-                font-family: Inter;
-                font-size: 15px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                text-transform: capitalize; 
+                justify-content: unset;
 
                 @media screen and (max-width: 500px) {
                     width: 100%;
+
+                }
+
+                .title {
+                    padding-top: 30px;
+                    align-self: flex-start;
+                    color: #363636;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
+
+                .subtitle {
+                    padding-top: 10px;
+                    align-self: flex-start;
+                    color: #666;
+                    text-align: center;
+                    font-family: Inter;
                     font-size: 13px;
-                 }
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
             }
 
-            .subtitle{
-                color: #666;
-                font-family: Inter;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                text-transform: capitalize;
-                margin-top: 20px;
+
+        }
+    }
+
+    .ourNews {
+        width: 40%;
+        height: 100%;
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+        }
+
+        .vertialContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 5px;
+
+            .newsCard {
+                margin: 10px;
+                border-radius: 12px;
+                background-color: #f5f7f7;
+                height: 30%;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+
                 @media screen and (max-width: 500px) {
-                    margin-top: 10px;
-                 }
-            }
+                    margin: 0;
+                    padding: 10px;
+                }
 
-            .newsImage{
+                .title {
+                    color: #363636;
+                    width: 300px;
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: capitalize;
+
+                    @media screen and (max-width: 500px) {
+                        width: 100%;
+                        font-size: 13px;
+                    }
+                }
+
+                .subtitle {
+                    color: #666;
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    margin-top: 20px;
+
+                    @media screen and (max-width: 500px) {
+                        margin-top: 10px;
+                    }
+                }
+
+                .newsImage {
                     position: relative;
                     border-radius: 3px;
                     height: 80px;
-                    object-fit: cover;    
+                    object-fit: cover;
+                }
             }
         }
-      }
-    
+
     }
-    
+
 }

@@ -29,7 +29,7 @@ export default function Exhibition() {
     const ArrowLeft =() =>{
         return(
             <div className='arrows' onClick={() => ref.current.slickNext()} >
-            <img src={arrowLeft} style={{width: '70px'}}/>
+            <img src={arrowLeft} style={{width: '70px'}} alt=''/>
             </div>
         )
     }
@@ -37,7 +37,7 @@ export default function Exhibition() {
     const ArrowRight =() =>{
         return(
             <div className='arrows' onClick={() => ref.current.slickPrev()} >
-              <img src={arrowRight} style={{width: '70px'}} />
+              <img src={arrowRight} style={{width: '70px'}} alt=''/>
             </div>
         )
     }
@@ -66,7 +66,7 @@ export default function Exhibition() {
             <Slider ref={ref} {...Settings}>
          {images.map((image, index)=> (
             <div>
-                 <img key={index} className='image' src={image } width="100%"  />
+                 <img key={index} className='image' src={image } width="100%"  alt=''/>
             </div>
          ))}  
         </Slider>

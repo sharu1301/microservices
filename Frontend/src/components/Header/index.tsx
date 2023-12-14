@@ -1,5 +1,5 @@
 import "./index.scss";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import facebook from "../../assets/icons/facebook.png";
 import x from "../../assets/icons/x.png";
 import linkedIn from "../../assets/icons/linkedin.png";
@@ -52,7 +52,7 @@ export default function Header() {
         </div>
 
         <div className="navbar">
-          <img src={logo} className="logoIcon" />
+          <img src={logo} className="logoIcon" alt="" />
 
           <div className={ openMenu ? 'navList active': 'navList'} >
             <ul>

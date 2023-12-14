@@ -3,7 +3,7 @@
 
 .mainDiv {
 
-    padding: 20px 10px 0px 40px;
+    padding: 20px 10px 0px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,6 +28,9 @@
         background-color: $footer-background;
         border-radius: 10px;
         margin: 30px;
+        @include breakpoint(sm){
+            display: none;
+          }
 
         h4 {
             font-family: 'Times New Roman', Times, serif;

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Modal } from "react-bootstrap";
 import './index.scss';
 
@@ -22,7 +22,7 @@ const ZoomModal = ({
         <Modal.Body>
             <div className="modal-body">
                 <p>{data.data}</p>
-                <img src={data.image}  />
+                <img src={data.image}  alt=""/>
             </div>
         </Modal.Body>
     </ Modal>

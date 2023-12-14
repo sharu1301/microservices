@@ -1,8 +1,5 @@
-import React from 'react';
 import './index.scss';
-import EuroPacImg from '../../../assets/images/productimages/EuroPac.png'
 import { BsArrowRight } from "react-icons/bs";
-
 import { useNavigate } from 'react-router-dom';
 
 
@@ -26,12 +23,12 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
     return (
         <div className="row leftComponent">
             <div className='col-md-5 leftimgSection'>
-                <img src={img} />
+                <img src={img} alt=''/>
             </div>
             <div className='col-md-5 rightDescription'>
                 <h4>{title}</h4>
                 <p>{description}</p>
-                <img className='responsiveImg' src={img} />
+                <img className='responsiveImg' src={img} alt=''/>
                 <div className="row">
                     <p className='highlighed'>{highlight1}</p>
                     <p className='highlighed'>{highlight2}</p>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import './index.scss';
 import Achievement1 from '../../../assets/images/Achievement1.png';
 import Slider from "react-slick";
@@ -14,7 +14,6 @@ const testimonialData = [
         "id": 1,
         "image": Achievement1,
         "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur. Lorem ips
-        um dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti molestias rem blanditiis accusamus natus numquam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur. Lorem ips
         um dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti molestias rem blanditiis accusamus natus numquam?`
     },
     {
@@ -44,14 +43,9 @@ interface dataInterface {
     data: string
 }
 export default function CustomerTestimonial() {
-    const [onHover, setOnHover] = useState("")
+    
     const [showZoomModal, setShowZoomModal] = useState(false)
     const [dataOnHover, setDataOnHover] = useState<any>({})
-    const [onClickId, setOnClickId] = useState('')
-
-
-
-
 
     const settings = {
         dots: false,
@@ -76,7 +70,7 @@ export default function CustomerTestimonial() {
 
     }
     const onMouseHover = (data: dataInterface, id: number) => {
-        if (data.id == (id + 1)) {
+        if (data.id === (id + 1)) {
             console.log('74', data.id, id)
             setDataOnHover(data)
             setShowZoomModal(true)
@@ -91,37 +85,32 @@ export default function CustomerTestimonial() {
         }
     }
     return (
-        <div className='Customers' >
+        <div className='Customers'>
+            <div className="container-fluid">
             <h3>Our Happy Customers</h3>
             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br /> Consectetur sit enim facilisi faucibus elementum feugiat.</p>
-            <div className='rowStyle'>
-                <div className='col-md-5 messageScroll'>
-
-                    <div>
-                        <div className='slide'>
-                            <Slider {...settings}>
-                                {testimonialData.map((testimonials, id) => (
-                                    <div key={id} className='row rowUi'
-                                        onClick={() => onMouseHover(testimonials, id)}
-
-                                    >
-                                        <img src={testimonials.image} />
-                                        <p>{testimonials.data}</p>
-                                    </div>
-                                ))}
+            <div className='row'>
+                <div className='col-md-5 col-12 pl-0 pr-0'>
+                    <div className="messageScroll">
+                    <div className='slide'>
+                        <Slider {...settings}>
+                            {testimonialData.map((testimonials, id) => (
+                                <div key={id} className='row rowUi'
+                                    onMouseEnter={() => onMouseHover(testimonials, id)}
+                                >
+                                    <img src={testimonials.image} alt=""/>
+                                    <p>{testimonials.data}</p>
+                                </div>
+                            ))}
 
 
-                            </Slider>
-
-                        </div>
-                        {showZoomModal && (
-                            <ZoomModal isOpen={showZoomModal} data={dataOnHover} />
-                        )}
+                        </Slider>
                     </div>
-
+                    </div>
+                    
                 </div>
 
-                <div className="col-md-5 videoDiv">
+                <div className="col-md-6 col-12 videoDiv">
                     <Slider {...VideoSettings}>
                         <video src={Sample1} controls />
                         <video src={Sample1} controls />
@@ -130,8 +119,11 @@ export default function CustomerTestimonial() {
 
             </div>
 
-
-
+            <ZoomModal
+                data={dataOnHover}
+                isOpen={showZoomModal}
+            />
+        </div>
         </div>
     )
 };

@@ -28,12 +28,5 @@ pipeline {
         }
       }
     }
-    stage('Upload to S3') {
-      steps {
-        s3Upload(
-          bucket: 'hindm-test', includePathPattern: '**/*', workingDir: '/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend/build', accessKey: env.AWS_ACCESS_KEY_ID, secretKey: env.AWS_SECRET_ACCESS_KEY
-        )
-        }
-      }
-    }
   }
+}

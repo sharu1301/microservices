@@ -3,11 +3,6 @@ pipeline {
   tools {
     jdk 'OpenJDK17'
   }
-  environment {
-    AWS_ACCESS_KEY_ID = 'AKIA3WJJAU2D4PYO7P4J'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_DEFAULT_REGION = 'us-east-1'
-  }
   stages {
     stage('Build Artifact') {
       steps {
@@ -28,5 +23,10 @@ pipeline {
         }
       }
     }
+    stage('Upload to S3') {
+      steps {
+        s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'hindm-test', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'us-east-1', showDirectlyInBrowser: false, sourceFile: '/var/lib/jenkins/workspace/mytestproject/Frontend/build', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'S3-Upload', userMetadata: []
+        }
+      }
+    }
   }
-}

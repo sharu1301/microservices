@@ -23,7 +23,7 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
 
     const navigate = useNavigate();
     return (
-        <div className="row rightComponent">
+        <div className="row rightComponent pt-4">
             <div className='col-md-5 rightDescription'>
                 <h4>{title}</h4>
                 <p></p>

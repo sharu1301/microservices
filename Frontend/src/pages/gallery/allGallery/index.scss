@@ -1,3 +1,4 @@
+@import '../../../assets/sass/main.scss';
 .container {
     display: flex;
     justify-content: center;
@@ -6,25 +7,18 @@
     width: 100%;
     gap: 10px;
 
-    .gallery {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-gap: 10px;
-
-        .image {
-            height: auto;
-            width: 100%;
-        }
-
-
-        .row-2 {
-            grid-column: span 2;
-
-        }
-
-        .col-2 {
-            grid-row: 2/3;
+}
+.container{
+    .gallery{
+        .row{
+            img{
+                height: auto;
+                width: 100%;
+                border-radius: 0;
+                @include breakpoint(sm) {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
-
 }

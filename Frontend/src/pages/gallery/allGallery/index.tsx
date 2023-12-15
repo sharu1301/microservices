@@ -15,28 +15,28 @@ export default function AllGallery() {
             <div className="gallery">
                 <div className="row">
                     <div className="col-md-4 ol-12">
-                        <img className="image" src={img1} />
+                        <img className="image" src={img1} alt="" />
                     </div>
                     <div className="col-md-8 col-12">
-                        <img className="image" src={img2} />
+                        <img className="image" src={img2} alt=""/>
                     </div>
                 </div>
                 <div className="row mt-2">
                     <div className="col-md-8">
                         <div className="row mt-3">
                             <div className="col-md-6 col-12">
-                                <img className="image" src={img3} />
+                                <img className="image" src={img3} alt="" />
                             </div>
                             <div className="col-md-6 col-12">
-                                <img className="image" src={img4} />
+                                <img className="image" src={img4} alt=""/>
                             </div>
                             <div className="col-md-12 col-12 mt-3">
-                                <img className="image" src={img6} />
+                                <img className="image" src={img6} alt=""/>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4 col-12 mt-3">
-                        <img className="image" src={img5} />
+                        <img className="image" src={img5} alt=""/>
                     </div>  
                 </div>
                 {/* <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>

@@ -14,12 +14,12 @@ export default function NewsGallery(){
                     <b className='mainTitle'>Our Gallery</b>
                     <div className='horizontalContainer'>
                       <div className='rectangleDiv'>
-                          <img  src={galleryImg1} width='100%'/>
+                          <img  src={galleryImg1} width='100%' alt=''/>
                           <p className='title'>at massa nulla quisque posuere.</p>
                           <p className='subtitle'>Lorem ipsum dolor sit amet </p>
                        </div>
                        <div className='rectangleDiv'>
-                          <img  src={galleryImg2} width='100%'/>
+                          <img  src={galleryImg2} width='100%' alt=''/>
                           <p className='title' >at massa nulla quisque posuere.</p>
                           <p className='subtitle'>Lorem ipsum dolor sit amet </p>
                        </div>
@@ -30,7 +30,7 @@ export default function NewsGallery(){
                 <b className='mainTitle'> Our News</b>
                 <div className='vertialContainer'>
                 <div className='newsCard'>
-                           <img src={newsImg1} className='newsImage'/>
+                           <img src={newsImg1} className='newsImage' alt=''/>
                            <div>
                               <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
                               <p className='subtitle'>2mins read . 12 Aug 2023</p>   
@@ -38,7 +38,7 @@ export default function NewsGallery(){
                 </div>
 
                 <div className='newsCard'>
-                           <img src={newsImg2} className='newsImage'/>
+                           <img src={newsImg2} className='newsImage' alt=''/>
                            <div>
                               <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
                               <p className='subtitle'>2mins read . 12 Aug 2023</p>   
@@ -46,7 +46,7 @@ export default function NewsGallery(){
                 </div> 
 
                 <div className='newsCard'>
-                           <img src={newsImg3} className='newsImage'/>
+                           <img src={newsImg3} className='newsImage' alt=''/>
                            <div>
                               <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
                               <p className='subtitle'>2mins read . 12 Aug 2023</p>   

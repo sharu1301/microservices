@@ -13,7 +13,7 @@ const HeroSection = () => {
         </p>
         <div className="btn">
           Explore Products
-          <img src={arrow} />
+          <img src={arrow} alt="" />
         </div>
       </div>
     </div>

@@ -66,7 +66,7 @@ export default function Header() {
 
 
 
-              <li className={pathname === "/" ? 'active' : ''}>Career</li>
+              <li className={pathname === "/career" ? 'active' : ''}>Career</li>
             </ul>
 
             <div

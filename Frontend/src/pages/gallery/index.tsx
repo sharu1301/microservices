@@ -8,6 +8,7 @@ import AllGallery from "./allGallery";
 import ExhibitionGallery from "./exhibition";
 import SubFooter from "../../components/subFooter";
 import Footer from "../../components/Footer";
+import './index.scss';
 
 const TabPanel = ({ value, index, children }) => (
   <div hidden={value !== index}>
@@ -33,6 +34,7 @@ export default function Gallery() {
           borderColor: "divider",
           marginLeft: "100px",
           marginRight: "100px",
+          paddingTop: "30px",
         }}
       >
         <Tabs value={value} onChange={handleChange} centered aria-label="">

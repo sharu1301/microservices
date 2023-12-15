@@ -1,16 +1,18 @@
-.container{
+@import '../../../assets/sass/main.scss';
 
+.container{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 10px;
-   
 
     .image1{
-        width: 30%;
+        width: 100%;
         height: auto;
-        margin: 10px;
+        @include breakpoint(sm) {
+            margin-bottom: 20px;
+        }
     }
     
 }

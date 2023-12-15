@@ -21,7 +21,7 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
     const navigate = useNavigate();
 
     return (
-        <div className="row leftComponent">
+        <div className="row leftComponent pt-4">
             <div className='col-md-5 leftimgSection'>
                 <img src={img} alt=''/>
             </div>

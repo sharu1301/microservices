@@ -41,7 +41,7 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
                     </ul>
                     <p className='highlighed'>Industry : Packaging, Cup & Closure</p>
                 </div>
-                <div className='button' onClick={() => navigate(`/product-specification`)}><p>View Details <BsArrowRight size={22} /></p> </div>
+                <div className='button' onClick={() => navigate(`/product-specification/${title}`)}><p>View Details <BsArrowRight size={22} /></p> </div>
             </div>
             <div className='col-md-5 rightimgSection'>
                 <img src={img} alt='' />

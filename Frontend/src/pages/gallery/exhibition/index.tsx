@@ -18,16 +18,16 @@ export default function ExhibitionGallery (){
           <img className='image1' src={image4}/> */}
           <div className="row">
             <div className="col-md-4 col-12">
-              <img className='image1' src={image1}/>
+              <img className='image1' src={image1} alt=''/>
             </div>
             <div className="col-md-4 col-12">
-              <img className='image1' src={image2}/>
+              <img className='image1' src={image2} alt=''/>
             </div>
             <div className="col-md-4 col-12">
-              <img className='image1' src={image3}/>
+              <img className='image1' src={image3} alt=''/>
             </div>
             <div className="col-md-4 col-12 mt-4">
-              <img className='image1' src={image4}/>
+              <img className='image1' src={image4}alt=''/>
             </div>
           </div>
         

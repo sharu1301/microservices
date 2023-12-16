@@ -13,6 +13,7 @@ import EuroPetImg from "../../assets/images/productimages/EuroPet.png";
 import EuroStarImg from "../../assets/images/productimages/EuroStar.png";
 import EuroPVCImg from "../../assets/images/productimages/EuroPVC.png";
 import EuroServoRImg from "../../assets/images/productimages/EuroServoR.png";
+import HeroCategory from "../../components/HeroCategory";
 
 
 
@@ -22,8 +23,8 @@ const ProductByCategory = () => {
     return (
         <div>
             <Header />
-            <PageTitle title="Products By Category " />
-
+            {/* <PageTitle title="Products By Category " /> */}
+             <HeroCategory/>
             <LeftImgComponent
                 title="Euro Pac Series"
                 img={EuroPacImg}

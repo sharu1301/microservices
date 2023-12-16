@@ -1,0 +1,85 @@
+@import "../../../assets/sass/main.scss";
+
+
+.rightComponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .rightimgSection {
+        padding: 10px 5px 10px ;
+        @media (max-width: 400px) {
+            display: none;
+          }
+    }
+
+    .rightDescription {
+        // border: 1px solid black;
+        margin: 15px;
+        align-items: flex-end;
+
+        .responsiveImg{
+            width: 100%;
+            @media (min-width: 400px) {
+                display: none;
+              }
+        }
+
+        h4 {
+            padding-top: 10px;
+            color: #363636;
+
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        p {
+            color: #666;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .highlighed {
+            background: #F1F1F1;
+            margin: 5px 5px 5px 15px;
+            padding: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 5px 5px 5px 20px;
+            padding: 5px 5px 10px 20px;
+            color: #666;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            li{
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .button {
+       
+
+        p {
+            text-align: center;
+            color: $white;
+            align-self: center;
+            background: #085B88;
+            display: inline-flex;
+            padding: 18px 18px;
+            align-items: center;
+            gap: 11.3px;
+            border-radius: 4px;
+        }
+    }
+}

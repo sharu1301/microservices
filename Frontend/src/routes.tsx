@@ -11,6 +11,7 @@ import Applications from "./pages/applications";
 import ProductSpecification from "./pages/ProductSpecification";
 import Service from "./pages/Services";
 import Process from "./pages/ProcessOptimisation";
+import ProductByCategory from "./pages/ProductByCatregory";
 
 const routes = (
   <>
@@ -26,6 +27,7 @@ const routes = (
       <Route path="/product-specification/:productname" element={<ProductSpecification/>}/>
       <Route path="/service" element={<Service />} />
       <Route path="/process" element={<Process />} />
+      <Route path="/product-by-category/:category" element={< ProductByCategory/>}/>
     </Routes>
   </>
 );

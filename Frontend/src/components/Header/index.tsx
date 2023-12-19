@@ -16,42 +16,51 @@ export default function Header() {
     <>
       <div className="headerContainer">
         <div className="rectangleDiv">
-          <p className="welcomeToHinds1">
-            Welcome to hinds machine (ISO Certified company)
-          </p>
-          <div className={"icons"}>
-            <div className={"socialIcons01"}>
-              <img
-                className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                alt=""
-                src={x}
-              />
-            </div>
-            <div className={"socialIcons01"}>
-              <img
-                className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                alt=""
-                src={facebook}
-              />
-            </div>
-            <div className={"socialIcons03"}>
-              <img
-                className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                alt=""
-                src={instagram}
-              />
-            </div>
-            <div className={"socialIcons03"}>
-              <img
-                className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                alt=""
-                src={linkedIn}
-              />
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8">
+                <p className="welcomeToHinds1">
+                  Welcome to hinds machine (ISO Certified company)
+                </p>
+              </div>
+              <div className="col-md-4 pr-0 text-right">
+                <div className={"icons"}>
+                <div className={"socialIcons01"}>
+                  <img
+                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                    alt=""
+                    src={x}
+                  />
+                </div>
+                <div className={"socialIcons01"}>
+                  <img
+                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                    alt=""
+                    src={facebook}
+                  />
+                </div>
+                <div className={"socialIcons03"}>
+                  <img
+                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                    alt=""
+                    src={instagram}
+                  />
+                </div>
+                <div className={"socialIcons03"}>
+                  <img
+                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                    alt=""
+                    src={linkedIn}
+                  />
+                </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="navbar">
+          <div className="container">
           <img src={logo} className="logoIcon" alt="" />
 
           <div className={ openMenu ? 'navList active': 'navList'} >
@@ -86,6 +95,7 @@ export default function Header() {
               openMenu ? 'fas fa-times': 'fas fa-bars'
              }> </i> 
           </div>
+        </div>
         </div>
       </div>
     </>

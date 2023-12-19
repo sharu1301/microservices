@@ -3,14 +3,19 @@
 /* Footer Section */
 .footer-section {
   background-color: $footer-background;
-  padding: 40px 20px 20px 20px;
+  padding: 40px 0 20px 0;
   //  flex-shrink: 0;
   display: flex-box;
   justify-content: flex-start;
   flex-direction: row;
   margin-bottom: 0px;
-
-
+  .row{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .line{
+    width: 100%;
+  }
   p {
     color: $white;
     margin-top: 15px;
@@ -44,6 +49,9 @@
 
         i {
           margin-right: 10px;
+          @include breakpoint(sm){
+            display: none;
+          }
         }
       }
     }

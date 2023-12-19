@@ -77,12 +77,16 @@
     padding-right: 64px ;
      padding: 20px 0;
 
-
-    
     .navList{
       display: flex;
       justify-content: center;
       align-items: center;
+      ul li{
+        @include breakpoint(sm) {
+          padding: 7px;
+          margin-bottom: 10px;
+        }
+      }
     }
 
     .logoIcon {
@@ -188,11 +192,11 @@
       flex-direction: column;
       position: fixed;
       z-index: 999;
-      top: 150px;
+      top: 105px;
       right: -300px;
       width: 300px;
-      height: 100vh;
-      background-color: #f2e6e6;
+      height: auto;
+      background-color: #eeeded;
       box-shadow: 0 40px 60px rgba(0,0,0,0.1);
       transition: 0.3s ease-in-out;
     li{

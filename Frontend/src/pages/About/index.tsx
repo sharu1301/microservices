@@ -10,7 +10,7 @@ function About() {
       <Header />
       <PageTitle title="About us" />
       <main className="ContentWrapper">
-        <div className="container-fluid">
+        <div className="container">
           <section className="section ourStory">
             <div className="row">
               <div className="col-lg-6">
@@ -55,6 +55,7 @@ function About() {
           </section>
 
           <section className="section aboutFeaturesWrapper">
+            <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-10 col-lg-10 col-xl-7 text-center">
                 <h3>Lorem ipsum dolor sit amet consectetur. Sed id id.</h3>
@@ -106,10 +107,13 @@ function About() {
                 </div>
               </div>
             </div>
+            </div>
           </section>
-
-          <section className="section bg-light aboutProductsWrapper">
-            <div className="row about-res">
+        </div>
+      </main>
+      <section className="section bg-light aboutProductsWrapper">
+          <div className="container">
+            <div className="row">
               <div className="col-md-6">
                 <div className="left-content">
                   <div className="section_head">
@@ -121,6 +125,9 @@ function About() {
                     cursus, mi quis viverra ornare, eros dolor
                   </p>
                 </div>
+                <div className="responsive-img">
+                    <img src="../../../images/pages/about-p2.png" className="img-fluid" alt="responsive" />
+                </div>
                 <div className="productImage pt-94">
                   <img
                     src="../../../images/pages/about-p1.png"
@@ -130,16 +137,6 @@ function About() {
                 </div>
               </div>
               <div className="col-md-6">
-              <div className="right-content">
-                  <div className="section_head">
-                    Lorem ipsum dolor sit amet consectetur. Sed id id.
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse varius enim in eros elementum tristique. Duis
-                    cursus, mi quis viverra ornare, eros dolor
-                  </p>
-                </div>
                 <div className="productImage ">
                   <img
                     src="../../../images/pages/about-p2.png"
@@ -155,15 +152,20 @@ function About() {
                   varius enim in eros elementum tristique. Duis cursus, mi quis
                   viverra ornare, eros dolor interdum
                 </p>
+                <div className="responsive-img">
+                    <img src="../../../images/pages/about-p1.png" className="img-fluid" alt="responsive" />
+                </div>
                 <button className="mt-4 btn btn-custom">
                   Show All Products <i className="fa fa-arrow-right"></i>
                 </button>
               </div>
             </div>
-          </section>
+          </div>
+      </section>
 
-          <section className="section companyInformation">
-            <div className="row justify-content-between company-head">
+      <section className="section companyInformation">
+          <div className="container">
+          <div className="row justify-content-between company-head">
               <div className="col-md-6">
                 <h4> Lorem ipsum dolor sit amet consectetur. Sed id id.</h4>
               </div>
@@ -258,12 +260,9 @@ function About() {
                 </div>
               </div>
             </div>
-          </section>
-
-          <SubFooter />
-        </div>
-      </main>
-
+          </div>
+      </section>
+      <SubFooter />
       <Footer />
     </>
   );

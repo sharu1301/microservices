@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './index.scss';
 import automotive from '../../../assets/images/automotive.png'
 import electrical from '../../../assets/images/electrical.png';
@@ -11,6 +12,9 @@ import construction from '../../../assets/images/construction.png';
 
 
 export default function AllMachinery(){
+
+  const navigate = useNavigate();
+
     return(
         <div className={"containerAllMachinery"}>
 
@@ -19,56 +23,56 @@ export default function AllMachinery(){
       <div className="cardContainer">
 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/automotive')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={automotive} />
                 <p className='title'>Automotive components</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/toy-industry')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={car} />
                 <p  className='title'>Toy Industry</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/electricai-electronics')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={electrical} />
                 <p  className='title'>Electrical & Electronics</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/pet-perform')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={pet} />
                 <p  className='title'>Pet Perform</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/packaging')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={packaging} />
                 <p  className='title'>Packaging</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/household')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={house} />
                 <p   className='title'>House hold</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/construction')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={construction} />
                 <p  className='title'>construction</p>
               </div>
            </div> 
 
-           <div className={'rectangleParent'}>
+           <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/plastic-industry')}>
              <div className={'instanceChild'} >
                <img className={'maskGroupIcon'} alt="" src={plastic} />
                 <p  className='title'>Precision Plastic industry</p>

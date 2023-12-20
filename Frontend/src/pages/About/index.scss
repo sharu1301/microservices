@@ -1,5 +1,8 @@
 @import "../../assets/sass/main.scss";
 
+.section{
+  padding: 84px 0 !important;
+}
 .ourStory {
   .ourStory-banner {
     width: 100%;
@@ -8,22 +11,38 @@
   @include breakpoint(sm){
     text-align: center;
   }
+  h3{
+    font-size: 40px;
+    @include breakpoint(sm){
+      font-size: $f24;
+    }
+  }
 }
 
 .aboutFeaturesWrapper {
+  h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+    @include breakpoint(sm){
+      font-size: $f24;
+    }
+  }
+  p{
+    font-size: 16px;
+  }
   .aboutFeatures {
-    padding-top: 77px;
+    padding-top: 30px;
     @include breakpoint(md) {
       padding-top: 15px;
     }
     .icon-box-wrapper {
       .icon{
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       h4 {
         color: $black;
 
-        font-size: 32px;
+        font-size: $f28;
         font-weight: 700;
         line-height: 130%; /* 41.6px */
         @include breakpoint(md) {
@@ -46,6 +65,11 @@
   @media (max-width: 768px) {
     .productImage {
       padding-top: $pt-1 !important;
+      img{
+        @include breakpoint(sm){
+          display: none;
+        }
+      }
     }
   }
 
@@ -53,19 +77,10 @@
     font-size: 16px;
     line-height: 150%; /* 24px */
   }
-  .about-res{
+  .responsive-img{
+    display: none;
     @include breakpoint(sm){
-      display: flex;
-      flex-direction: column-reverse;
-      .right-content{
-        display: block !important;
-      }
-      .left-content{
-        display: none;
-      }
-    }
-    .right-content{
-      display: none;
+      display: block;
     }
   }
 }

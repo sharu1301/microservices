@@ -11,14 +11,14 @@ const Service = () => {
       <PageTitle title="About Services" />
       <main className="ContentWrapper">
         <section className="section introWrapper">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-8 text-center">
                 <h5>Hinds services</h5>
                 <p className="pt-2">
-                Unique and creative solutions that meet the clients’ expectations not only by realizing the clients’ business objectives, but particularly by our strict adherence to the ethical principles of public relations.
-
-
+                  Unique and creative solutions that meet the clients’ expectations not only by 
+                  realizing the clients’ business objectives, but particularly by our strict 
+                  adherence to the ethical principles of public relations.
                 </p>
               </div>
             </div>
@@ -37,9 +37,9 @@ const Service = () => {
         </section>
 
         <section className="section servicesWrapper">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row box">
-              <div className="col-md-5 col-lg-5">
+              <div className="col-md-6">
                 <div className="service-img">
                   <img
                     src="../../images/pages/service1.png"
@@ -48,7 +48,7 @@ const Service = () => {
                   />
                 </div>
               </div>
-              <div className="col-md-7 col-lg-7">
+              <div className="col-md-6">
                 <div className="service-content">
                 <h2>Your Satisfaction is Our Goal! </h2>
                 <p className="pt-4">
@@ -132,9 +132,9 @@ const Service = () => {
         </section>
 
         <section className="section feature-counter">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row justify-content-between">
-              <div className="col-md-4">
+              <div className="col-md-5">
                 <h4>Lorem ipsum dolor sit</h4>
               </div>
               <div className="col-md-7">
@@ -145,8 +145,8 @@ const Service = () => {
                 pretium posuere vulputate feugiat non id.</p>
               </div>
             </div>
-            <div className="row mt-65">
-              <div className="col-sm-3 col-6">
+            <div className="row mt-65 w-100">
+              <div className="col-md-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">100+</div>
                   <div className="counterLabel">
@@ -154,7 +154,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3 col-6">
+              <div className="col-md-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">2K+</div>
                   <div className="counterLabel">
@@ -162,7 +162,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3 col-6">
+              <div className="col-md-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">10+</div>
                   <div className="counterLabel">
@@ -170,7 +170,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3 col-6">
+              <div className="col-md-3 col-6">
                 <div className="counterWrapper">
                   <div className="counterValue">15</div>
                   <div className="counterLabel">
@@ -188,9 +188,9 @@ const Service = () => {
         </section>
 
         <section className="section servicesWrapper">
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
-              <div className="col-md-7 col-lg-7">
+              <div className="col-md-7">
                 <h2>Retrofit Solutions </h2>
                 <p className="pt-4">
                 We, Hinds Plastic Machines Pvt Ltd., provide controlled Retrofitment solutions for our machines. Our service can increase the productivity level throughout the life of your machines.

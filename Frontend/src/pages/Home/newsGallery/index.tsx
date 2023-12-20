@@ -5,6 +5,7 @@ import galleryImg2 from '../../../assets/images/gallery_img_2.png';
 import newsImg1 from '../../../assets/images/news_img_1.png';
 import newsImg2 from '../../../assets/images/news_img_2.png';
 import newsImg3 from '../../../assets/images/news_img_3.png';
+import News from './News';
 
 export default function NewsGallery(){
     return(
@@ -28,31 +29,8 @@ export default function NewsGallery(){
             </div>
             <div className='ourNews'>
                 <b className='mainTitle'> Our News</b>
-                <div className='vertialContainer'>
-                <div className='newsCard'>
-                           <img src={newsImg1} className='newsImage' alt=''/>
-                           <div>
-                              <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
-                              <p className='subtitle'>2mins read . 12 Aug 2023</p>   
-                           </div>          
-                </div>
-
-                <div className='newsCard'>
-                           <img src={newsImg2} className='newsImage' alt=''/>
-                           <div>
-                              <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
-                              <p className='subtitle'>2mins read . 12 Aug 2023</p>   
-                           </div>          
-                </div> 
-
-                <div className='newsCard'>
-                           <img src={newsImg3} className='newsImage' alt=''/>
-                           <div>
-                              <p className='title'> Lorem ipsum dolor sit amet consect, Eleifend adipiscing amet ornare non am</p>
-                              <p className='subtitle'>2mins read . 12 Aug 2023</p>   
-                           </div>          
-                </div> 
-                </div>
+                <News limit={3}/>
+                
                 
             </div>
          </div>

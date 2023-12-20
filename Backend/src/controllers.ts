@@ -28,7 +28,7 @@ export const controller = {
       sortBy: [{ column: "PUBLISHED_AT", order: "DESC" }],
       first,
       page,
-      desk:5
+      desk: '5'
     };
 
     try {

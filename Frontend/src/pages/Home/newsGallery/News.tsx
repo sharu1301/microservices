@@ -6,10 +6,12 @@ import parse from "html-react-parser";
 import Pagination from "react-js-pagination";
 import './index.scss'
 import { Typography } from "@mui/material";
-// import { getServerBaseURL } from "../resources/functions/getBaseURL";
+import { getServerBaseURL } from "../../../Functions/getBaseURL";
 // import { Article } from "../interfaces/article";
 
-const serverBaseUrl = `http://localhost:3001`;
+
+const serverBaseUrl = getServerBaseURL();
+const deskId=process.env.REACT_APP_STORIPRESS_DESK_ID;
 
 interface Article {
     id: string;
@@ -34,11 +36,11 @@ const News = ({ limit }: { limit: number }) => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                let response = await fetch(`${serverBaseUrl}/articles?page=${activePage}&limit=${limit}`);
+                let response = await fetch(`${serverBaseUrl}/articles?desk=${deskId}&page=${activePage}&limit=${limit}`);
 
                 if (response.ok) {
                     let responseJson = await response.json();
-                    console.log('line 40', responseJson.data.articles.data)
+                    // console.log('line 40', responseJson.data.articles.data)
                     setArticles(responseJson.data.articles.data);
                     setTotalPages(responseJson.data.articles.paginatorInfo.lastPage);
                     setConnectionError(false);
@@ -88,6 +90,7 @@ const News = ({ limit }: { limit: number }) => {
                             <div>
                                 <p className='title'> {parse(article.title.substring(3, article.title.length - 1))}</p>
                                 <p className='subtitle'>{article.plaintext.slice(0,90)}</p>
+                                <p></p>
                             </div>
                         </div>
 

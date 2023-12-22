@@ -1,7 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import SubFooter from "../../components/subFooter";
-import PageTitle from "../../components/pageTitle";
 import LeftImgComponent from "./LeftImgComponent";
 import RightImgComponent from "./RightComponent";
 import './index.scss';

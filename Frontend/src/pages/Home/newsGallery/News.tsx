@@ -5,11 +5,8 @@ import moment from "moment";
 import parse from "html-react-parser";
 import Pagination from "react-js-pagination";
 import './index.scss'
-import { Typography } from "@mui/material";
+
 import { getServerBaseURL } from "../../../Functions/getBaseURL";
-// import { Article } from "../interfaces/article";
-
-
 const serverBaseUrl = getServerBaseURL();
 const deskId=process.env.REACT_APP_STORIPRESS_DESK_ID;
 
@@ -71,9 +68,9 @@ const News = ({ limit }: { limit: number }) => {
             let currentRow: JSX.Element[] = [];
 
             articles.forEach((article, index) => {
-                const publishedDay = moment(article.published_at).format("DD");
-                const publishedMonth = moment(article.published_at).format("MMMM");
-                const publishedYear = moment(article.published_at).format("YYYY");
+                // const publishedDay = moment(article.published_at).format("DD");
+                // const publishedMonth = moment(article.published_at).format("MMMM");
+                // const publishedYear = moment(article.published_at).format("YYYY");
 
                 currentRow.push(
                     <div className='vertialContainer'>
@@ -90,7 +87,8 @@ const News = ({ limit }: { limit: number }) => {
                             <div>
                                 <p className='title'> {parse(article.title.substring(3, article.title.length - 1))}</p>
                                 <p className='subtitle'>{article.plaintext.slice(0,90)}</p>
-                                <p></p>
+                                <div></div>
+                              
                             </div>
                         </div>
 

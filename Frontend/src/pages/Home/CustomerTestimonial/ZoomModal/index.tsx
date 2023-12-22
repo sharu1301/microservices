@@ -16,7 +16,7 @@ const ZoomModal = ({
     isOpen,
     size = "lg",
 }: ZoomModalInterface) => {
-    console.log("Data=======> Modal", data)
+    // console.log("Data=======> Modal", data)
     return (
         <Modal show={isOpen} size={size} className="modal" backdrop={true}>
         <Modal.Body>

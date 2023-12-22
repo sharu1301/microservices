@@ -32,15 +32,16 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
                     <p className='highlighed'>{highlight1}</p>
                     <p className='highlighed'>{highlight2}</p>
                     <p className='highlighed'>{highlight3}</p>
-                    <p className='highlighed'>+ 3 more</p>
+                    {/* <p className='highlighed' onClick={()=>}>+ 3 more</p> */}
+                    </div>
                     <ul>
                         <li>{l1}</li>
                         <li>{l2}</li>
                         <li>{l3}</li>
-                        {l4 && (<li className='highlighed'>{l4}</li>)}
+                        {l4 && (<li>{l4}</li>)}
                     </ul>
                     <p className='highlighed'>Industry : Packaging, Cup & Closure</p>
-                </div>
+                {/* </div> */}
                 <div className='button' onClick={() => navigate(`/product-specification/${title}`)}><p>View Details <BsArrowRight size={22} /></p> </div>
             </div>
             <div className='col-md-5 rightimgSection'>

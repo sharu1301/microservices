@@ -1,7 +1,7 @@
 .newsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 40px;
 
@@ -50,7 +50,7 @@
                 justify-content: unset;
 
                 @media screen and (max-width: 500px) {
-                    width: 100%;
+                                        width: 100%;
 
                 }
 
@@ -94,17 +94,19 @@
         }
 
         .vertialContainer {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
             gap: 5px;
 
-            .newsCard {
+            .newsCard {  
+                width: 100%;             
                 margin: 10px;
                 border-radius: 12px;
                 background-color: #f5f7f7;
-                height: 30%;
+                height: 105px;
                 padding: 10px;
                 display: flex;
                 flex-direction: row;
@@ -117,7 +119,7 @@
 
                 .title {
                     color: #363636;
-                    width: 300px;
+                    width: 100%;
                     font-family: Inter;
                     font-size: 15px;
                     font-style: normal;
@@ -126,7 +128,7 @@
                     text-transform: capitalize;
 
                     @media screen and (max-width: 500px) {
-                        width: 100%;
+                        // width: 100%;
                         font-size: 13px;
                     }
                 }

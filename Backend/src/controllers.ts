@@ -5,18 +5,42 @@ import axios from "axios";
 const storipressBaseURL = process.env.STORIPRESS_BASE_URL;
 const storipressAuthToken = process.env.STORIPRESS_AUTH_TOKEN;
 
-import { GET_ARTICLES_QUERY, GET_ARTICLE_QUERY } from "./queries";
+import { GET_ARTICLES_QUERY, GET_ARTICLE_QUERY,GET_DESKS_QUERY } from "./queries";
 
-console.log('storipressBaseURL', storipressBaseURL)
-console.log('storipressAuthToken', storipressAuthToken)
+// console.log('storipressBaseURL', storipressBaseURL)
+// console.log('storipressAuthToken', storipressAuthToken)
 export const controller = {
 
   home: (req: Request, res: Response) => {
     res.send("Welcome to Hinds Machine!");
   },
+
+  getDesks: async (req: Request, res: Response) => {
+
+    try {
+      
+      const response = await axios.post(
+        storipressBaseURL as string,
+        { query: GET_DESKS_QUERY },
+        {
+          headers: {
+            Authorization: `Bearer ${storipressAuthToken}`,
+          },
+        }
+      );
+      // console.log('45 Res', response.data)
+      res.json(response.data);
+    } catch (error) {
+      console.error("Error fetching articles:", error);
+      res.status(500).send("Internal server error");
+    }
+  },
+
+
   getArticles: async (req: Request, res: Response) => {
     let first = parseInt(req.query.limit as string, 10);
     let page = parseInt(req.query.page as string, 10);
+    let desk = req.query.desk;
 
     if (isNaN(first) || isNaN(page)) {
       res.status(400).send("Invalid limit or page value");
@@ -28,7 +52,7 @@ export const controller = {
       sortBy: [{ column: "PUBLISHED_AT", order: "DESC" }],
       first,
       page,
-      desk:5
+      desk
     };
 
     try {

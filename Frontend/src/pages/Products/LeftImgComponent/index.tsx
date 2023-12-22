@@ -35,13 +35,14 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
                     <p className='highlighed'>{highlight3}</p>
                     <p className='highlighed'>+ 3 more</p>
                 </div>
-                
+                <div>
                 <ul>
                         <li>{l1}</li>
                         <li>{l2}</li>
                         <li>{l3}</li>
-                        <li>{l4}</li>
+                        {l4 && (<li>{l4}</li>)}
                     </ul>
+                    </div>
                     <p className='highlighed'>Industry : Packaging, Cup & Closure</p>
 
                 <div className='button' onClick={() => navigate(`/product-specification/${title}`)}><p>View Details <BsArrowRight size={22} /></p> </div>

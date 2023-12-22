@@ -1,10 +1,7 @@
-import React from 'react';
 import './index.scss'
 import galleryImg1 from '../../../assets/images/gallery_img_1.png';
 import galleryImg2 from '../../../assets/images/gallery_img_2.png';
-import newsImg1 from '../../../assets/images/news_img_1.png';
-import newsImg2 from '../../../assets/images/news_img_2.png';
-import newsImg3 from '../../../assets/images/news_img_3.png';
+
 import News from './News';
 
 export default function NewsGallery(){
@@ -29,8 +26,7 @@ export default function NewsGallery(){
             </div>
             <div className='ourNews'>
                 <b className='mainTitle'> Our News</b>
-                <News limit={3}/>
-                
+                <News limit={3}/>              
                 
             </div>
          </div>

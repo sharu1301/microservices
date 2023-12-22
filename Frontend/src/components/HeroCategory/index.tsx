@@ -12,13 +12,13 @@ export default function HeroCategory(){
                         <h2>Products</h2>
                         <ul className="breadcrumb">
                             <li>
-                                <a href="#">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
                                 Application
                             </li>
                             <li>
-                                <a href="">Automobile</a>
+                                <a href="/automobile">Automobile</a>
                             </li>
                         </ul>
                     </div>

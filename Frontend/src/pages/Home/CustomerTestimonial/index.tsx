@@ -71,7 +71,7 @@ export default function CustomerTestimonial() {
     }
     const onMouseHover = (data: dataInterface, id: number) => {
         if (data.id === (id + 1)) {
-            console.log('74', data.id, id)
+            // console.log('74', data.id, id)
             setDataOnHover(data)
             setShowZoomModal(true)
 

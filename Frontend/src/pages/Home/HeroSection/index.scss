@@ -33,7 +33,7 @@
       
       .content {
         z-index: 1;
-        padding: 100px;
+        padding: 100px 100px 100px 120px;
         width: 60%; /* Take the right half */
         text-align: left;
 
@@ -44,34 +44,33 @@
         }
          .title{
           color: #FFF;
-  margin: 20px;
-font-family: Inter;
-font-size: 58px;
-font-style: normal;
-font-weight: 600;
-line-height: 105.023%; /* 60.913px */
-letter-spacing: 0.87px;
-text-transform: capitalize;
-@media screen and (max-width: 500px) {
-  font-size: 25px;
-  margin: 0px;
-}
+          font-family: Inter;
+          font-size: 58px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 105.023%; /* 60.913px */
+          letter-spacing: 0.87px;
+          text-transform: capitalize;
+          @media screen and (max-width: 500px) {
+            font-size: 28px;
+            margin: 0px;
+          }
          }
          .subtitle{
           color: #EBEBEB;
-          margin: 20px;
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 137.523%; /* 24.754px */
-text-transform: capitalize;
-@media screen and (max-width: 500px) {
-  font-size: 14px;
-  margin: 0px;
-  margin-bottom: 10px;
-  margin-bottom: 10px;
-}
+          margin: 20px 0;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 137.523%; /* 24.754px */
+          text-transform: capitalize;
+          @media screen and (max-width: 500px) {
+            font-size: 11px;
+            margin: 0px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+          }
          }
       }
       
@@ -88,12 +87,12 @@ text-transform: capitalize;
       .btn{
         margin: 20px;
        display: inline-flex;
-padding: 16px 32px;
-justify-content: center;
-align-items: center;
-gap: 12px;
- background: #E21E24;;
-  color: #FFF;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        background: #E21E24;;
+        color: #FFF;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -102,6 +101,12 @@ gap: 12px;
           padding: 10px;
           margin: 0px;
           gap:5px;
+          font-size: 12px;
+        }
+        img{
+          @media screen and (max-width: 500px) {
+            height: 12px;
+          }
         }
       }
       

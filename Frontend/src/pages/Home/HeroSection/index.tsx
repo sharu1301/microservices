@@ -11,7 +11,7 @@ const HeroSection = () => {
           Innovating Precision, Powering Progress: Welcome to the Future of
           Manufacturing with Hinds Machines.
         </p>
-        <div className="btn">
+        <div className="btn ml-0 mr-0">
           Explore Products
           <img src={arrow} alt="" />
         </div>

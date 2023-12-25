@@ -86,11 +86,15 @@ export default function CustomerTestimonial() {
     }
     return (
         <div className='Customers'>
-            <div className="container-fluid">
-            <h3>Our Happy Customers</h3>
-            <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br /> Consectetur sit enim facilisi faucibus elementum feugiat.</p>
-            <div className='row'>
-                <div className='col-md-5 col-12 pl-0 pr-0'>
+            <div className="container">
+            <div className="row w-100">
+                <div className="col-md-12">
+                <h3>Our Happy Customers</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br /> Consectetur sit enim facilisi faucibus elementum feugiat.</p>
+                </div>
+            </div>
+            <div className='row w-100'>
+                <div className='col-md-6 col-12 pl-0 pr-0'>
                     <div className="messageScroll">
                     <div className='slide'>
                         <Slider {...settings}>
@@ -109,14 +113,12 @@ export default function CustomerTestimonial() {
                     </div>
                     
                 </div>
-
-                <div className="col-md-6 col-12 videoDiv">
+                <div className="col-md-6 col-12 videoDiv mt-0 pt-3">
                     <Slider {...VideoSettings}>
                         <video src={Sample1} controls />
                         <video src={Sample1} controls />
                     </Slider>
                 </div>
-
             </div>
 
             <ZoomModal

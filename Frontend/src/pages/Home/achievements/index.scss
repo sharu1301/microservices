@@ -27,6 +27,10 @@
             display: none;
 
         }
+        img{
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .responsiveImgSection {
@@ -53,7 +57,7 @@
     }
 
     img {
-        padding-right: 20px;
+        padding-right: 0;
     }
 
     .buttondiv {

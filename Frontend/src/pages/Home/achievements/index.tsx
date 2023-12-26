@@ -23,13 +23,25 @@ const Achievements = () => {
     return (
 
         <div className="achievements">
-            <h4>Our Achievements</h4>
-            <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br />
-                Consectetur sit enim facilisi faucibus elementum feugiat. </p>
-            <div className="imgSection">
-                <img src={Achievement1} alt=""/>
-                <img src={Achievement2} alt=""/>
-                <img src={Achievement3} alt=""/>
+            <div className="container p-0">
+                <div className="row">
+                    <div className="col-md-12">
+                    <h4>Our Achievements</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br />
+                    Consectetur sit enim facilisi faucibus elementum feugiat. </p>
+                    </div>
+                    <div className="imgSection">
+                        <div className="col-md-4 pl-0">
+                            <img src={Achievement1} alt=""/>
+                        </div>
+                        <div className="col-md-4">
+                            <img src={Achievement2} alt=""/>
+                        </div>
+                        <div className="col-md-4 pr-0">
+                            <img src={Achievement3} alt=""/>
+                        </div>
+                    </div>
+                </div>
             </div>
             {/* <div className="slide"> */}
             <div className="responsiveImgSection">

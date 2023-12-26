@@ -190,7 +190,7 @@ const Service = () => {
         <section className="section servicesWrapper">
           <div className="container">
             <div className="row">
-              <div className="col-md-7">
+              <div className="col-md-6">
                 <h2>Retrofit Solutions </h2>
                 <p className="pt-4">
                 We, Hinds Plastic Machines Pvt Ltd., provide controlled Retrofitment solutions for our machines. Our service can increase the productivity level throughout the life of your machines.
@@ -261,7 +261,7 @@ const Service = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-5 col-lg-5">
+              <div className="col-md-6">
                 <div className="service-img">
                   <img
                     src="../../images/pages/service2.png"

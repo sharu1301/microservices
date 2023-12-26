@@ -57,12 +57,11 @@ export default function Exhibition() {
         <>
          <div className='container'>
             <h2 className='heading pt-5'> Around The Exhibition</h2>
-
             <p className='description'>Join us at the upcoming industry exhibition to explore the latest innovations and advancements in injection molding technology. Visit the Hinds Machines booth to experience firsthand our state-of-the-art machinery, tailored solutions, and expert insights that can elevate your manufacturing processes.</p>
 
             <div className="slide-container">
             <ArrowLeft />
-            <div style={{width: '90%'}}>
+            <div style={{width: '87%'}}>
             <Slider ref={ref} {...Settings}>
          {images.map((image, index)=> (
             <div>
@@ -74,7 +73,7 @@ export default function Exhibition() {
             
       
         <ArrowRight />
-      </div>
+            </div>
          </div>
         </>
     )

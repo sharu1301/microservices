@@ -13,7 +13,7 @@ app.use(cors());
 
 let server: http.Server | https.Server;
 const nodeEnv = process.env.NODE_ENV;
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 if (nodeEnv === "server") {
   const credentials = {

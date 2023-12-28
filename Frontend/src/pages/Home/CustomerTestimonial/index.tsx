@@ -1,131 +1,131 @@
-import React, { useState } from "react"
-import './index.scss';
-import Achievement1 from '../../../assets/images/Achievement1.png';
+import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ZoomModal from './ZoomModal';
+import "./index.scss";
+import Achievement1 from '../../../assets/images/Achievement1.png';
+
 const Sample1 = require('../../../assets/videos/Sample1.mp4')
-// import Video2 from "../../../assets/videos/Sample2.mp4";
 
-
-const testimonialData = [
-    {
-        "id": 1,
-        "image": Achievement1,
-        "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur. Lorem ips
-        um dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti molestias rem blanditiis accusamus natus numquam?`
-    },
-    {
-        "id": 2,
-        "image": Achievement1,
-        "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur.`
-    },
-    {
-        "id": 3
-        , "image": Achievement1,
-        "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur.`
-    },
-    {
-        "id": 4
-        , "image": Achievement1,
-        "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur.`
-    },
-    {
-        "id": 5
-        , "image": Achievement1,
-        "data": `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis? Lorem ipsum dolor sit amet consectetur.`
-    }
-]
-interface dataInterface {
+interface Testimonial {
     id: number;
-    image: string,
-    data: string
+    author: string;
+    text: string;
+    place: string;
+    image: string;
 }
-export default function CustomerTestimonial() {
-    
-    const [showZoomModal, setShowZoomModal] = useState(false)
-    const [dataOnHover, setDataOnHover] = useState<any>({})
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
-        pauseOnHover: true,
-        autoplay: true,
-        speed: 4000,
-        autoplaySpeed: 3000,
-        cssEase: "linear",
-        nextArrow: <></>,
-        prevArrow: <></>
-    };
-    const VideoSettings = {
-        // dots: true,
+const testimonials: Testimonial[] = [
+    {
+        id: 1,
+        author: "Alice",
+        text: "Love this product! It really made a difference for me.",
+        place: "AMD Plastic Toys (india)",
+        image: Achievement1
+    },
+    {
+        id: 2,
+        author: "Bob",
+        text: "Fantastic service, and the quality is top-notch.",
+        place: "Northern Automobiles (india)",
+        image: Achievement1
+    },
+    {
+        id: 3,
+        author: "Charlie",
+        text: "Highly recommend to anyone looking for quality!",
+        place: "Indie Pvc Pipes Pvt Ltd (india)",
+        image: Achievement1
+    },
+];
+
+const CustomerTestimonials = () => {
+    const [selectedTestimonial, setSelectedTestimonial] =
+        useState<Testimonial | null>(null);
+    const VideoSettings = { // dots: true, 
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-
     }
-    const onMouseHover = (data: dataInterface, id: number) => {
-        if (data.id === (id + 1)) {
-            // console.log('74', data.id, id)
-            setDataOnHover(data)
-            setShowZoomModal(true)
+    const handleTestimonialHover = (testimonial: Testimonial) => {
+        setSelectedTestimonial(testimonial);
+    };
 
-            setTimeout(() => {
-                setShowZoomModal(false)
-            }, 3000)
-        }
-        else {
-            setDataOnHover(null)
-            setShowZoomModal(false)
-        }
-    }
+    const handleTestimonialLeave = () => {
+        setSelectedTestimonial(null);
+    };
+
     return (
-        <div className='Customers'>
-            <div className="container">
-            <div className="row w-100">
-                <div className="col-md-12">
-                <h3>Our Happy Customers</h3>
-                <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br /> Consectetur sit enim facilisi faucibus elementum feugiat.</p>
-                </div>
-            </div>
+        <div className="container pb-5 mt-4">
             <div className='row w-100'>
-                <div className='col-md-6 col-12 pl-0 pr-0'>
-                    <div className="messageScroll">
-                    <div className='slide'>
-                        <Slider {...settings}>
-                            {testimonialData.map((testimonials, id) => (
-                                <div key={id} className='row rowUi'
-                                    onMouseEnter={() => onMouseHover(testimonials, id)}
-                                >
-                                    <img src={testimonials.image} alt=""/>
-                                    <p>{testimonials.data}</p>
-                                </div>
-                            ))}
-
-
-                        </Slider>
-                    </div>
-                    </div>
-                    
+                <div className="col-md-8 m-auto text-center mb-4">
+                    <h2 className="heading mb-2">Our Happy customers</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate
+                        tristique molestie non. Consectetur sit enim facilisi faucibus elementum
+                        feugiat. </p>
                 </div>
-                <div className="col-md-6 col-12 videoDiv mt-0 pt-3">
+                <div className="col-md-6 col-12">
+                    <div
+                        className="testimonial-container"
+                        onMouseLeave={handleTestimonialLeave}
+                    >
+                        {selectedTestimonial ? (
+                            <div className="testimonial-detail">
+                                <div className="testimonial-content">
+                                    <h2 className="testimonial-author">{selectedTestimonial.text}</h2>
+                                    <img src={selectedTestimonial.image} />
+                                    <h6 className="testimonial-text">{selectedTestimonial.author}</h6>
+                                    <ul>
+                                        <li>{selectedTestimonial.place}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="scrolling-testimonials">
+                                {testimonials.concat(testimonials).map((testimonial, index) => (
+                                    <div
+                                        key={index}
+                                        className="testimonial-bubble-left"
+                                        onMouseEnter={() => handleTestimonialHover(testimonial)}
+                                    >
+                                        <img src={testimonial.image} />
+                                        <h2 className="testimonial-author">{testimonial.text}</h2>
+                                        <h6 className="testimonial-text">{testimonial.author}</h6>
+                                        <ul>
+                                            <li>{testimonial.place}</li>
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                            // <div className="scrolling-testimonials">
+                            //     {testimonials.concat(testimonials).map((testimonial, index) => (
+                            //         <div
+                            //             key={index}
+                            //             className="testimonial-bubble-right"
+                            //             onMouseEnter={() => handleTestimonialHover(testimonial)}
+                            //         >
+                            //             <img src={testimonial.image} />
+                            //             <h2 className="testimonial-author">{testimonial.text}</h2>
+                            //             <h6 className="testimonial-text">{testimonial.author}</h6>
+                            //             <ul>
+                            //                 <li>{testimonial.place}</li>
+                            //             </ul>
+                            //         </div>
+                            //     ))}
+                            // </div>
+                        )}
+                    </div>
+                </div>
+
+                <div className="col-md-6 col-12 videoDiv">
                     <Slider {...VideoSettings}>
                         <video src={Sample1} controls />
                         <video src={Sample1} controls />
                     </Slider>
                 </div>
             </div>
-
-            <ZoomModal
-                data={dataOnHover}
-                isOpen={showZoomModal}
-            />
         </div>
-        </div>
-    )
+    );
 };
+
+export default CustomerTestimonials;

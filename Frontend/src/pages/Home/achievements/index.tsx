@@ -15,8 +15,8 @@ const Achievements = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
-      
-       
+
+
         // nextArrow: <></>,
         // prevArrow: <></>
     };
@@ -26,39 +26,38 @@ const Achievements = () => {
             <div className="container p-0">
                 <div className="row">
                     <div className="col-md-12">
-                    <h4>Our Achievements</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.<br />
-                    Consectetur sit enim facilisi faucibus elementum feugiat. </p>
+                        <h4>Our Achievements</h4>
+                        <p>Precision in Production – A Legacy of Achievement in Moulding Technology. </p>
                     </div>
                     <div className="imgSection">
                         <div className="col-md-4 pl-0">
-                            <img src={Achievement1} alt=""/>
+                            <img src={Achievement1} alt="" />
                         </div>
                         <div className="col-md-4">
-                            <img src={Achievement2} alt=""/>
+                            <img src={Achievement2} alt="" />
                         </div>
                         <div className="col-md-4 pr-0">
-                            <img src={Achievement3} alt=""/>
+                            <img src={Achievement3} alt="" />
                         </div>
                     </div>
                 </div>
             </div>
             {/* <div className="slide"> */}
             <div className="responsiveImgSection">
-            <div className="slider">
-                <Slider {...settings}>
-                    <div>
-                    
-                    <img src={Achievement1} alt="" />
-                    </div>
-                    <div><img src={Achievement2} alt=""/></div>
-                    <div>
-                    <img src={Achievement3} alt=""/>
-                    </div>
-                   
-                </Slider>
+                <div className="slider">
+                    <Slider {...settings}>
+                        <div>
+
+                            <img src={Achievement1} alt="" />
+                        </div>
+                        <div><img src={Achievement2} alt="" /></div>
+                        <div>
+                            <img src={Achievement3} alt="" />
+                        </div>
+
+                    </Slider>
                 </div>
-                </div>
+            </div>
             {/* </div> */}
 
             <div className="buttondiv">

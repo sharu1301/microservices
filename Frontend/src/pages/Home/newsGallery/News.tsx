@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import  { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 
 import parse from "html-react-parser";
@@ -109,7 +108,7 @@ const News = ({ limit }: { limit: number }) => {
                     <p className="subtitle">{article.plaintext.slice(0, 180)}</p>
                   </div>
                   <div className="modal-footer">
-                    <a href="#">View more</a>
+                    <a href="/">View more</a>
                   </div>
                 </div>
               </div>
@@ -205,9 +204,9 @@ const News = ({ limit }: { limit: number }) => {
           <div className="grid">{renderArticleCards()}</div>
           {limit <= 4 && (
             <div className="col-12 my-3 d-flex justify-content-end">
-              <Link className="viewall" to="/Blogs">
+              {/* <Link className="viewall" to="/Blogs">
                 View all
-              </Link>
+              </Link> */}
             </div>
           )}
         </>

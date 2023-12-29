@@ -2,9 +2,9 @@
 import './index.scss';
 
 
-export default function AppCard({image, icon, title, description, reverse}) {
+export default function AppCard({image, icon, title, description, reverse,onClickApp}) {
     return(
-           <div className="container pt-4">
+           <div className="container pt-4" onClick={onClickApp}>
              <div  className='row cardContainer' style={{ flexDirection: reverse ? 'row-reverse': 'row' }}>
               <div className="col-md-6">
                 <img className='cardImg' src={image} alt=''/>

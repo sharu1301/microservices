@@ -1,9 +1,11 @@
 import React from "react";
 import './index.scss';
+import { useNavigate } from "react-router-dom";
 
 export default function Description() {
+  const navigate = useNavigate()
   return (
-    <div className="descContainer"> 
+    <div className="descContainer">
       <div className={'weAreTheContainer'}>
         <p className={'weAreThe1'}>We Are the Name of the Trust When It</p>
         <p className={'comesToIndustrialMachinery'}>
@@ -20,8 +22,8 @@ export default function Description() {
         spanning decades, the company has consistently demonstrated a commitment
         to innovation, precision engineering, and customer satisfaction.
       </div>
-      <div className={'moreAboutUsParent'}>
-        <div className={'moreAboutUs1'}>more about us</div>
+      <div className={'moreAboutUsParent'} onClick={() => navigate("/about")}>
+        <div className={'moreAboutUs1'} >more about us</div>
       </div>
     </div>
   );

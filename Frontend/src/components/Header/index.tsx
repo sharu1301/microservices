@@ -61,7 +61,7 @@ export default function Header() {
 
         <div className="navbar">
           <div className="container">
-          <img src={logo} className="logoIcon" alt="" />
+          <img src={logo} className="logoIcon" alt="" onClick={() => navigate("/")}/>
 
           <div className={ openMenu ? 'navList active': 'navList'} >
             <ul>

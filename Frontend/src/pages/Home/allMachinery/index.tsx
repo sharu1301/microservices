@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import './index.scss';
 import automotive from '../../../assets/images/automotive.png'
@@ -9,9 +8,6 @@ import packaging from '../../../assets/images/package.png';
 import house from '../../../assets/images/house.png';
 import plastic from '../../../assets/images/precision.png';
 import construction from '../../../assets/images/construction.png';
-import productData from '../../../data/products.json';
-import ProductByCategory from "../../ProductByCatregory";
-
 
 export default function AllMachinery() {
 
@@ -26,26 +22,17 @@ export default function AllMachinery() {
 
 
 
-        {productData
-          ? (() => {
-            const automotiveItem = productData.filter(item => item.industry.includes('Automotive'));
 
-            if (automotiveItem) {
-              return (
-                <div
-                  className={'rectangleParent'}
-                  onClick={() => navigate('/product-by-category/automotive', { state: { data: automotiveItem } })}
-                >
-                  <div className={'instanceChild'}>
-                    <img className={'maskGroupIcon'} alt="" src={automotive} />
-                    <p className='title'>{'Automotive Components'}</p>
-                  </div>
-                </div>
-              );
-            }
-            return null;
-          })()
-          : null}
+        <div
+          className={'rectangleParent'}
+          onClick={() => navigate('/product-by-category/automotive')}
+        >
+          <div className={'instanceChild'}>
+            <img className={'maskGroupIcon'} alt="" src={automotive} />
+            <p className='title'>{'Automotive Components'}</p>
+          </div>
+        </div>
+
 
 
 
@@ -87,11 +74,11 @@ export default function AllMachinery() {
         <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/construction')}>
           <div className={'instanceChild'} >
             <img className={'maskGroupIcon'} alt="" src={construction} />
-            <p className='title'>construction</p>
+            <p className='title'>Construction</p>
           </div>
         </div>
 
-        <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/plastic-industry')}>
+        <div className={'rectangleParent'} onClick={() => navigate('/product-by-category/precision plastic')}>
           <div className={'instanceChild'} >
             <img className={'maskGroupIcon'} alt="" src={plastic} />
             <p className='title'>Precision Plastic industry</p>

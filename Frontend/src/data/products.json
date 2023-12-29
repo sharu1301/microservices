@@ -77,6 +77,7 @@
             "Precision Plastic",
             "Electrical Industry",
             "Engineering Components"
+            
            
         ]
     },
@@ -127,7 +128,8 @@
         "features": [
             "TFT Color Display",
             "Energy saving",
-            "Mould Safety protection"
+            "Mould Safety protection",
+            "Moulding"
         ],
         "lists": [
             "Wide tie bar distance and daylight.",
@@ -162,7 +164,8 @@
             "Pail Containers",
             "Household",
             "Electrical Industry",
-            "Automobile & More"
+            "Automobile & More",
+            "Moulding"
         ]
     }
     

@@ -1,117 +1,117 @@
 .heroSection {
-        // position: relative;
-        height: 400px; /* Adjust the height as needed */
-        fill: rgba(0, 0, 0, 0.50);
-       
-        background-image: url('../../../assets/images/hero-img.jpeg'); /* Replace with your image path */
-        background-size: cover;
-        background-position: center;
-        filter: drop-shadow(0px 4px 6px rgba(116, 0, 0, 0.08));
-        color: white;
-        display: flex;
-        align-items: center;
+  // position: relative;
+  height: 400px; /* Adjust the height as needed */
+  fill: rgba(0, 0, 0, 0.50);
+ 
+  background-image: url('../../../assets/images/hero-img.jpeg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 4px 6px rgba(116, 0, 0, 0.08));
+  color: white;
+  display: flex;
+  align-items: center;
 
-        @media screen and (max-width: 500px) {
-          background-image: url('../../../assets/images/mbl-hero-img.png');
-          height: 'auto' !important;
-          // margin-top: 100px;
-        }
-      }
-      
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%; /* Cover the left half */
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
-        @media screen and (max-width: 500px) {
-          display: none;
-        }
+  @media screen and (max-width: 500px) {
+    background-image: url('../../../assets/images/mbl-hero-img.png');
+    height: 'auto' !important;
+    // margin-top: 100px;
+  }
+}
 
-      }
-      
-      .content {
-        z-index: 1;
-        padding: 100px 100px 100px 120px;
-        width: 60%; /* Take the right half */
-        text-align: left;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Cover the left half */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 
-        @media screen and (max-width: 500px) {
-          margin-top: 160px;
-          padding: 20px;
-          width: 80%;
-        }
-         .title{
-          color: #FFF;
-          font-family: Inter;
-          font-size: 58px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 105.023%; /* 60.913px */
-          letter-spacing: 0.87px;
-          text-transform: capitalize;
-          @media screen and (max-width: 500px) {
-            font-size: 28px;
-            margin: 0px;
-          }
-         }
-         .subtitle{
-          color: #EBEBEB;
-          margin: 20px 0;
-          font-family: Inter;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 137.523%; /* 24.754px */
-          text-transform: capitalize;
-          @media screen and (max-width: 500px) {
-            font-size: 11px;
-            margin: 0px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-          }
-         }
-      }
-      
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-      
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-      
-      .btn{
-        margin: 20px;
-       display: inline-flex;
-        padding: 16px 32px;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        background: #E21E24;;
-        color: #FFF;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        @media screen and (max-width: 500px) {
-          margin-top: 100px;
-          padding: 10px;
-          margin: 0px;
-          gap:5px;
-          font-size: 12px;
-        }
-        img{
-          @media screen and (max-width: 500px) {
-            height: 12px;
-          }
-        }
-      }
-      
-      button:hover {
-        background-color: #b30000; /* Adjust the button color on hover */
-      }
+}
+
+.content {
+  z-index: 1;
+  padding: 100px 100px 100px 120px;
+  width: 60%; /* Take the right half */
+  text-align: left;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 160px;
+    padding: 20px;
+    width: 80%;
+  }
+   .title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105.023%; /* 60.913px */
+    letter-spacing: 0.87px;
+    text-transform: capitalize;
+    @media screen and (max-width: 500px) {
+      font-size: 28px;
+      margin: 0px;
+    }
+   }
+   .subtitle{
+    color: #EBEBEB;
+    margin: 20px 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 137.523%; /* 24.754px */
+    text-transform: capitalize;
+    @media screen and (max-width: 500px) {
+      font-size: 11px;
+      margin: 0px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+   }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn{
+  margin: 20px;
+ display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #E21E24;;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  @media screen and (max-width: 500px) {
+    margin-top: 100px;
+    padding: 10px;
+    margin: 0px;
+    gap:5px;
+    font-size: 12px;
+  }
+  img{
+    @media screen and (max-width: 500px) {
+      height: 12px;
+    }
+  }
+}
+
+button:hover {
+  background-color: #b30000; /* Adjust the button color on hover */
+}
 
 

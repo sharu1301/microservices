@@ -1,6 +1,8 @@
+@import './variable.scss';
+@import './breakpoints';
 body {
-  font-family: $inter;
-  font-size: $f16;
+  // font-family: $inter;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0em;
@@ -34,13 +36,14 @@ h2 {
 h3 {
   font-size: 48px;
   font-weight: 700;
+
   line-height: 120%;
   @include breakpoint(sm){
-    font-size: $f28;
+    font-size: 28px;
     margin-bottom: 14px;
   }
   @include breakpoint(xs) {
-    font-size: $f24;
+    font-size: 24px;
   }
 }
 h4 {
@@ -134,7 +137,7 @@ section {
 
 .primary-heading {
   color: $black;
-  font-family: $inter;
+  // font-family: $inter;
   font-size: 36px;
   font-weight: 600;
   line-height: 52px; /* 144.444% */

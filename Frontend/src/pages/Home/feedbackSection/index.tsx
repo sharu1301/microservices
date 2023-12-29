@@ -29,7 +29,8 @@ const FeedbackSection = () => {
                                         <img alt="" src={IsoCertified} className="icon" />
                                         <div>
                                             <h6>ISO Certified Company</h6>
-                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                            <p>Seal of Excellence - Certified Quality in Every Machine </p>
+                                            {/* <p>Lorem ipsum dolor sit amet consectetur.</p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +39,7 @@ const FeedbackSection = () => {
                                         <img alt="" src={productRangeIcon} className="icon" />
                                         <div>
                                             <h6>Wide Range of Products</h6>
-                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                            <p>Diverse Solutions – Moulding Possibilities for Every Need</p>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +48,7 @@ const FeedbackSection = () => {
                                         <img alt="" src={topQualityIcon} className="icon" />
                                         <div>
                                             <h6>Top-Notch Quality</h6>
-                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                            <p>Built to Last – Uncompromised Quality in Injection Moulding</p>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +57,7 @@ const FeedbackSection = () => {
                                         <img alt="" src={supportIcon} className="icon" />
                                         <div>
                                             <h6>Dedicated Support Team</h6>
-                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                            <p>Commitment to You – Support That Shapes Your Success</p>
                                         </div>
                                     </div>
                                 </div>

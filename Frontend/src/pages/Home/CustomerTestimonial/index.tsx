@@ -60,7 +60,9 @@ const CustomerTestimonials = () => {
             <div className='row w-100'>
                 <div className="col-md-8 m-auto text-center mb-4">
                     <h2 className="heading mb-2">Our Happy customers</h2>
-                    <p>Engineered Precision, Delivered Satisfaction – Hear from Our Happy Customers </p>
+                    <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate
+                        tristique molestie non. Consectetur sit enim facilisi faucibus elementum
+                        feugiat. </p>
                 </div>
                 <div className="col-md-6 col-12">
                     <div
@@ -70,8 +72,8 @@ const CustomerTestimonials = () => {
                         {selectedTestimonial ? (
                             <div className="testimonial-detail">
                                 <div className="testimonial-content">
-                                    <img src={selectedTestimonial.image} alt=""/>
                                     <h2 className="testimonial-author">{selectedTestimonial.text}</h2>
+                                    <img src={selectedTestimonial.image} />
                                     <h6 className="testimonial-text">{selectedTestimonial.author}</h6>
                                     <ul>
                                         <li>{selectedTestimonial.place}</li>
@@ -83,10 +85,10 @@ const CustomerTestimonials = () => {
                                 {testimonials.concat(testimonials).map((testimonial, index) => (
                                     <div
                                         key={index}
-                                        className="testimonial-bubble"
+                                        className="testimonial-bubble-left"
                                         onMouseEnter={() => handleTestimonialHover(testimonial)}
                                     >
-                                        <img src={testimonial.image} alt=""/>
+                                        <img src={testimonial.image} />
                                         <h2 className="testimonial-author">{testimonial.text}</h2>
                                         <h6 className="testimonial-text">{testimonial.author}</h6>
                                         <ul>
@@ -95,10 +97,7 @@ const CustomerTestimonials = () => {
                                     </div>
                                 ))}
                             </div>
-
-
-
-
+                        
                         )}
                     </div>
                 </div>

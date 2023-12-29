@@ -7,6 +7,7 @@
     background: url(../../../public/images/pages/automobile.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     h2{
         color: $white;
         @include breakpoint(sm){

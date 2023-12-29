@@ -75,7 +75,7 @@ const News = ({ limit }: { limit: number }) => {
 
         currentRow.push(
           <div className="vertialContainer">
-            <div className="newsCard">
+            <div className="newsCard" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img
                 src={
                   article.cover === null
@@ -90,12 +90,32 @@ const News = ({ limit }: { limit: number }) => {
                   {" "}
                   {parse(article.title.substring(3, article.title.length - 1))}
                 </p>
-                <p className="subtitle">{article.plaintext.slice(0, 90)}</p>
-                <div></div>
+                <div className="date">
+                  <h6>12 Aug 2023</h6>
+                </div>
+              </div>
+            </div>
+            <div className="modal fade news" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h6 className="modal-title" id="exampleModalLabel">
+                    {" "}
+                    {parse(article.title.substring(3, article.title.length - 1))}
+                    </h6>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <p className="subtitle">{article.plaintext.slice(0, 180)}</p>
+                  </div>
+                  <div className="modal-footer">
+                    <a href="#">View more</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
+          
           // <div className="col-md-12 mainNewsSection">
           //     <div className="row newsCard">
           //         <img

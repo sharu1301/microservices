@@ -26,5 +26,6 @@ export default function Description() {
         <div className={'moreAboutUs1'} >more about us</div>
       </div>
     </div>
+    
   );
 }

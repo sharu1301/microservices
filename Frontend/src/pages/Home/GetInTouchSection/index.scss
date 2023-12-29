@@ -28,6 +28,7 @@
         background-color: $footer-background;
         border-radius: 10px;
         margin: 30px;
+        padding:50px 40px;
         @include breakpoint(sm){
             display: none;
           }
@@ -36,7 +37,8 @@
             font-family: 'Times New Roman', Times, serif;
             color: $white;
             padding: 10px 10px 10px 10px;
-            font-size: 18px;
+            font-size: 17px;
+            line-height: 26px;
         }
 
         p {
@@ -67,5 +69,8 @@
 
         }
 
+    }
+    ._iframe:not(._takeover) .editor{
+        padding: 0;
     }
 }

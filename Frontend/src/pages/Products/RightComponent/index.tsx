@@ -23,8 +23,8 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
 
     const navigate = useNavigate();
     return (
-        <div className="row rightComponent pt-4">
-            <div className='col-md-5 rightDescription'>
+        <div className="row rightComponent pt-5 d-flex w-100">
+            <div className='col-md-6 rightDescription'>
                 <h4>{title}</h4>
                 <p></p>
                 <img className='responsiveImg' src={img} alt='' />
@@ -40,11 +40,11 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
                         <li>{l3}</li>
                         {l4 && (<li>{l4}</li>)}
                     </ul>
-                    <p className='highlighed'>Industry : Packaging, Cup & Closure</p>
+                    <p className='highlighed ml-0'>Industry : Packaging, Cup & Closure</p>
                 {/* </div> */}
                 <div className='button' onClick={() => navigate(`/product-specification/${title}`)}><p>View Details <BsArrowRight size={22} /></p> </div>
             </div>
-            <div className='col-md-5 rightimgSection'>
+            <div className='col-md-6 rightimgSection'>
                 <img src={img} alt='' />
             </div>
 

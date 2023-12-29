@@ -22,23 +22,25 @@ const ProductByCategory = () => {
             <Header />
             {/* <PageTitle title="Products By Category " /> */}
             <HeroCategory />
-            {productData.filter((data) => data.industry.map(cat => cat.toLowerCase()).includes(selectedCategory))
-                .map((data: any, i) => {
+            <div className="container mb-5">
+                {productData.filter((data) => data.industry.map(cat => cat.toLowerCase()).includes(selectedCategory))
+                    .map((data: any, i) => {
 
-                    return (
-                        (i % 2 === 0 || i === 0) ? (
-                            <LeftImgComponent
-                                data={data}
-                            />
-                        ) :
-                            (
-                                <RightImgComponent
+                        return (
+                            (i % 2 === 0 || i === 0) ? (
+                                <LeftImgComponent
                                     data={data}
                                 />
-                            )
-                    );
-                }
-                )}
+                            ) :
+                                (
+                                    <RightImgComponent
+                                        data={data}
+                                    />
+                                )
+                        );
+                    }
+                    )}
+            </div>
             <SubFooter />
             <Footer />
 

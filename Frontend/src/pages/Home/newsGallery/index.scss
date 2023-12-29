@@ -181,7 +181,8 @@
 
 .modal-open .news{
     margin: auto;
-    right: -700px;
+    top: 260px;
+    left: 370px;
     overflow-y: hidden;
     @media (max-width: 768px){
         right: 0;

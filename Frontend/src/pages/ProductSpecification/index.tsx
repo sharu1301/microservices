@@ -97,23 +97,26 @@ export default function ProductSpecification() {
         </div>
       </div>
 
-      <div className='descriptionContainer'>
-        <div className='leftSection'>
-          <b className='title'>High Performance Servo series produce Better pressure & output.</b>
 
-          <b className='subTitle'>Clamping Force 90-350</b>
+
+      <div className='description'>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className='leftSection'>
+                <b className='title'>High Performance Servo series produce Better pressure & output.</b>
+                <b className='subTitle'>Clamping Force 90-350</b>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className='rightSection'>
+                <b className='title' >Hinds Machines, a leading name in the field of machine manufacturerers, is dedicated to providing cutting-edge solutions for diverse industrial needs.</b>
+                <p className='subTitle'>With a rich history spanning decades, their commitment to innovation and quality has set them apart in the industry. Renowned for their precision engineering and advanced technology, Hinds Machines consistently delivers reliable, high-performance products that meet the demands of modern manufacturing. Backed by a team of seasoned experts, Hinds Machines remains at the forefront of the injection molding machinery sector, setting the standard for excellence and customer satisfaction.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className='rightSection'>
-          <b className='title' >Hinds Machines, a leading name in the field of machine manufacturerers, is dedicated to providing cutting-edge solutions for diverse industrial needs.</b>
-
-
-          <p className='subTitle'>With a rich history spanning decades, their commitment to innovation and quality has set them apart in the industry. Renowned for their precision engineering and advanced technology, Hinds Machines consistently delivers reliable, high-performance products that meet the demands of modern manufacturing. Backed by a team of seasoned experts, Hinds Machines remains at the forefront of the injection molding machinery sector, setting the standard for excellence and customer satisfaction.</p>
-        </div>
-
       </div>
-
-
 
       <div className='type'>
         <div className='card1'>
@@ -135,11 +138,13 @@ export default function ProductSpecification() {
 
 
       <div className='bottomSlider'>
-        <img src={footerImg} alt=''/>
+        <div className="image-section">
+          <img src={footerImg} alt='' />
+        </div>
 
         <div className={'smallContainer'} >
           <div onClick={() => setFooterImg(bottomSlider1)}>
-            <img className={footerImg === bottomSlider1 ? 'active' : 'image'} src={bottomSlider1}alt='' />
+            <img className={footerImg === bottomSlider1 ? 'active' : 'image'} src={bottomSlider1} alt='' />
           </div>
 
           <div onClick={() => setFooterImg(bottomSlider2)}>
@@ -147,11 +152,11 @@ export default function ProductSpecification() {
           </div>
 
           <div onClick={() => setFooterImg(bottomSlider3)}>
-            <img className={footerImg === bottomSlider3 ? 'active' : 'image'} src={bottomSlider3} alt=''/>
+            <img className={footerImg === bottomSlider3 ? 'active' : 'image'} src={bottomSlider3} alt='' />
           </div>
 
           <div onClick={() => setFooterImg(bottomSlider4)}>
-            <img className={footerImg === bottomSlider4 ? 'active' : 'image'} src={bottomSlider4} alt=''/>
+            <img className={footerImg === bottomSlider4 ? 'active' : 'image'} src={bottomSlider4} alt='' />
           </div>
         </div>
 

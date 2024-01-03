@@ -102,7 +102,7 @@ const CustomerTestimonials = () => {
                     </div>
                 </div>
 
-                <div className="col-md-6 col-11 videoDiv">
+                <div className="col-md-6 col-12 videoDiv">
                     <Slider {...VideoSettings}>
                         <video src={Sample1} controls />
                         <video src={Sample1} controls />

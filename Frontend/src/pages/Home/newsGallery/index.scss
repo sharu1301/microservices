@@ -5,6 +5,9 @@
     align-items: flex-start;
     padding: 40px 112px 40px 106px;
 
+    @media screen and (max-width: 1024px){
+        padding: 40px 36px;
+    }
     @media screen and (max-width: 500px) {
         flex-direction: column;
         padding: 40px 40px 40px 22px;

@@ -172,6 +172,9 @@
 .slick-slider {
     margin: 0 0px 20px 20px;
 }
+.slick-dots li button{
+    display: none;
+}
 @keyframes scrollTestimonials {
     0% {
         transform: translateY(0);

@@ -12,6 +12,7 @@ import ProductSpecification from "./pages/ProductSpecification";
 import Service from "./pages/Services";
 import Process from "./pages/ProcessOptimisation";
 import ProductByCategory from "./pages/ProductByCatregory";
+import Updates from "./pages/Updates";
 
 const routes = (
   <>
@@ -27,6 +28,7 @@ const routes = (
       <Route path="/product-specification/:productname" element={<ProductSpecification/>}/>
       <Route path="/service" element={<Service />} />
       <Route path="/process" element={<Process />} />
+      <Route path="/updates" element={<Updates />} />
       <Route path="/product-by-category/:category" element={< ProductByCategory/>}/>
     </Routes>
   </>

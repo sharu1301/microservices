@@ -1,0 +1,193 @@
+[
+    {
+        "title": "Euro Pac Series",
+        "image": "images/productimages/EuroPac.png",
+        "description": "High speed hydraulic motor on screw drive for high plascizing rate. Energy efficient DFE series electronic variable pump for high output",
+        "standardFeatures": [
+            {
+                "Clamping": [
+                    "Five point toggle.",
+                    "Wide platen area & Robust design with wide state on moving platen",
+                    "Centralised lubrication system with piston cylinder",
+                    "LPMT for position measuring for moving platen, screw travel & Ejection",
+                    "Air ejection system for fixed platen & moving platen side."
+                ]
+            },
+            {
+                "Injection": [
+                    "High speed hydraulic motor on screw drive for high plasticizing rate.",
+                    "High response logic cartridges used in injection manifold to ensure high speed injection with low noise.",
+                    "Nitride screw with large L/D ratio for high output with homogeneous mixture.",
+                    " Energy efficient DFE series electronic variable pump for high output with low power consumption."
+                ]
+            },
+            {
+                "Controls": [
+                    "B & R controller with 10” TFT display",
+                    "Actual injection speed & pressure with graphical display",
+                    "User friendly",
+                    "Ethernet connection",
+                    "Timer precision",
+                    "Mould data storage"
+                ]
+            },
+            {
+                "optionalFeature": [
+                    "Accumulator for very high injection speed.",
+                    "Parallel refilling with electric screw drive",
+                    "On line conveyor for ease of production.",
+                    "Energy meter for analysis power",
+                    "consumption.",
+                    "Feed temp controller."
+                ]
+            }
+        ],
+        "industry": [
+            "Packaging",
+            "Cap & Closures"
+        ]
+    },
+    {
+        "title": "Euro Pet Series",
+        "image": "images/productimages/EuroPet.png",
+        "description": "Heavy duty five point toggle mechanism.Higher torque radial piston hydraulic motor for screw drive.",
+        "features": [
+            "Low Power Consumption",
+            "Hydroulic Morter",
+            "Air Ejection"
+        ],
+        "lists": [
+            "Dedicated for PET preform with higher output at low cost",
+            "Robust clamping unit for evenly distribute clamp free",
+            "High Injecon speed with high response logic valves"
+        ],
+        "industry": [
+            "Pet Preform"
+        ]
+    },
+    {
+        "title": "Euro Servo Series",
+        "image": "images/productimages/EuroSurvo.png",
+        "description": "Energy efficient Servo Driven gear pump with closed loop pressure transducer feedback",
+        "features": [
+            "Air ejector",
+            "Hydraulics core pull",
+            "Water manifold"
+        ],
+        "lists": [
+            "Wide tie bar distance & daylight",
+            "Robust five point vertical toggle clamp mechanism",
+            "Variable back pressure control",
+            "Two stage speed with soft eject"
+        ],
+        "industry": [
+            "Household",
+            "Automotive",
+            "Electrical Industry"
+        ]
+    },
+    {
+        "title": "Euro Star Series",
+        "image": "images/productimages/EuroStar.png",
+        "description": "High Caliber machine to satisfy your needs for the production of high speed, superior precision parts.",
+        "features": [
+            "injection capacity 40gms - 120gms",
+            "10.2” TFT Display",
+            "USB Port"
+        ],
+        "lists": [
+            "Dedicated for PET preform with higher output at low cost",
+            "Robust clamping unit for evenly distribute clamp free",
+            "High Injecon speed with high response logic valves"
+        ],
+        "industry": [
+            "Precision Plastic",
+            "Electrical Industry",
+            "Engineering Components"
+        ]
+    },
+    {
+        "title": "Euro (CPVC) Series",
+        "image": "images/productimages/EuroCPVC.png",
+        "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
+        "features": [
+            "Construction",
+            "Energy Efficient",
+            "High Productivity"
+        ],
+        "lists": [
+            "Dedicated CPVC Machine",
+            "Unscrew feature for electric motor",
+            "Separate manifolds for injection unit and clamping unit",
+            "LPMT for posion measuring for moving platen, screw travel & Ejection."
+        ],
+        "industry": [
+            "CPVC Fittings",
+            "Construction"
+        ]
+    },
+    {
+        "title": "Euro (PVC) Series",
+        "image": "images/productimages/EuroPVC.png",
+        "description": "Polyvinyl chloride (PVC) is a versatile thermoplastic material that is used in the production of hundreds of products.",
+        "features": [
+            "PID Control System",
+            "Robot Interface",
+            "TFT Color Display"
+        ],
+        "lists": [
+            "Dedicated PVC Machine",
+            "Easily Programmable, User Friendly, Visual & Audio Alarm",
+            "Available in a range of 100 to 910 Ton"
+        ],
+        "industry": [
+            "PVC Fittings",
+            "Construction"
+        ]
+    },
+    {
+        "title": "Euro R Series",
+        "image": "images/productimages/EuroR.png",
+        "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
+        "features": [
+            "TFT Color Display",
+            "Energy saving",
+            "Mould Safety protection",
+            "Moulding"
+        ],
+        "lists": [
+            "Wide tie bar distance and daylight.",
+            "Direct hydraulic clamping system enable stable and precisely controlled clamping force.",
+            "Radial Piston type hydraulic motor enable high torque and excellent performance."
+        ],
+        "industry": [
+            "Euro R Series",
+            "Electrical Industry",
+            "Automobile",
+            "Household",
+            "Automotive"
+        ]
+    },
+    {
+        "title": "Euro Servo R Series",
+        "image": "images/productimages/EuroServoR.png",
+        "description": "Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump",
+        "features": [
+            "PID Control System",
+            "Robot Interface",
+            "TFT Color Display"
+        ],
+        "lists": [
+            "Wide tie bar distance and daylight.",
+            "Direct hydraulic clamping system enable stable and precisely controlled clamping force.",
+            "Radial Piston type hydraulic motor enable high torque and excellent performance."
+        ],
+        "industry": [
+            "Pail Containers",
+            "Household",
+            "Electrical Industry",
+            "Automobile & More",
+            "Moulding"
+        ]
+    }
+]

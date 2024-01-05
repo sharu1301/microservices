@@ -21,19 +21,19 @@ function About() {
               </div>
               <div className="col-lg-6">
                 <div>
-                  <p>
+                  <p style={{textAlign:'justify'}}>
                     Founded in 1999, by Mr. PARVEEN SHARMA, a Mechanical engineer, HINDS machineries
                     started with a small workshop at Subhash nagar New Delhi. In 2003 company introduced
                     the Euro Series of Injection molding during the PLASTINDIA 2003.
                   </p>
-                  <p>
+                  <p style={{textAlign:'justify'}}>
                     With overwhelming response from PLASTINDIA 2003. The company expanded itself to meet
                     the growing demand of customers, and set up a new factory at Manesar in 2005. With the
                     launch of new Euro R series of injection molding machine Hydraulic clamping type during
                     PLASTINDIA 2006, company expanded further its manufacturing set up with 2nd unit in
                     manesar at sec-8.
                   </p>
-                  <p>
+                  <p style={{textAlign:'justify'}}>
                     With the Start up of New Plant with a New Name M/s. Hinds Plastic Machines Pvt Ltd.
                     at Sector 8, Near Maruti Gate no.2, The Company Now Caters the other Automotive Sectors
                     also with Manufacturing the Special Purpose Machines & Also taking Complete Project

@@ -43,8 +43,8 @@ const CustomerTestimonials = () => {
     const [selectedTestimonial, setSelectedTestimonial] =
         useState<Testimonial | null>(null);
 
-    const VideoSettings = { 
-        dots: true, 
+    const VideoSettings = {
+        dots: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 2,
@@ -82,20 +82,37 @@ const CustomerTestimonials = () => {
                             </div>
                         ) : (
                             <div className="scrolling-testimonials">
-                                {testimonials.concat(testimonials).map((testimonial, index) => (
-                                    <div
-                                        key={index}
-                                        className="testimonial-bubble-left"
-                                        onMouseEnter={() => handleTestimonialHover(testimonial)}
-                                    >
-                                        <img src={testimonial.image} alt="" />
-                                        <h2 className="testimonial-author">{testimonial.text}</h2>
-                                        <h6 className="testimonial-text">{testimonial.author}</h6>
-                                        <ul>
-                                            <li>{testimonial.place}</li>
-                                        </ul>
-                                    </div>
-                                ))}
+                                {testimonials.concat(testimonials).map((testimonial, index) => {
+                                    return (
+                                        (index % 2 === 0 || index === 0) ? (
+                                            <div
+                                                key={index}
+                                                className="testimonial-bubble-left"
+                                                onMouseEnter={() => handleTestimonialHover(testimonial)}
+                                            >
+                                                <img src={testimonial.image} alt="" />
+                                                <h2 className="testimonial-author">{testimonial.text}</h2>
+                                                <h6 className="testimonial-text">{testimonial.author}</h6>
+                                                <ul>
+                                                    <li>{testimonial.place}</li>
+                                                </ul>
+                                            </div>) :
+                                            <div
+                                                key={index}
+                                                className="testimonial-bubble-right"
+                                                onMouseEnter={() => handleTestimonialHover(testimonial)}
+                                            >
+                                                <img src={testimonial.image} alt=""/>
+                                                <h2 className="testimonial-author">{testimonial.text}</h2>
+                                                <h6 className="testimonial-text">{testimonial.author}</h6>
+                                                <ul>
+                                                    <li>{testimonial.place}</li>
+                                                </ul>
+                                            </div>
+
+
+                                    )
+                                })}
                             </div>
 
                         )}

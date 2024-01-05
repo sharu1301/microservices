@@ -27,7 +27,7 @@ export default function Process() {
           </div>
         </div>
       </main>
-      <section className="section processWrapper pt-0">
+      <section className="processWrapper pt-0">
         <div className="container">
           <div className="row">
             <div className="col-md-5 col-lg-5">
@@ -36,21 +36,23 @@ export default function Process() {
               </div>
             </div>
             <div className="col-md-7 col-lg-7">
-              <div className="panel bg-light">
-                <h6>Lorem ipsum dolor sit</h6>
-                <p>Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas
-                  venenatis. Maecenas molestie sagittis. eros vel ante rutrum mollis in at mauris. Praesent,
-                </p>
-                <img src="../../images/pages/process-mobile.jpg" alt="" className="img-fluid" />
-              </div>
-              <div className="panel-sub">
-                <h6>Lorem ipsum dolor sit amet consectet.</h6>
-              </div>
-              <div className="panel-sub">
-                <h6>Lorem ipsum dolor sit amet.</h6>
-              </div>
-              <div className="panel-sub">
-                <h6>Lorem ipsum dolor sit amet consectet.</h6>
+              <div className="right-panel">
+                <div className="panel bg-light">
+                  <h6>Lorem ipsum dolor sit</h6>
+                  <p>Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas
+                    venenatis. Maecenas molestie sagittis. eros vel ante rutrum mollis in at mauris. Praesent,
+                  </p>
+                  <img src="../../images/pages/process-mobile.jpg" alt="" className="img-fluid" />
+                </div>
+                <div className="panel-sub">
+                  <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                </div>
+                <div className="panel-sub">
+                  <h6>Lorem ipsum dolor sit amet.</h6>
+                </div>
+                <div className="panel-sub">
+                  <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                </div>
               </div>
             </div>
           </div>

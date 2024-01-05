@@ -6,6 +6,8 @@ import linkedIn from "../../assets/icons/linkedin.png";
 import instagram from "../../assets/icons/instagram.png";
 import logo from "../../assets/logo/logo.png";
 import { useState } from "react";
+import productData from '../../data/products.json';
+import blowMouldingData from '../../data/blowMouldingList.json'
 
 export default function Header() {
   const navigate = useNavigate();
@@ -25,34 +27,34 @@ export default function Header() {
               </div>
               <div className="col-md-4 pr-0 text-right">
                 <div className={"icons"}>
-                <div className={"socialIcons01"}>
-                  <img
-                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                    alt=""
-                    src={x}
-                  />
-                </div>
-                <div className={"socialIcons01"}>
-                  <img
-                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                    alt=""
-                    src={facebook}
-                  />
-                </div>
-                <div className={"socialIcons03"}>
-                  <img
-                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                    alt=""
-                    src={instagram}
-                  />
-                </div>
-                <div className={"socialIcons03"}>
-                  <img
-                    className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                    alt=""
-                    src={linkedIn}
-                  />
-                </div>
+                  <div className={"socialIcons01"}>
+                    <img
+                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                      alt=""
+                      src={x}
+                    />
+                  </div>
+                  <div className={"socialIcons01"}>
+                    <img
+                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                      alt=""
+                      src={facebook}
+                    />
+                  </div>
+                  <div className={"socialIcons03"}>
+                    <img
+                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                      alt=""
+                      src={instagram}
+                    />
+                  </div>
+                  <div className={"socialIcons03"}>
+                    <img
+                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                      alt=""
+                      src={linkedIn}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -61,69 +63,61 @@ export default function Header() {
 
         <div className="navbar">
           <div className="container">
-          <img src={logo} className="logoIcon" alt="" onClick={() => navigate("/")}/>
+            <img src={logo} className="logoIcon" alt="" onClick={() => navigate("/")} />
 
-          <div className={ openMenu ? 'navList active': 'navList'} >
-            <ul>
-              <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
-              <li   className={pathname === "/about" ? 'active' : ''}  onClick={() => navigate("/about")}>About Us</li>
-              <li className={pathname === "/service" ? 'active' : ''} onClick={() => navigate("/service")}>Services</li>
-              <li className="dropdown">
-                <a className="dropdown-toggle" href="/productlist" data-bs-toggle="dropdown">Products</a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/productlist">Injection moulding machine</a>
-                    <ul className="submenu dropdown-menu">
-                      <li><a className="dropdown-item" href="/productlist">Euro Servo series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro Pac Series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro Pet Series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro Star Series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro CPVC Series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro PVC Series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro R Series</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Euro Series</a></li>
-                    </ul>
-                  </li>
-                  <li><a className="dropdown-item" href="/productlist">Blow moulding machine</a>
-                    <ul className="submenu dropdown-menu">
-                      <li><a className="dropdown-item" href="/productlist">Crimping press Machine</a></li>
-                      <li><a className="dropdown-item" href="/productlist">Leak testing machine</a></li>
-                      <li><a className="dropdown-item" href="/productlist">spacer insert machine</a></li>
-                      <li><a className="dropdown-item" href="/productlist">u bolt bend machine</a></li>
-                      <li><a className="dropdown-item" href="/productlist">drilling & tapping machine</a></li>
-                      <li><a className="dropdown-item" href="/productlist">chamfering machine</a></li>
-                      <li><a className="dropdown-item" href="/productlist">hydraulic press machine</a></li>
-                    </ul>
-			            </li>
-                  <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
-		            </ul>
-              </li>
+            <div className={openMenu ? 'navList active' : 'navList'} >
+              <ul>
+                <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
+                <li className={pathname === "/about" ? 'active' : ''} onClick={() => navigate("/about")}>About Us</li>
+                <li className={pathname === "/service" ? 'active' : ''} onClick={() => navigate("/service")}>Services</li>
+                <li className="dropdown">
+                  <a className="dropdown-toggle" href="/productlist" data-bs-toggle="dropdown">Products</a>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="/productlist">Injection moulding machine</a>
+                      <ul className="submenu dropdown-menu">
+                        {productData.map((list, i) => (
+                          <li><a className="dropdown-item" onClick={() => navigate(`/product-specification/${list.title}`)}>{list.title}</a></li>
+                        ))}
 
-              <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
-              <li className={pathname === "/gallery" ? 'active' : ''} onClick={() => navigate("/gallery")}>Gallery</li>
+                      </ul>
+                    </li>
+                    <li><a className="dropdown-item" href="/productlist">Blow moulding machine</a>
+                      <ul className="submenu dropdown-menu">
+                        {blowMouldingData.map((list, i) =>
+                        (<li><a className="dropdown-item" >{list.title}</a></li>
+                        ))}
+                      </ul>
+                    </li>
+                    <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
+                  </ul>
+                </li>
+
+                <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
+                <li className={pathname === "/gallery" ? 'active' : ''} onClick={() => navigate("/gallery")}>Gallery</li>
 
 
 
-              <li className={pathname === "/career" ? 'active' : ''}>Career</li>
-            </ul>
+                <li className={pathname === "/career" ? 'active' : ''}>Career</li>
+              </ul>
 
-            <div
-            className="contactUsParent"
-            onClick={() => navigate("/contactus")}
-          >
-            <b className="contactUs"> Contact Us</b>
+              <div
+                className="contactUsParent"
+                onClick={() => navigate("/contactus")}
+              >
+                <b className="contactUs"> Contact Us</b>
+              </div>
+
+            </div>
+
+
+            <div id="mobile"
+              onClick={() => setOpenMenu(!openMenu)}
+            >
+              <i className={
+                openMenu ? 'fas fa-times' : 'fas fa-bars'
+              }> </i>
+            </div>
           </div>
-
-          </div>
-
-         
-          <div  id="mobile"
-           onClick={() => setOpenMenu(!openMenu)}
-          >
-             <i className={
-              openMenu ? 'fas fa-times': 'fas fa-bars'
-             }> </i> 
-          </div>
-        </div>
         </div>
       </div>
     </>

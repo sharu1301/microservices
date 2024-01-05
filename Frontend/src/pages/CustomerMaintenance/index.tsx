@@ -290,10 +290,10 @@ const CustomerMaintenance = () => {
                                     <h4>Lorem Ipsum</h4>
                                     <p>Such simple and flexible settings make
                                         product a universal solution for the most of the interested customers.</p>
-                                    <a href="#">read more
+                                    <a href="/more">read more
                                         <i className="fa-solid fa-chevron-right"></i>
                                     </a>
-                                    <a href="#" className="float-right">
+                                    <a href="/more" className="float-right">
                                         <i className="fa-solid fa-share-nodes"></i>
                                     </a>
                                 </div>
@@ -330,10 +330,10 @@ const CustomerMaintenance = () => {
                                     <h4>Lorem Ipsum</h4>
                                     <p>Such simple and flexible settings make
                                         product a universal solution for the most of the interested customers.</p>
-                                    <a href="#">read more
+                                    <a href="/more">read more
                                         <i className="fa-solid fa-chevron-right"></i>
                                     </a>
-                                    <a href="#" className="float-right">
+                                    <a href="/more" className="float-right">
                                         <i className="fa-solid fa-share-nodes"></i>
                                     </a>
                                 </div>
@@ -370,10 +370,10 @@ const CustomerMaintenance = () => {
                                     <h4>Lorem Ipsum</h4>
                                     <p>Such simple and flexible settings make
                                         product a universal solution for the most of the interested customers.</p>
-                                    <a href="#">read more
+                                    <a href="/more">read more
                                         <i className="fa-solid fa-chevron-right"></i>
                                     </a>
-                                    <a href="#" className="float-right">
+                                    <a href="/more" className="float-right">
                                         <i className="fa-solid fa-share-nodes"></i>
                                     </a>
                                 </div>

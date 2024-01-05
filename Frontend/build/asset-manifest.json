@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.18ab1a90.css",
-    "main.js": "/static/js/main.2c2059c7.js",
+    "main.css": "/static/css/main.25bfefd1.css",
+    "main.js": "/static/js/main.7f695dfd.js",
     "static/js/787.698ab1ba.chunk.js": "/static/js/787.698ab1ba.chunk.js",
     "static/media/exhibition_img_1.png": "/static/media/exhibition_img_1.79ba59e162431953b28b.png",
+    "static/media/images.png": "/static/media/images.79ba59e162431953b28b.png",
+    "static/media/Sample2.mp4": "/static/media/Sample2.fabdb15b1bb89a678560.mp4",
     "static/media/Sample1.mp4": "/static/media/Sample1.867b6ab1c9db83359f6b.mp4",
     "static/media/heroImage.png": "/static/media/heroImage.f3a79bb2ac36fa1d420e.png",
+    "static/media/heroImg2.png": "/static/media/heroImg2.059e477a13207ef38d38.png",
     "static/media/page-title-bg.png": "/static/media/page-title-bg.6ff451401408625497a1.png",
     "static/media/img7.png": "/static/media/img7.331ce04887bb49b10f45.png",
     "static/media/mainImg.png": "/static/media/mainImg.70478868530015b963be.png",
@@ -27,6 +30,7 @@
     "static/media/img3.jpeg": "/static/media/img3.e20897f107ad05ca6945.jpeg",
     "static/media/EuroPac.png": "/static/media/EuroPac.36d67b017d5574dfdc03.png",
     "static/media/gallery_img_2.png": "/static/media/gallery_img_2.16539470ea80da79fe7b.png",
+    "static/media/EuroSurvo.png": "/static/media/EuroSurvo.0f6bf2cd75e49846ead2.png",
     "static/media/Achievement1.png": "/static/media/Achievement1.ec023a961cce8e317db2.png",
     "static/media/Achievement3.png": "/static/media/Achievement3.ec023a961cce8e317db2.png",
     "static/media/gallery_img_1.png": "/static/media/gallery_img_1.fb14cd93c7bdcd940096.png",
@@ -41,17 +45,23 @@
     "static/media/EuroPet.png": "/static/media/EuroPet.0d3bcedde1b976a4cabc.png",
     "static/media/automobile.jpg": "/static/media/automobile.fd825f2dc1865ea5e0c0.jpg",
     "static/media/img8.png": "/static/media/img8.7a16b76a09e270273226.png",
+    "static/media/Mask group.svg": "/static/media/Mask group.6659f3600a59128ea782.svg",
+    "static/media/news_img_2.png": "/static/media/news_img_2.125f61ef42074448ed8d.png",
+    "static/media/electrical.zip": "/static/media/electrical.3b84d446d340bea46177.zip",
+    "static/media/news_img_1.png": "/static/media/news_img_1.0fd325aaa8e6eb315678.png",
+    "static/media/news_img_3.png": "/static/media/news_img_3.50f2bc0b8bb7e3fd3c04.png",
     "index.html": "/index.html",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.18ab1a90.css.map": "/static/css/main.18ab1a90.css.map",
-    "main.2c2059c7.js.map": "/static/js/main.2c2059c7.js.map",
+    "static/media/arrow-down-circle.svg": "/static/media/arrow-down-circle.648ba23587b2114d7e61.svg",
+    "main.25bfefd1.css.map": "/static/css/main.25bfefd1.css.map",
+    "main.7f695dfd.js.map": "/static/js/main.7f695dfd.js.map",
     "787.698ab1ba.chunk.js.map": "/static/js/787.698ab1ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18ab1a90.css",
-    "static/js/main.2c2059c7.js"
+    "static/css/main.25bfefd1.css",
+    "static/js/main.7f695dfd.js"
   ]
 }

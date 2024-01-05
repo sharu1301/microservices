@@ -1,0 +1,87 @@
+@import "../../assets/sass/main.scss";
+
+.article-section{
+    padding: 40px 0;
+    .head{
+       font-size: $f32;
+       font-weight: 600;
+       text-transform: capitalize;
+       font-style: normal;
+       font-family: Inter;
+    }
+    .article-card{
+        background-color: #F5F7F7;
+        border-radius: 10px;
+        padding: 14px;
+        .article-img{
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .article-content{
+            margin-top: 10px;
+            .article-title{
+                font-size: $f24 !important;
+                @include breakpoint(md){
+                    font-size: $f18 !important;
+                }
+            }
+            p{
+                font-size: $f16;
+                @include breakpoint(md){
+                    font-size: $f13;
+                }
+            }
+            button{
+                background-color: #CCCCC5;
+                color: #666666;
+                padding: 6px 14px;
+                border: none;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+        }
+    
+    }
+}
+.broucher-section{
+    padding: 20px 0 60px 0;
+    .head{
+       font-size: $f32;
+       font-weight: 600;
+       text-transform: capitalize;
+       font-style: normal;
+       font-family: Inter;
+    }
+    .broucher-card{
+        background-color: #F5F7F7;
+        border-radius: 10px;
+        padding: 14px;
+        .broucher-img{
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .broucher-content{
+            margin-top: $mt-2;
+            h6{
+                text-transform: capitalize;
+                font-size: $f18;
+                line-height: 20px;
+                @include breakpoint(md){
+                    font-size: $f16;
+                }
+            }
+            p{
+                font-size: $f16;
+                margin-bottom: 0;
+                @include breakpoint(md){
+                    font-size: $f14;
+                }
+            }
+        }
+    }
+}

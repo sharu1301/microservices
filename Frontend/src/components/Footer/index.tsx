@@ -72,7 +72,7 @@ const Footer = () => {
                     <a href="/applications">Application</a>
                   </li>
                   <li>
-                    <a href="/returns">Updates </a>
+                    <a href="/updates">Updates </a>
                   </li>
                   <li>
                     <a href="/productenquiry">Enquiry</a>

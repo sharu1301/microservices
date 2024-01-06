@@ -33,18 +33,16 @@ pipeline {
     stage('Post-build Actions') {
       steps {
         script {
-            def jiraIssueKey = 'HIN-3' // Replace with your actual Jira issue key
-
-            // Update Jira issue with build status
-            jiraSendBuildInfo(
-                site: 'hindsmachines.atlassian.net', // Replace with your Jira site name
-                issueKey: jiraIssueKey,
-                buildNumber: currentBuild.number.toString(),
-                buildStatus: currentBuild.result.toString(),
-                envVars: env
-            )
+          def jiraIssueKey = 'HIN-3'
+          jiraSendBuildInfo(
+            site: 'hindsmachines.atlassian.net',
+            issueKey: jiraIssueKey,
+            buildNumber: currentBuild.number.toString(),
+            buildStatus: currentBuild.result.toString(),
+            envVars: env
+          )
         }
       }
-    } 
-  }
+    }
+  }
 }

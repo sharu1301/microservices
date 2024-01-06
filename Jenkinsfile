@@ -33,6 +33,7 @@ pipeline {
     stage('Post-build Actions') {
       steps {
         script {
+          jiraSendBuildInfo branch: 'dev', site: 'https://hindsmachines.atlassian.net/jira/software/c/projects/HIN/boards/2'
           def jiraIssueKey = 'HIN-16'
           jiraSendBuildInfo(
             site: 'hindsmachines.atlassian.net',

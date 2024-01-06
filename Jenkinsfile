@@ -36,7 +36,7 @@ pipeline {
           success {
             script {
               def jiraConfig = [
-                credentialsId: 'hindsmachines@gmail.com', // Jenkins credential ID for Jira
+                credentialsId: 'Jenkins', // Jenkins credential ID for Jira
                 site: 'https://hindsmachines.atlassian.net/', // Jira instance URL
                 projectKey: 'HIN', // Jira project key
                 issueType: 'HIN-15', // Jira issue type
@@ -49,7 +49,7 @@ pipeline {
           failure {
             script {
               def jiraConfig = [
-                credentialsId: 'hindsmachines@gmail.com', // Jenkins credential ID for Jira
+                credentialsId: 'Jenkins', // Jenkins credential ID for Jira
                 site: 'https://hindsmachines.atlassian.net', // Jira instance URL
                 projectKey: 'HIN', // Jira project key
                 issueType: 'HIN-15', // Jira issue type

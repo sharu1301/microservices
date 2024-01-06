@@ -30,17 +30,31 @@ pipeline {
         }
       }
     }
-    stage('Post-build Actions') {
-      steps {
+    post {
+      success {
         script {
-          def jiraIssueKey = 'HIN-16'
-          jiraSendBuildInfo(
-            site: 'hindsmachines.atlassian.net',
-            issueKey: jiraIssueKey,
-            buildNumber: currentBuild.number.toString(),
-            buildStatus: currentBuild.result.toString(),
-            envVars: env
-          )
+          def jiraConfig = [
+            credentialsId: 'hindsmachines@gmail.com', // Jenkins credential ID for Jira
+            site: 'https://hindsmachines.atlassian.net/', // Jira instance URL
+            projectKey: 'HIN', // Jira project key
+            issueType: 'HIN-15', // Jira issue type
+            summary: "Build Successful - ${currentBuild.fullDisplayName}",
+            description: "Build ${currentBuild.fullDisplayName} was successful.\n\n [Jenkins Build Info|${env.BUILD_URL}]"
+          ]
+          jiraSendBuildInfo jiraConfig
+        }
+      }
+      failure {
+        script {
+          def jiraConfig = [
+            credentialsId: 'hindsmachines@gmail.com', // Jenkins credential ID for Jira
+            site: 'https://hindsmachines.atlassian.net', // Jira instance URL
+            projectKey: 'HIN', // Jira project key
+            issueType: 'HIN-15', // Jira issue type
+            summary: "Build Failed - ${currentBuild.fullDisplayName}",
+            description: "Build ${currentBuild.fullDisplayName} failed.\n\n [Jenkins Build Info|${env.BUILD_URL}]"
+          ]
+          jiraSendBuildInfo jiraConfig
         }
       }
     }

@@ -76,10 +76,10 @@ export default function Header() {
                     data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
                   <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="/process">Process Optimization</a>
-                      
+
                     </li>
                     <li><a className="dropdown-item" href="/upgrades">Upgrades</a>
-                      
+
                     </li>
                     <li><a className="dropdown-item" href="/customermaintenance">Customer Service and Maintenance</a></li>
                   </ul>
@@ -94,7 +94,7 @@ export default function Header() {
                     <li><a className="dropdown-item" href="/productlist">Injection moulding machine</a>
                       <ul className="submenu dropdown-menu">
                         {productData.map((list, i) => (
-                          <li><p className="dropdown-item" onClick={() => navigate(`/product-specification/${list.title}`)}>{list.title}</p></li>
+                          <li><a className="dropdown-item" href={`/product-specification/${list.title}`}>{list.title}</a></li>
                         ))}
 
                       </ul>
@@ -103,7 +103,7 @@ export default function Header() {
                       <ul className="submenu dropdown-menu">
                         {blowMouldingData.map((list, i) =>
                         (<li><a
-                           className="dropdown-item" >{list.title}</a></li>
+                          className="dropdown-item"href="/productlist" >{list.title}</a></li>
                         ))}
                       </ul>
                     </li>
@@ -111,7 +111,7 @@ export default function Header() {
                   </ul>
                 </li>
 
-                
+
 
                 <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
                 <li className={pathname === "/gallery" ? 'active' : ''} onClick={() => navigate("/gallery")}>Gallery</li>

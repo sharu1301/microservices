@@ -4,9 +4,27 @@ import PageTitle from "../../components/pageTitle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { useState,useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function About() {
   const navigate = useNavigate()
+
+  
+  const Settings = {
+    dots: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <></>,
+    prevArrow: <></>
+};
+
+
   return (
     <>
       <Header />
@@ -46,11 +64,13 @@ function About() {
             <div className="row">
               <div className="col-md-12">
                 <div className="mt-4 ourStory-banner">
+                  <Slider {...Settings}>
                   <img
                     src="../../../images/pages/ourStory.png"
                     alt="ourStory"
                     className="img-fluid"
                   />
+                  </Slider>
                 </div>
               </div>
             </div>

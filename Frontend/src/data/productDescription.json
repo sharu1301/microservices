@@ -117,6 +117,10 @@
             "images/product-specification/slider/EuroPETSeries/11.png"
         ]
     },
+
+
+
+
     {
         "title": "Euro Servo Series",
         "image": "images/productimages/EuroSurvo.png",
@@ -156,7 +160,13 @@
             "images/product-specification/slider/EuroServoSeries/16.png",
             "images/product-specification/slider/EuroServoSeries/17.png"
         ]
+
     },
+
+
+
+
+
     {
         "title": "Euro Star Series",
         "image": "images/productimages/EuroStar.png",
@@ -192,6 +202,11 @@
           
         ]
     },
+
+
+
+
+
     {
         "title": "Euro (CPVC) Series",
         "image": "images/productimages/EuroCPVC.png",
@@ -272,6 +287,9 @@
             "Bimetallic screw & barrel"
         ]
     },
+
+
+
     {
         "title": "Euro (PVC) Series",
         "image": "images/productimages/EuroPVC.png",
@@ -291,6 +309,11 @@
             "Construction"
         ]
     },
+
+
+
+
+
     {
         "title": "Euro R Series",
         "image": "images/productimages/EuroR.png",

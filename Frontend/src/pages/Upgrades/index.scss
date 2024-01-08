@@ -1,0 +1,13 @@
+@import "../../assets/sass/main.scss";
+.customer-section{
+    padding: 40px 0 60px 0;
+    .cust-wrapper{
+        .cust-img{
+            margin-bottom: 20px;
+            img{
+                height: 100px;
+                width: 103px;
+            }
+        }
+    }
+}

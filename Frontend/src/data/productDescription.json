@@ -56,6 +56,20 @@
             "images/product-specification/slider/EuroPacSeries/9.png",
             "images/product-specification/slider/EuroPacSeries/10.png",
             "images/product-specification/slider/EuroPacSeries/11.png"
+        ],
+
+        "overviewImages": [
+            "images/product-specification/productoverview/EuroPacSeries/1.png",
+            "images/product-specification/productoverview/EuroPacSeries/2.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/3.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/4.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/5.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/6.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/7.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/8.png",
+            "images/product-specification/productoverview/EuroPacSeries/9.png",
+            "images/product-specification/productoverview/EuroPacSeries/10.png",
+            "images/product-specification/productoverview/EuroPacSeries/11.png"
         ]
     },
     {
@@ -115,6 +129,22 @@
             "images/product-specification/slider/EuroPETSeries/9.png",
             "images/product-specification/slider/EuroPETSeries/10.png",
             "images/product-specification/slider/EuroPETSeries/11.png"
+        ],
+
+        "overviewImages": [
+            "images/product-specification/productoverview/EuroPETSeries/1.png",
+            "images/product-specification/productoverview/EuroPETSeries/2.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/3.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/4.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/5.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/6.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/7.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/8.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/9.png",
+            "images/product-specification/productoverview/EuroPETSeries/10.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/11.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/12.jpeg"
+
         ]
     },
     {
@@ -155,6 +185,27 @@
             "images/product-specification/slider/EuroServoSeries/15.png",
             "images/product-specification/slider/EuroServoSeries/16.png",
             "images/product-specification/slider/EuroServoSeries/17.png"
+        ],
+
+        "overviewImages": [
+            "images/product-specification/productoverview/EuroServoSeries/1.png",
+            "images/product-specification/productoverview/EuroServoSeries/2.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/3.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/4.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/5.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/6.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/7.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/8.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/9.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/10.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/11.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/11.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/12.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/13.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/14.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/15.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/16.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/17.jpg"  
         ],
 
         "clampingUnit": [
@@ -264,6 +315,21 @@
           
         ],
 
+        "overviewImages":[
+            "images/product-specification/productoverview/EuroStarSeries/1.png",
+            "images/product-specification/productoverview/EuroStarSeries/2.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/3.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/4.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/5.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/6.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/7.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/8.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/9.png",
+            "images/product-specification/productoverview/EuroStarSeries/10.png",
+            "images/product-specification/productoverview/EuroStarSeries/11.png",
+            "images/product-specification/productoverview/EuroStarSeries/12.png"
+        ],
+
         "heavydutyclampingunit": [
             "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.", 
             "The clamping cylinder is controlled by two cylinders (a small one inside the large main cylinder). This allows for fast mould closing before the final high pressure stage." 
@@ -315,6 +381,13 @@
             "CPVC Fittings",
             "Construction"
         ],
+
+        "overviewImages": [
+            "images/product-specification/productoverview/EuroCPVCSeries/1.png",
+            "images/product-specification/productoverview/EuroCPVCSeries/2.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/3.jpg"
+        ],
+
         "clampingUnit": [
             "Wide tie bar distance & daylight",
             "Robust five point vertical toggle clamp mechanism",
@@ -367,7 +440,7 @@
             "Return line & suction filter provided to clean the oil",
             "Ergonomic hydraulics layout for easy approach & easy for maintenance"
         ],
-        "pptionalFeatures": [
+        "optionalFeatures": [
             "Air ejector",
             "Hydraulics core pull",
             "Un screw feature for electric motor",
@@ -394,6 +467,14 @@
             "PVC Fittings",
             "Construction"
         ],
+
+        "overviewImages": [
+            "images/product-specification/productoverview/EuroPVCSeries/1.png",
+            "images/product-specification/productoverview/EuroPVCSeries/2.jpg",
+            "images/product-specification/productoverview/EuroPVCSeries/3.jpg",
+            "images/product-specification/productoverview/EuroPVCSeries/4.jpg"
+        ],
+
 
         "clampingUnit": [
             "Wide tie bar distance & daylight" ,
@@ -493,6 +574,25 @@
             "Automotive"
         ],
 
+        "overviewImages": [
+            "images/product-specification/productoverview/EuroRSeries/1.png",
+            "images/product-specification/productoverview/EuroRSeries/2.jpg",
+            "images/product-specification/productoverview/EuroRSeries/3.jpg",
+            "images/product-specification/productoverview/EuroRSeries/4.jpg",
+            "images/product-specification/productoverview/EuroRSeries/5.jpg",
+            "images/product-specification/productoverview/EuroRSeries/6.jpg",
+            "images/product-specification/productoverview/EuroRSeries/7.jpg",
+            "images/product-specification/productoverview/EuroRSeries/8.jpg",
+            "images/product-specification/productoverview/EuroRSeries/9.jpg",
+            "images/product-specification/productoverview/EuroRSeries/10.jpg",
+            "images/product-specification/productoverview/EuroRSeries/11.jpg",
+            "images/product-specification/productoverview/EuroRSeries/12.jpg",
+            "images/product-specification/productoverview/EuroRSeries/13.png",
+            "images/product-specification/productoverview/EuroRSeries/14.png",
+            "images/product-specification/productoverview/EuroRSeries/15.jpg",
+            "images/product-specification/productoverview/EuroRSeries/16.jpg"
+        ],
+
         "Special Features": [
             "Wide tie bar distance and daylight.",
             "Direct  hydraulic  clamping  system  enable  stable and  precisely controlled clamping force.",
@@ -531,5 +631,7 @@
             "Automobile & More",
             "Moulding"
         ]
+
+
     }
 ]

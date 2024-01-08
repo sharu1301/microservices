@@ -69,14 +69,32 @@ export default function Header() {
               <ul>
                 <li className={pathname === "/" ? 'active' : ''} onClick={() => navigate("/")}>Home</li>
                 <li className={pathname === "/about" ? 'active' : ''} onClick={() => navigate("/about")}>About Us</li>
-                <li className={pathname === "/service" ? 'active' : ''} onClick={() => navigate("/service")}>Services</li>
+
+
                 <li className="dropdown">
-                  <a className="dropdown-toggle" href="/productlist" data-bs-toggle="dropdown">Products</a>
+                  <li className={pathname === "/service" ? 'active dropdown-toggle' : 'dropdown-toggle'}
+                    data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
+                  <ul className="dropdown-menu">
+                    <li><a className="dropdown-item" href="/process">Process Optimization</a>
+                      
+                    </li>
+                    <li><a className="dropdown-item" href="/upgrades">Upgrades</a>
+                      
+                    </li>
+                    <li><a className="dropdown-item" href="/customermaintenance">Customer Service and Maintenance</a></li>
+                  </ul>
+
+
+                </li>
+
+
+                <li className="dropdown">
+                  <li className="dropdown-toggle" data-bs-toggle="dropdown">Products</li>
                   <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="/productlist">Injection moulding machine</a>
                       <ul className="submenu dropdown-menu">
                         {productData.map((list, i) => (
-                          <li><a className="dropdown-item" onClick={() => navigate(`/product-specification/${list.title}`)}>{list.title}</a></li>
+                          <li><p className="dropdown-item" onClick={() => navigate(`/product-specification/${list.title}`)}>{list.title}</p></li>
                         ))}
 
                       </ul>
@@ -84,13 +102,16 @@ export default function Header() {
                     <li><a className="dropdown-item" href="/productlist">Blow moulding machine</a>
                       <ul className="submenu dropdown-menu">
                         {blowMouldingData.map((list, i) =>
-                        (<li><a className="dropdown-item" >{list.title}</a></li>
+                        (<li><a
+                           className="dropdown-item" >{list.title}</a></li>
                         ))}
                       </ul>
                     </li>
                     <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
                   </ul>
                 </li>
+
+                
 
                 <li className={pathname === "/applications" ? 'active' : ''} onClick={() => navigate("/applications")} >Applications</li>
                 <li className={pathname === "/gallery" ? 'active' : ''} onClick={() => navigate("/gallery")}>Gallery</li>

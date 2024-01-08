@@ -14,6 +14,7 @@ import Process from "./pages/ProcessOptimisation";
 import ProductByCategory from "./pages/ProductByCatregory";
 import Updates from "./pages/Updates";
 import CustomerMaintenance from "./pages/CustomerMaintenance";
+import Upgrades from "./pages/Upgrades";
 
 const routes = (
   <>
@@ -32,6 +33,7 @@ const routes = (
       <Route path="/updates" element={<Updates />} />
       <Route path="/product-by-category/:category" element={< ProductByCategory/>}/>
       <Route path="/customermaintenance" element={<CustomerMaintenance/>} />
+      <Route path="/upgrades" element={<Upgrades/>} />
     </Routes>
   </>
 );

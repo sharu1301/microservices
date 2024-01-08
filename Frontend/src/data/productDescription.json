@@ -155,7 +155,79 @@
             "images/product-specification/slider/EuroServoSeries/15.png",
             "images/product-specification/slider/EuroServoSeries/16.png",
             "images/product-specification/slider/EuroServoSeries/17.png"
+        ],
+
+        "clampingUnit": [
+            "Wide tie bar distance & daylight" ,
+            "Robust five point vertical toggle clamp mechanism" ,
+            "Five stage clamping speed & pressure" ,
+            "Linear position transducer for accurate clamp position control" ,
+            "Auto mould height adjustment for quick mould change" ,
+            "Low pressure precise mould protection",
+            "Tripple safety control of mechanical", 
+            "electrical & hydraulic devices to ensure operator safety", 
+            "Automatic centralised lubrication system with motorized pump" 
+        ],
+
+        "injectionUnit": [
+            "Nitrided screw & barrel, wear resistant screw tip assembly", 
+            "Three option screw dia available for customer choice",
+            "Five stage injection speed & pressure control", 
+            "Variable back pressure control", 
+            "Linear position transducer for accurate injection position control",
+            "Screw driven by high torque radial piston motor",
+            "Injection decompression before/after refilling or both",
+            "Aluminum checkered plate below purge area "
+        ],
+
+        "ejector": [
+            "Knockout bar", 
+            "Two stage speed with soft eject", 
+            "Ejector stay forward & forward dwell time" 
+        ],
+
+        "hydraulics": [
+            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback", 
+            "Separate manifolds for injection unit and clamping unit", 
+            "All hydraulics seals are as per ISO Standards", 
+            "Oil temperature indication with alarm", 
+            "Return line & suction filter provided to clean the oil", 
+            "Ergonomic hydraulics layout for easy approach & easy for maintenance"
+        ],
+
+        "temperaturecontrol": [
+            "Actual temperature display of heating zone with colour change effect", 
+            "Thermocouple failure detection",
+            "Accurate PID temperature control setting on screen", 
+            "Auto heat start up & shut down program", 
+            "High/low temperature alarm",
+            "Set & actual temperature data with graphical display", 
+            "Soak timer for cold start protection"
+        ],
+
+        "controls": [
+            "10.2 vertical TFT colour display with alpha numeric keypad", 
+            "Actual injection speed & pressure with graphical display",
+            "Configure different level of password for different users",
+            "Easily programmable & user friendly", 
+            "USB port provided to copy data or production report", 
+            "Ethernet connection port for internet connectivity", 
+            "Timer precision with 0.01second", 
+            "Alarm history provide to recall the fault analysis", 
+            "Visual & Audible alarm", 
+            "I/O diagnosis for analog & digital", 
+            "Mould data storage" 
+        ],
+
+        "optionalfeatures": [
+            "Air ejector", 
+             "Hydraulics core pull", 
+             "Un screw feature for electric motor", 
+             "Water manifold", 
+             "Robot interface",
+             "Bimetallic screw & barrel" 
         ]
+
     },
     {
         "title": "Euro Star Series",
@@ -190,7 +262,39 @@
             "images/product-specification/slider/EuroStarSeries/11.png",
             "images/product-specification/slider/EuroStarSeries/12.png"
           
+        ],
+
+        "heavydutyclampingunit": [
+            "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.", 
+            "The clamping cylinder is controlled by two cylinders (a small one inside the large main cylinder). This allows for fast mould closing before the final high pressure stage." 
+
+        ],
+
+        "lowmaintenanceclampingunit": [
+            "Clamping unit with higher speed & less wear on mould, with smooth motion & stable operation", 
+            "Moving platen moves on guide rails bearings with wide skates supporting pads.", 
+            "Bush less tie bars requires no lubrication, Thus "
+        
+        ],
+
+
+        "b&rsmartmold-advanceduserfriendlycontrol": [
+            "10.2 vertical TFT colour display with alpha numeric keypad", 
+            "Configure different level of password for different users", 
+            "Easily programmable & user friendly", 
+            "USB port provided to copy data or production report", 
+            "Ethernet connection port for internet connectivity", 
+            "Timer precision with 0.01 second" 
+        ],
+
+        "injectionunit": [
+            "Nitrited screw and barrel, a wear resistance screw tip assembly", 
+            "Three optional screw diameter available for customer's choice", 
+            "5 Stage injection speed & pressure control", 
+            "Cold start screw prevention", 
+            "Screw driven by high torque variable speed radial" 
         ]
+
     },
     {
         "title": "Euro (CPVC) Series",
@@ -289,7 +393,82 @@
         "industry": [
             "PVC Fittings",
             "Construction"
+        ],
+
+        "clampingUnit": [
+            "Wide tie bar distance & daylight" ,
+            "Robust five point vertical toggle clamp mechanism" ,
+            "Five stage clamping speed & pressure" ,
+            "Linear position transducer for accurate clamp position control" ,
+            "Auto mould height adjustment for quick mould change" ,
+            "Low pressure precise mould protection",
+            "Tripple safety control of mechanical", 
+            "electrical & hydraulic devices to ensure operator safety", 
+            "Automatic centralised lubrication system with motorized pump" 
+        ],
+
+        "injectionUnit": [
+            "Nitrided screw & barrel, wear resistant screw tip assembly", 
+            "Three option screw dia available for customer choice",
+            "Five stage injection speed & pressure control", 
+            "Variable back pressure control", 
+            "Linear position transducer for accurate injection position control",
+            "Screw driven by high torque radial piston motor",
+            "Injection decompression before/after refilling or both",
+            "Aluminum checkered plate below purge area "
+        ],
+
+        "ejector": [
+            "Knockout bar", 
+            "Two stage speed with soft eject", 
+            "Ejector stay forward & forward dwell time" 
+        ],
+
+        "hydraulics": [
+            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback", 
+            "Separate manifolds for injection unit and clamping unit", 
+            "All hydraulics seals are as per ISO Standards", 
+            "Oil temperature indication with alarm", 
+            "Return line & suction filter provided to clean the oil", 
+            "Ergonomic hydraulics layout for easy approach & easy for maintenance"
+        ],
+
+        "temperaturecontrol": [
+            "Actual temperature display of heating zone with colour change effect", 
+            "Thermocouple failure detection",
+            "Accurate PID temperature control setting on screen", 
+            "Auto heat start up & shut down program", 
+            "High/low temperature alarm",
+            "Set & actual temperature data with graphical display", 
+            "Soak timer for cold start protection"
+        ],
+
+        "controls": [
+            "10.2 vertical TFT colour display with alpha numeric keypad", 
+            "Actual injection speed & pressure with graphical display",
+            "Configure different level of password for different users",
+            "Easily programmable & user friendly", 
+            "USB port provided to copy data or production report", 
+            "Ethernet connection port for internet connectivity", 
+            "Timer precision with 0.01second", 
+            "Alarm history provide to recall the fault analysis", 
+            "Visual & Audible alarm", 
+            "I/O diagnosis for analog & digital", 
+            "Mould data storage" 
+        ],
+
+        "optionalfeatures": [
+            "Air ejector", 
+             "Hydraulics core pull", 
+             "Un screw feature for electric motor", 
+             "Water manifold", 
+             "Robot interface",
+             "Bimetallic screw & barrel" 
         ]
+
+
+
+
     },
     {
         "title": "Euro R Series",
@@ -312,7 +491,24 @@
             "Automobile",
             "Household",
             "Automotive"
+        ],
+
+        "Special Features": [
+            "Wide tie bar distance and daylight.",
+            "Direct  hydraulic  clamping  system  enable  stable and  precisely controlled clamping force.",
+            "Radial Piston type hydraulic motor enable high torque and excellent performance.",
+            "Supporting pad under the tie rods enhance the loading capacity and increasing the tool life.",
+            "Low  pressure  mould safety  protection  is standard  -equipped  to prevent mould damage.",
+            "Triple safety control of mechanical, electrical and hydraulic devices to ensure operator safety.",
+            "Energy saving variable displacement pump.",
+            "PLC controlled machine enable quick response time, essential for high productivity and repeatability.",
+            "Low  pressure  mould safety  protection  is standard  -equipped  to prevent mould damage.",
+            "Triple safety control of mechanical, electrical and hydraulic devices to ensure operator safety.",
+            "Energy saving variable displacement pump.",
+            "PLC controlled machine enable quick response time, essential for high productivity and repeatability."
         ]
+
+
     },
     {
         "title": "Euro Servo R Series",

@@ -34,13 +34,13 @@ pipeline {
       steps {
         script {
           def jiraConfig = [
-            credentialsId: 'Jenkins', // Jenkins credential ID for Jira
-            site: 'https://hindsmachines.atlassian.net/', // Jira instance URL
-            projectKey: 'HIN'
-            issueType: 'Bug', // Jira issue type
+            credentialsId: 'Jenkins', 
+            site: 'https://hindsmachines.atlassian.net/', 
+            projectKey: 'HIN',
+            issueType: 'Bug', 
             summary: "Build Successful - ${currentBuild.fullDisplayName}",
             description: "Build ${currentBuild.fullDisplayName} was successful.\n\n [Jenkins Build Info|${env.BUILD_URL}]"
-          ]
+            ]
           jiraSendBuildInfo jiraConfig
         }
       }

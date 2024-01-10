@@ -41,6 +41,7 @@ pipeline {
             summary: "Build Successful - ${currentBuild.fullDisplayName}",
             description: "Build ${currentBuild.fullDisplayName} was successful.\n\n [Jenkins Build Info|${env.BUILD_URL}]"
           ]
+          jiraSendBuildInfo jiraConfig
         }
       }
     }

@@ -1,0 +1,229 @@
+@import "../../assets/sass/main.scss";
+
+.filter-section {
+    padding: 0 0 60px 0;
+
+    .row {
+        background-color: $white;
+        padding: 20px;
+        position: relative;
+        margin-top: -40px;
+        margin-left: 0;
+        border-radius: 10px;
+        box-shadow: 0px 6px 12px #ccc;
+
+        .filters {
+            border-right: 2px solid #DCDCDC;
+
+            svg {
+                color: #B0B0B0;
+                margin-right: 14px;
+            }
+
+            h4 {
+                font-size: $f20;
+                color: #B0B0B0;
+                font-weight: normal;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: #BE0E14;
+            color: $white;
+            padding: 8px 34px;
+            border-radius: 4px;
+            margin: 4px 0 0 0;
+            font-size: $f18;
+        }
+    }
+}
+
+.careerwraper {
+    padding: 40px 0;
+
+    .image {
+        background-color: #DCDCDC;
+        padding: 15px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .content {
+        padding: 0 0 0 40px;
+        width: 100%;
+
+        h2 {
+            font-size: 36px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: $black;
+            font-size: $f18;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.feature-section {
+    padding: 40px 0;
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .fea-card {
+        background-color: $white;
+        border: 1px solid #E6E6E6;
+        padding: 20px;
+        border-radius: 4px;
+
+        hr {
+            width: 100%;
+        }
+
+        h4 {
+            font-size: $f24;
+            line-height: 30px;
+        }
+    }
+}
+
+.career-section {
+    padding: 40px 0;
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .info {
+        padding-right: 40px;
+
+        p {
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        button {
+            border: none;
+            background-color: #E21D23;
+            color: $white;
+            padding: 8px 90px;
+            border-radius: 4px;
+            margin: 4px 0 0 0;
+            font-size: $f18;
+            text-transform: capitalize;
+            margin-top: 20px;
+        }
+    }
+
+    .image {
+        background-color: #DCDCDC;
+        padding: 15px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+.team-section {
+    padding: 40px 0 60px 0;
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .team-card {
+        .team-info {
+            p {
+                font-size: $f16;
+                margin-bottom: 0;
+            }
+
+            h4 {
+                font-size: $f22;
+                line-height: 40px;
+                color: #BE0E14;
+            }
+        }
+    }
+}
+
+.bannerwrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-image: url(../../../public/images/pages/career/banner.jpg);
+    backdrop-filter: blur(4px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .left-info {
+        padding-right: 40px;
+        h2 {
+            font-size: 42px;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        a{
+            color: $black;
+            font-size: $f18;
+            text-transform: capitalize;
+            text-decoration: underline !important;
+            i{
+                margin-left: 10px;
+            }
+        }
+    }
+    .right-section{
+        background-color: $white;
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0px 0px 6px #ccc;
+        border-radius: 10px;
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 26px;
+        span{
+            background-color: #BE0E14;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: $white;
+            margin-right: 20px;
+        }
+        h4{
+            display: inline;
+            font-size: $f24;
+            line-height: 20px;
+        }
+        p{
+            margin-bottom: 6px;
+        }
+    }
+}
+.right-section::before{
+    content: "";
+}

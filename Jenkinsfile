@@ -36,10 +36,10 @@ pipeline {
           def jiraConfig = [
           credentialsId:'Jenkins', // Jenkins credential ID for Jira
           site:'https://hindsmachines.atlassian.net/', // Jira instance URL
-          projectKey:'HIN',
+          projectKey:'HIN'
+          ]
           def jiraIssueKey = 'HIN-16'
           jiraAddComment idOrKey: jiraIssueKey, comment: 'Deployment completed'
-          ]
         }
       }
     }

@@ -1,5 +1,6 @@
 @import './variable.scss';
 @import './breakpoints';
+
 body {
   // font-family: $inter;
   font-size: 16px;
@@ -24,36 +25,46 @@ h6 {
 
 h1 {
   font-size: 58px;
-  line-height: 105.023%; /* 60.913px */
+  line-height: 105.023%;
+  /* 60.913px */
   letter-spacing: 0.87px;
   text-transform: capitalize;
 }
+
 h2 {
   font-size: 50px;
   font-weight: 700;
-  line-height: 60px; /* 120% */
+  line-height: 60px;
+  /* 120% */
 }
+
 h3 {
   font-size: 48px;
   font-weight: 700;
 
   line-height: 120%;
-  @include breakpoint(sm){
+
+  @include breakpoint(sm) {
     font-size: 28px;
     margin-bottom: 14px;
   }
+
   @include breakpoint(xs) {
     font-size: 24px;
   }
 }
+
 h4 {
   font-size: 40px;
   line-height: 50px;
 }
+
 h5 {
   font-size: 42px;
-  line-height: 48px; /* 133.333% */
+  line-height: 48px;
+  /* 133.333% */
 }
+
 h6 {
   font-size: 32px;
   line-height: 38px;
@@ -66,16 +77,20 @@ a {
 section {
   position: relative;
 }
+
 .section {
   width: $w100;
   padding: 80px 84px;
+
   @media (max-width: 768px) {
     padding: 49px 10px;
   }
 }
+
 .bg-light {
   background: #f5f5f5;
 }
+
 // Page Banner section Start
 
 .pageBanner {
@@ -84,16 +99,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(8, 91, 136, 0.6) 0%,
-      rgba(8, 91, 136, 0.6) 100%
-    ),
+      rgba(8, 91, 136, 0.6) 100%),
     url(../../../public/images/pages/page-title-bg.png);
   backdrop-filter: blur(4px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   .pageTitle {
     text-align: center;
     color: $white;
@@ -101,16 +115,20 @@ section {
     font-weight: 600;
     text-transform: capitalize;
     line-height: 60px;
+
     @include breakpoint(xs) {
       font-size: 28px;
     }
+
     @include breakpoint(sm) {
       font-size: 28px;
     }
+
     @include breakpoint(md) {
       font-size: 28px;
     }
   }
+
   nav {
     .breadcrumb {
       padding: 0.3rem 1rem;
@@ -118,12 +136,15 @@ section {
       width: fit-content;
       margin: auto;
     }
+
     .breadcrumb-item {
       color: $white;
+
       a {
         color: $white;
       }
-      & + .breadcrumb-item::before {
+
+      &+.breadcrumb-item::before {
         display: inline-block;
         padding-right: 0.5rem;
         color: $white;
@@ -140,20 +161,24 @@ section {
   // font-family: $inter;
   font-size: 36px;
   font-weight: 600;
-  line-height: 52px; /* 144.444% */
+  line-height: 52px;
+  /* 144.444% */
   text-transform: capitalize;
-  @include breakpoint(sm){
+
+  @include breakpoint(sm) {
     font-size: $f26 !important;
     line-height: 40px;
   }
 }
+
 .sub-heading {
   color: $black;
   /* Text/Regular/Semi Bold */
   font-family: $roboto;
   font-size: 16px;
   font-weight: 600;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
+  /* 24px */
 }
 
 p {
@@ -172,18 +197,21 @@ p {
   border-radius: 0;
   color: $white;
   font-size: 18px;
-  line-height: 16px; /* 88.889% */
+  line-height: 16px;
+  /* 88.889% */
   font-weight: 600;
 }
 
 .mt-40 {
   margin-top: 40px;
 }
+
 @media (min-width: 992px) {
   .container-fluid {
     max-width: 1440px;
   }
 }
+
 .btn:focus {
   box-shadow: none !important;
 }
@@ -192,12 +220,15 @@ p {
 .pt-94 {
   padding-top: 94px;
 }
+
 .plr-77 {
   padding: 0 77px;
 }
+
 .ptb-70 {
   padding: 70px 0;
 }
+
 .ptb-56 {
   padding: 56px 0;
 }

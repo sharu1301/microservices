@@ -37,9 +37,11 @@ pipeline {
             credentialsId: 'Jenkins', 
             site: 'https://hindsmachines.atlassian.net/', 
             projectKey: 'HIN',
-            issueType: 'Bug', 
+            issueType: 'HIN-16', 
             summary: "Build Successful - ${currentBuild.fullDisplayName}",
             description: "Build ${currentBuild.fullDisplayName} was successful.\n\n [Jenkins Build Info|${env.BUILD_URL}]"
+            buildUrl: env.BUILD_URL,               // Jenkins build URL
+            displayName: env.JOB_NAME,             // Jenkins job name
             ]
           jiraSendBuildInfo jiraConfig
         }

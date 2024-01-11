@@ -4,7 +4,7 @@ import PageTitle from "../../components/pageTitle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
-import { useState,useEffect,useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +16,7 @@ import axios from "axios";
 function About() {
   const navigate = useNavigate()
   const ref: any = useRef();
-  
+
   const exposureURL = process.env.REACT_APP_EXPOSURE_URL
   const [coverImages, setCoverImages] = useState([])
 
@@ -24,42 +24,42 @@ function About() {
 
   useEffect(() => {
     getCoverImage();
-}, [])
+  }, [])
 
-const getCoverImage = () => {
+  const getCoverImage = () => {
     axios.get(`${exposureURL}/achievements`).then((response) => {
       setCoverImages(response.data.groups[0].photos)
     })
-}
-const ArrowLeft = () => {
-  return (
+  }
+  const ArrowLeft = () => {
+    return (
       <div className='arrows' onClick={() => ref.current.slickNext()} >
-          <img src={arrowLeft} style={{ width: '70px' }} alt='' />
+        <img src={arrowLeft} style={{ width: '50px' }} alt='' />
       </div>
-  )
-}
+    )
+  }
 
-const ArrowRight = () => {
-  return (
+  const ArrowRight = () => {
+    return (
       <div className='arrows' onClick={() => ref.current.slickPrev()} >
-          <img src={arrowRight}  alt='' />
+        <img src={arrowRight} alt='' style={{ width: '50px' }} />
       </div>
-  )
-}
+    )
+  }
 
 
   const Settings = {
-    dots: true,
-    // fade: true,
+    dots: false,
+    fade: true,
     infinite: true,
-    // speed: 500,
+    speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 9,
-    // nextArrow: <ArrowRight />,
-    //   prevArrow: <ArrowLeft />
-   
-    
-};
+    slidesToScroll: 1,
+    nextArrow: <></>,
+    prevArrow: <></>
+
+
+  };
 
 
   return (
@@ -76,19 +76,19 @@ const ArrowRight = () => {
               </div>
               <div className="col-lg-6">
                 <div>
-                  <p style={{textAlign:'justify'}}>
+                  <p style={{ textAlign: 'justify' }}>
                     Founded in 1999, by Mr. PARVEEN SHARMA, a Mechanical engineer, HINDS machineries
                     started with a small workshop at Subhash nagar New Delhi. In 2003 company introduced
                     the Euro Series of Injection molding during the PLASTINDIA 2003.
                   </p>
-                  <p style={{textAlign:'justify'}}>
+                  <p style={{ textAlign: 'justify' }}>
                     With overwhelming response from PLASTINDIA 2003. The company expanded itself to meet
                     the growing demand of customers, and set up a new factory at Manesar in 2005. With the
                     launch of new Euro R series of injection molding machine Hydraulic clamping type during
                     PLASTINDIA 2006, company expanded further its manufacturing set up with 2nd unit in
                     manesar at sec-8.
                   </p>
-                  <p style={{textAlign:'justify'}}>
+                  <p style={{ textAlign: 'justify' }}>
                     With the Start up of New Plant with a New Name M/s. Hinds Plastic Machines Pvt Ltd.
                     at Sector 8, Near Maruti Gate no.2, The Company Now Caters the other Automotive Sectors
                     also with Manufacturing the Special Purpose Machines & Also taking Complete Project
@@ -98,27 +98,28 @@ const ArrowRight = () => {
                 </div>
               </div>
             </div>
-            <div className="row">
-            
-              <div className="col-md-12">
-             
+            <div className="container">
+
+              <div className="col-md-10 banner">
+                <ArrowLeft />
                 <div className="mt-4 ourStory-banner">
-                {/* <ArrowLeft /> */}
-                  <Slider {...Settings}>
-                 
-                 {coverImages.map((item:any,id)=>(
-                   <img
-                    src={item.url}
-                    alt="ourStory"
-                    className="img-fluid"
-                  />))}
-                
+
+                  <Slider {...Settings} ref={ref}>
+
+                    {coverImages.map((item: any, id) => (
+                      <img
+                        key={id}
+                        src={item.url}
+                        alt="ourStory"
+                        className="img-fluid"
+                      />))}
+
                   </Slider>
-                
+
                 </div>
-                {/* <ArrowRight/> */}
+                <ArrowRight />
               </div>
-             
+
             </div>
           </section>
 

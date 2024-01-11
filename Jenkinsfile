@@ -30,5 +30,23 @@ pipeline {
         }
       }
     }
+    stage('Update Jira') {
+      steps {
+        script {
+          def jiraConfig = [
+            credentialsId: 'Jenkins', 
+            site: 'https://hindsmachines.atlassian.net/', 
+            projectKey: 'HIN',
+            issueType: 'HIN-16', 
+            summary: "Build Successful - ${currentBuild.fullDisplayName}",
+            description: "Build ${currentBuild.fullDisplayName} was successful.\n\n [Jenkins Build Info|${env.BUILD_URL}]",
+            buildUrl: env.BUILD_URL,               
+            displayName: env.JOB_NAME,             
+            ]
+          jiraSendBuildInfo jiraConfig
+        }
+      }
+    }
   }
 }
+

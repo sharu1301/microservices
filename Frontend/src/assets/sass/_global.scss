@@ -117,11 +117,11 @@ section {
     line-height: 60px;
 
     @include breakpoint(xs) {
-      font-size: 28px;
+      font-size: 26px !important;
     }
 
     @include breakpoint(sm) {
-      font-size: 28px;
+      font-size: 26px !important;
     }
 
     @include breakpoint(md) {

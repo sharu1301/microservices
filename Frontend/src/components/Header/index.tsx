@@ -71,7 +71,7 @@ export default function Header() {
                 <li className={pathname === "/about" ? 'active' : ''} onClick={() => navigate("/about")}>About Us</li>
 
 
-                <li className="dropdown">
+                <li className="dropdown m-0 p-0">
                   <li className={pathname === "/service" ? 'active dropdown-toggle' : 'dropdown-toggle'}
                     data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
                   <ul className="dropdown-menu">
@@ -89,7 +89,7 @@ export default function Header() {
 
 
                 <li className="dropdown">
-                  <li className="dropdown-toggle" data-bs-toggle="dropdown">Products</li>
+                  <li className="dropdown-toggle m-0 p-0" data-bs-toggle="dropdown">Products</li>
                   <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="/productlist">Injection moulding machine</a>
                       <ul className="submenu dropdown-menu">

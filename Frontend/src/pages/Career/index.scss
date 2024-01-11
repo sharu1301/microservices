@@ -39,6 +39,18 @@
     }
 }
 
+.description-section {
+    .head {
+        font-weight: bold;
+
+        @include breakpoint(sm) {
+            font-size: $f28;
+            line-height: 30px;
+            margin-bottom: 18px;
+        }
+    }
+}
+
 .careerwraper {
     padding: 40px 0;
 
@@ -57,10 +69,19 @@
         padding: 0 0 0 40px;
         width: 100%;
 
+        @include breakpoint(sm) {
+            margin-top: 30px;
+            padding-left: 0;
+        }
+
         h2 {
             font-size: 36px;
             line-height: 30px;
             margin-bottom: 20px;
+
+            @include breakpoint(sm) {
+                font-size: $f28;
+            }
         }
 
         p {
@@ -77,13 +98,36 @@
 
 }
 
+.servicesWrapper {
+    h2 {
+        font-size: $f42;
+    }
+
+    @include breakpoint(sm) {
+        h2 {
+            font-size: $f28;
+        }
+
+        p {
+            padding-top: 0 !important;
+        }
+    }
+}
+
 .feature-section {
     padding: 40px 0;
+
+    @include breakpoint(sm) {
+        padding-top: 0;
+    }
 
     h2 {
         font-size: 42px;
         margin-bottom: 4px;
-        font-weight: 600;
+
+        @include breakpoint(sm) {
+            font-size: $f28;
+        }
     }
 
     .fea-card {
@@ -91,6 +135,10 @@
         border: 1px solid #E6E6E6;
         padding: 20px;
         border-radius: 4px;
+
+        @include breakpoint(sm) {
+            margin-bottom: 20px;
+        }
 
         hr {
             width: 100%;
@@ -106,14 +154,33 @@
 .career-section {
     padding: 40px 0;
 
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+
+    .row {
+        @include breakpoint(sm) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
     h2 {
         font-size: 42px;
         margin-bottom: 4px;
-        font-weight: 600;
+
+        @include breakpoint(sm) {
+            font-size: $f28;
+        }
     }
 
     .info {
         padding-right: 40px;
+
+        @include breakpoint(sm) {
+            padding-right: 0;
+            margin-top: 20px;
+        }
 
         p {
             text-align: justify;
@@ -151,11 +218,22 @@
     h2 {
         font-size: 42px;
         margin-bottom: 4px;
-        font-weight: 600;
+
+        @include breakpoint(sm) {
+            font-size: $f26;
+        }
     }
 
     .team-card {
+        @include breakpoint(sm) {
+            margin-bottom: 20px;
+        }
+
         .team-info {
+            @include breakpoint(sm) {
+                padding: 0 40px;
+            }
+
             p {
                 font-size: $f16;
                 margin-bottom: 0;
@@ -181,49 +259,77 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @include breakpoint(sm) {
+        padding-top: 30px;
+    }
+
     .left-info {
         padding-right: 40px;
+
+        @include breakpoint(sm) {
+            padding-right: 0;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
         h2 {
             font-size: 42px;
             margin-bottom: 4px;
-            font-weight: 600;
+
+
+            @include breakpoint(sm) {
+                font-size: $f26;
+            }
         }
-        a{
+
+        a {
             color: $black;
             font-size: $f18;
             text-transform: capitalize;
             text-decoration: underline !important;
-            i{
+
+            i {
                 margin-left: 10px;
             }
         }
     }
-    .right-section{
+
+    .right-section {
         background-color: $white;
         padding: 20px;
         width: 100%;
         box-shadow: 0px 0px 6px #ccc;
-        border-radius: 10px;
+        border-radius: 20px;
         display: flex;
         align-items: baseline;
         margin-bottom: 26px;
-        span{
+
+        @include breakpoint(sm) {}
+
+        span {
             background-color: #BE0E14;
             padding: 8px 15px;
             border-radius: 20px;
             color: $white;
             margin-right: 20px;
         }
-        h4{
+
+        h4 {
             display: inline;
             font-size: $f24;
             line-height: 20px;
         }
-        p{
+
+        p {
             margin-bottom: 6px;
         }
     }
 }
-.right-section::before{
+
+.right-section::before {
     content: "";
 }

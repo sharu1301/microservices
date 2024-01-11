@@ -1,25 +1,32 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "./index.scss";
-import Achievement1 from "../../../assets/images/Achievement1.png";
-import Achievement2 from "../../../assets/images/Achievement2.png";
-import Achievement3 from "../../../assets/images/Achievement3.png";
 import { BsArrowRight } from "react-icons/bs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
 
 const Achievements = () => {
+    const exposureURL = process.env.REACT_APP_EXPOSURE_URL
+    const [achievementImages, setAchievementImages] = useState([])
+
     const settings = {
-        // dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
-
-
-        // nextArrow: <></>,
-        // prevArrow: <></>
     };
+    useEffect(() => {
+        getAchievements();
+    }, [])
+
+    const getAchievements = () => {
+        axios.get(`${exposureURL}/achievements`).then((response) => {
+            setAchievementImages(response.data.groups[0].photos)
+        })
+    }
+
+
     return (
 
         <div className="achievements">
@@ -30,15 +37,11 @@ const Achievements = () => {
                         <p>Precision in Production – A Legacy of Achievement in Moulding Technology. </p>
                     </div>
                     <div className="imgSection">
-                        <div className="col-md-4 pl-0">
-                            <img src={Achievement1} alt="" />
-                        </div>
-                        <div className="col-md-4">
-                            <img src={Achievement2} alt="" />
-                        </div>
-                        <div className="col-md-4 pr-0">
-                            <img src={Achievement3} alt="" />
-                        </div>
+                        {achievementImages.map((images: any, i) => (
+                            <div className="col-md-4 pl-0" key={i}>
+                                <img src={images.url} alt="" />
+                            </div>))}
+
                     </div>
                 </div>
             </div>
@@ -46,14 +49,11 @@ const Achievements = () => {
             <div className="responsiveImgSection">
                 <div className="slider">
                     <Slider {...settings}>
-                        <div>
+                        {achievementImages.map((images: any, i) => (
 
-                            <img src={Achievement1} alt="" />
-                        </div>
-                        <div><img src={Achievement2} alt="" /></div>
-                        <div>
-                            <img src={Achievement3} alt="" />
-                        </div>
+                            <div key={i}>
+                                <img src={images.url} alt="" />
+                            </div>))}
 
                     </Slider>
                 </div>

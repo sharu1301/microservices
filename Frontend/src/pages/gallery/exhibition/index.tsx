@@ -1,37 +1,18 @@
-import React from 'react';
-import './index.scss';
-import image1 from '../../../assets/images/gallery/exhibition/img1.png';
-import image2 from '../../../assets/images/gallery/exhibition/img2.png';
-import image3 from '../../../assets/images/gallery/exhibition/img3.png';
-import image4 from '../../../assets/images/gallery/exhibition/img4.png';
+import React from "react";
+import './index.scss'
 
+export default function ExhibitionGallery(imageData: any) {
+  console.log("Res", imageData.imageData, typeof imageData.imageData)
 
-
-
-export default function ExhibitionGallery (){
-    return(
-        <>
-        <div className='container'>
-          
-          {/* <img className='image1' src={image2}/>
-          <img className='image1' src={image3}/>
-          <img className='image1' src={image4}/> */}
-          <div className="row">
-            <div className="col-md-4 col-12">
-              <img className='image1' src={image1} alt=''/>
-            </div>
-            <div className="col-md-4 col-12">
-              <img className='image1' src={image2} alt=''/>
-            </div>
-            <div className="col-md-4 col-12">
-              <img className='image1' src={image3} alt=''/>
-            </div>
-            <div className="col-md-4 col-12 mt-4">
-              <img className='image1' src={image4}alt=''/>
-            </div>
-          </div>
-        
+  return (
+    <div className="container">
+      {imageData?.imageData?.map((images, id) => (
+        <div className="col-md-12">
+          <img src={images.url} alt="" />
         </div>
-        </>
-    )
+        ))}
+    </div>
+
+
+  )
 }

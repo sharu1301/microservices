@@ -1,51 +1,66 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 
-import img1 from '../../../assets/images/gallery/all/img1.jpeg';
-import img2 from '../../../assets/images/gallery/all/img2.jpeg';
-import img3 from '../../../assets/images/gallery/all/img3.jpeg';
-import img4 from '../../../assets/images/gallery/all/img4.jpeg';
-import img5 from '../../../assets/images/gallery/all/img5.jpeg';
-import img6 from '../../../assets/images/gallery/all/img6.jpg';
 import './index.scss';
+import axios from "axios";
+import ReactPlayer from 'react-player'
 
-export default function AllGallery() {
+
+const AllGallery=({ imageData }: { imageData: any })=>{
+    
+
     return (
         <div className="container">
             {/* <h2> All Gallery section </h2> */}
             <div className="gallery">
-                <div className="row">
-                    <div className="col-md-4 ol-12">
-                        <img className="image" src={img1} alt="" />
-                    </div>
-                    <div className="col-md-8 col-12">
-                        <img className="image" src={img2} alt=""/>
-                    </div>
-                </div>
-                <div className="row mt-2">
-                    <div className="col-md-8">
-                        <div className="row mt-3">
-                            <div className="col-md-6 col-12">
-                                <img className="image" src={img3} alt="" />
-                            </div>
-                            <div className="col-md-6 col-12">
-                                <img className="image" src={img4} alt=""/>
-                            </div>
-                            <div className="col-md-12 col-12 mt-3">
-                                <img className="image" src={img6} alt=""/>
-                            </div>
+                {imageData?.map((data: any, i) => (
+                    <div>
+                        {data.title == "Exhibition Gallery"
+                            && (data.photos.map((images, id) => (
+                                <div className="row" key={id}>
+                                    {(i % 2 === 0 || i === 0) ?
+                                        <div className="col-md-4 ol-12">
+                                            <img className="image" src={images.url} alt="" />
+                                        </div> :
+                                        <div className="col-md-8 col-12">
+                                            <img className="image" src={images.url} alt="" />
+                                        </div>}
+                                </div>))
+
+                            )}
+
+                        <div className="row mt-2">
+                            {data.title == "Machine Gallery" && (
+                                <div className="col-md-8">
+                                    <div className="row mt-3">
+                                        {data.photos.map((images, id) => (
+                                            <div className="col-md-6 col-12" key={id}>
+                                                <img className="image" src={images.url} alt="" />
+                                            </div>))}
+
+                                    </div>
+                                </div>)}
+                            {data.type == "native-video" && (
+                                <div className="col-md-12">
+
+                                    {data.photos.map((images, id) => (
+                                        <ReactPlayer
+                                            key={id}
+                                            url={images.url.split(';')[0]} loop={true} controls={true} />))}
+
+
+                                </div>)}
+
+
                         </div>
                     </div>
-                    <div className="col-md-4 col-12 mt-3">
-                        <img className="image" src={img5} alt=""/>
-                    </div>  
-                </div>
-                {/* <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div  className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div> */}
-            </div>  
+
+                ))}
+
+
+
+            </div>
         </div>
     )
 }
+
+export default AllGallery

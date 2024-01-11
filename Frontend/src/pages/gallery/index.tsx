@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
@@ -6,9 +6,12 @@ import Header from "../../components/Header";
 import PageTitle from "../../components/pageTitle";
 import AllGallery from "./allGallery";
 import ExhibitionGallery from "./exhibition";
+import VideoGallery from "./video";
 import SubFooter from "../../components/subFooter";
 import Footer from "../../components/Footer";
 import './index.scss';
+import axios from "axios";
+import MachineGallery from "./machineGallery";
 
 const TabPanel = ({ value, index, children }) => (
   <div hidden={value !== index}>
@@ -16,12 +19,79 @@ const TabPanel = ({ value, index, children }) => (
   </div>
 );
 
+
+interface VideoInterface {
+  id: number;
+  url: string;
+  caption: string | null; // Adjust this based on your actual data
+}
 export default function Gallery() {
   const [value, setValue] = React.useState(0);
+
+  const exposureURL = process.env.REACT_APP_EXPOSURE_URL
+  const [allImages, setAllImages] = useState([])
+  const [exhibitionImages, setExhibitionImages] = useState([])
+  const [machineryImages, setMachineryImages] = useState([])
+  const [allVideos, setAllVideos] = useState([])
+
+
+
+  useEffect(() => {
+    getGalleryImages();
+  }, [])
+
+  const getGalleryImages = () => {
+    let tempVideos: any = [];
+    let temExhibitionGallery:any=[];
+    let tempMachinery:any=[];
+
+    axios.get(`${exposureURL}/our-gallery`).then((response) => {
+
+      const groups = response?.data?.groups;
+
+
+      setAllImages(response?.data?.groups)
+      console.log("29", response.data.groups)
+      groups.forEach((group: any) => {
+        if (group.title == "Exhibition Gallery") {
+          temExhibitionGallery = temExhibitionGallery.concat(group.photos.map((image) => ({
+           
+            url: image.url,
+           
+          })));
+        }
+        if (group.title == "Machine Gallery") {
+          tempMachinery = tempMachinery.concat(group.photos.map((image) => ({
+           
+            url: image.url,
+           
+          })));
+          
+        }
+        if (group.type === 'native-video') {
+          // Extract videos from the group and add them to tempVideos
+          tempVideos = tempVideos.concat(group.photos.map((video) => ({
+            id: video.id,
+            url: video.url,
+            caption: video.caption,
+          })));
+        }
+      })
+      setAllVideos(tempVideos)
+      setExhibitionImages(temExhibitionGallery)
+      setMachineryImages(tempMachinery)
+    })
+  }
+
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+
+
+
 
   return (
     <>
@@ -46,17 +116,18 @@ export default function Gallery() {
       </Box>
 
       <TabPanel value={value} index={0}>
-        <AllGallery />
+        <AllGallery imageData={allImages} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ExhibitionGallery />
+        <ExhibitionGallery imageData={exhibitionImages} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <ExhibitionGallery />
+        <MachineGallery imageData={machineryImages} />
       </TabPanel>
 
       <TabPanel value={value} index={3}>
-        <ExhibitionGallery />
+        <VideoGallery videoData={allVideos} />
+
       </TabPanel>
       <SubFooter />
       <Footer />

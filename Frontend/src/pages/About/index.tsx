@@ -4,9 +4,64 @@ import PageTitle from "../../components/pageTitle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { useState,useEffect,useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import arrowLeft from '../../assets/images/arrow_left.png';
+import arrowRight from '../../assets/images/arrow_right.png';
+import axios from "axios";
+
 
 function About() {
   const navigate = useNavigate()
+  const ref: any = useRef();
+  
+  const exposureURL = process.env.REACT_APP_EXPOSURE_URL
+  const [coverImages, setCoverImages] = useState([])
+
+
+
+  useEffect(() => {
+    getCoverImage();
+}, [])
+
+const getCoverImage = () => {
+    axios.get(`${exposureURL}/achievements`).then((response) => {
+      setCoverImages(response.data.groups[0].photos)
+    })
+}
+const ArrowLeft = () => {
+  return (
+      <div className='arrows' onClick={() => ref.current.slickNext()} >
+          <img src={arrowLeft} style={{ width: '70px' }} alt='' />
+      </div>
+  )
+}
+
+const ArrowRight = () => {
+  return (
+      <div className='arrows' onClick={() => ref.current.slickPrev()} >
+          <img src={arrowRight}  alt='' />
+      </div>
+  )
+}
+
+
+  const Settings = {
+    dots: true,
+    // fade: true,
+    infinite: true,
+    // speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 9,
+    // nextArrow: <ArrowRight />,
+    //   prevArrow: <ArrowLeft />
+   
+    
+};
+
+
   return (
     <>
       <Header />
@@ -44,15 +99,26 @@ function About() {
               </div>
             </div>
             <div className="row">
+            
               <div className="col-md-12">
+             
                 <div className="mt-4 ourStory-banner">
-                  <img
-                    src="../../../images/pages/ourStory.png"
+                {/* <ArrowLeft /> */}
+                  <Slider {...Settings}>
+                 
+                 {coverImages.map((item:any,id)=>(
+                   <img
+                    src={item.url}
                     alt="ourStory"
                     className="img-fluid"
-                  />
+                  />))}
+                
+                  </Slider>
+                
                 </div>
+                {/* <ArrowRight/> */}
               </div>
+             
             </div>
           </section>
 

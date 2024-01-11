@@ -15,6 +15,7 @@ import ProductByCategory from "./pages/ProductByCatregory";
 import Updates from "./pages/Updates";
 import CustomerMaintenance from "./pages/CustomerMaintenance";
 import Upgrades from "./pages/Upgrades";
+import Career from "./pages/Career";
 
 const routes = (
   <>
@@ -34,6 +35,7 @@ const routes = (
       <Route path="/product-by-category/:category" element={< ProductByCategory/>}/>
       <Route path="/customermaintenance" element={<CustomerMaintenance/>} />
       <Route path="/upgrades" element={<Upgrades/>} />
+      <Route path="/career" element={<Career/>} />
     </Routes>
   </>
 );

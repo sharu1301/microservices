@@ -1,0 +1,335 @@
+@import "../../assets/sass/main.scss";
+
+.filter-section {
+    padding: 0 0 60px 0;
+
+    .row {
+        background-color: $white;
+        padding: 20px;
+        position: relative;
+        margin-top: -40px;
+        margin-left: 0;
+        border-radius: 10px;
+        box-shadow: 0px 6px 12px #ccc;
+
+        .filters {
+            border-right: 2px solid #DCDCDC;
+
+            svg {
+                color: #B0B0B0;
+                margin-right: 14px;
+            }
+
+            h4 {
+                font-size: $f20;
+                color: #B0B0B0;
+                font-weight: normal;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: #BE0E14;
+            color: $white;
+            padding: 8px 34px;
+            border-radius: 4px;
+            margin: 4px 0 0 0;
+            font-size: $f18;
+        }
+    }
+}
+
+.description-section {
+    .head {
+        font-weight: bold;
+
+        @include breakpoint(sm) {
+            font-size: $f28;
+            line-height: 30px;
+            margin-bottom: 18px;
+        }
+    }
+}
+
+.careerwraper {
+    padding: 40px 0;
+
+    .image {
+        background-color: #DCDCDC;
+        padding: 15px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .content {
+        padding: 0 0 0 40px;
+        width: 100%;
+
+        @include breakpoint(sm) {
+            margin-top: 30px;
+            padding-left: 0;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 30px;
+            margin-bottom: 20px;
+
+            @include breakpoint(sm) {
+                font-size: $f28;
+            }
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: $black;
+            font-size: $f18;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.servicesWrapper {
+    h2 {
+        font-size: $f42;
+    }
+
+    @include breakpoint(sm) {
+        h2 {
+            font-size: $f28;
+        }
+
+        p {
+            padding-top: 0 !important;
+        }
+    }
+}
+
+.feature-section {
+    padding: 40px 0;
+
+    @include breakpoint(sm) {
+        padding-top: 0;
+    }
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 4px;
+
+        @include breakpoint(sm) {
+            font-size: $f28;
+        }
+    }
+
+    .fea-card {
+        background-color: $white;
+        border: 1px solid #E6E6E6;
+        padding: 20px;
+        border-radius: 4px;
+
+        @include breakpoint(sm) {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        h4 {
+            font-size: $f24;
+            line-height: 30px;
+        }
+    }
+}
+
+.career-section {
+    padding: 40px 0;
+
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+
+    .row {
+        @include breakpoint(sm) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 4px;
+
+        @include breakpoint(sm) {
+            font-size: $f28;
+        }
+    }
+
+    .info {
+        padding-right: 40px;
+
+        @include breakpoint(sm) {
+            padding-right: 0;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        button {
+            border: none;
+            background-color: #E21D23;
+            color: $white;
+            padding: 8px 90px;
+            border-radius: 4px;
+            margin: 4px 0 0 0;
+            font-size: $f18;
+            text-transform: capitalize;
+            margin-top: 20px;
+        }
+    }
+
+    .image {
+        background-color: #DCDCDC;
+        padding: 15px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+.team-section {
+    padding: 40px 0 60px 0;
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 4px;
+
+        @include breakpoint(sm) {
+            font-size: $f26;
+        }
+    }
+
+    .team-card {
+        @include breakpoint(sm) {
+            margin-bottom: 20px;
+        }
+
+        .team-info {
+            @include breakpoint(sm) {
+                padding: 0 40px;
+            }
+
+            p {
+                font-size: $f16;
+                margin-bottom: 0;
+            }
+
+            h4 {
+                font-size: $f22;
+                line-height: 40px;
+                color: #BE0E14;
+            }
+        }
+    }
+}
+
+.bannerwrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-image: url(../../../public/images/pages/career/banner.jpg);
+    backdrop-filter: blur(4px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(sm) {
+        padding-top: 30px;
+    }
+
+    .left-info {
+        padding-right: 40px;
+
+        @include breakpoint(sm) {
+            padding-right: 0;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 42px;
+            margin-bottom: 4px;
+
+
+            @include breakpoint(sm) {
+                font-size: $f26;
+            }
+        }
+
+        a {
+            color: $black;
+            font-size: $f18;
+            text-transform: capitalize;
+            text-decoration: underline !important;
+
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .right-section {
+        background-color: $white;
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0px 0px 6px #ccc;
+        border-radius: 20px;
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 26px;
+
+        @include breakpoint(sm) {}
+
+        span {
+            background-color: #BE0E14;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: $white;
+            margin-right: 20px;
+        }
+
+        h4 {
+            display: inline;
+            font-size: $f24;
+            line-height: 20px;
+        }
+
+        p {
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.right-section::before {
+    content: "";
+}

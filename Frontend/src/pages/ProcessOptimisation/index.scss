@@ -18,7 +18,11 @@
 
 .processWrapper {
   .process-img {
-    .img-fluid {
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
       @include breakpoint(xs) {
         display: none;
       }
@@ -145,6 +149,14 @@
 }
 
 .infoWrapper {
+  .service-img{
+    height: 100%;
+    width: 100%;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
   label {
     input {
       color: $black;

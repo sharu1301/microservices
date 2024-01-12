@@ -11,19 +11,53 @@
         margin-left: 0;
         border-radius: 10px;
         box-shadow: 0px 6px 12px #ccc;
-
+        @include breakpoint(lg){
+            padding: 20px 0;
+        }
+        @include breakpoint(md){
+            padding: 10px 6px;
+        }
+        @include breakpoint(sm){
+            padding: 6px 0;
+            margin-left: 10px;
+            margin-right: 10px !important;
+        }
+        .col-md-3{
+            @include breakpoint(lg){
+                padding-right: 0;
+            }
+            @include breakpoint(sm){
+                padding-right: 0;
+            }
+        }
         .filters {
             border-right: 2px solid #DCDCDC;
 
             svg {
                 color: #B0B0B0;
                 margin-right: 14px;
+                @include breakpoint(lg){
+                    margin-right: 6px;
+                    height: 20px;
+                    width: 22px;
+                }
+                @include breakpoint(sm){
+                    margin-right: 4px;
+                    height: 20px;
+                    width: 22px;
+                }
             }
 
             h4 {
                 font-size: $f20;
                 color: #B0B0B0;
                 font-weight: normal;
+                @include breakpoint(md){
+                   font-size: $f14;
+                }
+                @include breakpoint(sm){
+                    font-size: $f16;
+                }
             }
         }
 
@@ -35,6 +69,12 @@
             border-radius: 4px;
             margin: 4px 0 0 0;
             font-size: $f18;
+            @include breakpoint(md){
+                font-size: $f14;
+            }
+            @include breakpoint(sm){
+                margin-left: -16px;
+            }
         }
     }
 }
@@ -57,6 +97,8 @@
     .image {
         background-color: #DCDCDC;
         padding: 15px;
+        height: 100%;
+        width: 100%;
 
         img {
             height: 100%;
@@ -97,7 +139,12 @@
     }
 
 }
-
+.award{
+    @include breakpoint(sm){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
 .servicesWrapper {
     h2 {
         font-size: $f42;
@@ -127,6 +174,7 @@
 
         @include breakpoint(sm) {
             font-size: $f28;
+            line-height: 34px;
         }
     }
 
@@ -147,6 +195,14 @@
         h4 {
             font-size: $f24;
             line-height: 30px;
+        }
+        p{
+            @include breakpoint(md){
+                font-size: $f14;
+            }
+            @include breakpoint(sm){
+                font-size: $f16;
+            }
         }
     }
 }
@@ -203,6 +259,8 @@
     .image {
         background-color: #DCDCDC;
         padding: 15px;
+        height: 100%;
+        width: 100%;
 
         img {
             height: 100%;

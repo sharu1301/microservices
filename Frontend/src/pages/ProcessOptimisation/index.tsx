@@ -27,7 +27,7 @@ export default function Process() {
           </div>
         </div>
       </main>
-      <section className="processWrapper pt-0">
+      <section className="processWrapper pt-0 pb-5">
         <div className="container">
           <div className="row">
             <div className="col-md-5 col-lg-5">

@@ -148,7 +148,7 @@ const Career = () => {
             </div>
             <section className="section servicesWrapper">
                 <div className="container">
-                    <div className="row ml-0">
+                    <div className="row ml-0 award">
                         <div className="col-md-6 col-12">
                             <h2>Our Award</h2>
                             <p className="pt-4">
@@ -243,7 +243,7 @@ const Career = () => {
                             <p>Lorem ipsum dolor sit amet consectetur. Justo malesuada pretium</p>
                         </div>
                     </div>
-                    <div className="row w-100 mt-3">
+                    <div className="row w-100 mt-3 ml-0">
                         <div className="col-md-4 col-12">
                             <div className="fea-card">
                                 <p>Lorem ipsum dolor sit amet consectetur.
@@ -317,7 +317,7 @@ const Career = () => {
             </div>
             <div className="career-section">
                 <div className="container">
-                    <div className="row w-100 align-items-center">
+                    <div className="row w-100 align-items-center ml-0">
                         <div className="col-md-7 col-12">
                             <div className="info">
                                 <h2>Career Development</h2>

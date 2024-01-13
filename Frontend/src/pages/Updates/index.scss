@@ -2,6 +2,9 @@
 
 .article-section{
     padding: 40px 0;
+    @include breakpoint(sm){
+        padding: 0;
+    }
     .head{
        font-size: $f32;
        font-weight: 600;
@@ -13,6 +16,9 @@
         background-color: #F5F7F7;
         border-radius: 10px;
         padding: 14px;
+        @include breakpoint(sm){
+            margin-bottom: 30px;
+        }
         .article-img{
             img{
                 height: 100%;
@@ -48,6 +54,9 @@
 }
 .broucher-section{
     padding: 20px 0 60px 0;
+    @include breakpoint(sm){
+        padding: 0;
+    }
     .head{
        font-size: $f32;
        font-weight: 600;
@@ -59,6 +68,9 @@
         background-color: #F5F7F7;
         border-radius: 10px;
         padding: 14px;
+        @include breakpoint(sm){
+            margin-bottom: 30px;
+        }
         .broucher-img{
             img{
                 height: 100%;

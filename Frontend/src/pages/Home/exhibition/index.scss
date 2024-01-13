@@ -42,6 +42,14 @@
       padding-top: 40px;
       padding-bottom: 40px;
       margin: auto;
+      .exhibition-slider{
+         @include breakpoint(md){
+            width: 80% !important;
+         }
+         @include breakpoint(sm){
+            width: 94% !important;
+         }
+      }
 
       .slick-slider {
          margin: 0 20px;

@@ -1,10 +1,11 @@
+import "./index.scss";
 export default function MachineGallery(imageData: any) {
   return (
-    <div className="container img-aspect">
-      <div className="col-md-12">
+    <div className="continer">
+      <div className="grid-machine-container img-aspect">
         {imageData?.imageData?.map((images, id) => (
-          <div className="col-md-12">
-            <img src={images.url} alt="" />
+          <div key={id}>
+            <img src={images.url} alt="" />{" "}
           </div>
         ))}
       </div>

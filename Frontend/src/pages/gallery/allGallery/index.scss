@@ -1,29 +1,19 @@
 @import "../../../assets/sass/main.scss";
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-}
-.container {
-  .gallery {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
+
 .grid-container {
   display: grid;
   gap: 2px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 20vw) 15vw;
+  
   @include breakpoint(md) {
     display: flex;
     flex-direction: column;
     width: 100%;
+    .videoFrame {
+      width: 100% !important;
+      height: auto !important;
+    }
   }
   & > :nth-child(1) {
     grid-row: 1 / 2;

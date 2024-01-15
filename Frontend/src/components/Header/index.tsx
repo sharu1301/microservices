@@ -94,7 +94,7 @@ export default function Header() {
                     <li><a className="dropdown-item" href="/productlist">Injection moulding machine</a>
                       <ul className="submenu dropdown-menu">
                         {productData.map((list, i) => (
-                          <li><p className="dropdown-item" onClick={() => navigate(`/product-specification/${list.title}`)}>{list.title}</p></li>
+                          <li><a className="dropdown-item" onClick={() => navigate(`/product-specification/${list.title}`)}>{list.title}</a></li>
                         ))}
 
                       </ul>

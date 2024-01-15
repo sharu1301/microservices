@@ -55,6 +55,19 @@
                 width: 100%;
                 display: block;
             }
+            .slick-dots li button {
+                font-size: 7px;
+                line-height: 0;
+                display: block;
+                width: 10px;
+                height: 10px;
+                padding: 0px;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: none;
+                background: transparent;
+            }
         }
 
         .btnContainer {

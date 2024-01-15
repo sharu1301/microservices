@@ -2,10 +2,10 @@
 
 .grid-container {
   display: grid;
-  gap: 2px;
+  gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 20vw) 15vw;
-  
+
   @include breakpoint(md) {
     display: flex;
     flex-direction: column;

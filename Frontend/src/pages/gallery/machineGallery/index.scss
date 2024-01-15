@@ -1,9 +1,10 @@
 @import "../../../assets/sass/main.scss";
 .grid-machine-container {
   display: grid;
-  gap: 2px;
+  gap: 20px;
+  padding: 5px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 15vw 15vw;
+  grid-template-rows: repeat(2, 18vw);
   @include breakpoint(md) {
     display: flex;
     flex-direction: column;

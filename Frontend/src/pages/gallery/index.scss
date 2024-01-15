@@ -33,5 +33,8 @@ button:hover {
     height: 100%;
     object-fit: cover;
     margin-bottom: 5px;
+    @include breakpoint(md) {
+      margin-bottom: -5px;
+    }
   }
 }

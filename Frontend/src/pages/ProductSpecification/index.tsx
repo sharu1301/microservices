@@ -168,23 +168,15 @@ export default function ProductSpecification() {
                   </div>
 
                   <div className={'smallContainer'} >
-                   
-                   
-                    <div onClick={() => setFooterImg(bottomSlider1)}>
-                      <img className={footerImg === bottomSlider1 ? 'active' : 'image'} src={bottomSlider1} alt='' />
-                    </div>
+                   {data.overviewImages?.map((image,index)=>(
 
-                    {/* <div onClick={() => setFooterImg(bottomSlider2)}>
-                      <img className={footerImg === bottomSlider2 ? 'active' : 'image'} src={bottomSlider2} alt='' />
-                    </div>
+                   <div 
+                   key={index}
+                   onClick={() => setFooterImg(require(`../../assets/${image}`))}>
+                      <img className={footerImg === image ? 'active' : 'image'} src={require(`../../assets/${image}`)} alt='' />
+                    </div> ))}
 
-                    <div onClick={() => setFooterImg(bottomSlider3)}>
-                      <img className={footerImg === bottomSlider3 ? 'active' : 'image'} src={bottomSlider3} alt='' />
-                    </div>
-
-                    <div onClick={() => setFooterImg(bottomSlider4)}>
-                      <img className={footerImg === bottomSlider4 ? 'active' : 'image'} src={bottomSlider4} alt='' />
-                    </div> */}
+                    
                   </div>
 
                   <div className='paraContainer'>

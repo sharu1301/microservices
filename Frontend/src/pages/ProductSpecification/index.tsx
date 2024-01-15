@@ -9,9 +9,7 @@ import Slider from "react-slick";
 import downArrow from '../../assets/images/product-specification/arrow-down-circle.png';
 import mainImg from '../../assets/images/product-specification/mainImg.png';
 import bottomSlider1 from '../../assets/images/product-specification/bottomSlider.png';
-import bottomSlider2 from '../../assets/images/product-specification/bottomSlider2.png';
-import bottomSlider3 from '../../assets/images/product-specification/bottomSlider3.png';
-import bottomSlider4 from '../../assets/images/product-specification/bottomSlider4.png';
+
 import { useParams } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,8 +25,8 @@ export default function ProductSpecification() {
   const { productname }: any = useParams();
 
   console.log('Params', productname)
-  const [footerImg, setFooterImg] = useState(bottomSlider1);
-  
+  const [footerImg, setFooterImg] = useState();
+
   const [blowMoulding, setMouldingData] = useState<any>(null);
   const [injectionData, setInjectionMouldingData] = useState<any>(null)
 
@@ -36,7 +34,7 @@ export default function ProductSpecification() {
   const settings = {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
-    
+
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -108,10 +106,10 @@ export default function ProductSpecification() {
                     <div>
                       <b>Standard Features</b>
                       <ul>
-                        {data?.standardFeatures?.map((features,index)=>(
-                        <li>{features}</li>
+                        {data?.standardFeatures?.map((features, index) => (
+                          <li>{features}</li>
                         ))}
-                        
+
                       </ul>
                     </div>
 
@@ -166,17 +164,18 @@ export default function ProductSpecification() {
                   <div className="image-section">
                     <img src={footerImg} alt='' />
                   </div>
-
+                  
                   <div className={'smallContainer'} >
-                   {data.overviewImages?.map((image,index)=>(
-
-                   <div 
-                   key={index}
-                   onClick={() => setFooterImg(require(`../../assets/${image}`))}>
-                      <img className={footerImg === image ? 'active' : 'image'} src={require(`../../assets/${image}`)} alt='' />
-                    </div> ))}
-
                     
+                    {data.overviewImages?.map((image, index) => (
+
+                      <div
+                        key={index}
+                        onClick={() => setFooterImg(require(`../../assets/${image}`))}>
+                        <img className={footerImg === image ? 'active' : 'image'} src={require(`../../assets/${image}`)} alt='' />
+                      </div>))}
+
+
                   </div>
 
                   <div className='paraContainer'>

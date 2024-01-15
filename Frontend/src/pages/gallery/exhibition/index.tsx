@@ -1,18 +1,16 @@
 import React from "react";
-import './index.scss'
+import "./index.scss";
 
 export default function ExhibitionGallery(imageData: any) {
-  console.log("Res", imageData.imageData, typeof imageData.imageData)
+  console.log("Res", imageData.imageData, typeof imageData.imageData);
 
   return (
-    <div className="container">
+    <div className="container img-aspect">
       {imageData?.imageData?.map((images, id) => (
         <div className="col-md-12">
           <img src={images.url} alt="" />
         </div>
-        ))}
+      ))}
     </div>
-
-
-  )
+  );
 }

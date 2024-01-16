@@ -4,6 +4,7 @@
   gap: 2px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 20vw);
+  grid-auto-rows: 20vw;
   .videoFrame {
     width: 660px !important;
     height: auto !important;

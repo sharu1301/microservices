@@ -1,7 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
 
 import './index.scss';
-import axios from "axios";
 import ReactPlayer from 'react-player'
 
 
@@ -13,8 +11,8 @@ const AllGallery=({ imageData }: { imageData: any })=>{
             {/* <h2> All Gallery section </h2> */}
             <div className="gallery">
                 {imageData?.map((data: any, i) => (
-                    <div>
-                        {data.title == "Exhibition Gallery"
+                    <div key={i}>
+                        {data.title === "Exhibition Gallery"
                             && (data.photos.map((images, id) => (
                                 <div className="row" key={id}>
                                     {(i % 2 === 0 || i === 0) ?
@@ -29,7 +27,7 @@ const AllGallery=({ imageData }: { imageData: any })=>{
                             )}
 
                         <div className="row mt-2">
-                            {data.title == "Machine Gallery" && (
+                            {data.title === "Machine Gallery" && (
                                 <div className="col-md-8">
                                     <div className="row mt-3">
                                         {data.photos.map((images, id) => (
@@ -39,7 +37,7 @@ const AllGallery=({ imageData }: { imageData: any })=>{
 
                                     </div>
                                 </div>)}
-                            {data.type == "native-video" && (
+                            {data.type === "native-video" && (
                                 <div className="col-md-12">
 
                                     {data.photos.map((images, id) => (

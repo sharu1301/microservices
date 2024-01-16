@@ -14,7 +14,7 @@ import { useParams } from "react-router-dom";
 const ProductByCategory = () => {
     const { category } = useParams();
     const selectedCategory = category || "defaultCategory";
-    console.log('Params', category)
+    // console.log('Params', category)
 
     return (
         <div>
@@ -28,6 +28,7 @@ const ProductByCategory = () => {
                         return (
                             (i % 2 === 0 || i === 0) ? (
                                 <LeftImgComponent
+                                key={i}
                                     data={data}
                                 />
                             ) :

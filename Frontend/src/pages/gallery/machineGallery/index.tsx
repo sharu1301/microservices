@@ -1,9 +1,3 @@
-import React from "react";
-
-
-
-
-
 export default function MachineGallery(imageData: any) {
 
 
@@ -15,7 +9,7 @@ export default function MachineGallery(imageData: any) {
             <div className="col-md-12">
 
                 {imageData?.imageData?.map((images, id) => (
-                    <div className="col-md-12">
+                    <div className="col-md-12" key={id}>
                         <img src={images.url} alt="" />
                     </div>
                 ))}

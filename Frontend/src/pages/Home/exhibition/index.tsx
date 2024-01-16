@@ -19,7 +19,8 @@ export default function Exhibition() {
 
     useEffect(() => {
         getExhibitions();
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
 
     const getExhibitions = () => {
@@ -66,8 +67,8 @@ export default function Exhibition() {
                     <div style={{ width: '87%' }}>
                         <Slider ref={ref} {...Settings}>
                             {exhibitionImages.map((image: any, index) => (
-                                <div>
-                                    <img key={index} className='image' src={image.url} width="100%" alt='' />
+                                <div key={index}>
+                                    <img  className='image' src={image.url} width="100%" alt='' />
                                 </div>
                             ))}
                         </Slider>

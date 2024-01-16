@@ -8,8 +8,6 @@ import Footer from '../../components/Footer';
 import Slider from "react-slick";
 import downArrow from '../../assets/images/product-specification/arrow-down-circle.png';
 import mainImg from '../../assets/images/product-specification/mainImg.png';
-import bottomSlider1 from '../../assets/images/product-specification/bottomSlider.png';
-
 import { useParams } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,7 +22,7 @@ export default function ProductSpecification() {
 
   const { productname }: any = useParams();
 
-  console.log('Params', productname)
+  // console.log('Params', productname)
   const [footerImg, setFooterImg] = useState();
 
   const [blowMoulding, setMouldingData] = useState<any>(null);
@@ -34,7 +32,6 @@ export default function ProductSpecification() {
   const settings = {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
-
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -71,9 +68,9 @@ export default function ProductSpecification() {
 
         {injectionData ? (
           injectionMouldingData?.filter((data) => data.title.toLowerCase() === productname?.toLowerCase())
-            .map((data: any, i) => (
+            .map((data: any, index) => (
 
-              <div>
+              <div key={index}>
 
                 <div className='mainSectionContainer'>
                   <img src={mainImg} className='image' alt='' />
@@ -107,7 +104,7 @@ export default function ProductSpecification() {
                       <b>Standard Features</b>
                       <ul>
                         {data?.standardFeatures?.map((features, index) => (
-                          <li>{features}</li>
+                          <li key={index}>{features}</li>
                         ))}
 
                       </ul>
@@ -186,7 +183,9 @@ export default function ProductSpecification() {
               </div>
             )))
           :
-          blowMoulding && (<div>
+          blowMoulding && (
+
+          <div className='reactplayer'>
 
 
             <ReactPlayer

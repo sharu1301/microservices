@@ -1,6 +1,6 @@
 import "./index.scss";
 import React from "react";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import { AllGalleryProps } from "../typeInterface";
 import { List } from "immutable";
 
@@ -23,11 +23,12 @@ const AllGallery: React.FC<AllGalleryProps> = ({ pictures }) => {
         <div key={id}>
           <ReactPlayer
             key={id}
+            wrapper={undefined}
             url={ele?.url?.split(";")[0]}
             loop={true}
             controls={true}
-            height={230}
-            width={430}
+            height={"inherit"}
+            width={"100%"}
             className="videoFrame"
           />
         </div>

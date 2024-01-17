@@ -4,8 +4,17 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 373px);
+  grid-template-rows: repeat(3, 20ww);
   grid-auto-rows: 20vw;
+  justify-content: center;
+  align-content: center;
+
+  .videoFrame {
+    video {
+      height: 343px !important;
+      object-fit: cover;
+    }
+  }
 
   @include breakpoint(md) {
     display: flex;

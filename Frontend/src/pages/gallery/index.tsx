@@ -53,7 +53,6 @@ export default function Gallery() {
       const groups = response?.data?.groups;
 
       setAllImages(response?.data?.groups);
-      console.log("29", response.data.groups);
 
       groups.forEach((group: any) => {
         if (group.title === "Exhibition Gallery") {

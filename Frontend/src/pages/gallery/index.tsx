@@ -20,11 +20,6 @@ const TabPanel = ({ value, index, children }) => (
 );
 
 
-interface VideoInterface {
-  id: number;
-  url: string;
-  caption: string | null; // Adjust this based on your actual data
-}
 export default function Gallery() {
   const [value, setValue] = React.useState(0);
 
@@ -38,35 +33,36 @@ export default function Gallery() {
 
   useEffect(() => {
     getGalleryImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const getGalleryImages = () => {
+  const getGalleryImages = async() => {
     let tempVideos: any = [];
-    let temExhibitionGallery:any=[];
-    let tempMachinery:any=[];
+    let temExhibitionGallery: any = [];
+    let tempMachinery: any = [];
 
-    axios.get(`${exposureURL}/our-gallery`).then((response) => {
+   await axios.get(`${exposureURL}/our-gallery`).then((response) => {
 
       const groups = response?.data?.groups;
 
 
       setAllImages(response?.data?.groups)
-      console.log("29", response.data.groups)
+      // console.log("29", response.data.groups)
       groups.forEach((group: any) => {
-        if (group.title == "Exhibition Gallery") {
+        if (group.title === "Exhibition Gallery") {
           temExhibitionGallery = temExhibitionGallery.concat(group.photos.map((image) => ({
-           
+
             url: image.url,
-           
+
           })));
         }
-        if (group.title == "Machine Gallery") {
+        if (group.title === "Machine Gallery") {
           tempMachinery = tempMachinery.concat(group.photos.map((image) => ({
-           
+
             url: image.url,
-           
+
           })));
-          
+
         }
         if (group.type === 'native-video') {
           // Extract videos from the group and add them to tempVideos

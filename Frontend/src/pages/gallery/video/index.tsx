@@ -1,5 +1,3 @@
-import React from "react";
-
 import ReactPlayer from 'react-player'
 
 
@@ -13,10 +11,10 @@ export default function VideoGallery({ videoData }: { videoData: any }) {
             <div className="col-md-12">
 
                 {videoData?.map((images, id) => (
-                    <div>
+                    <div  key={id}>
 
                         <ReactPlayer
-                            key={id}
+                           
                             url={images?.url?.split(';')[0]} loop={true} controls={true} />
                     </div>
                 ))}

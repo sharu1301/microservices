@@ -11,7 +11,7 @@ const CustomerMaintenance = () => {
             <PageTitle title="Customer Service And Maintenance" />
             <div className="description-section">
                 <div className="container">
-                    <div className="row">
+                    <div className="row ml-0">
                         <div className="col-md-10 m-auto text-center">
                             <h2 className="head">Customer Service And Mantainance</h2>
                             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
@@ -23,7 +23,7 @@ const CustomerMaintenance = () => {
             </div>
             <section className="section processWrapper pt-0">
                 <div className="container">
-                    <div className="row">
+                    <div className="row ml-0">
                         <div className="col-md-5 col-lg-5">
                             <div className="process-img">
                                 <img src="../../images/pages/service/service.jpg" alt="service" className="img-fluid" />
@@ -38,13 +38,13 @@ const CustomerMaintenance = () => {
                                     </p>
                                     <img src="../../images/pages/service/service.jpg" alt="" className="img-fluid" />
                                 </div>
-                                <div className="panel-sub">
+                                <div className="panel-sub pl-0 pr-0">
                                     <h6>Lorem ipsum dolor sit amet consectet.</h6>
                                 </div>
-                                <div className="panel-sub">
+                                <div className="panel-sub pl-0 pr-0">
                                     <h6>Lorem ipsum dolor sit amet.</h6>
                                 </div>
-                                <div className="panel-sub">
+                                <div className="panel-sub pl-0 pr-0">
                                     <h6>Lorem ipsum dolor sit amet consectet.</h6>
                                 </div>
                             </div>
@@ -54,11 +54,11 @@ const CustomerMaintenance = () => {
             </section>
             <div className="introwrapper">
                 <div className="container">
-                    <div className="row align-items-center">
+                    <div className="row align-items-center ml-0">
                         <div className="col-md-7">
                             <div className="introcontent">
                                 <h2>Lorem ipsum dolor sit</h2>
-                                <p><b>Hinds Machines, a leading name in the field of machine
+                                <p className="bold-content"><b>Hinds Machines, a leading name in the field of machine
                                     manufacturerers, is dedicated to providing cutting-edge
                                     solutions for diverse industrial needs.</b></p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -76,14 +76,14 @@ const CustomerMaintenance = () => {
             </div>
             <section className="section bg-light stepswrapper">
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center ml-0">
                         <div className="col-md-9 col-lg-9 text-center">
                             <h4 className="head mb-3">All solutions for your machine in the area of customer service & maintenance</h4>
                             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
                                 Iaculis urna vestibulum sed velit neque</p>
                         </div>
                     </div>
-                    <div className="row pt-4">
+                    <div className="row pt-4 ml-0">
                         <div className="col-md-4">
                             <div className="step-card">
                                 <h2>01</h2>
@@ -116,7 +116,7 @@ const CustomerMaintenance = () => {
             </section>
             <div className="staff-section">
                 <div className="container">
-                    <div className="row w-100">
+                    <div className="row w-100 ml-0">
                         <div className="col-md-4">
                             <div className="staff-card">
                                 <div className="staff-img">
@@ -255,7 +255,7 @@ const CustomerMaintenance = () => {
             </div>
             <div className="blog-section">
                 <div className="container">
-                    <div className="row w-100">
+                    <div className="row w-100 ml-0">
                         <div className="col-md-12 mb-4">
                             <h2>Blogs</h2>
                         </div>

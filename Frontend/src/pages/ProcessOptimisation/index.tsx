@@ -44,13 +44,13 @@ export default function Process() {
                   </p>
                   <img src="../../images/pages/process-mobile.jpg" alt="" className="img-fluid" />
                 </div>
-                <div className="panel-sub">
+                <div className="panel-sub pl-0">
                   <h6>Lorem ipsum dolor sit amet consectet.</h6>
                 </div>
-                <div className="panel-sub">
+                <div className="panel-sub pl-0">
                   <h6>Lorem ipsum dolor sit amet.</h6>
                 </div>
-                <div className="panel-sub">
+                <div className="panel-sub pl-0">
                   <h6>Lorem ipsum dolor sit amet consectet.</h6>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function Process() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-10 col-lg-10 col-xl-7 text-center">
-              <h4>How It Works</h4>
+              <h4 className="mb-2">How It Works</h4>
               <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
                 Iaculis urna vestibulum sed velit neque</p>
             </div>

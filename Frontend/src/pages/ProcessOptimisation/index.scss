@@ -98,11 +98,13 @@
         }
 
         @include breakpoint(sm) {
-          font-size: $f25;
+          font-size: 21px !important;
+          line-height: 14px;
         }
 
         @include breakpoint(md) {
-          font-size: $f25;
+          font-size: $f20;
+          line-height: 0;
         }
       }
     }
@@ -110,6 +112,16 @@
 }
 
 .stepswrapper {
+  h4{
+    @include breakpoint(md) {
+      font-size: $f28 !important;
+      line-height: 36px;
+    }
+    @include breakpoint(sm) {
+      font-size: $f24 !important;
+      line-height: 36px;
+    }
+  }
   .step-card {
     background-color: $white;
     border-radius: 4px;
@@ -118,7 +130,6 @@
     h2 {
       color: $light-gray;
     }
-
     h6 {
       font-size: $f20;
 
@@ -127,23 +138,32 @@
       }
 
       @include breakpoint(md) {
-        font-size: $f16;
+        font-size: $f14;
+      }
+      @include breakpoint(sm) {
+        font-size: $f22;
       }
     }
 
     p {
       font-size: $f14;
       margin-bottom: 0;
+      @include breakpoint(sm) {
+        font-size: $f16 !important;
+      }
+      @include breakpoint(md) {
+        font-size: $f14;
+      }
     }
 
     @include breakpoint(xs) {
       margin-bottom: $mt-2;
-      text-align: center;
+      text-align: justify;
     }
 
     @include breakpoint(sm) {
       margin-bottom: $mt-2;
-      text-align: center;
+      text-align: justify;
     }
   }
 }

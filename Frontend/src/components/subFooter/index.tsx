@@ -4,7 +4,7 @@ function SubFooter() {
   return (
     <section className="bg-light ptb-56 call-to-action">
       <div className="container-fluid">
-      <div className="row justify-content-center">
+      <div className="row justify-content-center ml-0">
         <div className="col-md-10 col-lg-7 text-center">
           <div className="primary-heading">
             Get the Marketing Insights and Product Advice You Need from Industry

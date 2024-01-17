@@ -1,6 +1,9 @@
 @import "../../assets/sass/main.scss";
 .customer-section{
     padding: 40px 0 60px 0;
+    @include breakpoint(sm) {
+        padding: 0 0 40px 0;
+    }
     .cust-wrapper{
         .cust-img{
             margin-bottom: 20px;

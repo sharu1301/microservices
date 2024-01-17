@@ -21,7 +21,7 @@ const CustomerMaintenance = () => {
                     </div>
                 </div>
             </div>
-            <section className="section processWrapper pt-0">
+            <section className="processWrapper pt-0 pb-3">
                 <div className="container">
                     <div className="row ml-0">
                         <div className="col-md-5 col-lg-5">

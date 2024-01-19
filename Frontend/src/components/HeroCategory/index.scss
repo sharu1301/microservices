@@ -1,0 +1,37 @@
+@import "../../assets/sass/main.scss";
+
+.banner-section{
+    width: 100%;
+    min-height: 334px;
+    display: flex;
+    background: url(../../../public/images/pages/automobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h2{
+        color: $white;
+        @include breakpoint(sm){
+            font-size: 35px;
+        }
+    }
+
+    .breadcrumb{
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+        li{
+            color: $white;
+            a{
+                color: $white;
+            }
+        }
+    }
+
+    .breadcrumb li+li:before{
+        display: inline-block;
+        padding-right: 0.5rem;
+        color: $white;
+        content: ">";
+        padding-left: 10px;
+    }
+}

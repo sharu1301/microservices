@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import './index.scss';
 import Header from '../../components/Header';
 import PageTitle from '../../components/pageTitle';
@@ -28,11 +28,13 @@ import Footer from '../../components/Footer';
 import SubFooter from '../../components/subFooter';
 
 export default function Applications(){
+  const navigate=useNavigate()
     return(
         <>
           <Header/>
           <PageTitle title="Applications"/>
           <AppCard
+          onClickApp={()=>navigate('/product-by-category/automotive')}
            image={image1}
            icon={icon1}
            reverse={false}
@@ -41,6 +43,7 @@ export default function Applications(){
           />
 
            <AppCard
+           onClickApp={()=>navigate('/product-by-category/packaging')}
            image={image2}
            icon={icon2}
            reverse={true}
@@ -49,15 +52,17 @@ export default function Applications(){
           />
 
        <AppCard
+       onClickApp={()=>navigate('/product-by-category/moulding')}
            image={image3}
            icon={icon3}
            reverse={false}
            title={'Elevating Everyday Living with High-Performance Moulding Machines'}
            description={
-            "Lorem ipsum dolor sit amet consectetur. Rhoncus ullamcorper neque nibh ultricies dictumst massa porta malesuada. Lorem ipsum dolor sit amet consectetur. Rhoncus ullamcorper neque nibh ultricies dictumst massa porta malesuada."}
+            "Moulding Machines: At Hinds Plastic Machines Pvt. Ltd., we pride ourselves on being a leading manufacturer of top-tier injection moulding machines. Our extensive line of machines is specifically engineered to meet the dynamic and rigorous demands of the moulding industry. With a focus on precision, energy efficiency, and reliability, our machines serve a multitude of sectors by facilitating the production of high-quality parts ranging from automotive components to consumer electronics."}
           />
 
          <AppCard
+         onClickApp={()=>navigate('/product-by-category/construction')}
            image={image4}
            icon={icon4}
            reverse={true}
@@ -66,6 +71,7 @@ export default function Applications(){
           />
 
         <AppCard
+        onClickApp={()=>navigate('/product-by-category/electrical')}
            image={image5}
            icon={icon5}
            reverse={false}
@@ -74,6 +80,7 @@ export default function Applications(){
           />
 
         <AppCard
+        onClickApp={()=>navigate('/product-by-category/pet preform')}
            image={image6}
            icon={icon6}
            reverse={true}
@@ -82,6 +89,7 @@ export default function Applications(){
           />
 
           <AppCard
+          onClickApp={()=>navigate('/product-by-category/toy industry')}
            image={image7}
            icon={icon7}
            reverse={false}
@@ -90,6 +98,7 @@ export default function Applications(){
           />
 
          <AppCard
+         onClickApp={()=>navigate('/product-by-category/precision plastic')}
            image={image8}
            icon={icon8}
            reverse={true}

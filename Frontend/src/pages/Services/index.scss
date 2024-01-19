@@ -3,11 +3,24 @@
   @include breakpoint(sm){
     padding: $pt-3 !important;
     padding-bottom: $pt-1 !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.section{
+  @include breakpoint(sm){
+    padding-top: $pt-2 !important;
   }
 }
 .servicesWrapper {
+  .service-content{
+    h2{
+      @include breakpoint(sm){
+        font-size: $f28;
+        line-height: 42px;
+      }
+    }
+  }
   label {
     input {
       color: $black;
@@ -38,6 +51,14 @@
      .service-img{
       order: 2;
      }
+    }
+  }
+  .service-img{
+    height: 100%;
+    width: 100%;
+    img{
+      height: 100%;
+      width: 100%;
     }
   }
 }

@@ -11,6 +11,12 @@ import Applications from "./pages/applications";
 import ProductSpecification from "./pages/ProductSpecification";
 import Service from "./pages/Services";
 import Process from "./pages/ProcessOptimisation";
+import ProductByCategory from "./pages/ProductByCatregory";
+import Updates from "./pages/Updates";
+import CustomerMaintenance from "./pages/CustomerMaintenance";
+import Upgrades from "./pages/Upgrades";
+import Career from "./pages/Career";
+import CareerListing from "./pages/careerListing";
 
 const routes = (
   <>
@@ -26,6 +32,12 @@ const routes = (
       <Route path="/product-specification/:productname" element={<ProductSpecification/>}/>
       <Route path="/service" element={<Service />} />
       <Route path="/process" element={<Process />} />
+      <Route path="/updates" element={<Updates />} />
+      <Route path="/product-by-category/:category" element={< ProductByCategory/>}/>
+      <Route path="/customermaintenance" element={<CustomerMaintenance/>} />
+      <Route path="/upgrades" element={<Upgrades/>} />
+      <Route path="/career" element={<Career/>} />
+      <Route path="/careerlisting" element={<CareerListing/>} />
     </Routes>
   </>
 );

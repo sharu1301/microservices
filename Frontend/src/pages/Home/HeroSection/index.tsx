@@ -1,7 +1,9 @@
 import "./index.scss";
 import arrow from "../../../assets/images/right_arrow.png";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate()
   return (
     <div className={"heroSection"}>
       <div className={"overlay"}></div>
@@ -11,9 +13,9 @@ const HeroSection = () => {
           Innovating Precision, Powering Progress: Welcome to the Future of
           Manufacturing with Hinds Machines.
         </p>
-        <div className="btn">
+        <div className="btn" onClick={() => navigate('productlist')}>
           Explore Products
-          <img src={arrow} />
+          <img src={arrow} alt="" />
         </div>
       </div>
     </div>

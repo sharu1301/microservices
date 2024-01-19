@@ -27,6 +27,10 @@
             display: none;
 
         }
+        img{
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .responsiveImgSection {
@@ -38,7 +42,9 @@
                 width: 100%;
                 padding: 0px 15px 0px 15px;
             }
-
+            .slick-slider{
+                margin: 0;
+            }
             padding: 0px 15px 0px 15px;
             display: flex;
 
@@ -46,14 +52,13 @@
                 // height: 250px;
                 width: 100%;
                 position: relative;
-                margin: 10px 5px 0px 5px;
                 margin-top: 15px;
             }
         }
     }
 
     img {
-        padding-right: 20px;
+        padding-right: 0;
     }
 
     .buttondiv {

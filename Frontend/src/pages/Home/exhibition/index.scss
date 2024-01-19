@@ -1,48 +1,88 @@
 @import "../../../assets/sass/main.scss";
-.container{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
 
-     .heading{
-        color: #363636;
-text-align: center;
-font-family: Inter;
-font-size: 44px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-text-transform: capitalize;
-margin: 20px;
-     }
-     .description{
-        width: 936px;
-        // text-align: center;
-     }
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
-     .slide-container{
+   .heading {
+      color: #363636;
+      text-align: center;
+      font-family: Inter;
+      font-size: 44px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+      margin: auto;
 
-        width: 100%;
-        display: flex;
-         flex-direction: row;
-         align-items: center;
-          padding: 20px;
-          padding-top: 40px;
-          padding-bottom: 40px;
-    
+      @include breakpoint(sm) {
+         font-size: 34px;
+      }
+   }
+
+   .description {
+      width: 936px;
+      margin: auto;
+      text-align: center;
+
+      @include breakpoint(sm) {
+         font-size: $f16;
+      }
+   }
+
+   .slide-container {
+
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin: auto;
+      .exhibition-slider{
+         @include breakpoint(md){
+            width: 80% !important;
+         }
+         @include breakpoint(sm){
+            width: 94% !important;
+         }
+      }
+
+      .slick-slider {
+         margin: 0 20px;
+
+         @include breakpoint(sm) {
             margin: auto;
+         }
+      }
 
-       
-     }
-    
-     .image{
-   
-        border-radius: 12px;
-        width: '100%';
-        height: 489px;
-        border-radius: 12px;
+      @include breakpoint(sm) {
+         justify-content: center;
+         padding-left: 0;
+         padding-right: 0;
+      }
+
+      .arrows {
+         @include breakpoint(sm) {
+            display: none;
+         }
+      }
+   }
+
+   .image {
+
+      border-radius: 12px;
+      width: '100%';
+      height: 489px;
+      border-radius: 12px;
       //  width: 100%;
-        filter:  lightgray -32.736px -254.434px / 103.05% 159.1%;
-     }
+      filter: lightgray -32.736px -254.434px / 103.05% 159.1%;
+
+      @include breakpoint(sm) {
+         height: 260px;
+      }
+   }
 }

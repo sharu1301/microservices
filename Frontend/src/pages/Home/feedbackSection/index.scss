@@ -3,11 +3,9 @@
 .feedback {
 
     background: $feedback-background;
-     padding: 40px 0px 40px 40px;
+    padding: 40px 0px 40px 0px;
     margin-right: 0px;
    
-    
-
     .secondaryfeedback {
         display: flex;
          flex-direction: row;
@@ -28,32 +26,45 @@
 
     p {
         font-size: 13px;
-        padding-top: 15px;
+        line-height: 20px;
+        @include breakpoint(sm){
+            font-size: 12px;
+        }
     }
 
     button {
         background-color: red;
         color: $white;
-        margin-top: 40px;
     }
 
     .iso {
         // flex-direction: row;
         // display: flex;
         margin-bottom: 20px;
-        margin-right: 20px;
         
         display: flex;
         justify-content: space-between;
 
         .icon {
             padding-right: 10px;
-            height: 60px;
-            width: 60px;
+            height: 48px;
+            width: 50px;
+            margin-right: 10px;
+            @include breakpoint(sm){
+                height: 40px;
+                width: 40px;
+                margin-right: 0;
+            }
         }
 
         h6 {
             font-size: 15px;
+            line-height: 23px;
+            margin-bottom: 4px;
+            @include breakpoint(sm){
+                font-size: 12px;
+                font-weight: bold;
+            }
         }
     }
 

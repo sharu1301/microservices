@@ -1,32 +1,40 @@
+import "./index.scss";
 import React from "react";
+import ReactPlayer from "react-player/lazy";
+import { AllGalleryProps } from "../typeInterface";
+import { List } from "immutable";
 
-import img1 from '../../../assets/images/gallery/all/img1.jpeg';
-import img2 from '../../../assets/images/gallery/all/img2.jpeg';
-import img3 from '../../../assets/images/gallery/all/img3.jpeg';
-import img4 from '../../../assets/images/gallery/all/img4.jpeg';
-import img5 from '../../../assets/images/gallery/all/img5.jpeg';
-import './index.scss';
+const AllGallery: React.FC<AllGalleryProps> = ({ pictures }) => {
+  const list = List(pictures);
 
-export default function AllGallery(){
-    return(
-        <div  className="container">
-             {/* <h2> All Gallery section </h2> */}
-             <div className="gallery">
-                <img className="image" src={img1}/>
-                <img className="image row-2" src={img2}/>
-                <img className="image" src={img3}/>
-                <img className="image" src={img4} />
-                <img className="image " src={img5}/>
-                <img className="image" src={img3}/>
-              
-                {/* <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div  className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div>
-                <div className="image" style={{backgroundColor: "red", width:"600px", height:'500px'}}></div> */}
-             </div>
-            </div>
-    
-    )
-}
+  const filteredList = list.filter((item) => item.id !== undefined);
+
+  return (
+    <div className="grid-container img-aspect">
+      {list
+        .filter((item) => item.id === undefined)
+        .map((ele, id) => (
+          <div key={id}>
+            <img src={ele.url} alt={ele.alt_text} />
+          </div>
+        ))}
+
+      {filteredList.map((ele, id) => (
+        <div key={id}>
+          <ReactPlayer
+            key={id}
+            wrapper={undefined}
+            url={ele?.url?.split(";")[0]}
+            loop={true}
+            controls={true}
+            height={"inherit"}
+            width={"100%"}
+            className="videoFrame"
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default React.memo(AllGallery);

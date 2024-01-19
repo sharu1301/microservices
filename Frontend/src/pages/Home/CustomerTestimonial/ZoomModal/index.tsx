@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Modal } from "react-bootstrap";
 import './index.scss';
 
@@ -16,13 +16,13 @@ const ZoomModal = ({
     isOpen,
     size = "lg",
 }: ZoomModalInterface) => {
-    console.log("Data=======> Modal", data)
+    // console.log("Data=======> Modal", data)
     return (
         <Modal show={isOpen} size={size} className="modal" backdrop={true}>
         <Modal.Body>
             <div className="modal-body">
                 <p>{data.data}</p>
-                <img src={data.image}  />
+                <img src={data.image}  alt=""/>
             </div>
         </Modal.Body>
     </ Modal>

@@ -100,7 +100,7 @@ function About() {
             </div>
             <div className="container">
 
-              <div className="col-md-10 banner">
+              <div className="col-md-12 banner">
                 <ArrowLeft />
                 <div className="mt-4 ourStory-banner">
 

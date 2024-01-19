@@ -7,16 +7,31 @@
 .ourStory {
   align-items: center;
 
+  .arrows {
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
   .banner {
     align-self: center;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 0;
 
     .ourStory-banner {
-
-      width: 100%;
+      width: 88%;
       min-height: fit-content;
+      margin: 0 20px;
+
+      @include breakpoint(sm) {
+        margin: 0;
+        width: 100%;
+      }
+      .slick-slider{
+        margin: 0;
+      }
     }
   }
 

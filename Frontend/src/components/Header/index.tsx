@@ -75,6 +75,7 @@ export default function Header() {
                   <li className={pathname === "/service" ? 'active dropdown-toggle' : 'dropdown-toggle'}
                     data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
                   <ul className="dropdown-menu">
+                  {/* <li><a className="dropdown-item" href="/service">About Services</a></li> */}
                     <li><a className="dropdown-item" href="/process">Process Optimization</a>
 
                     </li>
@@ -99,7 +100,7 @@ export default function Header() {
 
                       </ul>
                     </li>
-                    <li><a className="dropdown-item" href="/productlist">Blow moulding machine</a>
+                    {/* <li><a className="dropdown-item" href="/productlist">Blow moulding machine</a>
                       <ul className="submenu dropdown-menu">
                         {blowMouldingData.map((list, i) =>
                         (<li key={i}>
@@ -107,8 +108,8 @@ export default function Header() {
                           className="dropdown-item" href={`/product-specification/${list.title}`}>{list.title}</a></li>
                         ))}
                       </ul>
-                    </li>
-                    <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
+                    </li> */}
+                    {/* <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li> */}
                   </ul>
                 </li>
 

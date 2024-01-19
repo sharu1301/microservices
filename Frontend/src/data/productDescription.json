@@ -60,16 +60,15 @@
         ],
         "3Cards": [
             {
-                "Injection Moulding": "Type"
+                "Toggle": "Type"
             },
             {
-                "Fully Electric": "Drive Type"
+                "Hydraulic": "Drive Type"
             },
             {
                 "Clamping Force": "90-350 KN"
             }
         ],
-
         "overviewImages": [
             "images/product-specification/productoverview/EuroPacSeries/1.png",
             "images/product-specification/productoverview/EuroPacSeries/2.jpg",
@@ -78,7 +77,6 @@
             "images/product-specification/productoverview/EuroPacSeries/5.jpg",
             "images/product-specification/productoverview/EuroPacSeries/6.jpg",
             "images/product-specification/productoverview/EuroPacSeries/7.jpg"
-           
         ]
     },
     {
@@ -142,16 +140,15 @@
         ],
         "3Cards": [
             {
-                "Injection Moulding": "Type"
+                "Toggle": "Type"
             },
             {
-                "Fully Electric": "Drive Type"
+                "Hydraulic": "Drive Type"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "Clamping Force": "130-270 KN"
             }
         ],
-
         "overviewImages": [
             "images/product-specification/productoverview/EuroPETSeries/1.png",
             "images/product-specification/productoverview/EuroPETSeries/2.jpg",
@@ -159,10 +156,7 @@
             "images/product-specification/productoverview/EuroPETSeries/4.jpg",
             "images/product-specification/productoverview/EuroPETSeries/5.jpg",
             "images/product-specification/productoverview/EuroPETSeries/6.jpg"
-      
-
         ]
-        
     },
     {
         "title": "Euro Servo Series",
@@ -203,7 +197,6 @@
             "images/product-specification/slider/EuroServoSeries/16.png",
             "images/product-specification/slider/EuroServoSeries/17.png"
         ],
-
         "overviewImages": [
             "images/product-specification/productoverview/EuroServoSeries/1.png",
             "images/product-specification/productoverview/EuroServoSeries/2.jpg",
@@ -211,9 +204,7 @@
             "images/product-specification/productoverview/EuroServoSeries/4.jpg",
             "images/product-specification/productoverview/EuroServoSeries/5.jpg",
             "images/product-specification/productoverview/EuroServoSeries/6.jpg"
-         
         ],
-
         "clampingUnit": [
             "Wide tie bar distance & daylight",
             "Robust five point vertical toggle clamp mechanism",
@@ -289,11 +280,15 @@
             "Robot interface",
             "Bimetallic screw & barrel"
         ],
-        "3Cards":[
-            {"Injection Moulding":"Type"},
-            {"Fully Electric":"Drive Type"},
+        "3Cards": [
             {
-                "Clamping Force":"90-350 KN"
+                "Toggle": "Type"
+            },
+            {
+                "Hydraulic": "Drive Type"
+            },
+            {
+                "Clamping Force": "90-350 KN"
             }
         ]
     },
@@ -330,17 +325,14 @@
             "images/product-specification/slider/EuroStarSeries/11.png",
             "images/product-specification/slider/EuroStarSeries/12.png"
         ],
-
-        "overviewImages":[
+        "overviewImages": [
             "images/product-specification/productoverview/EuroStarSeries/1.png",
             "images/product-specification/productoverview/EuroStarSeries/2.jpg",
             "images/product-specification/productoverview/EuroStarSeries/3.jpg",
             "images/product-specification/productoverview/EuroStarSeries/4.jpg",
             "images/product-specification/productoverview/EuroStarSeries/5.jpg",
             "images/product-specification/productoverview/EuroStarSeries/6.jpg"
-           
         ],
-
         "heavydutyclampingunit": [
             "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.",
             "The clamping cylinder is controlled by two cylinders (a small one inside the large main cylinder). This allows for fast mould closing before the final high pressure stage."
@@ -365,17 +357,20 @@
             "Cold start screw prevention",
             "Screw driven by high torque variable speed radial"
         ],
-        "3Cards":[
-            {"Injection Moulding":"Type"},
-            {"Fully Electric":"Drive Type"},
+        "3Cards": [
             {
-                "Clamping Force":"90-350 KN"
+                "Toggle": "Type"
+            },
+            {
+                "Hydraulic": "Drive Type"
+            },
+            {
+                "Clamping Force": "90-350 KN"
             }
         ],
         "standardFeatures": [
             "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.",
             "The clamping cylinder is controlled by two cylinders (a small one inside the large main cylinder). This allows for fast mould closing before the final high pressure stage.",
-
             "Clamping unit with higher speed & less wear on mould, with smooth motion & stable operation",
             "Moving platen moves on guide rails bearings with wide skates supporting pads.",
             "Nitrited screw and barrel, a wear resistance screw tip assembly",
@@ -402,13 +397,11 @@
             "CPVC Fittings",
             "Construction"
         ],
-
         "overviewImages": [
             "images/product-specification/productoverview/EuroCPVCSeries/1.png",
             "images/product-specification/productoverview/EuroCPVCSeries/2.jpg",
             "images/product-specification/productoverview/EuroCPVCSeries/3.jpg"
         ],
-
         "clampingUnit": [
             "Wide tie bar distance & daylight",
             "Robust five point vertical toggle clamp mechanism",
@@ -474,7 +467,6 @@
             "images/product-specification/slider/EuroCPVCSeries/2.jpg",
             "images/product-specification/slider/EuroCPVCSeries/3.jpg"
         ],
-
         "standardFeatures": [
             "Wide tie bar distance & daylight",
             "Robust five point vertical toggle clamp mechanism",
@@ -487,8 +479,18 @@
             "Alarm history provide to recall the fault analysis",
             "Visual & Audible alarm",
             "I/O diagnosis for analog & digital"
+        ],
+        "3Cards": [
+            {
+                "Toggle": "Type"
+            },
+            {
+                "Hydraulic": "Drive Type"
+            },
+            {
+                "Clamping Force": "90-350 KN"
+            }
         ]
-
     },
     {
         "title": "Euro (PVC) Series",
@@ -508,15 +510,12 @@
             "PVC Fittings",
             "Construction"
         ],
-
         "overviewImages": [
             "images/product-specification/productoverview/EuroPVCSeries/1.png",
             "images/product-specification/productoverview/EuroPVCSeries/2.jpg",
             "images/product-specification/productoverview/EuroPVCSeries/3.jpg",
             "images/product-specification/productoverview/EuroPVCSeries/4.jpg"
         ],
-
-
         "clampingUnit": [
             "Wide tie bar distance & daylight",
             "Robust five point vertical toggle clamp mechanism",
@@ -594,6 +593,17 @@
             "Tripple safety control of mechanical",
             "Accurate PID temperature control setting on screen",
             "Auto heat start up & shut down program"
+        ],
+        "3Cards": [
+            {
+                "Toggle": "Type"
+            },
+            {
+                "Hydraulic": "Drive Type"
+            },
+            {
+                "Clamping Force": "90-350 KN"
+            }
         ]
     },
     {
@@ -619,7 +629,6 @@
             "Automotive"
         ],
         "standardFeatures": [
-       
             "Wide tie bar distance and daylight.",
             "Direct  hydraulic  clamping  system  enable  stable and  precisely controlled clamping force.",
             "Radial Piston type hydraulic motor enable high torque and excellent performance.",
@@ -658,15 +667,19 @@
             "images/product-specification/productoverview/EuroRSeries/4.jpg",
             "images/product-specification/productoverview/EuroRSeries/5.jpg",
             "images/product-specification/productoverview/EuroRSeries/6.jpg"
+        ],
+        "3Cards": [
+            {
+                "RAM": "Type"
+            },
+            {
+                "Hydraulic": "Drive Type"
+            },
+            {
+                "Clamping Force": "90-350 KN"
+            }
         ]
     },
-
-
-
-
-
-
-    
     {
         "title": "Euro Servo R Series",
         "image": "images/productimages/EuroServoR.png",
@@ -687,8 +700,24 @@
             "Electrical Industry",
             "Automobile & More",
             "Moulding"
+        ],
+        "3Cards": [
+            {
+                "Toggle": "RAM"
+            },
+            {
+                "Hydraulic": "Drive Type"
+            },
+            {
+                "Clamping Force": "110-180 KN"
+            }
+        ],
+        "clampingUnit": [
+            "Unique Prefill Cylinder Design",
+            "Telescopic Piston design for fast clamping",
+            "Large tie bar distance",
+            "Better Day light",
+            "Very Precise Mould safety"
         ]
-
-
     }
 ]

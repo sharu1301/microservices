@@ -30,9 +30,19 @@ pipeline {
         }
       }
     }
-    stage('JIRA') {
+    stage('JIRA- Create New Ticket') {
       steps {
-        jiraAddComment comment:'BUILD SUCCESS', idOrKey:'HIN-18', site:'hindsmachines'
+         def testIssue = [fields: [
+                            project: [key: 'HIN'],
+                            summary: 'New JIRA Created from Jenkins.',
+                            description: 'New JIRA Created from Jenkins.',
+                            issuetype: [name: 'Bug'] 
+                    ]]
+
+                    def response = jiraNewIssue issue: testIssue, site: 'hindsmachines'
+
+                    echo response.successful.toString()
+                    echo response.data.toString()
       }
     }
   }

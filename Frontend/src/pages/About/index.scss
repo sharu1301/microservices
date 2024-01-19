@@ -1,72 +1,115 @@
 @import "../../assets/sass/main.scss";
 
-.section{
+.section {
   padding: 84px 0 !important;
 }
+
 .ourStory {
-  .ourStory-banner {
-    width: 100%;
-    min-height: fit-content;
+  align-items: center;
+
+  .arrows {
+    @include breakpoint(sm) {
+      display: none;
+    }
   }
-  @include breakpoint(sm){
+
+  .banner {
+    align-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    .ourStory-banner {
+      width: 88%;
+      min-height: fit-content;
+      margin: 0 20px;
+
+      @include breakpoint(sm) {
+        margin: 0;
+        width: 100%;
+      }
+      .slick-slider{
+        margin: 0;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
     text-align: center;
   }
-  h3{
+
+  h3 {
     font-size: 40px;
-    @include breakpoint(sm){
+
+    @include breakpoint(sm) {
       font-size: $f24;
     }
   }
 }
 
 .aboutFeaturesWrapper {
-  h3{
+  h3 {
     font-size: 40px;
     margin-bottom: 10px;
-    @include breakpoint(sm){
+    text-align: center;
+    align-items: c;
+
+    @include breakpoint(sm) {
       font-size: $f24;
     }
   }
-  p{
+
+  p {
     font-size: 16px;
   }
+
   .aboutFeatures {
     padding-top: 30px;
+
     @include breakpoint(md) {
       padding-top: 15px;
     }
+
     .icon-box-wrapper {
-      .icon{
+      .icon {
         margin-bottom: 20px;
       }
+
       h4 {
         color: $black;
 
         font-size: $f28;
         font-weight: 700;
-        line-height: 130%; /* 41.6px */
+        line-height: 130%;
+
+        /* 41.6px */
         @include breakpoint(md) {
           font-size: 21px;
         }
       }
+
       p {
         padding-top: 24px;
         font-size: 16px;
-        line-height: 150%; /* 24px */
+        line-height: 150%;
+        /* 24px */
       }
     }
   }
 }
 
 .aboutProductsWrapper {
-  @include breakpoint(sm){
+  @include breakpoint(sm) {
     text-align: center;
   }
+
   @media (max-width: 768px) {
     .productImage {
       padding-top: $pt-1 !important;
-      img{
-        @include breakpoint(sm){
+
+      img {
+        @include breakpoint(sm) {
           display: none;
         }
       }
@@ -75,11 +118,14 @@
 
   p {
     font-size: 16px;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
+    /* 24px */
   }
-  .responsive-img{
+
+  .responsive-img {
     display: none;
-    @include breakpoint(sm){
+
+    @include breakpoint(sm) {
       display: block;
     }
   }
@@ -90,8 +136,10 @@
   font-family: $inter;
   font-size: 40px;
   font-weight: 700;
-  line-height: 120%; /* 48px */
-  @include breakpoint(sm){
+  line-height: 120%;
+
+  /* 48px */
+  @include breakpoint(sm) {
     font-size: $f26;
     margin-bottom: 14px;
   }
@@ -102,14 +150,17 @@
     color: $gray;
     font-size: 20px;
     font-weight: 400;
-    line-height: 150%; /* 30px */
+    line-height: 150%;
+    /* 30px */
   }
-  .company-head{
-    @include breakpoint(sm){
+
+  .company-head {
+    @include breakpoint(sm) {
       text-align: center;
     }
-    h4{
-      @include breakpoint(sm){
+
+    h4 {
+      @include breakpoint(sm) {
         font-size: $f28;
         margin-bottom: 14px;
       }
@@ -118,10 +169,12 @@
 
   .companyInfoWrapper {
     position: relative;
+
     .company {
       position: relative;
       display: flex;
       justify-content: space-between;
+
       &:not(:last-child) {
         margin-bottom: 50px;
       }
@@ -130,21 +183,27 @@
         width: 80px;
         height: 80px;
       }
+
       .company-content {
         width: calc(100% - 100px);
+
         h6 {
           font-size: 24px;
-          line-height: 120%; /* 28.8px */
+          line-height: 120%;
+          /* 28.8px */
         }
+
         p {
           font-size: 14px;
           font-weight: 400;
-          line-height: 150%; /* 21px */
+          line-height: 150%;
+          /* 21px */
           margin-bottom: 0;
         }
       }
     }
-    .company + .company {
+
+    .company+.company {
       &::before {
         content: "";
 
@@ -156,13 +215,16 @@
         left: 7.5%;
         margin-top: 0;
         z-index: -1;
+
         @include breakpoint(xs) {
           left: 10.5%;
         }
+
         @include breakpoint(md) {
           top: -65px;
           left: 5.5%;
         }
+
         @include breakpoint(lg) {
           top: -110px;
           left: 11.5%;
@@ -174,14 +236,17 @@
   .company-statistics {
     width: 100%;
     position: relative;
+
     .profile-image {
       img {
         border-radius: 16px;
       }
+
       @include breakpoint(md) {
         margin-top: 40px;
       }
     }
+
     .counterWrapper {
       width: 60%;
       height: 148px;
@@ -194,11 +259,13 @@
       display: flex;
       justify-content: space-between;
       position: relative;
+
       @include breakpoint(lg) {
         width: 88%;
         margin-top: -9%;
         padding: 25px 26px;
       }
+
       &::before {
         content: "";
         display: block;
@@ -211,6 +278,7 @@
         background: #085b88;
         mix-blend-mode: multiply;
       }
+
       .counter-box {
         position: relative;
         max-width: 82px;
@@ -220,8 +288,10 @@
         .counter {
           font-size: 37px;
           font-weight: 800;
-          line-height: 150%; /* 56.446px */
+          line-height: 150%;
+          /* 56.446px */
         }
+
         .counter-title {
           font-size: 15px;
           font-weight: 600;
@@ -229,7 +299,7 @@
         }
       }
 
-      .counter-box + .counter-box {
+      .counter-box+.counter-box {
         &::after {
           content: "";
           width: 0px;
@@ -240,6 +310,7 @@
           z-index: 0;
           left: -19px;
           top: 4px;
+
           @include breakpoint(sm) {
             margin-left: 10px;
           }

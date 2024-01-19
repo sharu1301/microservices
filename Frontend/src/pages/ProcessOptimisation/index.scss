@@ -61,6 +61,9 @@
         font-size: $f14;
         margin-bottom: 0;
         margin-top: $mt-1;
+        @include breakpoint(sm) {
+          font-size: $f16;
+        }
       }
 
       .img-fluid {
@@ -91,15 +94,20 @@
 
     .panel-sub {
       padding: $pt-3 $pt-2 $pt-2 $pt-2;
-
+      @include breakpoint(md) {
+        padding: $pt-3 0 $pt-2 $pt-2;
+      }
+      @include breakpoint(sm) {
+        padding: $pt-3 0 0 0;
+      }
       h6 {
         @include breakpoint(xs) {
           font-size: $f25;
         }
 
         @include breakpoint(sm) {
-          font-size: 21px !important;
-          line-height: 14px;
+          font-size: 23px !important;
+          line-height: 30px !important;
         }
 
         @include breakpoint(md) {

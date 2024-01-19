@@ -30,13 +30,15 @@ export default function LeftImgComponent({ data }: LeftImgComponentInterface) {
                 <img className='responsiveImg' src={require(`../../../assets/${data.image}`)} alt='' />
 
                 <div className="row d-flex mb-3">
-                    {data.industry.map((industryData, i) => (<p className='highlighed'>{industryData}</p>))}
+                    {data.industry.map((industryData, i) => (
+                        <p className='highlighed' key={i}> {industryData}</p>
+                        ))}
 
                     {/* <p className='highlighed'>+ 3 more</p> */}
                 </div>
 
                 {data.lists.map((listData, i) => (
-                    <ul>
+                    <ul key={i}>
                         <li>{listData}</li>
                     </ul>))}
                 <p className='highlighed ml-1 mt-3'>Industry : Packaging, Cup & Closure</p>

@@ -11,7 +11,7 @@ const Upgrades = () => {
             <PageTitle title="Upgrades" />
             <div className="description-section">
                 <div className="container">
-                    <div className="row">
+                    <div className="row ml-0">
                         <div className="col-md-10 m-auto text-center">
                             <h2 className="head">Upgrades</h2>
                             <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
@@ -21,15 +21,15 @@ const Upgrades = () => {
                     </div>
                 </div>
             </div>
-            <section className="section processWrapper pt-0">
+            <section className="processWrapper pt-2 pb-2">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-5 col-lg-5">
+                    <div className="row ml-0">
+                        <div className="col-md-5 col-12">
                             <div className="process-img">
                                 <img src="../../images/pages/upgrades/upgrades1.jpg" alt="upgrades" className="img-fluid" />
                             </div>
                         </div>
-                        <div className="col-md-7 col-lg-7">
+                        <div className="col-md-7 col-12">
                             <div className="right-panel">
                                 <div className="panel bg-light">
                                     <h6>Lorem ipsum dolor sit</h6>
@@ -38,13 +38,13 @@ const Upgrades = () => {
                                     </p>
                                     <img src="../../images/pages/upgrades/upgrades1.jpg" alt="upgrades" className="img-fluid" />
                                 </div>
-                                <div className="panel-sub">
+                                <div className="panel-sub pl-0 pr-0">
                                     <h6>Lorem ipsum dolor sit amet consectet.</h6>
                                 </div>
-                                <div className="panel-sub">
+                                <div className="panel-sub pl-0 pr-0">
                                     <h6>Lorem ipsum dolor sit amet.</h6>
                                 </div>
-                                <div className="panel-sub">
+                                <div className="panel-sub pl-0 pr-0">
                                     <h6>Lorem ipsum dolor sit amet consectet.</h6>
                                 </div>
                             </div>
@@ -54,8 +54,8 @@ const Upgrades = () => {
             </section>
             <div className="introwrapper">
                 <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-7">
+                    <div className="row align-items-center ml-0">
+                        <div className="col-md-7 col-12">
                             <div className="introcontent pr-5">
                                 <h2>Lorem ipsum dolor sit</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -66,7 +66,7 @@ const Upgrades = () => {
                                 <button>learn more</button>
                             </div>
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5 col-12">
                             <img src="../../images/pages/upgrades/upgrades2.jpg" alt="upgrade" className="img-fluid" />
                         </div>
                     </div>
@@ -75,8 +75,8 @@ const Upgrades = () => {
 
             <section className="section servicesWrapper">
                 <div className="container">
-                    <div className="row box">
-                        <div className="col-md-6">
+                    <div className="row box ml-0">
+                        <div className="col-md-6 col-12">
                             <div className="service-img">
                                 <img
                                     src="../../images/pages/upgrades/upgrades3.jpg"
@@ -85,7 +85,7 @@ const Upgrades = () => {
                                 />
                             </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6 col-12">
                             <div className="service-content">
                                 <h2>Lorem ipsum dolor sit amet consectur </h2>
                                 <p className="pt-4">Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas
@@ -161,11 +161,11 @@ const Upgrades = () => {
             </section>
             <div className="customer-section">
                 <div className="container">
-                    <div className="row w-100">
-                        <div className="col-md-12 text-center mb-5">
+                    <div className="row w-100 ml-0">
+                        <div className="col-md-12 col-12 text-center mb-5">
                             <h5>Our Customers</h5>
                         </div>
-                        <div className="col-md-4 text-center">
+                        <div className="col-md-4 col-12 text-center">
                             <div className="cust-wrapper">
                                 <div className="cust-img">
                                     <img src="../../images/pages/upgrades/cust1.jpg" alt="customer" />
@@ -182,7 +182,7 @@ const Upgrades = () => {
                                     my experience so great!"</p>
                             </div>
                         </div>
-                        <div className="col-md-4 text-center">
+                        <div className="col-md-4 col-12 text-center">
                             <div className="cust-wrapper">
                                 <div className="cust-img">
                                     <img src="../../images/pages/upgrades/cust2.jpg" alt="customer" />
@@ -199,7 +199,7 @@ const Upgrades = () => {
                                     my experience so great!"</p>
                             </div>
                         </div>
-                        <div className="col-md-4 text-center">
+                        <div className="col-md-4 col-12 text-center">
                             <div className="cust-wrapper">
                                 <div className="cust-img">
                                     <img src="../../images/pages/upgrades/cust3.jpg" alt="customer" />

@@ -96,6 +96,14 @@
     .ourNews {
         width: 40%;
         height: 100%;
+        .grid{
+            height: 380px;
+            overflow: hidden;
+            margin-top: 10px;
+            .row{
+                animation: scrollTestimonials 10s linear infinite;
+            }
+        }
 
         @include breakpoint(sm) {
             width: 100%;

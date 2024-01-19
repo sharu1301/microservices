@@ -9,8 +9,8 @@ export default function VideoGallery({ videoData }: { videoData: any }) {
           url={images?.url?.split(";")[0]}
           loop={true}
           controls={true}
-          width={"auto"}
-          height={"100%"}
+          width={"420px"}
+          height={"auto"}
           className="videoFrame"
         />
       ))}

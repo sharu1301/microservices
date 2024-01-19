@@ -5,11 +5,13 @@
   padding: 5px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 18vw);
+  padding: 0 85px;
   grid-auto-rows: 18vw;
   @include breakpoint(md) {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 4px;
   }
 
   & > :nth-child(1) {

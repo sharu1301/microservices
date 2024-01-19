@@ -30,5 +30,11 @@ pipeline {
         }
       }
     }
+    stage('JIRA') {
+      steps {
+        jiraAddComment comment:'BUILD SUCCESS', idOrKey:'HIN-17', site:'hindsmachines'
+      }
+    }
   }
 }
+

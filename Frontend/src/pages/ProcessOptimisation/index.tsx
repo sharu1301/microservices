@@ -12,7 +12,7 @@ export default function Process() {
       <main className="ContentWrapper">
         <div className="container">
           <div className="section ourstory">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center ml-0">
               <div className="col-lg-8 text-center">
                 <h5>Process Optimisation</h5>
                 <p className="pt-2">
@@ -27,9 +27,9 @@ export default function Process() {
           </div>
         </div>
       </main>
-      <section className="processWrapper pt-0">
+      <section className="processWrapper pt-0 pb-5">
         <div className="container">
-          <div className="row">
+          <div className="row ml-0">
             <div className="col-md-5 col-lg-5">
               <div className="process-img">
                 <img src="../../images/pages/process1.jpg" alt="" className="img-fluid" />
@@ -44,13 +44,13 @@ export default function Process() {
                   </p>
                   <img src="../../images/pages/process-mobile.jpg" alt="" className="img-fluid" />
                 </div>
-                <div className="panel-sub">
+                <div className="panel-sub pl-0">
                   <h6>Lorem ipsum dolor sit amet consectet.</h6>
                 </div>
-                <div className="panel-sub">
+                <div className="panel-sub pl-0">
                   <h6>Lorem ipsum dolor sit amet.</h6>
                 </div>
-                <div className="panel-sub">
+                <div className="panel-sub pl-0">
                   <h6>Lorem ipsum dolor sit amet consectet.</h6>
                 </div>
               </div>
@@ -60,14 +60,14 @@ export default function Process() {
       </section>
       <section className="section bg-light stepswrapper">
         <div className="container">
-          <div className="row justify-content-center">
+          <div className="row justify-content-center ml-0">
             <div className="col-md-10 col-lg-10 col-xl-7 text-center">
-              <h4>How It Works</h4>
+              <h4 className="mb-2">How It Works</h4>
               <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
                 Iaculis urna vestibulum sed velit neque</p>
             </div>
           </div>
-          <div className="row pt-4">
+          <div className="row pt-4 ml-0">
             <div className="col-md-4">
               <div className="step-card">
                 <h2>01</h2>
@@ -100,7 +100,7 @@ export default function Process() {
       </section>
       <section className="section infoWrapper">
         <div className="container">
-          <div className="row">
+          <div className="row ml-0">
             <div className="col-md-7 col-lg-7">
               <h2>Lorem ipsum dolor sit amet consectur </h2>
               <p className="pt-4">

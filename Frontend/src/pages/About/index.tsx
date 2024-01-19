@@ -69,7 +69,7 @@ function About() {
       <main className="ContentWrapper">
         <div className="container">
           <section className="section ourStory">
-            <div className="row">
+            <div className="row ml-0">
               <div className="col-lg-6">
                 <div className="sub-heading">Our Story</div>
                 <h3>Tell the story of how your company came about</h3>
@@ -100,7 +100,7 @@ function About() {
             </div>
             <div className="container">
 
-              <div className="col-md-10 banner">
+              <div className="col-md-12 banner">
                 <ArrowLeft />
                 <div className="mt-4 ourStory-banner">
 
@@ -125,8 +125,8 @@ function About() {
 
           <section className="section aboutFeaturesWrapper">
             <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-md-10 col-lg-10 col-xl-7 text-center">
+              <div className="row justify-content-center ml-0">
+                <div className="col-md-10 col-12 col-lg-10 col-xl-7 text-center">
                   <h3>Lorem ipsum dolor sit amet consectetur. Sed id id.</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -135,7 +135,7 @@ function About() {
                   </p>
                 </div>
               </div>
-              <div className="row  aboutFeatures">
+              <div className="row ml-0 aboutFeatures">
                 <div className="col-md-4">
                   <div className="icon-box-wrapper text-center">
                     <div className="icon">
@@ -182,7 +182,7 @@ function About() {
       </main>
       <section className="section bg-light aboutProductsWrapper">
         <div className="container">
-          <div className="row">
+          <div className="row ml-0">
             <div className="col-md-6">
               <div className="left-content">
                 <div className="section_head">
@@ -234,7 +234,7 @@ function About() {
 
       <section className="section companyInformation">
         <div className="container">
-          <div className="row justify-content-between company-head">
+          <div className="row justify-content-between company-head ml-0">
             <div className="col-md-6">
               <h4> Lorem ipsum dolor sit amet consectetur. Sed id id.</h4>
             </div>
@@ -246,7 +246,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="row ptb-70">
+          <div className="row ptb-70 ml-0">
             <div className="col-sm-5 col-md-12 col-lg-5">
               <div className="companyInfoWrapper">
                 <div className="company companyGoals">

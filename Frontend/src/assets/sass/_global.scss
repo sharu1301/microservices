@@ -115,13 +115,15 @@ section {
     font-weight: 600;
     text-transform: capitalize;
     line-height: 60px;
+    margin-bottom: 10px;
 
     @include breakpoint(xs) {
-      font-size: 28px;
+      font-size: 26px !important;
     }
 
     @include breakpoint(sm) {
-      font-size: 28px;
+      font-size: 26px !important;
+      line-height: 34px;
     }
 
     @include breakpoint(md) {

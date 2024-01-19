@@ -13,12 +13,12 @@ const Updates = () => {
             <NewsGallery />
             <div className="article-section">
                 <div className="container">
-                    <div className="row w-100">
+                    <div className="row w-100 ml-0">
                         <div className="col-md-12">
                             <h4 className="head">Our Articles</h4>
                         </div>
                     </div>
-                    <div className="row w-100">
+                    <div className="row w-100 ml-0">
                         <div className="col-md-4 col-12">
                             <div className="article-card">
                                 <div className="article-img">
@@ -66,13 +66,13 @@ const Updates = () => {
             </div>
             <div className="broucher-section">
                 <div className="container">
-                    <div className="row w-100">
+                    <div className="row w-100 ml-0">
                         <div className="col-md-12">
                             <h4 className="head">Our Brochures</h4>
                         </div>
                     </div>
-                    <div className="row w-100">
-                        <div className="col-md-4">
+                    <div className="row w-100 ml-0">
+                        <div className="col-md-4 col-12">
                             <div className="broucher-card">
                                 <div className="broucher-img">
                                     <img src="../../images/pages/updates/broucher1.jpg" alt="broucher" />
@@ -83,7 +83,7 @@ const Updates = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-12">
                         <div className="broucher-card">
                                 <div className="broucher-img">
                                     <img src="../../images/pages/updates/broucher2.jpg" alt="broucher" />
@@ -94,7 +94,7 @@ const Updates = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-12">
                         <div className="broucher-card">
                                 <div className="broucher-img">
                                     <img src="../../images/pages/updates/broucher3.jpg" alt="broucher" />

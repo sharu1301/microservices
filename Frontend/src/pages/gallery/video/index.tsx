@@ -1,28 +1,19 @@
-import ReactPlayer from 'react-player'
-
-
-
+import ReactPlayer from "react-player";
+import "./index.scss";
 export default function VideoGallery({ videoData }: { videoData: any }) {
-  
-    console.log("Vido", videoData)
-
-    return (
-        <div className="container">
-            <div className="col-md-12">
-
-                {videoData?.map((images, id) => (
-                    <div  key={id}>
-
-                        <ReactPlayer
-                           
-                            url={images?.url?.split(';')[0]} loop={true} controls={true} />
-                    </div>
-                ))}
-
-            </div>
-
-        </div>
-
-
-    )
+  return (
+    <div className="video-align container">
+      {videoData?.map((images, id) => (
+        <ReactPlayer
+          key={id}
+          url={images?.url?.split(";")[0]}
+          loop={true}
+          controls={true}
+          width={"420px"}
+          height={"auto"}
+          className="videoFrame"
+        />
+      ))}
+    </div>
+  );
 }

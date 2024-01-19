@@ -1,64 +1,40 @@
+import "./index.scss";
+import React from "react";
+import ReactPlayer from "react-player/lazy";
+import { AllGalleryProps } from "../typeInterface";
+import { List } from "immutable";
 
-import './index.scss';
-import ReactPlayer from 'react-player'
+const AllGallery: React.FC<AllGalleryProps> = ({ pictures }) => {
+  const list = List(pictures);
 
+  const filteredList = list.filter((item) => item.id !== undefined);
 
-const AllGallery=({ imageData }: { imageData: any })=>{
-    
+  return (
+    <div className="grid-container img-aspect">
+      {list
+        .filter((item) => item.id === undefined)
+        .map((ele, id) => (
+          <div key={id}>
+            <img src={ele.url} alt={ele.alt_text} />
+          </div>
+        ))}
 
-    return (
-        <div className="container">
-            {/* <h2> All Gallery section </h2> */}
-            <div className="gallery">
-                {imageData?.map((data: any, i) => (
-                    <div key={i}>
-                        {data.title === "Exhibition Gallery"
-                            && (data.photos.map((images, id) => (
-                                <div className="row" key={id}>
-                                    {(i % 2 === 0 || i === 0) ?
-                                        <div className="col-md-4 ol-12">
-                                            <img className="image" src={images.url} alt="" />
-                                        </div> :
-                                        <div className="col-md-8 col-12">
-                                            <img className="image" src={images.url} alt="" />
-                                        </div>}
-                                </div>))
-
-                            )}
-
-                        <div className="row mt-2">
-                            {data.title === "Machine Gallery" && (
-                                <div className="col-md-8">
-                                    <div className="row mt-3">
-                                        {data.photos.map((images, id) => (
-                                            <div className="col-md-6 col-12" key={id}>
-                                                <img className="image" src={images.url} alt="" />
-                                            </div>))}
-
-                                    </div>
-                                </div>)}
-                            {data.type === "native-video" && (
-                                <div className="col-md-12">
-
-                                    {data.photos.map((images, id) => (
-                                        <ReactPlayer
-                                            key={id}
-                                            url={images.url.split(';')[0]} loop={true} controls={true} />))}
-
-
-                                </div>)}
-
-
-                        </div>
-                    </div>
-
-                ))}
-
-
-
-            </div>
+      {filteredList.map((ele, id) => (
+        <div key={id}>
+          <ReactPlayer
+            key={id}
+            wrapper={undefined}
+            url={ele?.url?.split(";")[0]}
+            loop={true}
+            controls={true}
+            height={"inherit"}
+            width={"100%"}
+            className="videoFrame"
+          />
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
-export default AllGallery
+export default React.memo(AllGallery);

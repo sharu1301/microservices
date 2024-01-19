@@ -64,7 +64,7 @@ export default function Exhibition() {
 
                 <div className="slide-container">
                     <ArrowLeft />
-                    <div style={{ width: '87%' }}>
+                    <div className='exhibition-slider' style={{ width: '87%' }}>
                         <Slider ref={ref} {...Settings}>
                             {exhibitionImages.map((image: any, index) => (
                                 <div key={index}>

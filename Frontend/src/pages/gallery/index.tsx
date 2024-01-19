@@ -9,86 +9,77 @@ import ExhibitionGallery from "./exhibition";
 import VideoGallery from "./video";
 import SubFooter from "../../components/subFooter";
 import Footer from "../../components/Footer";
-import './index.scss';
+import "./index.scss";
 import axios from "axios";
 import MachineGallery from "./machineGallery";
-
 const TabPanel = ({ value, index, children }) => (
   <div hidden={value !== index}>
     {value === index && <Box p={3}>{children}</Box>}
   </div>
 );
-
-
+interface VideoInterface {
+  id: number;
+  url: string;
+  caption: string | null; // Adjust this based on your actual data
+}
+interface Picture {
+  id: number;
+  name: string;
+  url: string;
+}
 export default function Gallery() {
   const [value, setValue] = React.useState(0);
-
-  const exposureURL = process.env.REACT_APP_EXPOSURE_URL
-  const [allImages, setAllImages] = useState([])
-  const [exhibitionImages, setExhibitionImages] = useState([])
-  const [machineryImages, setMachineryImages] = useState([])
-  const [allVideos, setAllVideos] = useState([])
-
-
-
+  const exposureURL = process.env.REACT_APP_EXPOSURE_URL;
+  const [allImages, setAllImages] = useState([]);
+  const [exhibitionImages, setExhibitionImages] = useState([]);
+  const [machineryImages, setMachineryImages] = useState([]);
+  const [allVideos, setAllVideos] = useState([]);
+  const [pictures, setPictures] = useState<Picture[]>([]);
   useEffect(() => {
     getGalleryImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const getGalleryImages = async() => {
+  }, []);
+  const getGalleryImages = () => {
     let tempVideos: any = [];
     let temExhibitionGallery: any = [];
     let tempMachinery: any = [];
-
-   await axios.get(`${exposureURL}/our-gallery`).then((response) => {
-
+    axios.get(`${exposureURL}/our-gallery`).then((response) => {
       const groups = response?.data?.groups;
-
-
-      setAllImages(response?.data?.groups)
-      // console.log("29", response.data.groups)
+      setAllImages(response?.data?.groups);
       groups.forEach((group: any) => {
         if (group.title === "Exhibition Gallery") {
-          temExhibitionGallery = temExhibitionGallery.concat(group.photos.map((image) => ({
-
-            url: image.url,
-
-          })));
+          temExhibitionGallery = temExhibitionGallery.concat(
+            group.photos.map((image) => ({
+              url: image.url,
+            }))
+          );
         }
         if (group.title === "Machine Gallery") {
-          tempMachinery = tempMachinery.concat(group.photos.map((image) => ({
-
-            url: image.url,
-
-          })));
-
+          tempMachinery = tempMachinery.concat(
+            group.photos.map((image) => ({
+              url: image.url,
+            }))
+          );
         }
-        if (group.type === 'native-video') {
+        if (group.type === "native-video") {
           // Extract videos from the group and add them to tempVideos
-          tempVideos = tempVideos.concat(group.photos.map((video) => ({
-            id: video.id,
-            url: video.url,
-            caption: video.caption,
-          })));
+          tempVideos = tempVideos.concat(
+            group.photos.map((video) => ({
+              id: video.id,
+              url: video.url,
+              caption: video.caption,
+            }))
+          );
         }
-      })
-      setAllVideos(tempVideos)
-      setExhibitionImages(temExhibitionGallery)
-      setMachineryImages(tempMachinery)
-    })
-  }
-
-
-
+      });
+      setAllVideos(tempVideos);
+      setExhibitionImages(temExhibitionGallery);
+      setMachineryImages(tempMachinery);
+      setPictures([...tempMachinery, ...tempVideos, ...temExhibitionGallery]);
+    });
+  };
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
-
-
-
   return (
     <>
       <Header />
@@ -110,9 +101,8 @@ export default function Gallery() {
           <Tab label="Video Gallery" />
         </Tabs>
       </Box>
-
       <TabPanel value={value} index={0}>
-        <AllGallery imageData={allImages} />
+        <AllGallery pictures={pictures} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ExhibitionGallery imageData={exhibitionImages} />
@@ -120,10 +110,8 @@ export default function Gallery() {
       <TabPanel value={value} index={2}>
         <MachineGallery imageData={machineryImages} />
       </TabPanel>
-
       <TabPanel value={value} index={3}>
         <VideoGallery videoData={allVideos} />
-
       </TabPanel>
       <SubFooter />
       <Footer />

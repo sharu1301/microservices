@@ -120,7 +120,7 @@ export default function Header() {
 
 
 
-                <li className={pathname === "/career" ? 'active' : ''}>Career</li>
+                <li className={pathname === "/career" ? 'active' : '' }onClick={() => navigate("/career")}>Career</li>
               </ul>
 
               <div

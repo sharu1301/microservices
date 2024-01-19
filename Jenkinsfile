@@ -32,7 +32,7 @@ pipeline {
     }
     stage('JIRA') {
       steps {
-        jiraAddComment comment:'BUILD SUCCESS', idOrKey:'HIN-17', site:'hindsmachines'
+        jiraAddComment comment:'BUILD SUCCESS', idOrKey:'HIN-18', site:'hindsmachines'
       }
     }
   }

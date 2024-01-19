@@ -24,6 +24,7 @@ function About() {
 
   useEffect(() => {
     getCoverImage();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const getCoverImage = () => {

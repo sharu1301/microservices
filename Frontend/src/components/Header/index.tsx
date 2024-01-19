@@ -7,7 +7,7 @@ import instagram from "../../assets/icons/instagram.png";
 import logo from "../../assets/logo/logo.png";
 import { useState } from "react";
 import productData from '../../data/products.json';
-import blowMouldingData from '../../data/blowMouldingList.json'
+
 
 export default function Header() {
   const navigate = useNavigate();

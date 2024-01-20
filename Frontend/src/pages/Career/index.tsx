@@ -68,7 +68,7 @@ const Career = () => {
                                 <p>A career at AVL is full of possibilities. As the rate of technological change continues to accelerate, we remain more committed than ever to helping our customers meet the challenges facing today’s automotive industry. Whether in powertrain engineering, test system development or measurement technologies, AVL is working on innovative solutions for the problems of tomorrow, today.
                                     Unlike other companies, we encourage our employees to look beyond the horizon and be the driving force behind the new technologies that are shaping the future of mobility. We know this can be challenging. That is why we give you the space to work on your own research projects, independent of customer orders.
                                     With our interdisciplinary team of engineers, researchers and technical experts, we offer an ideal environment for those wanting to not just develop solutions, but to see them in series production. As a team, we drive innovation. We achieve excellence. We change the future. We are AVL.</p>
-                                <a href="#">Join our team to unleash your full potential.</a>
+                                <a href="/careerlisting">Join our team to unleash your full potential.</a>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ const Career = () => {
                                     malesuada pretium tristique imperdiet.</p>
                                 <p className="pb-3">Lorem ipsum dolor sit amet consectetur. Justo
                                     malesuada pretium tristique imperdiet.</p>
-                                <a href="#">learn more<i className="fa-solid fa-arrow-right"></i></a>
+                                <a href="/career">learn more<i className="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                         {/* <svg xmlns="http://www.w3.org/2000/svg" width="66" height="194" viewBox="0 0 66 194" fill="none">

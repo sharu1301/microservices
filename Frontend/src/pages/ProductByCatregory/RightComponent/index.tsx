@@ -26,10 +26,12 @@ export default function RightImgComponent({ data }: RightImgComponentInterface) 
                 <p>{data.description}</p>
                 <img className='responsiveImg' src={require(`../../../assets/${data.image}`)} alt='' />
                 <div className="row mb-3">
-                    {data.industry.map((industryData, i) => (<p className='highlighed'>{industryData}</p>))}
+                    {data.industry.map((industryData, i) => (
+                    <p className='highlighed' key={i}>{industryData}</p>
+                    ))}
                 </div>
                 {data.lists.map((listData, i) => (
-                    <ul>
+                    <ul key={i}>
                         <li>{listData}</li>
                     </ul>))}
                 <p className='highlighed mt-3'>Industry : Packaging, Cup & Closure</p>

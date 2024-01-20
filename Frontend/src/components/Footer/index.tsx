@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <div className="footer-section">
         <div className="container">
-          <div className="row">
+          <div className="row ml-0">
             <div className="col-md-3">
               <div className="footer-logo">
                 <img src="images/pages/footer/logo.svg" alt="Logo" />
@@ -53,7 +53,7 @@ const Footer = () => {
                     <a href="/contactus">Contact us</a>
                   </li>
                   <li>
-                    <a href="/buy">Careers</a>
+                    <a href="/career">Careers</a>
                   </li>
                   <li>
                     <a href="/faq">FAQ</a>

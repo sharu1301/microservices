@@ -11,18 +11,24 @@
 }
 
 .introwrapper {
-    padding: 0 0 40px 0;
+    padding: 60px 0 40px 0;
+    @include breakpoint(sm) {
+        padding: 0 0 40px 0;
+    }
 
-    .row {
+    img{
         @include breakpoint(sm) {
-            display: flex;
-            flex-direction: column-reverse;
+            margin-top: $mt-3;
         }
     }
 
     .introcontent {
         margin-right: 80px;
 
+        @include breakpoint(md) {
+            margin: 0;
+            padding-top: 20px;
+        }
         @include breakpoint(sm) {
             margin: 0;
             padding-top: 20px;

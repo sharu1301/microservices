@@ -58,15 +58,15 @@
             "Timer precision",
             "Mould data storage"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "ClampingForce": "110-180 KN"
             }
         ],
         "overviewImages": [
@@ -138,15 +138,15 @@
             "images/product-specification/slider/EuroPETSeries/11.jpg",
             "images/product-specification/slider/EuroPETSeries/12.jpeg"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "130-270 KN"
+                "ClampingForce": "110-180 KN"
             }
         ],
         "overviewImages": [
@@ -280,15 +280,15 @@
             "Robot interface",
             "Bimetallic screw & barrel"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "ClampingForce": "110-180 KN"
             }
         ]
     },
@@ -357,15 +357,15 @@
             "Cold start screw prevention",
             "Screw driven by high torque variable speed radial"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "ClampingForce": "110-180 KN"
             }
         ],
         "standardFeatures": [
@@ -412,7 +412,7 @@
             "Tripple safety control of mechanical, electrical & hydraulic devices to ensure operator safety.",
             " Automatic centralised lubrication system with motorized pump."
         ],
-        "injection Unit": [
+        "injectionUnit": [
             "Nitrided screw & barrel, wear resistant screw tip assembly",
             "Three option screw dia available for customer choice",
             "Five stage injection speed & pressure control",
@@ -480,15 +480,15 @@
             "Visual & Audible alarm",
             "I/O diagnosis for analog & digital"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "ClampingForce": "110-180 KN"
             }
         ]
     },
@@ -594,15 +594,15 @@
             "Accurate PID temperature control setting on screen",
             "Auto heat start up & shut down program"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "ClampingForce": "110-180 KN"
             }
         ]
     },
@@ -668,15 +668,15 @@
             "images/product-specification/productoverview/EuroRSeries/5.jpg",
             "images/product-specification/productoverview/EuroRSeries/6.jpg"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "RAM": "Type"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "90-350 KN"
+                "ClampingForce": "110-180 KN"
             }
         ]
     },
@@ -701,15 +701,15 @@
             "Automobile & More",
             "Moulding"
         ],
-        "3Cards": [
+        "cards": [
             {
-                "Toggle": "RAM"
+                "Type": "Toggle"
             },
             {
-                "Hydraulic": "Drive Type"
+                "DriveType": "Hydraulic"
             },
             {
-                "Clamping Force": "110-180 KN"
+                "ClampingForce": "110-180 KN"
             }
         ],
         "clampingUnit": [

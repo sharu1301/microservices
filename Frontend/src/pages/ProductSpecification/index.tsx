@@ -23,7 +23,7 @@ export default function ProductSpecification() {
   const { productname }: any = useParams();
 
   // console.log('Params', productname)
-  const [footerImg, setFooterImg] = useState();
+  const [footerImg, setFooterImg] = useState(null);
 
   const [blowMoulding, setMouldingData] = useState<any>(null);
   const [injectionData, setInjectionMouldingData] = useState<any>(null)
@@ -125,7 +125,7 @@ export default function ProductSpecification() {
                       <div className="col-md-6">
                         <div className='leftSection'>
                           <b className='title'>High Performance Servo series produce Better pressure & output.</b>
-                          <b className='subTitle'>Clamping Force 90-350</b>
+                          {/* <b className='subTitle'>Clamping Force 90-350</b> */}
                         </div>
                       </div>
                       <div className="col-md-6">
@@ -138,32 +138,36 @@ export default function ProductSpecification() {
                   </div>
                 </div>
 
+
                 <div className='type'>
                   <div className='card1'>
-                    <b className='title'>Injection Moulding</b>
+                    {data?.cards.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData.Type}</b>))}
                     <p className='description'>Type</p>
                   </div>
 
                   <div className='card1'>
-                    <b className='title'>Fully Electric</b>
+                    {data?.cards.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData.DriveType}</b>))}
                     <p className='description'>Drive Type</p>
                   </div>
 
                   <div className='card1'>
-                    <b className='title'>90-350 KN</b>
+                    {data?.cards.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData.ClampingForce}</b>))}
                     <p className='description'>Clamping Force</p>
                   </div>
                 </div>
 
 
 
-                <div className='bottomSlider'>
+                <div className='bottomSlider' >
                   <div className="image-section">
-                    <img src={footerImg} alt='' />
+                    <img src={footerImg || require(`../../assets/${data.overviewImages[0]}`)} alt='' />
                   </div>
-                  
+
                   <div className={'smallContainer'} >
-                    
+
                     {data.overviewImages?.map((image, index) => (
 
                       <div
@@ -185,17 +189,17 @@ export default function ProductSpecification() {
           :
           blowMoulding && (
 
-          <div className='reactplayer'>
+            <div className='reactplayer'>
 
 
-            <ReactPlayer
-              url={blowMoulding?.videoLink}
-              loop={true}
-              controls={true}
-            />
+              <ReactPlayer
+                url={blowMoulding?.videoLink}
+                loop={true}
+                controls={true}
+              />
 
-            {/* )} */}
-          </div>
+              {/* )} */}
+            </div>
           )}
 
 
@@ -208,7 +212,7 @@ export default function ProductSpecification() {
         <SubFooter />
         <Footer />
 
-      </div>
+      </div >
     </>
   )
 }

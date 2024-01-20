@@ -96,13 +96,19 @@ const CustomerTestimonials = () => {
                                                 <ul>
                                                     <li>{testimonial.place}</li>
                                                 </ul>
-                                            </div>) :
+                                            </div>
+                                        )
+
+
+
+
+                                            :
                                             <div
                                                 key={index}
                                                 className="testimonial-bubble-right"
                                                 onMouseEnter={() => handleTestimonialHover(testimonial)}
                                             >
-                                                <img src={testimonial.image} alt=""/>
+                                                <img src={testimonial.image} alt="" />
                                                 <h2 className="testimonial-author">{testimonial.text}</h2>
                                                 <h6 className="testimonial-text">{testimonial.author}</h6>
                                                 <ul>

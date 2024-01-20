@@ -22,8 +22,8 @@ interface Article {
 
 const News = ({ limit }: { limit: number }) => {
   const [articles, setArticles] = useState<Article[]>([]);
-  const [activePage, setActivePage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
+  // const [activePage, setActivePage] = useState(1);
+  // const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [connectionError, setConnectionError] = useState(false);
   const [selectedNews, setSelectedNews] = useState<any>()
@@ -32,14 +32,14 @@ const News = ({ limit }: { limit: number }) => {
     const fetchArticles = async () => {
       try {
         let response = await fetch(
-          `${serverBaseUrl}/articles?desk=${deskId}&page=${activePage}&limit=${limit}`
+          `${serverBaseUrl}/articles?desk=${deskId}&page=${1}&limit=${limit}`
         );
 
         if (response.ok) {
           let responseJson = await response.json();
           // console.log('line 40', responseJson.data.articles.data)
           setArticles(responseJson.data.articles.data);
-          setTotalPages(responseJson.data.articles.paginatorInfo.lastPage);
+          // setTotalPages(responseJson.data.articles.paginatorInfo.lastPage);
           setConnectionError(false);
         }
       } catch (error) {
@@ -52,21 +52,13 @@ const News = ({ limit }: { limit: number }) => {
 
     setLoading(true);
     fetchArticles();
-  }, [activePage, limit]);
+  }, [ limit]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [articles]);
 
-  const handlePageChange = (pageNumber: number) => {
-    setActivePage(pageNumber);
-  };
-
-
-  const handleTestimonialHover = (article) => {
-    setSelectedNews(article);
-  };
-
+ 
   const handleTestimonialLeave = () => {
     setSelectedNews(null);
   };

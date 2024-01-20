@@ -96,13 +96,16 @@
     .ourNews {
         width: 40%;
         height: 100%;
+        // border: 1px solid black;
         .grid{
             height: 380px;
             overflow: hidden;
             margin-top: 10px;
-            .row{
-                animation: scrollTestimonials 10s linear infinite;
-            }
+            
+            // .row{
+            //     border: 1px solid black;
+            //     animation: scrollTestimonials 10s linear infinite;
+            // }
         }
 
         @include breakpoint(sm) {
@@ -122,7 +125,8 @@
                 padding-right: 0;
             }
 
-            .newsCard {  
+            .newsCard { 
+                animation: scrollTestimonials 10s linear infinite; 
                 width: 100%;             
                 margin: 10px;
                 border-radius: 12px;
@@ -218,4 +222,9 @@
     a{
         text-transform: capitalize;
     }
+}
+
+.row.paused{
+    
+    animation-play-state: paused;
 }

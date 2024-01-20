@@ -28,6 +28,7 @@
       text-align: center;
 
       @include breakpoint(sm) {
+            width: auto;
          font-size: $f16;
       }
    }

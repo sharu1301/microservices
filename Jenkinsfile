@@ -33,7 +33,7 @@ pipeline {
                  scannerHome = tool 'SonarQube'; 
                 }
                 withSonarQubeEnv('SonarQube') {
-                sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=maven-jenkins-pipeline"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=HINDS-MACHINE-KEY"
                 }
             }
         }

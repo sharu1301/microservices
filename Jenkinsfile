@@ -44,6 +44,13 @@ pipeline {
               }
             }
         }
+        stage("quality gate-2"){
+           steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'HINDS-MACHINE-KEY-sonar' 
+                }
+            } 
+        }
         stage('Check Code Coverage') {
             steps {
                 script {

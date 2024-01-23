@@ -26,6 +26,34 @@ pipeline {
                     }
                 }
             }
+        }                                                                                                                                                                                                                                                                                                                                           
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                 scannerHome = tool 'SonarQube'; 
+                }
+                withSonarQubeEnv('SonarQube') {
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=maven-jenkins-pipeline"
+                }
+            }
+        }
+        stage('Check Code Coverage') {
+            steps {
+                script {
+                    // Extract code coverage from SonarQube API
+                    def codeCoverage = sh(script: 'curl -s -u SONARQUBE_TOKEN: -X GET "http://sonarqube-server/api/measures/component?component=${JOB_NAME}&metricKeys=coverage"',
+                            returnStdout: true).trim()
+
+                    // Convert code coverage to a float value
+                    def coverageValue = codeCoverage.toFloat()
+
+                    // Check if code coverage is less than 50%
+                    if (coverageValue < 50) {
+                        // Create a Jira ticket using Jira REST API
+                        sh 'curl -D- -u JIRA_USERNAME:JIRA_PASSWORD -X POST -H "Content-Type: application/json" --data \'{"fields":{"project":{"key": "HNI"},"summary":"Low Code Coverage","description":"Code coverage is less than 50%","issuetype":{"name":"Bug"}}}\' http://jira-server/rest/api/2/issue/'
+                    }
+                }
+            }
         }
 
         stage('Upload to S3') {

@@ -37,34 +37,27 @@ pipeline {
                 }
             }
         }
-        stage("Quality Gate") {
-            steps {
-              timeout(time: 1, unit: 'HOURS') {
-                waitForQualityGate abortPipeline: true
-              }
-            }
-        }
-        stage("quality gate-2"){
-           steps {
-                script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'HINDS-MACHINE-KEY-sonar' 
-                }
-            } 
-        }
-        stage('Check Code Coverage') {
+        stage('Check Quality Gates') {
             steps {
                 script {
-                    // Extract code coverage from SonarQube API
-                    def codeCoverage = sh(script: 'curl -s -u HINDS-MACHINE-KEY-sonar: -X GET "http://sonarqube-server/api/measures/component?component=${JOB_NAME}&metricKeys=coverage"',
-                            returnStdout: true).trim()
+                    def qualityGates = waitForQualityGate()
+                    
+                    if (qualityGates.status == 'ERROR' || qualityGates.status == 'FAILED') {
+                        echo "Quality gates failed. Generating Jira ticket."
 
-                    // Convert code coverage to a float value
-                    def coverageValue = codeCoverage.toFloat()
+                        def jiraIssue = jiraNewIssue(
+                            serverUrl: https://hindsmachines.atlassian.net/,
+                            credentialsId: 'Jira-Jenkins-Integration',
+                            issueType: 'Bug',
+                            projectKey: HIN,
+                            summary: 'SonarQube Quality Gates Failed',
+                            description: "SonarQube Quality Gates failed for build ${env.BUILD_NUMBER}."
+                        )
 
-                    // Check if code coverage is less than 50%
-                    if (coverageValue < 50) {
-                        // Create a Jira ticket using Jira REST API
-                        sh 'curl -D- -u JIRA_USERNAME:JIRA_PASSWORD -X POST -H "Content-Type: application/json" --data \'{"fields":{"project":{"key": "HNI"},"summary":"Low Code Coverage","description":"Code coverage is less than 50%","issuetype":{"name":"Bug"}}}\' http://jira-server/rest/api/2/issue/'
+                        echo "Jira Issue Key: ${jiraIssue.key}"
+                    } 
+                    else {
+                        echo "Quality gates passed. No Jira ticket needed."
                     }
                 }
             }
@@ -132,3 +125,4 @@ pipeline {
         }
     }
 }
+

@@ -83,18 +83,18 @@ const News = ({ limit }: { limit: number }) => {
           <div className="grid" onMouseLeave={handleTestimonialLeave}>
             {selectedNews ?
               (
-                <div  >
-                  <div onClick={()=>handleTestimonialLeave()}><i className="fa-solid fa-xmark"></i></div>
+                <div className="news-detail">
+                  <div className="close" onClick={()=>handleTestimonialLeave()}><i className="fa-solid fa-xmark"></i></div>
 
 
-                  <div >
+                  <div className="news-header">
                     <h6 >
                       {" "}
                       {parse(selectedNews?.title.substring(3, selectedNews?.title.length - 1))}
                     </h6>
                     {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
                   </div>
-                  <div >
+                  <div className="news-body">
                     <p className="subtitle">{selectedNews.plaintext.slice(0, 180)}</p>
                   </div>
                   <div >

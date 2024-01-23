@@ -46,10 +46,10 @@ pipeline {
                         echo "Quality gates failed. Generating Jira ticket."
 
                         def jiraIssue = jiraNewIssue(
-                            serverUrl: https://hindsmachines.atlassian.net/,
+                            serverUrl: 'https://hindsmachines.atlassian.net/',
                             credentialsId: 'Jira-Jenkins-Integration',
                             issueType: 'Bug',
-                            projectKey: HIN,
+                            projectKey: 'HIN',
                             summary: 'SonarQube Quality Gates Failed',
                             description: "SonarQube Quality Gates failed for build ${env.BUILD_NUMBER}."
                         )

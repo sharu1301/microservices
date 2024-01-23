@@ -33,7 +33,7 @@ pipeline {
                  scannerHome = tool 'SonarQube'; 
                 }
                 withSonarQubeEnv('SonarQube') {
-                sh "${scannerHome}/bin/sonar-scanne -Dsonar.projectName=HINDS-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=HINDS-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
                 }
             }
         }

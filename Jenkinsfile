@@ -26,38 +26,50 @@ pipeline {
                     }
                 }
             }
-        }                                                                                                                                                                                                                                                                                                                                           
+        }
+        
         stage('SonarQube Analysis') {
             steps {
                 script {
-                 scannerHome = tool 'SonarQube'; 
-                }
-                withSonarQubeEnv('SonarQube') {
-                sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=HINDS-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
+                    def scannerHome = tool 'SonarQube'
+                    withSonarQubeEnv('SonarQube') {
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=HINDS-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
+                    }
                 }
             }
         }
-        stage('Check Quality Gates') {
+
+        stage('Quality Gate') {
             steps {
                 script {
-                    def qualityGates = waitForQualityGate()
-                    
-                    if (qualityGates.status == 'ERROR' || qualityGates.status == 'FAILED') {
-                        echo "Quality gates failed. Generating Jira ticket."
-
-                        def jiraIssue = jiraNewIssue(
-                            serverUrl: 'https://hindsmachines.atlassian.net/',
-                            credentialsId: 'Jira-Jenkins-Integration',
-                            issueType: 'Bug',
-                            projectKey: 'HIN',
-                            summary: 'SonarQube Quality Gates Failed',
-                            description: "SonarQube Quality Gates failed for build ${env.BUILD_NUMBER}."
-                        )
-
-                        echo "Jira Issue Key: ${jiraIssue.key}"
-                    } 
-                    else {
-                        echo "Quality gates passed. No Jira ticket needed."
+                    timeout(time: 1, unit: 'HOURS') {
+                        def qg = waitForQualityGate()
+                        if (qg.status == 'OK') {
+                            echo "Quality gate passed, generating ticket..."
+                            // Add your ticket generation code here
+                            def jiraIssue = [
+                                fields: [
+                                    project: [key: 'HIN'],
+                                    summary: 'SonarQube Quality Gates Passed',
+                                    description: "SonarQube Quality Gates passed for build ${env.BUILD_NUMBER}.",
+                                    issuetype: [name: 'Task']
+                                ]
+                            ]
+                            jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
+                        } else {
+                            // Generate ticket for failed quality gate
+                            echo "Quality gate failed, generating ticket..."
+                            // Add your ticket generation code here
+                            def jiraIssue = [
+                                fields: [
+                                    project: [key: 'HIN'],
+                                    summary: 'SonarQube Quality Gates failed',
+                                    description: "SonarQube Quality Gates failed for build ${env.BUILD_NUMBER}.",
+                                    issuetype: [name: 'Bug']
+                                ]
+                            ]
+                            jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
+                        }
                     }
                 }
             }
@@ -101,7 +113,6 @@ pipeline {
     post {
         success {
             script {
-                // If the build is successful, create a new Jira ticket
                 def jiraIssue = [
                     fields: [
                         project: [key: 'HIN'],
@@ -111,18 +122,14 @@ pipeline {
                     ]
                 ]
 
-                def jiraResponse = jiraNewIssue issue: jiraIssue, site: 'hindsmachines'
-                echo "JIRA Ticket Creation Status: ${jiraResponse.successful}"
-                echo "JIRA Response Data: ${jiraResponse.data}"
+                jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
             }
         }
 
         failure {
             script {
-                // If the build fails, you can optionally perform actions or notifications here
                 echo "Build failed. No Jira ticket will be created."
             }
         }
     }
 }
-

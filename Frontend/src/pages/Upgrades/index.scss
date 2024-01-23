@@ -1,13 +1,50 @@
 @import "../../assets/sass/main.scss";
-.customer-section{
+
+.upgrades-wrpper {
+    h2 {
+        font-size: $f32 !important;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+    button{
+        background-color: #E21D23;
+        color: $white;
+        border: none;
+        padding: 8px 100px;
+        text-transform: capitalize;
+        font-size: $f16;
+    }
+
+    .freq-content {
+        .title {
+            font-size: $f32 !important;
+            line-height: 36px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: $mt-2;
+
+            li {
+                font-size: $f20;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.customer-section {
     padding: 40px 0 60px 0;
+
     @include breakpoint(sm) {
         padding: 0 0 40px 0;
     }
-    .cust-wrapper{
-        .cust-img{
+
+    .cust-wrapper {
+        .cust-img {
             margin-bottom: 20px;
-            img{
+
+            img {
                 height: 100px;
                 width: 103px;
             }

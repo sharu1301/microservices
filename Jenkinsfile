@@ -55,7 +55,7 @@ pipeline {
             steps {
                 script {
                     // Extract code coverage from SonarQube API
-                    def codeCoverage = sh(script: 'curl -s -u SONARQUBE_TOKEN: -X GET "http://sonarqube-server/api/measures/component?component=${JOB_NAME}&metricKeys=coverage"',
+                    def codeCoverage = sh(script: 'curl -s -u HINDS-MACHINE-KEY-sonar: -X GET "http://sonarqube-server/api/measures/component?component=${JOB_NAME}&metricKeys=coverage"',
                             returnStdout: true).trim()
 
                     // Convert code coverage to a float value

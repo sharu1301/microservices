@@ -6,6 +6,9 @@
 
 .ourStory {
   align-items: center;
+  h6{
+    font-size: $f22;
+  }
 
   .arrows {
     @include breakpoint(sm) {

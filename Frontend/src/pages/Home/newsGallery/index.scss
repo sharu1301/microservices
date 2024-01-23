@@ -106,6 +106,30 @@
             //     border: 1px solid black;
             //     animation: scrollTestimonials 10s linear infinite;
             // }
+            .news-detail{
+                padding: 20px;
+                background-color: $white;
+                box-shadow: 0px 0px 5px 2px #ccc;
+                margin: 10px 20px 20px 20px;
+                .close{
+                    cursor: pointer;
+                    margin-left: 20px;
+                }
+                .news-header{
+                    h6{
+                        font-size: $f20;
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                        text-align: justify;
+                    }
+                }
+                .news-body{
+                    p{
+                        font-size: $f16;
+                        text-align: justify;
+                    }
+                }
+            }
         }
 
         @include breakpoint(sm) {

@@ -132,45 +132,71 @@
   //       }
   //     }
   //   }
-  // }
-
-  .processWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 34px;
+  // }.
+  .processWapper-main {
+    background: #f6f8fa;
+    padding-top: 42px;
     @include breakpoint(sm) {
-      flex-direction: column;
-    }
-    h6 {
-      font-size: 20px;
-      font-weight: 700;
-    }
-    p {
-      font-size: 13px;
+      padding-top: 0;
     }
 
-    .processWrapper-left {
-      p {
+    section {
+      .processWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 34px;
+        padding-bottom: 42px;
         @include breakpoint(sm) {
-          padding-top: 8px;
+          flex-direction: column;
+          gap: 0px;
+          padding: 0 33px;
         }
-      }
-      h6 {
-        @include breakpoint(sm) {
-          padding-top: 26px;
+        h6 {
+          color: #363636;
+          font-size: 32px;
+          font-weight: 700;
+          @include breakpoint(sm) {
+            font-size: 20px;
+            font-weight: 700;
+          }
         }
-      }
-    }
-    .processWrapper-right {
-      width: 560px;
-      @include breakpoint(sm) {
-        margin-top: 57px;
-        width: auto;
-      }
-      p {
-        @include breakpoint(sm) {
-          padding-top: 20px;
+        p {
+          font-size: 13px;
+          padding-top: 14px;
+        }
+
+        .processWrapper-left {
+          p {
+            @include breakpoint(sm) {
+              padding-top: 8px;
+            }
+          }
+          h6 {
+            @include breakpoint(sm) {
+              padding-top: 26px;
+            }
+          }
+          .processWrapper-note {
+            h6 {
+              padding-top: 57px;
+              @include breakpoint(sm) {
+                padding-top: 26px;
+              }
+            }
+          }
+        }
+        .processWrapper-right {
+          width: 560px;
+          @include breakpoint(sm) {
+            margin-top: 57px;
+            width: auto;
+          }
+          p {
+            @include breakpoint(sm) {
+              padding-top: 20px;
+            }
+          }
         }
       }
     }
@@ -179,6 +205,7 @@
     padding: 80px 0 0 0;
     background: #f6f8fa;
     .all-solutions-details {
+      margin-bottom: 97px;
       @include breakpoint(sm) {
         display: none;
       }
@@ -209,7 +236,7 @@
         flex-direction: column;
       }
       .all-solutions-cards {
-        padding: 108px 0 85px 0;
+        padding: 0 0 85px 0;
         font-family: "Inter";
         font-style: normal;
         line-height: 24px;
@@ -218,6 +245,16 @@
         margin: 0 16px 0 16px;
         @include breakpoint(sm) {
           width: 348px;
+          margin-bottom: 72px;
+        }
+        .icon {
+          height: 100px;
+          width: 100px;
+          text-align: center;
+          margin: auto;
+          margin-top: -50px;
+          background: #f6f8fa;
+          margin-bottom: 57px;
         }
         h6 {
           color: #363636;

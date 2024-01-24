@@ -142,48 +142,51 @@ const CustomerMaintenance = () => {
             </div>
           </div>
         </section> */}
-        <section className="container">
-          <div className="processWrapper">
-            <div className="processWrapper-left">
-              <div className="">
-                <h6>Your Advantages with Our Machine and Robot Retrofits</h6>
-                <p>
-                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
-                  Praesent vitae venenatis. Maecenas venenatis. Maecenas
-                  molestie sagittis. eros vel ante rutrum mollis in at mauris.
-                  Praesent,
-                </p>
+        <div className="processWapper-main">
+          <section className="container">
+            <div className="processWrapper">
+              <div className="processWrapper-left">
+                <div className="">
+                  <h6>Your Advantages with Our Machine and Robot Retrofits</h6>
+                  <p>
+                    Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
+                    Praesent vitae venenatis. Maecenas venenatis. Maecenas
+                    molestie sagittis. eros vel ante rutrum mollis in at mauris.
+                    Praesent,
+                  </p>
+                </div>
+                <div className="processWrapper-note">
+                  <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                </div>
+                <div className="processWrapper-note">
+                  <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                </div>
+                <div className="processWrapper-note">
+                  <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                </div>
               </div>
-              <div className="processWrapper-note">
-                <h6>Lorem ipsum dolor sit amet consectet.</h6>
-              </div>
-              <div className="processWrapper-note">
-                <h6>Lorem ipsum dolor sit amet consectet.</h6>
-              </div>
-              <div className="processWrapper-note">
-                <h6>Lorem ipsum dolor sit amet consectet.</h6>
+              <div className="processWrapper-right">
+                <div className="process-img">
+                  <img
+                    src="../../images/pages/service/our-machine.jpg"
+                    alt="service"
+                    className="img-fluid"
+                  />
+                </div>
+                <div className="process-img-details">
+                  <p>
+                    Our service experts analyze your individual needs for
+                    machine retrofits and advise you on options for machine and
+                    automation modifications as well as increased efficiency.
+                    They ensure that the retrofits of your injection molding
+                    machine are coordinated with existing processes and your
+                    peripherals.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="processWrapper-right">
-              <div className="process-img">
-                <img
-                  src="../../images/pages/service/our-machine.jpg"
-                  alt="service"
-                  className="img-fluid"
-                />
-              </div>
-              <div className="process-img-details">
-                <p>
-                  Our service experts analyze your individual needs for machine
-                  retrofits and advise you on options for machine and automation
-                  modifications as well as increased efficiency. They ensure
-                  that the retrofits of your injection molding machine are
-                  coordinated with existing processes and your peripherals.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <div className="all-solutions">
           <div className="container">
@@ -200,7 +203,12 @@ const CustomerMaintenance = () => {
             </div>
             <div className=" all-solutions-cards-container">
               <div className="all-solutions-cards">
-                <div className="icon"></div>
+                <div className="icon">
+                  <img
+                    src="../../images/pages/service/webillu-maintenance-reactive 1.png"
+                    alt="icon"
+                  />
+                </div>
                 <h6>Reactive Maintenance</h6>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
@@ -223,8 +231,13 @@ const CustomerMaintenance = () => {
                 </ul>
               </div>
               <div className="all-solutions-cards">
-                <div className="icon"></div>
-                <h6>Reactive Maintenance</h6>
+                <div className="icon">
+                  <img
+                    src="../../images/pages/service/webillu-maintenance-preventive 1.png"
+                    alt="icon"
+                  />
+                </div>
+                <h6>Preventive Maintenance</h6>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
                   vulputate tristique molestie non. Iaculis urna vestibulum sed
@@ -236,18 +249,23 @@ const CustomerMaintenance = () => {
                     Availability With Hinds Specialist
                   </li>
                   <li>
-                    <i className="fa-solid fa-circle-check"></i>Quickly Start
-                    troubleshooting with remote maintenance tools.
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
                   </li>
                   <li>
-                    <i className="fa-solid fa-circle-check"></i>High parts
-                    availability.
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
                   </li>
                 </ul>
               </div>
               <div className="all-solutions-cards">
-                <div className="icon"></div>
-                <h6>Reactive Maintenance</h6>
+                <div className="icon">
+                  <img
+                    src="../../images/pages/service/webillu-maintenance-predictive 1.png"
+                    alt="icon"
+                  />
+                </div>
+                <h6>Predictive Maintenance </h6>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
                   vulputate tristique molestie non. Iaculis urna vestibulum sed
@@ -259,12 +277,12 @@ const CustomerMaintenance = () => {
                     Availability With Hinds Specialist
                   </li>
                   <li>
-                    <i className="fa-solid fa-circle-check"></i>Quickly Start
-                    troubleshooting with remote maintenance tools.
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
                   </li>
                   <li>
-                    <i className="fa-solid fa-circle-check"></i>High parts
-                    availability.
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
                   </li>
                 </ul>
               </div>

@@ -75,19 +75,14 @@ export default function Header() {
                   <li className={pathname === "/service" ? 'active dropdown-toggle' : 'dropdown-toggle'}
                     data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
                   <ul className="dropdown-menu">
-                  {/* <li><a className="dropdown-item" href="/service">About Services</a></li> */}
+                    {/* <li><a className="dropdown-item" href="/service">About Services</a></li> */}
                     <li><a className="dropdown-item" href="/process">Process Optimization</a>
-
                     </li>
                     <li><a className="dropdown-item" href="/upgrades">Upgrades</a>
-
                     </li>
                     <li><a className="dropdown-item" href="/customermaintenance">Customer Service and Maintenance</a></li>
                   </ul>
-
-
                 </li>
-
 
                 <li className="dropdown">
                   <li className="dropdown-toggle m-0 p-0" data-bs-toggle="dropdown">Products</li>
@@ -109,7 +104,7 @@ export default function Header() {
                         ))}
                       </ul>
                     </li> */}
-                    {/* <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li> */}
+                    <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
                   </ul>
                 </li>
 
@@ -120,7 +115,7 @@ export default function Header() {
 
 
 
-                <li className={pathname === "/career" ? 'active' : '' }onClick={() => navigate("/career")}>Career</li>
+                <li className={pathname === "/career" ? 'active' : ''} onClick={() => navigate("/career")}>Career</li>
               </ul>
 
               <div

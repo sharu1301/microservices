@@ -1,392 +1,281 @@
 import "./index.scss";
+import { Link } from "react-router-dom";
 import SubFooter from "../../components/subFooter";
 import PageTitle from "../../components/pageTitle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const CustomerMaintenance = () => {
-    return (
-        <>
-            <Header />
-            <PageTitle title="Customer Service And Maintenance" />
-            <div className="description-section">
-                <div className="container">
-                    <div className="row ml-0">
-                        <div className="col-md-10 m-auto text-center">
-                            <h2 className="head">Customer Service And Mantainance</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
-                                Consectetur sit enim facilisi faucibus elementum feugiat. Iaculis urna vestibulum sed velit neque
-                                non eu. Id vitae ullamcorper praesent in ipsum. Leo pretium posuere vulputate feugiat non id.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section className="processWrapper pt-0 pb-3">
-                <div className="container">
-                    <div className="row ml-0">
-                        <div className="col-md-5 col-lg-5">
-                            <div className="process-img">
-                                <img src="../../images/pages/service/service.jpg" alt="service" className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="col-md-7 col-lg-7">
-                            <div className="right-panel">
-                                <div className="panel bg-light">
-                                    <h6>Lorem ipsum dolor sit</h6>
-                                    <p>Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas
-                                        venenatis. Maecenas molestie sagittis. eros vel ante rutrum mollis in at mauris. Praesent,
-                                    </p>
-                                    <img src="../../images/pages/service/service.jpg" alt="" className="img-fluid" />
-                                </div>
-                                <div className="panel-sub pl-0 pr-0">
-                                    <h6>Lorem ipsum dolor sit amet consectet.</h6>
-                                </div>
-                                <div className="panel-sub pl-0 pr-0">
-                                    <h6>Lorem ipsum dolor sit amet.</h6>
-                                </div>
-                                <div className="panel-sub pl-0 pr-0">
-                                    <h6>Lorem ipsum dolor sit amet consectet.</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div className="introwrapper">
-                <div className="container">
-                    <div className="row align-items-center ml-0">
-                        <div className="col-md-7">
-                            <div className="introcontent">
-                                <h2>Lorem ipsum dolor sit</h2>
-                                <p className="bold-content"><b>Hinds Machines, a leading name in the field of machine
-                                    manufacturerers, is dedicated to providing cutting-edge
-                                    solutions for diverse industrial needs.</b></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                    varius faucibus massa sollicitudin amet augue. Nibh metus a
-                                    semper purus mauris duis. Lorem eu neque, tristique quis duis.
-                                    Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque.</p>
-                                <button>learn more</button>
-                            </div>
-                        </div>
-                        <div className="col-md-5">
-                            <img src="../../images/pages/service/service1.jpg" alt="services" className="img-fluid" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section className="section bg-light stepswrapper">
-                <div className="container">
-                    <div className="row justify-content-center ml-0">
-                        <div className="col-md-9 col-lg-9 text-center">
-                            <h4 className="head mb-3">All solutions for your machine in the area of customer service & maintenance</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestie non.
-                                Iaculis urna vestibulum sed velit neque</p>
-                        </div>
-                    </div>
-                    <div className="row pt-4 ml-0">
-                        <div className="col-md-4">
-                            <div className="step-card">
-                                <h2>01</h2>
-                                <h6>Lorem Ipsum dolor amet</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur. Vitae
-                                    sit ultrices vulputate tristique molestie non. Iaculis
-                                    urna vestibulum sed velit neque</p>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="step-card">
-                                <h2>02</h2>
-                                <h6>Lorem Ipsum dolor amet</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur. Vitae
-                                    sit ultrices vulputate tristique molestie non. Iaculis
-                                    urna vestibulum sed velit neque</p>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="step-card">
-                                <h2>03</h2>
-                                <h6>Lorem Ipsum dolor amet</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur. Vitae
-                                    sit ultrices vulputate tristique molestie non. Iaculis
-                                    urna vestibulum sed velit neque</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div className="staff-section">
-                <div className="container">
-                    <div className="row w-100 ml-0">
-                        <div className="col-md-4">
-                            <div className="staff-card">
-                                <div className="staff-img">
-                                    <img src="../../images/pages/service/staff1.jpg" alt="staff" />
-                                </div>
-                                <div className="staff-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin
-                                        ullamcorper vitae aliquam sed massa.
-                                        Feugiat vestibulum nec vestibulum
-                                        habitant ac eget.</p>
-                                    <hr />
-                                    <div className="staff d-inline-block">
-                                        <h5>Nithin Kumar</h5>
-                                        <h6>Founder VB Infotech</h6>
-                                    </div>
-                                    <div className="icon d-inline float-right mt-2">
-                                        <i className="fa-solid fa-quote-left"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="staff-card">
-                                <div className="staff-img">
-                                    <img src="../../images/pages/service/staff2.jpg" alt="staff" />
-                                </div>
-                                <div className="staff-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin
-                                        ullamcorper vitae aliquam sed massa.
-                                        Feugiat vestibulum nec vestibulum
-                                        habitant ac eget.sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin</p>
-                                    <hr />
-                                    <div className="staff d-inline-block">
-                                        <h5>Kishaan</h5>
-                                        <h6>UX Designer</h6>
-                                    </div>
-                                    <div className="icon d-inline float-right mt-2">
-                                        <i className="fa-solid fa-quote-left"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="staff-card">
-                                <div className="staff-img">
-                                    <img src="../../images/pages/service/staff3.jpg" alt="staff" />
-                                </div>
-                                <div className="staff-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin
-                                        ullamcorper vitae aliquam sed massa.
-                                        Feugiat vestibulum nec vestibulum
-                                        habitant ac eget.</p>
-                                    <hr />
-                                    <div className="staff d-inline-block">
-                                        <h5>Abinesh</h5>
-                                        <h6>CEO at Eventually</h6>
-                                    </div>
-                                    <div className="icon d-inline float-right mt-2">
-                                        <i className="fa-solid fa-quote-left"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="staff-card">
-                                <div className="staff-img">
-                                    <img src="../../images/pages/service/staff4.jpg" alt="staff" />
-                                </div>
-                                <div className="staff-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin
-                                        ullamcorper vitae aliquam sed massa.
-                                        Feugiat vestibulum nec vestibulum
-                                        habitant ac eget.</p>
-                                    <hr />
-                                    <div className="staff d-inline-block">
-                                        <h5>Abinesh</h5>
-                                        <h6>CEO at Eventually</h6>
-                                    </div>
-                                    <div className="icon d-inline float-right mt-2">
-                                        <i className="fa-solid fa-quote-left"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 mt-4">
-                            <div className="staff-card">
-                                <div className="staff-img">
-                                    <img src="../../images/pages/service/staff3.jpg" alt="staff" />
-                                </div>
-                                <div className="staff-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin
-                                        ullamcorper vitae aliquam sed massa.
-                                        Feugiat vestibulum nec vestibulum
-                                        habitant ac eget.</p>
-                                    <hr />
-                                    <div className="staff d-inline-block">
-                                        <h5>Abinesh</h5>
-                                        <h6>CEO at Eventually</h6>
-                                    </div>
-                                    <div className="icon d-inline float-right mt-2">
-                                        <i className="fa-solid fa-quote-left"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="staff-card">
-                                <div className="staff-img">
-                                    <img src="../../images/pages/service/staff5.jpg" alt="staff" />
-                                </div>
-                                <div className="staff-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        Consequat nunc aliquam facilisi sollicitudin
-                                        ullamcorper vitae aliquam sed massa.
-                                        Feugiat vestibulum nec vestibulum
-                                        habitant ac eget.</p>
-                                    <hr />
-                                    <div className="staff d-inline-block">
-                                        <h5>Abinesh</h5>
-                                        <h6>CEO at Eventually</h6>
-                                    </div>
-                                    <div className="icon d-inline float-right mt-2">
-                                        <i className="fa-solid fa-quote-left"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="blog-section">
-                <div className="container">
-                    <div className="row w-100 ml-0">
-                        <div className="col-md-12 mb-4">
-                            <h2>Blogs</h2>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="blog-card">
-                                <div className="blog-img">
-                                    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item active">
-                                                <img src="../../images/pages/service/blog2.jpg" className="d-block w-100" alt="blog" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src="../../images/pages/service/blog1.jpg" className="d-block w-100" alt="..." />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src="../../images/pages/service/blog3.jpg" className="d-block w-100" alt="..." />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <div className="author">
-                                        <span className="author-img">
-                                            <img src="../../images/pages/service/author2.jpg" alt="author" />
-                                        </span>
-                                        <span className="ml-2">Author Name</span>
-                                        <span className="float-right">
-                                            <i className="fa-regular fa-clock mr-2"></i>
-                                            01-01-2024
-                                        </span>
-                                    </div>
-                                    <h4>Lorem Ipsum</h4>
-                                    <p>Such simple and flexible settings make
-                                        product a universal solution for the most of the interested customers.</p>
-                                    <a href="/more">read more
-                                        <i className="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <a href="/more" className="float-right">
-                                        <i className="fa-solid fa-share-nodes"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="blog-card">
-                                <div className="blog-img">
-                                    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item active">
-                                                <img src="../../images/pages/service/blog3.jpg" className="d-block w-100" alt="blog" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src="../../images/pages/service/blog2.jpg" className="d-block w-100" alt="..." />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src="../../images/pages/service/blog1.jpg" className="d-block w-100" alt="..." />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <div className="author">
-                                        <span className="author-img">
-                                            <img src="../../images/pages/service/author3.jpg" alt="author" />
-                                        </span>
-                                        <span className="ml-2">Author Name</span>
-                                        <span className="float-right">
-                                            <i className="fa-regular fa-clock mr-2"></i>
-                                            01-01-2024
-                                        </span>
-                                    </div>
-                                    <h4>Lorem Ipsum</h4>
-                                    <p>Such simple and flexible settings make
-                                        product a universal solution for the most of the interested customers.</p>
-                                    <a href="/more">read more
-                                        <i className="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <a href="/more" className="float-right">
-                                        <i className="fa-solid fa-share-nodes"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="blog-card">
-                                <div className="blog-img">
-                                    <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                                        <div className="carousel-inner">
-                                            <div className="carousel-item active">
-                                                <img src="../../images/pages/service/blog1.jpg" className="d-block w-100" alt="blog" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src="../../images/pages/service/blog2.jpg" className="d-block w-100" alt="..." />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src="../../images/pages/service/blog3.jpg" className="d-block w-100" alt="..." />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="blog-content">
-                                    <div className="author">
-                                        <span className="author-img">
-                                            <img src="../../images/pages/service/author1.jpg" alt="author" />
-                                        </span>
-                                        <span className="ml-2">Author Name</span>
-                                        <span className="float-right">
-                                            <i className="fa-regular fa-clock mr-2"></i>
-                                            01-01-2024
-                                        </span>
-                                    </div>
-                                    <h4>Lorem Ipsum</h4>
-                                    <p>Such simple and flexible settings make
-                                        product a universal solution for the most of the interested customers.</p>
-                                    <a href="/more">read more
-                                        <i className="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <a href="/more" className="float-right">
-                                        <i className="fa-solid fa-share-nodes"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <SubFooter />
-            <Footer />
-        </>
-    )
-}
+const maintenanceData: object = [
+  {
+    title: "Reactive Maintenance",
+    details:
+      "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
+    note1: "24/7 Hotline Availability With Hinds Specialist",
+    note2: "Quickly Start troubleshooting with remote maintainance tools.",
+    note3: "High parts availabilty.",
+    src: "../../images/pages/service/webillu-maintenance-reactive 1.png",
+  },
+  {
+    title: "Preventive Maintenance",
+    details:
+      "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
+    note1: "24/7 Hotline Availability With Hinds Specialist",
+    note2: "24/7 Hotline Availability With Hinds Specialist",
+    note3: "24/7 Hotline Availability With Hinds Specialist",
+    src: "../../images/pages/service/webillu-maintenance-preventive 1.png",
+  },
+  {
+    title: "Preventive Maintenance",
+    details:
+      "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
+    note1: "24/7 Hotline Availability With Hinds Specialist",
+    note2: "24/7 Hotline Availability With Hinds Specialist",
+    note3: "24/7 Hotline Availability With Hinds Specialist",
+    src: "../../images/pages/service/webillu-maintenance-predictive 1.png",
+  },
+];
 
+const CustomerMaintenance = () => {
+  return (
+    <>
+      <Header />
+      <div className="customer-maintenance">
+        <PageTitle title="Customer Service And Maintenance" />
+        <div className="description-section">
+          <div className="container">
+            <div className="row ml-0">
+              <div className="col-md-10 m-auto text-center">
+                <h2 className="head">
+                  Customer service & injection <br /> molding machine
+                  maintenance
+                </h2>
+                <p>Modernization or Adaptation of Existing Machines</p>
+                <p>
+                  Hinds service stands for solving problems in no time. Our
+                  technical service solutions offe quality support throughout
+                  the entire service life of your plastics injection molding
+                  machines. When you need help immediately, you can count on us
+                  - our service technicians are available in your area with
+                  comprehensive product knowledge and many years of experience.
+                  We have an extensive spare parts inventory with 24/7 parts
+                  shipment, 365 days a year. In addition, our customer service &
+                  maintenance experts are here to advise you on predictive
+                  maintenance solutions for a trouble-free production.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="sqare-part-delivery">
+          <div className="container">
+            <div className="row ml-0">
+              <div className="col-md-10 m-auto text-center parts-delivery">
+                <h2 className="head ">
+                  Do you need assistance from the Hinds service experts for your
+                  plastics injection molding machines or spare parts delivery?
+                </h2>
+                <p className="tel">
+                  <Link to="tel:1800 1187 7718">
+                    <i className="fa-solid fa-phone"></i>
+                    1800 1187 7718
+                  </Link>
+                </p>
+
+                <p className="spd-text">
+                  Charges for the hotline vary depending on the country. <br />
+                  You can find more information at Service & Support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <section className="processWrapper pt-0 pb-3 ">
+          <div className="container">
+            <div className="row ml-0">
+              <div className="col-md-7 col-lg-7">
+                <div className="process-details">
+                  <div className="right-panel">
+                    <div className="panel bg-light">
+                      <h6>
+                        Your Advantages with Our Machine and Robot Retrofits
+                      </h6>
+                      <p>
+                        Lorem ipsum dolor sit amet, consec tetur adipi scing
+                        elit. Praesent vitae venenatis. Maecenas venenatis.
+                        Maecenas molestie sagittis. eros vel ante rutrum mollis
+                        in at mauris. Praesent,
+                      </p>
+                    </div>
+                    <div className="panel-sub pl-0 pr-0">
+                      <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                    </div>
+                    <div className="panel-sub pl-0 pr-0">
+                      <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                    </div>
+                    <div className="panel-sub pl-0 pr-0">
+                      <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-5 col-lg-5">
+                <div className="process-image-details">
+                  <div className="process-img">
+                    <img
+                      src="../../images/pages/service/our-machine.jpg"
+                      alt="service"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="process-right-details">
+                    <p>
+                      Our service experts analyze your individual needs for
+                      machine retrofits and advise you on options for machine
+                      and automation modifications as well as increased
+                      efficiency. They ensure that the retrofits of your
+                      injection molding machine are coordinated with existing
+                      processes and your peripherals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> */}
+        <section className="container">
+          <div className="processWrapper">
+            <div className="processWrapper-left">
+              <div className="">
+                <h6>Your Advantages with Our Machine and Robot Retrofits</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
+                  Praesent vitae venenatis. Maecenas venenatis. Maecenas
+                  molestie sagittis. eros vel ante rutrum mollis in at mauris.
+                  Praesent,
+                </p>
+              </div>
+              <div className="processWrapper-note">
+                <h6>Lorem ipsum dolor sit amet consectet.</h6>
+              </div>
+              <div className="processWrapper-note">
+                <h6>Lorem ipsum dolor sit amet consectet.</h6>
+              </div>
+              <div className="processWrapper-note">
+                <h6>Lorem ipsum dolor sit amet consectet.</h6>
+              </div>
+            </div>
+            <div className="processWrapper-right">
+              <div className="process-img">
+                <img
+                  src="../../images/pages/service/our-machine.jpg"
+                  alt="service"
+                  className="img-fluid"
+                />
+              </div>
+              <div className="process-img-details">
+                <p>
+                  Our service experts analyze your individual needs for machine
+                  retrofits and advise you on options for machine and automation
+                  modifications as well as increased efficiency. They ensure
+                  that the retrofits of your injection molding machine are
+                  coordinated with existing processes and your peripherals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="all-solutions">
+          <div className="container">
+            <div className="all-solutions-details">
+              <h5>
+                All solutions for your machine in the area of customer service &
+                maintenance
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
+                vulputate tristique molestie non. Iaculis urna vestibulum sed
+                velit neque
+              </p>
+            </div>
+            <div className=" all-solutions-cards-container">
+              <div className="all-solutions-cards">
+                <div className="icon"></div>
+                <h6>Reactive Maintenance</h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
+                  vulputate tristique molestie non. Iaculis urna vestibulum sed
+                  velit neque
+                </p>
+                <ul>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Quickly Start
+                    troubleshooting with remote maintenance tools.
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>High parts
+                    availability.
+                  </li>
+                </ul>
+              </div>
+              <div className="all-solutions-cards">
+                <div className="icon"></div>
+                <h6>Reactive Maintenance</h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
+                  vulputate tristique molestie non. Iaculis urna vestibulum sed
+                  velit neque
+                </p>
+                <ul>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Quickly Start
+                    troubleshooting with remote maintenance tools.
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>High parts
+                    availability.
+                  </li>
+                </ul>
+              </div>
+              <div className="all-solutions-cards">
+                <div className="icon"></div>
+                <h6>Reactive Maintenance</h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
+                  vulputate tristique molestie non. Iaculis urna vestibulum sed
+                  velit neque
+                </p>
+                <ul>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>24/7 Hotline
+                    Availability With Hinds Specialist
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>Quickly Start
+                    troubleshooting with remote maintenance tools.
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-circle-check"></i>High parts
+                    availability.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <SubFooter />
+      <Footer />
+    </>
+  );
+};
 
 export default CustomerMaintenance;

@@ -1,215 +1,225 @@
 @import "../../assets/sass/main.scss";
 
-.ourstory {
-  h5 {
-    @include breakpoint(xs) {
-      font-size: $f26;
-    }
-
-    @include breakpoint(sm) {
-      font-size: $f26;
-    }
-
-    @include breakpoint(md) {
-      font-size: $f26;
+.process-optimization {
+  .customer-section {
+    padding-bottom: 27px;
+    padding-top: 0;
+    .mb-5 {
+      padding-bottom: 39px;
+      margin-bottom: 0 !important;
     }
   }
-}
-
-.processWrapper {
-  .process-img {
-    height: 100%;
-    width: 100%;
-    img {
-      height: 100%;
-      width: 100%;
+  .ourstory {
+    h5 {
       @include breakpoint(xs) {
-        display: none;
+        font-size: $f26;
       }
 
       @include breakpoint(sm) {
-        display: none;
+        font-size: $f26;
+      }
+
+      @include breakpoint(md) {
+        font-size: $f26;
       }
     }
   }
 
-  .right-panel {
-    padding-left: 20px;
-    @include breakpoint(sm) {
-      padding-left: 0;
-    }
-    .panel {
-      padding: $pt-3 $pt-2 $pt-2 $pt-2;
-      box-shadow: 0px 4px 0px #FFE1E2;
-      margin-bottom: $mt-2;
-
-      h6 {
+  .processWrapper {
+    .process-img {
+      height: 100%;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
         @include breakpoint(xs) {
-          font-size: $f25;
+          display: none;
         }
 
         @include breakpoint(sm) {
-          font-size: $f25;
+          display: none;
+        }
+      }
+    }
+
+    .right-panel {
+      padding-left: 20px;
+      @include breakpoint(sm) {
+        padding-left: 0;
+      }
+      .panel {
+        padding: $pt-3 $pt-2 $pt-2 $pt-2;
+        box-shadow: 0px 4px 0px #ffe1e2;
+        margin-bottom: $mt-2;
+
+        h6 {
+          @include breakpoint(xs) {
+            font-size: $f25;
+          }
+
+          @include breakpoint(sm) {
+            font-size: $f25;
+          }
+
+          @include breakpoint(md) {
+            font-size: $f25;
+          }
+        }
+
+        p {
+          font-size: $f14;
+          margin-bottom: 0;
+          margin-top: $mt-1;
+          @include breakpoint(sm) {
+            font-size: $f16;
+          }
+        }
+
+        .img-fluid {
+          display: none;
+
+          @include breakpoint(xs) {
+            display: block;
+            margin-top: $mt-2;
+          }
+
+          @include breakpoint(sm) {
+            display: block;
+            margin-top: $mt-2;
+          }
+        }
+      }
+
+      .panel:after {
+        content: "";
+        width: 50%;
+        height: 5px;
+        display: inline-block;
+        background-color: #be0e14;
+        top: 30px;
+        left: -20px;
+        position: relative;
+      }
+
+      .panel-sub {
+        padding: $pt-3 $pt-2 $pt-2 $pt-2;
+        @include breakpoint(md) {
+          padding: $pt-3 0 $pt-2 $pt-2;
+        }
+        @include breakpoint(sm) {
+          padding: $pt-3 0 0 0;
+        }
+        h6 {
+          @include breakpoint(xs) {
+            font-size: $f25;
+          }
+
+          @include breakpoint(sm) {
+            font-size: 23px !important;
+            line-height: 30px !important;
+          }
+
+          @include breakpoint(md) {
+            font-size: $f20;
+            line-height: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .stepswrapper {
+    h4 {
+      @include breakpoint(md) {
+        font-size: $f28 !important;
+        line-height: 36px;
+      }
+      @include breakpoint(sm) {
+        font-size: $f24 !important;
+        line-height: 36px;
+      }
+    }
+    .step-card {
+      background-color: $white;
+      border-radius: 4px;
+      padding: $pt-2;
+
+      h2 {
+        color: $light-gray;
+      }
+      h6 {
+        font-size: $f20;
+
+        @include breakpoint(lg) {
+          font-size: $f18;
         }
 
         @include breakpoint(md) {
-          font-size: $f25;
+          font-size: $f14;
+        }
+        @include breakpoint(sm) {
+          font-size: $f22;
         }
       }
 
       p {
         font-size: $f14;
         margin-bottom: 0;
-        margin-top: $mt-1;
         @include breakpoint(sm) {
-          font-size: $f16;
+          font-size: $f16 !important;
         }
-      }
-
-      .img-fluid {
-        display: none;
-
-        @include breakpoint(xs) {
-          display: block;
-          margin-top: $mt-2;
-        }
-
-        @include breakpoint(sm) {
-          display: block;
-          margin-top: $mt-2;
-        }
-      }
-    }
-
-    .panel:after {
-      content: "";
-      width: 50%;
-      height: 5px;
-      display: inline-block;
-      background-color: #BE0E14;
-      top: 30px;
-      left: -20px;
-      position: relative;
-    }
-
-    .panel-sub {
-      padding: $pt-3 $pt-2 $pt-2 $pt-2;
-      @include breakpoint(md) {
-        padding: $pt-3 0 $pt-2 $pt-2;
-      }
-      @include breakpoint(sm) {
-        padding: $pt-3 0 0 0;
-      }
-      h6 {
-        @include breakpoint(xs) {
-          font-size: $f25;
-        }
-
-        @include breakpoint(sm) {
-          font-size: 23px !important;
-          line-height: 30px !important;
-        }
-
         @include breakpoint(md) {
-          font-size: $f20;
-          line-height: 0;
+          font-size: $f14;
         }
       }
-    }
-  }
-}
 
-.stepswrapper {
-  h4{
-    @include breakpoint(md) {
-      font-size: $f28 !important;
-      line-height: 36px;
-    }
-    @include breakpoint(sm) {
-      font-size: $f24 !important;
-      line-height: 36px;
-    }
-  }
-  .step-card {
-    background-color: $white;
-    border-radius: 4px;
-    padding: $pt-2;
-    
-    h2 {
-      color: $light-gray;
-    }
-    h6 {
-      font-size: $f20;
-
-      @include breakpoint(lg) {
-        font-size: $f18;
+      @include breakpoint(xs) {
+        margin-bottom: $mt-2;
+        text-align: justify;
       }
 
-      @include breakpoint(md) {
-        font-size: $f14;
-      }
       @include breakpoint(sm) {
-        font-size: $f22;
+        margin-bottom: $mt-2;
+        text-align: justify;
       }
-    }
-
-    p {
-      font-size: $f14;
-      margin-bottom: 0;
-      @include breakpoint(sm) {
-        font-size: $f16 !important;
-      }
-      @include breakpoint(md) {
-        font-size: $f14;
-      }
-    }
-
-    @include breakpoint(xs) {
-      margin-bottom: $mt-2;
-      text-align: justify;
-    }
-
-    @include breakpoint(sm) {
-      margin-bottom: $mt-2;
-      text-align: justify;
     }
   }
-}
 
-.infoWrapper {
-  .service-img{
-    height: 100%;
-    width: 100%;
-    img{
+  .infoWrapper {
+    .service-img {
       height: 100%;
       width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
-  }
-  label {
-    input {
-      color: $black;
-      font-family: $inter;
-      font-size: 16.502px;
-      font-weight: $fw500;
-      line-height: 29.114px;
-      /* 176.429% */
-    }
-  }
-
-  h2 {
-    @include breakpoint(xs) {
-      font-size: $f28;
-      line-height: 32px;
+    label {
+      input {
+        color: $black;
+        font-family: $inter;
+        font-size: 16.502px;
+        font-weight: $fw500;
+        line-height: 29.114px;
+        /* 176.429% */
+      }
     }
 
-    @include breakpoint(sm) {
-      font-size: $f28;
-      line-height: 32px;
-    }
+    h2 {
+      @include breakpoint(xs) {
+        font-size: $f28;
+        line-height: 32px;
+      }
 
-    @include breakpoint(md) {
-      font-size: $f28;
-      line-height: 32px;
+      @include breakpoint(sm) {
+        font-size: $f28;
+        line-height: 32px;
+      }
+
+      @include breakpoint(md) {
+        font-size: $f28;
+        line-height: 32px;
+      }
     }
   }
 }

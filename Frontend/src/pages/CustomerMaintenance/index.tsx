@@ -5,35 +5,35 @@ import PageTitle from "../../components/pageTitle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const maintenanceData: object = [
-  {
-    title: "Reactive Maintenance",
-    details:
-      "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
-    note1: "24/7 Hotline Availability With Hinds Specialist",
-    note2: "Quickly Start troubleshooting with remote maintainance tools.",
-    note3: "High parts availabilty.",
-    src: "../../images/pages/service/webillu-maintenance-reactive 1.png",
-  },
-  {
-    title: "Preventive Maintenance",
-    details:
-      "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
-    note1: "24/7 Hotline Availability With Hinds Specialist",
-    note2: "24/7 Hotline Availability With Hinds Specialist",
-    note3: "24/7 Hotline Availability With Hinds Specialist",
-    src: "../../images/pages/service/webillu-maintenance-preventive 1.png",
-  },
-  {
-    title: "Preventive Maintenance",
-    details:
-      "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
-    note1: "24/7 Hotline Availability With Hinds Specialist",
-    note2: "24/7 Hotline Availability With Hinds Specialist",
-    note3: "24/7 Hotline Availability With Hinds Specialist",
-    src: "../../images/pages/service/webillu-maintenance-predictive 1.png",
-  },
-];
+// const maintenanceData: object = [
+//   {
+//     title: "Reactive Maintenance",
+//     details:
+//       "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
+//     note1: "24/7 Hotline Availability With Hinds Specialist",
+//     note2: "Quickly Start troubleshooting with remote maintainance tools.",
+//     note3: "High parts availabilty.",
+//     src: "../../images/pages/service/webillu-maintenance-reactive 1.png",
+//   },
+//   {
+//     title: "Preventive Maintenance",
+//     details:
+//       "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
+//     note1: "24/7 Hotline Availability With Hinds Specialist",
+//     note2: "24/7 Hotline Availability With Hinds Specialist",
+//     note3: "24/7 Hotline Availability With Hinds Specialist",
+//     src: "../../images/pages/service/webillu-maintenance-preventive 1.png",
+//   },
+//   {
+//     title: "Preventive Maintenance",
+//     details:
+//       "Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices vulputate tristique molestienon. Iaculisurna vestibulum sed velit neque",
+//     note1: "24/7 Hotline Availability With Hinds Specialist",
+//     note2: "24/7 Hotline Availability With Hinds Specialist",
+//     note3: "24/7 Hotline Availability With Hinds Specialist",
+//     src: "../../images/pages/service/webillu-maintenance-predictive 1.png",
+//   },
+// ];
 
 const CustomerMaintenance = () => {
   return (

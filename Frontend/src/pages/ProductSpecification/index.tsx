@@ -141,20 +141,20 @@ export default function ProductSpecification() {
 
                 <div className='type'>
                   <div className='card1'>
-                    {data?.cards.map((cardData, i) =>
-                      (<b className='title' key={i}>{cardData.Type}</b>))}
+                    {data?.cards?.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData?.Type}</b>))}
                     <p className='description'>Type</p>
                   </div>
 
                   <div className='card1'>
-                    {data?.cards.map((cardData, i) =>
-                      (<b className='title' key={i}>{cardData.DriveType}</b>))}
+                    {data?.cards?.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData?.DriveType}</b>))}
                     <p className='description'>Drive Type</p>
                   </div>
 
                   <div className='card1'>
-                    {data?.cards.map((cardData, i) =>
-                      (<b className='title' key={i}>{cardData.ClampingForce}</b>))}
+                    {data?.cards?.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData?.ClampingForce}</b>))}
                     <p className='description'>Clamping Force</p>
                   </div>
                 </div>

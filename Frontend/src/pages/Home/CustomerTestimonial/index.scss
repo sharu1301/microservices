@@ -5,6 +5,7 @@
   background-color: #e2e8f0;
   position: relative;
   border-radius: 10px;
+  padding: 5px;
   @include breakpoint(sm) {
     margin: 0 0px 30px 20px;
   }
@@ -46,7 +47,7 @@
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           border-bottom-right-radius: 0;
           .testimonial-author {
-            font-size: 20px;
+            font-size: 16px;
             line-height: 30px;
             color: #fff;
             font-weight: normal;
@@ -110,7 +111,7 @@
           border-bottom-left-radius: 0;
 
           .testimonial-author {
-            font-size: 20px;
+            font-size: 16px;
             line-height: 30px;
             color: #fff;
             font-weight: normal;
@@ -154,14 +155,20 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    padding: 40px 80px;
+    padding: 40px 60px;
     align-items: center;
     display: flex;
+    @include breakpoint(md) {
+      overflow: scroll;
+      max-width: 90%;
+    }
+   
+
     .testimonial-content {
       text-align: center;
       h2 {
-        font-size: 28px;
-        line-height: 35px;
+        font-size: 22px;
+        line-height: 30px;
         margin-bottom: 20px;
       }
       h6 {

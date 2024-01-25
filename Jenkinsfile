@@ -38,12 +38,6 @@ pipeline {
                 }
             }
         }
-        stage('reporting') {
-            steps {
-                junit testResults: '**/target/surefire-reports/TEST-*.xml'
-            }
-        }
-
         stage('Quality Gate') {
             steps {
                 script {

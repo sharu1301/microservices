@@ -11,7 +11,6 @@ pipeline {
                 dir('/var/lib/jenkins/workspace/Hinds Machine/ics-ics-hind-machine/Frontend') {
                     script {
                         sh '''
-                            git pull https://gitlab.insigniaconsultancy.com/js-devs/ics-ics-hind-machine.git
                             export NVM_DIR="/var/lib/jenkins/.nvm"
                             . "$NVM_DIR/nvm.sh"
                             nvm install v20.10.0

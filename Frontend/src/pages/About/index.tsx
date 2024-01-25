@@ -28,7 +28,7 @@ function About() {
   }, [])
 
   const getCoverImage = () => {
-    axios.get(`${exposureURL}/achievements`).then((response) => {
+    axios.get(`${exposureURL}/about-us`).then((response) => {
       setCoverImages(response.data.groups[0].photos)
     })
   }

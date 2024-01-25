@@ -20,7 +20,7 @@ const ProductByCategory = () => {
         <div>
             <Header />
             {/* <PageTitle title="Products By Category " /> */}
-            <HeroCategory />
+            <HeroCategory pagetitle={selectedCategory}/>
             <div className="container mb-5">
                 {productData.filter((data) => data.industry.map(cat => cat.toLowerCase()).includes(selectedCategory))
                     .map((data: any, i) => {

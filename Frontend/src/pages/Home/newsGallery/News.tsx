@@ -115,7 +115,7 @@ const News = ({ limit }: { limit: number }) => {
                     </div>
                   </div>
                   <div className="viewMore" >
-                    <a href="/">View more</a>
+                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in">View more</a>
                   </div>
                 </div>
               ) :

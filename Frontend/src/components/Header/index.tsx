@@ -75,7 +75,7 @@ export default function Header() {
                   <li className={pathname === "/service" ? 'active dropdown-toggle' : 'dropdown-toggle'}
                     data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
                   <ul className="dropdown-menu">
-                    {/* <li><a className="dropdown-item" href="/service">About Services</a></li> */}
+                    <li><a className="dropdown-item" href="/service">About Services</a></li>
                     <li><a className="dropdown-item" href="/process">Process Optimization</a>
                     </li>
                     <li><a className="dropdown-item" href="/upgrades">Upgrades</a>

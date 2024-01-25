@@ -1,7 +1,7 @@
 
 import './index.scss';
 
-export default function HeroCategory(){
+export default function HeroCategory(props: { pagetitle: string }){
 
     return(
         <>
@@ -15,10 +15,10 @@ export default function HeroCategory(){
                                 <a href="/">Home</a>
                             </li>
                             <li>
-                                Application
+                                Product
                             </li>
                             <li>
-                                <a href="/automobile">Automobile</a>
+                                <a href="/automobile">{(props.pagetitle)}</a>
                             </li>
                         </ul>
                     </div>

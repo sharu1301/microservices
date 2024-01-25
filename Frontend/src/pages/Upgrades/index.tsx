@@ -9,13 +9,13 @@ const Upgrades = () => {
         <>
             <Header />
             <PageTitle title="Upgrades" />
-            <div className="description-section">
+            <div className="description-section pt-5">
                 <div className="container">
                     <div className="row ml-0">
-                        <div className="col-md-12 m-auto text-center">
+                        <div className="col-md-10 m-auto text-center">
                             <h2 className="head">Retrofits for Injection Molding Machines and Robots</h2>
                             <p><b>Modernization or Adaptation of Existing Machines</b></p>
-                            <p>Hinds machines produce reliably for decades. Nevertheless, they can be retrofitted as needed to meet new production requirements. Efficiency and flexibility are often driving indicators. Our solutions for machine retrofits meet the need to upgrade existing injection molding machines and robots to face new challenges. Additionally, upgrades increase the service life of your machines.</p>
+                            <p>Hinds machines demonstrate consistent reliability over decades. However, they can be retrofitted as necessary to align with evolving production requirements. Efficiency and flexibility often drive this need. Our retrofit solutions address the demand to upgrade existing injection molding machines and robots, equipping them to tackle new challenges and extending their service life.</p>
                         </div>
                     </div>
                 </div>
@@ -32,19 +32,19 @@ const Upgrades = () => {
 
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Modifications for new applications in injection molding</h6>
+                                    <h6>Tailored modifications for new applications in injection molding</h6>
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Extend service life - increase efficiency</h6>
+                                    <h6>Service life extension with increased efficiency</h6>
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Save investment costs with retrofits</h6>
+                                    <h6>Cost savings through retrofit solutions</h6>
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Fast solution for new challenges </h6>
+                                    <h6>Swift resolution for emerging challenges</h6>
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Knowledge for a smooth machine modification</h6>
+                                    <h6>Expertise for seamless machine modification</h6>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ const Upgrades = () => {
                     <div className="row w-100 align-items-center ml-0">
                         <div className="col-md-7 col-12">
                             <div className="freq-content">
-                                <h2 className="title">The Following Machine Retrofits are Frequently Requested:</h2>
+                                <h2 className="title">The Following Machine Retrofits are Frequently Requested</h2>
                                 <ul>
                                     <li>Hydraulic aggregates</li>
                                     <li>Tool heating</li>
@@ -89,7 +89,7 @@ const Upgrades = () => {
                     <div className="row w-100 ml-0 mt-5">
                         <div className="col-md-8 col-12 text-center m-auto">
                             <h2 className="title">Using Machines Sustainably Thanks to Retrofits</h2>
-                            <p>Do you want to use your injection molding machine for new applications, be more efficient, and save energy costs at the same time? Our retrofit machine solutions are the right fit for you.</p>
+                            <p>Are you aiming to utilize your injection molding machine for new applications, enhance efficiency, and simultaneously reduce energy costs? Our retrofit machine solutions are tailored to meet your requirements.</p>
                             <button>request now</button>
                         </div>
                     </div>

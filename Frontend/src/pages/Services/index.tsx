@@ -18,7 +18,7 @@ const Service = () => {
               </div>
               <div className="col-md-10 text-center">
                 <p className="pt-2">
-                  The journey with HINDS extends far beyond the delivery of our injection molding machines or automation systems. Our commitment is to accompany you from the moment your equipment is set up in your facility through to its full operational lifespan. When the time comes to consider a new machine, we tailor our approach to meet your unique needs, ensuring a strategic investment that fosters your ongoing prosperity. At HINDS, exceptional customer service is at the heart of ensuring your total contentment.
+                The journey with HINDS extends far beyond the delivery of our injection molding machines or automation systems. Our commitment is to accompany you from the moment your equipment is set up in your facility through to its full operational lifespan. When the time comes to consider a new machine, we tailor our approach to meet your unique needs, ensuring a strategic investment that fosters your ongoing prosperity. At HINDS, exceptional customer service is at the heart of ensuring your total contentment.
                 </p>
               </div>
             </div>

@@ -99,7 +99,7 @@ const CareerListing = () => {
                                         malesuada pretium tristique imperdiet.
                                         Lorem ipsum dolor sit amet consectetur.
                                         malesuada pretium tristique imperdiet.</p>
-                                    <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a>
+                                    {/* <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a> */}
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ const CareerListing = () => {
                                         malesuada pretium tristique imperdiet.
                                         Lorem ipsum dolor sit amet consectetur.
                                         malesuada pretium tristique imperdiet.</p>
-                                    <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a>
+                                    <a href="/about">Read More<i className="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ const CareerListing = () => {
                                         malesuada pretium tristique imperdiet.
                                         Lorem ipsum dolor sit amet consectetur.
                                         malesuada pretium tristique imperdiet.</p>
-                                    <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a>
+                                    {/* <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a> */}
                                 </div>
                             </div>
                         </div>

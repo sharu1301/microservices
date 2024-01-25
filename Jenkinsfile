@@ -77,7 +77,7 @@ pipeline {
 
         stage('Upload to S3') {
             steps {
-                dir("/var/lib/jenkins/workspace/Hinds Machine/ics-ics-hind-machine/Frontend/build") {
+                dir("/var/lib/jenkins/workspace/Hinds Machine/Frontend/build") {
                     script {
                         s3Upload(
                             consoleLogLevel: 'INFO',

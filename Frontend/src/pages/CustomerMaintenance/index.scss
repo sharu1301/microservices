@@ -230,8 +230,12 @@
           color: #666;
           font-size: 14px;
           padding: 29px 60px 0 60px;
+          position: relative;
           i {
             margin-right: 16px;
+            position: absolute;
+            top: 34px;
+            left: 31px;
           }
         }
       }

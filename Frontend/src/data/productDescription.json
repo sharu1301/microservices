@@ -68,11 +68,10 @@
         ],
         "overviewImages": [
             "images/product-specification/productoverview/EuroPacSeries/1.png",
-            "images/product-specification/productoverview/EuroPacSeries/3.jpg",
-            "images/product-specification/productoverview/EuroPacSeries/4.jpg",
-            "images/product-specification/productoverview/EuroPacSeries/5.jpg",
-            "images/product-specification/productoverview/EuroPacSeries/6.jpg",
-            "images/product-specification/productoverview/EuroPacSeries/7.jpg"
+            "images/product-specification/productoverview/EuroPacSeries/2.png",
+            "images/product-specification/productoverview/EuroPacSeries/3.png",
+            "images/product-specification/productoverview/EuroPacSeries/4.png"
+           
         ]
     },
     {
@@ -140,12 +139,12 @@
             }
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroPETSeries/1.png",
+            "images/product-specification/productoverview/EuroPETSeries/1.jpg",
             "images/product-specification/productoverview/EuroPETSeries/2.png",
             "images/product-specification/productoverview/EuroPETSeries/3.jpg",
             "images/product-specification/productoverview/EuroPETSeries/4.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/5.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/6.jpg"
+            "images/product-specification/productoverview/EuroPETSeries/5.jpg"
+            
         ]
     },
 
@@ -189,11 +188,10 @@
         ],
         "overviewImages": [
             "images/product-specification/productoverview/EuroServoSeries/1.png",
-            "images/product-specification/productoverview/EuroServoSeries/2.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/3.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/4.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/5.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/6.jpg"
+            "images/product-specification/productoverview/EuroServoSeries/2.png",
+            "images/product-specification/productoverview/EuroServoSeries/3.png",
+            "images/product-specification/productoverview/EuroServoSeries/4.png"
+         
         ],
         "clampingUnit": [
             "Wide tie bar distance & daylight",
@@ -314,11 +312,10 @@
         ],
         "overviewImages": [
             "images/product-specification/productoverview/EuroStarSeries/1.png",
-            "images/product-specification/productoverview/EuroStarSeries/2.jpg",
-            "images/product-specification/productoverview/EuroStarSeries/3.jpg",
-            "images/product-specification/productoverview/EuroStarSeries/4.jpg",
-            "images/product-specification/productoverview/EuroStarSeries/5.jpg",
-            "images/product-specification/productoverview/EuroStarSeries/6.jpg"
+            "images/product-specification/productoverview/EuroStarSeries/2.png",
+            "images/product-specification/productoverview/EuroStarSeries/3.png",
+            "images/product-specification/productoverview/EuroStarSeries/4.png"
+          
         ],
         "heavydutyclampingunit": [
             "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.",
@@ -570,7 +567,7 @@
             "Bimetallic screw & barrel"
         ],
         "sliderImages": [
-            "images/product-specification/slider/EuroPVCSeries/1.png",
+            
             "images/product-specification/slider/EuroPVCSeries/2.jpg",
             "images/product-specification/slider/EuroPVCSeries/3.jpg",
             "images/product-specification/slider/EuroPVCSeries/4.jpg"
@@ -647,12 +644,11 @@
         
         ],
         "overviewImages": [
-           
-            "images/product-specification/productoverview/EuroRSeries/2.jpg",
+            "images/product-specification/productoverview/EuroRSeries/1.png",
+            "images/product-specification/productoverview/EuroRSeries/2.png",
             "images/product-specification/productoverview/EuroRSeries/3.jpg",
-            "images/product-specification/productoverview/EuroRSeries/4.jpg",
-            "images/product-specification/productoverview/EuroRSeries/5.jpg",
-            "images/product-specification/productoverview/EuroRSeries/6.jpg"
+            "images/product-specification/productoverview/EuroRSeries/4.jpg"
+      
         ],
         "cards": [
             {

@@ -146,7 +146,7 @@ const CustomerMaintenance = () => {
           <section className="container">
             <div className="processWrapper">
               <div className="processWrapper-left">
-                <div className="">
+                <div className="headingPanel">
                   <h6>Your Advantages with Our Machine and Robot Retrofits</h6>
                   <p>
                     Lorem ipsum dolor sit amet, consec tetur adipi scing elit.

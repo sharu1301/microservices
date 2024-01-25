@@ -69,70 +69,6 @@
       }
     }
   }
-  // .processWrapper {
-  //   background: #f6f8fa;
-  //   @include breakpoint(sm) {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
-  //   .process-details {
-  //     @include breakpoint(sm) {
-  //       width: 100%;
-  //       padding: 0 35px;
-  //     }
-  //     h6 {
-  //       font-family: Inter;
-  //       font-weight: 700;
-  //       @include breakpoint(sm) {
-  //         font-size: 20px;
-  //       }
-  //     }
-  //     p {
-  //       color: #666;
-  //       font-family: Poppins;
-  //       font-size: 13px;
-  //       font-weight: 400;
-  //       line-height: 24.7px;
-  //     }
-  //     .panel-sub {
-  //       padding: 57px 0 0 0;
-  //       h6 {
-  //         color: #363636;
-  //         font-family: Inter;
-  //         font-size: 32px;
-  //         font-weight: 700;
-  //         line-height: 60px;
-  //         @include breakpoint(sm) {
-  //           font-size: 20px;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .process-image-details {
-  //     .process-img {
-  //       margin-top: 42px;
-  //       width: 557px;
-  //       height: 439px;
-  //       @include breakpoint(sm) {
-  //         width: 342px;
-  //         height: 190px;
-  //       }
-  //     }
-  //     .process-right-details {
-  //       color: #666;
-  //       width: 557px;
-  //       font-family: "Poppins";
-  //       font-size: 16px;
-  //       font-weight: 400;
-  //       @include breakpoint(sm) {
-  //         font-size: 13px;
-  //       }
-  //       p {
-  //         margin-top: 16px;
-  //       }
-  //     }
-  //   }
-  // }.
   .processWapper-main {
     background: #f6f8fa;
     padding-top: 42px;
@@ -152,6 +88,27 @@
           gap: 0px;
           padding: 0 33px;
         }
+        .headingPanel {
+          border-bottom: 3px solid #ffe1e2;
+          position: relative;
+          padding-left: 24px;
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: #be0e14;
+            height: 3px;
+            bottom: -3px;
+            left: 0;
+            width: 50%;
+          }
+          @include breakpoint(sm) {
+            border: 0 none;
+            &::after {
+              display: none;
+            }
+          }
+        }
+
         h6 {
           color: #363636;
           font-size: 32px;

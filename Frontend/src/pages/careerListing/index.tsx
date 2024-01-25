@@ -76,38 +76,8 @@ const CareerListing = () => {
                                 <tbody>
                                     <tr>
                                         <td>01-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>02-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>02-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>03-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>16-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
+                                        <td>Marketing Intern</td>
+                                        <td>Marketing/Advertising/Public Relations</td>
                                     </tr>
                                 </tbody>
                             </table>

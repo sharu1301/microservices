@@ -14,38 +14,45 @@ const Upgrades = () => {
                     <div className="row ml-0">
                         <div className="col-md-12 m-auto text-center">
                             <h2 className="head">Retrofits for Injection Molding Machines and Robots</h2>
-                            <p>Modernization or Adaptation of Existing Machines</p>
-                            <p>Hind machines produce reliably for decades. Nevertheless, they can be retrofitted as needed to meet new production requirements. Efficiency and flexibility are often driving indicators. Our solutions for machine retrofits meet the need to upgrade existing injection molding machines and robots to face new challenges. Additionally, upgrades increase the service life of your machines.</p>
+                            <p><b>Modernization or Adaptation of Existing Machines</b></p>
+                            <p>Hinds machines produce reliably for decades. Nevertheless, they can be retrofitted as needed to meet new production requirements. Efficiency and flexibility are often driving indicators. Our solutions for machine retrofits meet the need to upgrade existing injection molding machines and robots to face new challenges. Additionally, upgrades increase the service life of your machines.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <section className="processWrapper mt-5 pt-5 pb-2 bg-light">
+            <section className="upgrades-section mt-5 pt-5 pb-5 bg-light">
                 <div className="container">
                     <div className="row ml-0">
                         <div className="col-md-7 col-12">
                             <div className="right-panel">
                                 <div className="panel bg-light">
                                     <h6>Your Advantages with Our Machine and Robot Retrofits</h6>
-                                    <p>Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas</p>
-                                    <p>venenatis. Maecenas molestie sagittis. eros vel ante rutrum mollis in at mauris. Praesent,</p>
-                                    <img src="../../images/pages/upgrades/upgrades1.jpg" alt="upgrades" className="img-fluid" />
+                                    {/* <p>Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas</p>
+                                    <p>venenatis. Maecenas molestie sagittis. eros vel ante rutrum mollis in at mauris. Praesent,</p> */}
+
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                                    <h6>Modifications for new applications in injection molding</h6>
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                                    <h6>Extend service life - increase efficiency</h6>
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
-                                    <h6>Lorem ipsum dolor sit amet consectet.</h6>
+                                    <h6>Save investment costs with retrofits</h6>
+                                </div>
+                                <div className="panel-sub pl-0 pr-0">
+                                    <h6>Fast solution for new challenges </h6>
+                                </div>
+                                <div className="panel-sub pl-0 pr-0">
+                                    <h6>Knowledge for a smooth machine modification</h6>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-5 col-12">
-                            <div className="process-img">
-                                <img src="../../images/pages/upgrades/upgrades1.jpg" alt="upgrades" className="img-fluid" />
+                            <div className="upgrade-img">
+                                <img src="../../images/pages/upgrades/upgrade.jpg" alt="upgrades" className="img-fluid" />
                             </div>
+                            <p className="mt-3">Our service experts analyze your individual needs for machine retrofits and advise you on options for machine and automation modifications as well as increased efficiency. They ensure that the retrofits of your injection molding machine are coordinated with existing processes and your peripherals. </p>
                         </div>
                     </div>
                 </div>
@@ -54,35 +61,33 @@ const Upgrades = () => {
             <div className="upgrades-wrpper section">
                 <div className="container">
                     <div className="row w-100 align-items-center ml-0">
-                        <div className="col-md-7">
+                        <div className="col-md-7 col-12">
                             <div className="freq-content">
                                 <h2 className="title">The Following Machine Retrofits are Frequently Requested:</h2>
                                 <ul>
-                                    <li>Additional core pulls</li>
-                                    <li>Hydraulic power pack</li>
-                                    <li>Mold heating</li>
-                                    <li>Mold nozzle control</li>
+                                    <li>Hydraulic aggregates</li>
+                                    <li>Tool heating</li>
+                                    <li>Tool nozzle control</li>
                                     <li>Hot runners</li>
                                     <li>Additional inputs/outputs (I/Os)</li>
-                                    <li>Euromap interfaces - Euromap 63, Euromap 67/12</li>
-                                    <li>Solutions for fast mold change</li>
-                                    <li>Rotary tables</li>
-                                    <li>Tie-bar pulling device</li>
+                                    <li>Solutions for rapid tool assembly</li>
+                                    <li>Turntables</li>
+                                    <li>Tie bar pulling devices</li>
                                     <li>Pneumatic/hydraulic shut-off nozzles</li>
-                                    <li>Shut off nozzle system</li>
+                                    <li>Tool nozzles</li>
                                     <li>Pneumatic air valves</li>
                                     <li>Robots & automation</li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5 col-12">
                             <div className="up-img">
                                 <img src="../../images/pages/upgrades/upgrades.jpg" alt="upgrades" className="img-fluid" />
                             </div>
                         </div>
                     </div>
                     <div className="row w-100 ml-0 mt-5">
-                        <div className="col-md-8 text-center m-auto">
+                        <div className="col-md-8 col-12 text-center m-auto">
                             <h2 className="title">Using Machines Sustainably Thanks to Retrofits</h2>
                             <p>Do you want to use your injection molding machine for new applications, be more efficient, and save energy costs at the same time? Our retrofit machine solutions are the right fit for you.</p>
                             <button>request now</button>

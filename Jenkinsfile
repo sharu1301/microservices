@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build Artifact') {
             steps {
-                dir('/var/lib/jenkins/workspace/Hinds\ Machine/ics-ics-hind-machine/Frontend') {
+                dir('/var/lib/jenkins/workspace/Hinds Machine/ics-ics-hind-machine/Frontend') {
                     script {
                         sh '''
                             export NVM_DIR="/var/lib/jenkins/.nvm"

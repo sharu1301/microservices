@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build Artifact') {
             steps {
-                dir('/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend') {
+                dir('/var/lib/jenkins/workspace/Hinds Machine/ics-ics-hind-machine/Frontend') {
                     script {
                         sh '''
                             export NVM_DIR="/var/lib/jenkins/.nvm"
@@ -77,7 +77,7 @@ pipeline {
 
         stage('Upload to S3') {
             steps {
-                dir("/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend/build") {
+                dir("/var/lib/jenkins/workspace/Hinds Machine/ics-ics-hind-machine/Frontend/build") {
                     script {
                         s3Upload(
                             consoleLogLevel: 'INFO',
@@ -133,3 +133,4 @@ pipeline {
         }
     }
 }
+/// aaded comment

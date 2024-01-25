@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./index.scss";
-import { BsArrowRight } from "react-icons/bs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,6 +17,7 @@ const Achievements = () => {
     };
     useEffect(() => {
         getAchievements();
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const getAchievements = () => {

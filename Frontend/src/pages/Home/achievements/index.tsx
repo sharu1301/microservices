@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./index.scss";
-import { BsArrowRight } from "react-icons/bs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,6 +17,7 @@ const Achievements = () => {
     };
     useEffect(() => {
         getAchievements();
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const getAchievements = () => {
@@ -33,7 +33,7 @@ const Achievements = () => {
             <div className="container p-0">
                 <div className="row">
                     <div className="col-md-12">
-                        <h4>Our Achievements</h4>
+                        <h6>Our Achievements</h6>
                         <p>Precision in Production – A Legacy of Achievement in Moulding Technology. </p>
                     </div>
                     <div className="imgSection">
@@ -60,11 +60,11 @@ const Achievements = () => {
             </div>
             {/* </div> */}
 
-            <div className="buttondiv">
+            {/* <div className="buttondiv">
                 <button type="button" className="btn btn-formSubmit button">
                     See All Achievements <BsArrowRight size={22} />
                 </button>
-            </div>
+            </div> */}
         </div>
 
     )

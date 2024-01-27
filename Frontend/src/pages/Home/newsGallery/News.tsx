@@ -52,13 +52,13 @@ const News = ({ limit }: { limit: number }) => {
 
     setLoading(true);
     fetchArticles();
-  }, [ limit]);
+  }, [limit]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [articles]);
 
- 
+
   const handleTestimonialLeave = () => {
     setSelectedNews(null);
   };
@@ -80,25 +80,42 @@ const News = ({ limit }: { limit: number }) => {
 
       {!loading && !connectionError && (
         <>
-          <div className="grid" onMouseLeave={handleTestimonialLeave}>
+          <div className="grid"
+          //  onMouseLeave={handleTestimonialLeave}
+          >
             {selectedNews ?
               (
                 <div className="news-detail">
-                  <div className="close" onClick={()=>handleTestimonialLeave()}><i className="fa-solid fa-xmark"></i></div>
-
-
+                  <div className="close"
+                    onClick={() => handleTestimonialLeave()}>
+                    <i className="fa-solid fa-xmark"></i></div>
                   <div className="news-header">
                     <h6 >
-                      {" "}
                       {parse(selectedNews?.title.substring(3, selectedNews?.title.length - 1))}
                     </h6>
+
                     {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
                   </div>
+
                   <div className="news-body">
-                    <p className="subtitle">{selectedNews.plaintext.slice(0, 180)}</p>
+                    <div className="col-md-6">
+                      <img
+                        src={
+                          selectedNews.cover === null
+                            ? "images/pages/about_us/blog_default.jpg"
+                            : JSON.parse(selectedNews.cover).url
+                        }
+                        alt="blog"
+                        className="modalNewsImg"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <p className="subtitle">{selectedNews.plaintext.slice(0, 180)}
+                      </p>
+                    </div>
                   </div>
-                  <div >
-                    <a href="/">View more</a>
+                  <div className="viewMore" >
+                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in">View more</a>
                   </div>
                 </div>
               ) :
@@ -122,7 +139,7 @@ const News = ({ limit }: { limit: number }) => {
                           {parse(article.title.substring(3, article.title.length - 1))}
                         </p>
                         <div className="date">
-                          <h6>12 Aug 2023</h6>
+                          <h6>28 Jan 2024</h6>
                         </div>
                       </div>
                     </div>
@@ -132,8 +149,6 @@ const News = ({ limit }: { limit: number }) => {
               </div>
             }
           </div>
-
-
 
         </>
       )}

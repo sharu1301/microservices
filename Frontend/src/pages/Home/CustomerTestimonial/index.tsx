@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.scss";
-import Achievement1 from "../../../assets/images/Achievement1.png";
 
-const Sample1 = require("../../../assets/videos/Sample1.mp4");
+import CustomerTestominialData from '../../../data/testimonial.json'
+
+const Sample1 = require("../../../assets/videos/testimonial1.MOV");
+const Sample2 = require("../../../assets/videos/testimonial2.MOV");
 
 interface Testimonial {
   id: number;
@@ -15,29 +17,8 @@ interface Testimonial {
   image: string;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    author: "Alice",
-    text: "Love this product! It really made a difference for me.",
-    place: "AMD Plastic Toys (india)",
-    image: Achievement1,
-  },
-  {
-    id: 2,
-    author: "Bob",
-    text: "Fantastic service, and the quality is top-notch.",
-    place: "Northern Automobiles (india)",
-    image: Achievement1,
-  },
-  {
-    id: 3,
-    author: "Charlie",
-    text: "Highly recommend to anyone looking for quality!",
-    place: "Indie Pvc Pipes Pvt Ltd (india)",
-    image: Achievement1,
-  },
-];
+const testimonials: Testimonial[] = CustomerTestominialData
+
 
 const CustomerTestimonials = () => {
   const [selectedTestimonial, setSelectedTestimonial] =
@@ -47,7 +28,7 @@ const CustomerTestimonials = () => {
     dots: true,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
   };
   const handleTestimonialHover = (testimonial: Testimonial) => {
     setSelectedTestimonial(testimonial);
@@ -78,7 +59,7 @@ const CustomerTestimonials = () => {
                   <h2 className="testimonial-author">
                     {selectedTestimonial.text}
                   </h2>
-                  <img src={selectedTestimonial.image} alt="" />
+                  <img src={require(`../../../assets/${selectedTestimonial.image}`)} alt="" />
                   <h6 className="testimonial-text">
                     {selectedTestimonial.author}
                   </h6>
@@ -98,7 +79,7 @@ const CustomerTestimonials = () => {
                         onMouseEnter={() => handleTestimonialHover(testimonial)}
                       >
                         <div className="image-container">
-                        <img src={testimonial.image} alt="" />
+                        <img src={require(`../../../assets/${testimonial.image}`)} alt="" />
                         </div>
                         <div className="testimonial-contant-details">
                           <h2 className="testimonial-author">
@@ -132,7 +113,7 @@ const CustomerTestimonials = () => {
                           </ul>
                         </div>
                         <div className="image-container">
-                        <img src={testimonial.image} alt="" />
+                        <img src={require(`../../../assets/${testimonial.image}`)} alt="" />
                         </div>
                       </div>
                     </div>
@@ -146,7 +127,7 @@ const CustomerTestimonials = () => {
         <div className="col-md-6 col-12 videoDiv ">
           <Slider {...VideoSettings}>
             <video src={Sample1} controls />
-            <video src={Sample1} controls />
+            <video src={Sample2} controls />
           </Slider>
         </div>
       </div>

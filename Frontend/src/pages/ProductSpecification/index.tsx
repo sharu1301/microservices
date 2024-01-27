@@ -7,7 +7,8 @@ import SubFooter from '../../components/subFooter';
 import Footer from '../../components/Footer';
 import Slider from "react-slick";
 import downArrow from '../../assets/images/product-specification/arrow-down-circle.png';
-import mainImg from '../../assets/images/product-specification/mainImg.png';
+// import mainImg from '../../assets/images/product-specification/mainImg.png';
+import mainImg from '../../assets/images/product-specification/mainImgNumbered.png';
 import { useParams } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,6 +29,8 @@ export default function ProductSpecification() {
   const [blowMoulding, setMouldingData] = useState<any>(null);
   const [injectionData, setInjectionMouldingData] = useState<any>(null)
 
+  // const [clickMessage, setClickMessage] = useState('');
+  const [modal, showModal] = useState(false)
 
   const settings = {
     dots: true,
@@ -59,6 +62,33 @@ export default function ProductSpecification() {
     setMouldingData(blowMouldingMatch)
   }, [productname]);
 
+
+
+
+
+
+
+
+  // const handleClick = (event) => {
+  //   const x = event?.nativeEvent.offsetX;
+  //   const y = event?.nativeEvent.offsetY;
+
+  //   const clickableArea = {
+  //     startX: 100, // Replace with your desired x-coordinate
+  //     startY: 50,  // Replace with your desired y-coordinate
+  //     endX: 200,   // Replace with your desired x-coordinate
+  //     endY: 150    // Replace with your desired y-coordinate
+  //   };
+
+  //   if (x >= clickableArea.startX && x <= clickableArea.endX && y >= clickableArea.startY && y <= clickableArea.endY) {
+  //     setClickMessage('Clicked on the specified portion of the image!');
+  //   } else {
+  //     setClickMessage('');
+  //   }
+  // };
+
+
+
   return (
 
     <>
@@ -73,7 +103,40 @@ export default function ProductSpecification() {
               <div key={index}>
 
                 <div className='mainSectionContainer'>
-                  <img src={mainImg} className='image' alt='' />
+                  <img src={mainImg}
+                    className='image'
+                    alt=''
+                    // onClick={() => handleClick(data.id)}
+                    style={{ cursor: 'pointer' }} />
+                  {/* <p
+                    style={{
+                      paddingLeft: '760px',
+                      paddingTop: '260px',
+                      position: 'absolute',
+                      cursor: 'grabbing',
+                      fontWeight: '500'
+                    }} onClick={() => showModal(true)}>1</p> */}
+                  {modal && (
+                    <div className="machine-unit">
+
+                      <div className="machine-content">
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                          <h2 className="testimonial-author">
+                            {"Injection Unit"}
+                          </h2>
+                          <div className="close"
+                            onClick={() => showModal(false)}>
+                            <i className="fa-solid fa-xmark"></i></div>
+                        </div>
+                        <img src={require(`../../assets/${data.image}`)} alt="" />
+                        <ul style={{ listStyleType: 'disc' }}>
+                          {data.injectionUnit?.map((data, i) =>
+                            <li key={i} style={{ color: 'black', textAlign: 'left' }}>{data}</li>)}
+                        </ul>
+
+                      </div>
+                    </div>
+                  )}
 
                   <div className='detailcard'>
                     <div>
@@ -141,20 +204,20 @@ export default function ProductSpecification() {
 
                 <div className='type'>
                   <div className='card1'>
-                    {data?.cards.map((cardData, i) =>
-                      (<b className='title' key={i}>{cardData.Type}</b>))}
+                    {data?.cards?.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData?.Type}</b>))}
                     <p className='description'>Type</p>
                   </div>
 
                   <div className='card1'>
-                    {data?.cards.map((cardData, i) =>
-                      (<b className='title' key={i}>{cardData.DriveType}</b>))}
+                    {data?.cards?.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData?.DriveType}</b>))}
                     <p className='description'>Drive Type</p>
                   </div>
 
                   <div className='card1'>
-                    {data?.cards.map((cardData, i) =>
-                      (<b className='title' key={i}>{cardData.ClampingForce}</b>))}
+                    {data?.cards?.map((cardData, i) =>
+                      (<b className='title' key={i}>{cardData?.ClampingForce}</b>))}
                     <p className='description'>Clamping Force</p>
                   </div>
                 </div>
@@ -180,7 +243,7 @@ export default function ProductSpecification() {
                   </div>
 
                   <div className='paraContainer'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque.</p>
+                    <p>Click to Zoom</p>
                   </div>
 
                 </div>

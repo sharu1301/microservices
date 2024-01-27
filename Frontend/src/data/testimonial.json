@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "author": "Praveen Kumar Yadav",
+      "text": "We thanks to Mr. Praveen Sharma for providing the consultation to achieve minimum Breakdown, & increase the productivity. We achieve our goal up to saving of 20 lakhs per month",
+      "place": "Machine Plastic ltd.",
+      "image": "images/user.png"
+    },
+    {
+      "id": 2,
+      "author": "Vijay Khemchandani",
+      "text": "We are really admire for their personal attention & services providing out of the way. We are very happy with performance of there Injection Moulding Machines since 2009. Their quality & features are outstanding",
+      "place": "V Bros Auto Pvt Ltd.",
+      "image": "images/user.png"
+    },
+    {
+      "id": 3,
+      "author": "Sharbhjot Singh",
+      "text": "We feel immense pleasure to share that Mr. Praveen Sharma M.D of Hinds Plastic Machines Pvt ltd. help us to develop Blow Moulding Machine for producing our medical item, which we earlier buy from China. Now, we say that we are not dependant on China.",
+      "place": "Indie Pvc Pipes Pvt Ltd (india)",
+      "image": "images/user.png"
+    }
+  ]

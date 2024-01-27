@@ -28,32 +28,40 @@ export default function Header() {
               <div className="col-md-4 pr-0 text-right">
                 <div className={"icons"}>
                   <div className={"socialIcons01"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={x}
-                    />
+                    <a href="/">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={x}
+                      />
+                    </a>
                   </div>
                   <div className={"socialIcons01"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={facebook}
-                    />
+                    <a href="/">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={facebook}
+                      />
+                    </a>
                   </div>
                   <div className={"socialIcons03"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={instagram}
-                    />
+                    <a href="/">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={instagram}
+                      />
+                    </a>
                   </div>
                   <div className={"socialIcons03"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={linkedIn}
-                    />
+                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank" rel="noreferrer">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={linkedIn}
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -75,19 +83,14 @@ export default function Header() {
                   <li className={pathname === "/service" ? 'active dropdown-toggle' : 'dropdown-toggle'}
                     data-bs-toggle="dropdown" onClick={() => navigate("/service")}>Services</li>
                   <ul className="dropdown-menu">
-                  {/* <li><a className="dropdown-item" href="/service">About Services</a></li> */}
+                    <li><a className="dropdown-item" href="/service">About Services</a></li>
                     <li><a className="dropdown-item" href="/process">Process Optimization</a>
-
                     </li>
                     <li><a className="dropdown-item" href="/upgrades">Upgrades</a>
-
                     </li>
                     <li><a className="dropdown-item" href="/customermaintenance">Customer Service and Maintenance</a></li>
                   </ul>
-
-
                 </li>
-
 
                 <li className="dropdown">
                   <li className="dropdown-toggle m-0 p-0" data-bs-toggle="dropdown">Products</li>
@@ -109,7 +112,7 @@ export default function Header() {
                         ))}
                       </ul>
                     </li> */}
-                    {/* <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li> */}
+                    <li><a className="dropdown-item" href="/auxiliaries">Auxiliary Parts</a></li>
                   </ul>
                 </li>
 
@@ -120,7 +123,7 @@ export default function Header() {
 
 
 
-                <li className={pathname === "/career" ? 'active' : '' }onClick={() => navigate("/career")}>Career</li>
+                <li className={pathname === "/career" ? 'active' : ''} onClick={() => navigate("/career")}>Career</li>
               </ul>
 
               <div

@@ -3,7 +3,7 @@ import SubFooter from "../../components/subFooter";
 import PageTitle from "../../components/pageTitle";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Career = () => {
   const [readMore, setreadMore] = useState(false);
@@ -80,10 +80,10 @@ const Career = () => {
           <div className="row w-100 ml-0">
             <div className="col-md-10 col-12 m-auto text-center">
               <h2 className="head">Everything in one place. Be amazed!</h2>
-              <p className="mb-0">
+              {/* <p className="mb-0">
                 Lorem ipsum dolor sit amet consectetur. Felis varius scelerisque
               </p>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+              <p>Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ const Career = () => {
                   our expertise and targeted research to shape the technologies
                   of the future in the present.
                 </p>
-                <a href="/career">
+                <a href="/careerlisting">
                   learn more<i className="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
@@ -460,8 +460,12 @@ const Career = () => {
                   that encourages innovation, nurtures skills, and propels
                   professional growth.
                 </p>
-                <p></p>
-                <button onClick={() => setreadMore(true)}>read more</button>
+                {readMore && (
+                  <p>
+                    We provide a dynamic work environment where challenges are seen as opportunities, allowing you to extend your expertise and push the boundaries of what's possible. Whether you're an engineer, a creative specialist, or a strategist, HINDS Project offers the resources and support you need to evolve in your career path, ensuring that your journey with us is not just a job, but a trajectory of continuous development and success.
+                  </p>
+                )}
+               {!readMore && (<button onClick={() => setreadMore(true)}>read more</button>)} 
               </div>
             </div>
             <div className="col-md-5 col-12">

@@ -27,9 +27,6 @@ const Upgrades = () => {
                             <div className="right-panel">
                                 <div className="panel bg-light">
                                     <h6>Your Advantages with Our Machine and Robot Retrofits</h6>
-                                    {/* <p>Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Praesent vitae venenatis. Maecenas</p>
-                                    <p>venenatis. Maecenas molestie sagittis. eros vel ante rutrum mollis in at mauris. Praesent,</p> */}
-
                                 </div>
                                 <div className="panel-sub pl-0 pr-0">
                                     <h6>Tailored modifications for new applications in injection molding</h6>
@@ -105,7 +102,10 @@ const Upgrades = () => {
                         <div className="col-md-4 col-12 text-center">
                             <div className="cust-wrapper">
                                 <div className="cust-img">
-                                    <img src="../../images/pages/upgrades/cust1.jpg" alt="customer" />
+                                    <img
+                                        src={require('../../assets/images/user.png')}
+                                        alt="customer"
+                                    />
                                 </div>
                                 <span>
                                     <i className="fa-solid fa-star ml-2"></i>
@@ -114,15 +114,18 @@ const Upgrades = () => {
                                     <i className="fa-solid fa-star ml-2"></i>
                                     <i className="fa-solid fa-star ml-2"></i>
                                 </span>
-                                <p className="pt-4">I highly recommend XYZ Electronics to anyone looking for high-quality products
-                                    and exceptional customer service. Thanks to Emily and the entire team for making
-                                    my experience so great!"</p>
+                                <p className="pt-4">
+                                    "We are really admire for their personal attention & services providing out of the way. We are very happy with performance of there Injection Moulding Machines since 2009. Their quality & features are outstanding."
+                                </p>
                             </div>
                         </div>
                         <div className="col-md-4 col-12 text-center">
                             <div className="cust-wrapper">
                                 <div className="cust-img">
-                                    <img src="../../images/pages/upgrades/cust2.jpg" alt="customer" />
+                                    <img
+                                        src={require('../../assets/images/user.png')}
+                                        alt="customer"
+                                    />
                                 </div>
                                 <span>
                                     <i className="fa-solid fa-star ml-2"></i>
@@ -131,15 +134,18 @@ const Upgrades = () => {
                                     <i className="fa-solid fa-star ml-2"></i>
                                     <i className="fa-solid fa-star ml-2"></i>
                                 </span>
-                                <p className="pt-4">I highly recommend XYZ Electronics to anyone looking for high-quality products
-                                    and exceptional customer service. Thanks to Emily and the entire team for making
-                                    my experience so great!"</p>
+                                <p className="pt-4">
+                                    "We thanks to Mr. Praveen Sharma for providing the consultation to achieve minimum Breakdown, & increase the productivity. We achieve our goal up to saving of 20 lakhs per month"
+                                </p>
                             </div>
                         </div>
                         <div className="col-md-4 col-12 text-center">
                             <div className="cust-wrapper">
                                 <div className="cust-img">
-                                    <img src="../../images/pages/upgrades/cust3.jpg" alt="customer" />
+                                    <img
+                                        src={require('../../assets/images/user.png')}
+                                        alt="customer"
+                                    />
                                 </div>
                                 <span>
                                     <i className="fa-solid fa-star ml-2"></i>
@@ -148,9 +154,9 @@ const Upgrades = () => {
                                     <i className="fa-solid fa-star ml-2"></i>
                                     <i className="fa-solid fa-star ml-2"></i>
                                 </span>
-                                <p className="pt-4">I highly recommend XYZ Electronics to anyone looking for high-quality products
-                                    and exceptional customer service. Thanks to Emily and the entire team for making
-                                    my experience so great!"</p>
+                                <p className="pt-4">
+                                    "We feel immense pleasure to share that Mr. Praveen Sharma M.D of Hinds Plastic Machines Pvt ltd. help us to develop Blow Moulding Machine for producing our medical item, which we earlier buy from China. Now, we say that we are not dependant on China."
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -94,12 +94,9 @@ const CareerListing = () => {
                                     <img src="../../images/pages/career/card1.jpg" className="img-fluid" alt="" />
                                 </div>
                                 <div className="text">
-                                    <h4>Career</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        malesuada pretium tristique imperdiet.
-                                        Lorem ipsum dolor sit amet consectetur.
-                                        malesuada pretium tristique imperdiet.</p>
-                                    {/* <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a> */}
+                                    <h4>HINDS Careers</h4>
+                                    <p>Curious about the pathways to grow your career at HINDS Project? Visit our careers page to discover the range of employee benefits, professional development opportunities, and insights from our team members, and much more.</p>
+                                    <a href="/career">Read More<i className="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -109,11 +106,8 @@ const CareerListing = () => {
                                     <img src="../../images/pages/career/card2.jpg" className="img-fluid" alt="" />
                                 </div>
                                 <div className="text">
-                                    <h4>About</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        malesuada pretium tristique imperdiet.
-                                        Lorem ipsum dolor sit amet consectetur.
-                                        malesuada pretium tristique imperdiet.</p>
+                                    <h4>About HINDS Project</h4>
+                                    <p>As a pivotal player in mobility technology and innovation for the automotive sector and beyond, HINDS Project is dedicated to advancing a more sustainable, secure, and enhanced mobility experience.</p>
                                     <a href="/about">Read More<i className="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -124,12 +118,8 @@ const CareerListing = () => {
                                     <img src="../../images/pages/career/card3.jpg" className="img-fluid" alt="" />
                                 </div>
                                 <div className="text">
-                                    <h4>Application Process</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur.
-                                        malesuada pretium tristique imperdiet.
-                                        Lorem ipsum dolor sit amet consectetur.
-                                        malesuada pretium tristique imperdiet.</p>
-                                    {/* <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a> */}
+                                    <h4>Application Journey</h4>
+                                    <p>Interested in joining the HINDS Project family but unsure of the application process or what to expect after submission? Our step-by-step guide will walk you through our application procedure, providing clarity and support at each stage.</p>
                                 </div>
                             </div>
                         </div>

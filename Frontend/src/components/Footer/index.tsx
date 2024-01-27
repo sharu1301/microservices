@@ -5,7 +5,7 @@ import instagram from '../../assets/icons/instagram.png';
 import linkedIn from '../../assets/icons/linkedin.png'
 
 const Footer = () => {
-  
+
   return (
     <>
       <div className="footer-section">
@@ -30,16 +30,28 @@ const Footer = () => {
 
                 </ul>
                 <div className=" imgDiv">
-                      <img  alt="" src={x} />
+                  <a href="/">
+                  <img alt="" src={x} />
+                  </a>
 
-                      <img  alt="" src={facebook} />
+                  <a href="/">
+                  <img alt="" src={facebook} />
+                  </a>
 
 
-                      <img  alt="" src={instagram} />
+                  <a href="/">
+                  <img alt="" src={instagram} />
+                  </a>
 
-                      <img  alt="" src={linkedIn} />
+                  <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank">
+                    <img
+                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                      alt=""
+                      src={linkedIn}
+                    />
+                  </a>
 
-                  </div>
+                </div>
               </div>
             </div>
             <div className="col-md-3 col-6">
@@ -95,17 +107,17 @@ const Footer = () => {
           <div className="line">
             <div className="row">
               <div className="col-md-6">
-              <div className="imgDiv responsive">
-                      <img  alt="" src={x} />
+                <div className="imgDiv responsive">
+                  <img alt="" src={x} />
 
-                      <img  alt="" src={facebook} />
+                  <img alt="" src={facebook} />
 
 
-                      <img  alt="" src={instagram} />
+                  <img alt="" src={instagram} />
 
-                      <img  alt="" src={linkedIn} />
+                  <img alt="" src={linkedIn} />
 
-                  </div>
+                </div>
                 <p>Plot No. 139, Sec-8, IMT Maneshwar, Gurgaon, India-6000214</p>
               </div>
               <div className="col-md-6 text-right">

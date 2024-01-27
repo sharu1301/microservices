@@ -112,7 +112,7 @@ export default function Header() {
                         ))}
                       </ul>
                     </li> */}
-                    <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
+                    <li><a className="dropdown-item" href="/auxiliaries">Auxiliary Parts</a></li>
                   </ul>
                 </li>
 

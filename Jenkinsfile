@@ -114,11 +114,11 @@ pipeline {
             }
         }
 
-        failure {
+        success {
             script {
                 echo "Build failed. No Jira ticket will be created."
             }
         }
     }
 }
-/// aaded comment
+

@@ -29,7 +29,7 @@ export default function ProductSpecification() {
   const [blowMoulding, setMouldingData] = useState<any>(null);
   const [injectionData, setInjectionMouldingData] = useState<any>(null)
 
-  const [clickMessage, setClickMessage] = useState('');
+  // const [clickMessage, setClickMessage] = useState('');
   const [modal, showModal] = useState(false)
 
   const settings = {
@@ -69,23 +69,23 @@ export default function ProductSpecification() {
 
 
 
-  const handleClick = (event) => {
-    const x = event?.nativeEvent.offsetX;
-    const y = event?.nativeEvent.offsetY;
+  // const handleClick = (event) => {
+  //   const x = event?.nativeEvent.offsetX;
+  //   const y = event?.nativeEvent.offsetY;
 
-    const clickableArea = {
-      startX: 100, // Replace with your desired x-coordinate
-      startY: 50,  // Replace with your desired y-coordinate
-      endX: 200,   // Replace with your desired x-coordinate
-      endY: 150    // Replace with your desired y-coordinate
-    };
+  //   const clickableArea = {
+  //     startX: 100, // Replace with your desired x-coordinate
+  //     startY: 50,  // Replace with your desired y-coordinate
+  //     endX: 200,   // Replace with your desired x-coordinate
+  //     endY: 150    // Replace with your desired y-coordinate
+  //   };
 
-    if (x >= clickableArea.startX && x <= clickableArea.endX && y >= clickableArea.startY && y <= clickableArea.endY) {
-      setClickMessage('Clicked on the specified portion of the image!');
-    } else {
-      setClickMessage('');
-    }
-  };
+  //   if (x >= clickableArea.startX && x <= clickableArea.endX && y >= clickableArea.startY && y <= clickableArea.endY) {
+  //     setClickMessage('Clicked on the specified portion of the image!');
+  //   } else {
+  //     setClickMessage('');
+  //   }
+  // };
 
 
 

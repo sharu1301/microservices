@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 
 import './index.scss';
 import Header from '../../components/Header';
@@ -7,7 +7,8 @@ import SubFooter from '../../components/subFooter';
 import Footer from '../../components/Footer';
 import Slider from "react-slick";
 import downArrow from '../../assets/images/product-specification/arrow-down-circle.png';
-import mainImg from '../../assets/images/product-specification/mainImg.png';
+// import mainImg from '../../assets/images/product-specification/mainImg.png';
+import mainImg from '../../assets/images/product-specification/mainImgNumbered.png';
 import { useParams } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,7 +29,9 @@ export default function ProductSpecification() {
   const [blowMoulding, setMouldingData] = useState<any>(null);
   const [injectionData, setInjectionMouldingData] = useState<any>(null)
 
-
+  const [clickMessage, setClickMessage] = useState('');
+  const [modal, showModal] = useState(false)
+  const myElementRef = useRef(null);
   const settings = {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
@@ -59,6 +62,45 @@ export default function ProductSpecification() {
     setMouldingData(blowMouldingMatch)
   }, [productname]);
 
+
+
+
+
+
+
+
+  const handleClick = (event) => {
+
+    const element:any = myElementRef.current;
+
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      console.log('Offset values:', rect.left, rect.top);
+      // Do something with the offset values
+    }
+    // const x = event?.nativeEvent?.offsetX ?? 0;
+    // const y = event?.nativeEvent?.offsetY ?? 0;
+
+    // // Replace these coordinates with the desired values for your clickable area
+    // const clickableArea = {
+    //   startX: 200, // Replace with your desired x-coordinate
+    //   startY: 200, // Replace with your desired y-coordinate
+    //   endX: 0,   // Replace with your desired x-coordinate
+    //   endY: 0    // Replace with your desired y-coordinate
+    // };
+
+    // if (x >= clickableArea.startX && x <= clickableArea.endX && y >= clickableArea.startY && y <= clickableArea.endY) {
+    //   console.log('Clicked on the specified portion of the image!');
+    //   showModal(true)
+    //   // Add the logic or action you want to perform when clicking inside the specified area
+    // } else {
+    //   console.log('elseeeeeeeeeeeeeeeeeeee!');
+    // }
+  };
+
+
+
+
   return (
 
     <>
@@ -73,7 +115,40 @@ export default function ProductSpecification() {
               <div key={index}>
 
                 <div className='mainSectionContainer'>
-                  <img src={mainImg} className='image' alt='' />
+                  <img src={mainImg}
+                    className='image'
+                    alt=''
+                    onClick={() => handleClick(data.id)}
+                    style={{ cursor: 'pointer' }} />
+                  <p
+                    style={{
+                      paddingLeft: '760px',
+                      paddingTop: '260px',
+                      position: 'absolute',
+                      cursor: 'grabbing',
+                      fontWeight: '500'
+                    }} onClick={() => showModal(true)}>1</p>
+                  {modal && (
+                    <div className="machine-unit">
+
+                      <div className="machine-content">
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                          <h6 className="testimonial-author">
+                            {"Injection Unit"}
+                          </h6>
+                          <div className="close"
+                            onClick={() => showModal(false)}>
+                            <i className="fa-solid fa-xmark"></i></div>
+                        </div>
+                        {/* <img src={require(`../../assets/${data.image}`)} alt="" /> */}
+                        <ul style={{ listStyleType: 'inherit' }}>
+                          {data.injectionUnit?.map((data: any, i) =>
+                            <li key={i} style={{ color: 'black', textAlign: 'left' }}>{data}</li>)}
+                        </ul>
+
+                      </div>
+                    </div>
+                  )}
 
                   <div className='detailcard'>
                     <div>
@@ -180,7 +255,7 @@ export default function ProductSpecification() {
                   </div>
 
                   <div className='paraContainer'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque.</p>
+                    <p>Click to Zoom</p>
                   </div>
 
                 </div>

@@ -139,7 +139,7 @@ const News = ({ limit }: { limit: number }) => {
                           {parse(article.title.substring(3, article.title.length - 1))}
                         </p>
                         <div className="date">
-                          <h6>12 Aug 2023</h6>
+                          <h6>28 Jan 2024</h6>
                         </div>
                       </div>
                     </div>

@@ -13,12 +13,11 @@ export default function Process() {
         <div className="container">
           <div className="section ourstory">
             <div className="row justify-content-center ml-0">
-              <div className="col-lg-8 text-center">
-                <h4>Optimization of Injection Moulding Processes</h4>
-                <h6>with Customized Consulting and Digital Solution</h6>
+              <div className="col-lg-10 text-center">
+                <h4>Optimization of Injection Molding Processes</h4>
+                <p><b>with Customized Consulting and Digital Solution</b></p>
                 <p className="pt-2">
-                  We support you in optimizing your injection moulding processes with our knowledge in application technology and plasticizing as well as with HIND's digital solutions.
-                  You benefit from shorter cycle times, less wear, higher energy efficiency and sustainable plastics processing.
+                Improve your injection molding processes using our expertise in application technology, plasticizing, and HIND's digital solutions. Benefit from reduced cycle times, decreased wear, enhanced energy efficiency, and sustainable plastics processing.
                 </p>
               </div>
             </div>
@@ -40,13 +39,7 @@ export default function Process() {
             <div className="col-md-7 col-lg-7">
               <div className="right-panel">
                 <div className="panel bg-light">
-                  <h6>Your Advantages When Optimizing Injection Moulding Processes With HINDS</h6>
-                  {/* <p>
-                    Lorem ipsum dolor sit amet, consec tetur adipi scing elit.
-                    Praesent vitae venenatis. Maecenas venenatis. Maecenas
-                    molestie sagittis. eros vel ante rutrum mollis in at mauris.
-                    Praesent,
-                  </p> */}
+                  <h6>Your Advantages When Optimizing Injection Molding Processes With HINDS</h6>
                   <img
                     src="../../images/pages/process-mobile.jpg"
                     alt=""
@@ -54,16 +47,16 @@ export default function Process() {
                   />
                 </div>
                 <div className="panel-sub pl-0">
-                  <h6>	Plasticizing advice</h6>
+                  <h6>Expert Plasticizing Guidance</h6>
                 </div>
                 <div className="panel-sub pl-0">
-                  <h6>	Optimized Injection Moulding Processes at the Push of a Button</h6>
+                  <h6>Streamlined Injection Molding with the Push of a Button</h6>
+                </div>
+                <div className="panel-sub pl-0 pr-0">
+                  <h6>Enhance Machine Efficiency through Application Technology</h6>
                 </div>
                 <div className="panel-sub pl-0">
-                  <h6>	Get More Out of Your Machines – with Application Technology</h6>
-                </div>
-                <div className="panel-sub pl-0">
-                  <h6>Get More Out of Your Machines – with Application Technology</h6>
+                  <h6>Empower Yourself with Targeted Training Courses</h6>
                 </div>
               </div>
             </div>
@@ -72,14 +65,9 @@ export default function Process() {
       </section>
       <section className="section bg-light stepswrapper">
         <div className="container">
-          <div className="row justify-content-center ml-0">
-            <div className="col-md-10 col-lg-10 col-xl-7 text-center">
-              <h4 className="mb-2">Possibilities for Optimizing Injection Moulding Processes</h4>
-              {/* <p>
-                Lorem ipsum dolor sit amet consectetur. Vitae sit ultrices
-                vulputate tristique molestie non. Iaculis urna vestibulum sed
-                velit neque
-              </p> */}
+          <div className="row justify-content-center ml-0 w-100">
+            <div className="col-md-10 col-12 text-center">
+              <h4 className="mb-2">Possibilities for Optimizing Injection Molding Processes</h4>
             </div>
           </div>
           <div className="row pt-4 ml-0">
@@ -87,51 +75,34 @@ export default function Process() {
               <div className="step-card">
                 <h2>01</h2>
                 <h6>Application Engineering</h6>
-                <p>
-                • Check feasibility of injection  moulding processes
-                 
-                </p>
-                <p>
-                • Trails in ENGEL technology centers
-                 
-                </p>
-                <p>
-                • Optimize ongoing injection molding processes
-                 
-                </p>
+                <ul className="pl-3">
+                  <li>Assessing Feasibility of Injection Molding Processes</li>
+                  <li>Trials in ENGEL Technology Centers</li>
+                  <li>Continuous Optimization of Injection Molding Processes</li>
+                </ul>
               </div>
             </div>
             <div className="col-md-4">
               <div className="step-card">
                 <h2>02</h2>
-                <h6>Plasticizing</h6>
-                <p>
-                • Parts of your plasticizing unit
-                </p>
-                <p>
-                • Consulting and technical support
-                </p>
-                <p>
-                • Customized solutions
-                </p>
-                <p>
-                • Fast, worldwide delivery
-                </p>
+                <h6>2.	Plasticizing</h6>
+                <ul className="pl-3">
+                  <li>Improving Your Plasticizing Unit</li>
+                  <li>Consulting and Technical Support</li>
+                  <li>Tailored Solutions</li>
+                  <li>Fast Worldwide Delivery</li>
+                </ul>
               </div>
             </div>
             <div className="col-md-4">
               <div className="step-card">
                 <h2>03</h2>
-                <h6>• Digital Solutions</h6>
-                <p>
-                • Optimization of Injection moulding processes along the product life cycle.
-                </p>
-                <p>
-                • Cross-system networking.
-                </p>
-                <p>
-                •	Utilize the full potential of your machine.
-                </p>
+                <h6>3.	Digital Solutions</h6>
+                <ul className="pl-3">
+                  <li>Optimization of Injection Molding Processes throughout the Product Life Cycle</li>
+                  <li>Cross-System Networking</li>
+                  <li>Utilize the Full Potential of Your Machine</li>
+                </ul>
               </div>
             </div>
           </div>

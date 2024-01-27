@@ -129,34 +129,34 @@ function About() {
                 </div>
               </div>
               <div className="row ml-0 aboutFeatures">
-                <div className="col-md-4">
-                  <div className="icon-box-wrapper text-center">
-                    <div className="icon">
+                <div className="col-md-4 text-justify">
+                  <div className="icon-box-wrapper">
+                    <div className="icon text-center">
                       <img src="../../../images/pages/about-f1.svg" alt="icon" />
                     </div>
-                    <h4>ISO Certified Excellence</h4>
+                    <h4 className="text-center">ISO Certified Excellence</h4>
                     <p>
                       Hinds Plastic Machines Pvt Ltd proudly holds ISO certification, showcasing our steadfast commitment to rigorous quality standards and operational excellence. This certification underscores our dedication to delivering products and services that surpass industry benchmarks, ensuring exceptional quality across all facets of our operations.
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="icon-box-wrapper text-center">
-                    <div className="icon">
+                <div className="col-md-4 text-justify">
+                  <div className="icon-box-wrapper">
+                    <div className="icon text-center">
                       <img src="../../../images/pages/about-f2.svg" alt="icon" />
                     </div>
-                    <h4>Top-Quality Assurance</h4>
+                    <h4 className="text-center">Top-Quality Assurance</h4>
                     <p>
                       At Hinds Plastic Machines Pvt Ltd, top-notch quality is not just a goal; it's our standard. Our firm commitment to quality assurance permeates every aspect of our operations, from materials sourcing to manufacturing processes. We adhere to the highest standards, ensuring each product leaving our facilities is synonymous with durability, reliability, and uncompromising quality.
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="icon-box-wrapper text-center">
-                    <div className="icon">
+                <div className="col-md-4 text-justify">
+                  <div className="icon-box-wrapper">
+                    <div className="icon text-center">
                       <img src="../../../images/pages/about-f3.svg" alt="icon" />
                     </div>
-                    <h4>Dedicated Support</h4>
+                    <h4 className="text-center">Dedicated Support</h4>
                     <p>
                     Experience exceptional support with Hinds Plastic Machines Pvt Ltd. Our commitment to support goes beyond product delivery. We stand by our clients, offering responsive and personalized assistance at every stage. Our team ensures your experience with our machines is seamless, backed by a reliable network of professionals ready to assist you.
                     </p>

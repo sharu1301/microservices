@@ -27,14 +27,26 @@ const GetinTouch = () => {
                             <p className="socialLinks">Find Us</p>
 
                             <div className=" imgDiv">
-                                <img  alt="" src={x} />
+                                <a href="/">
+                                <img alt="" src={x} />
+                                </a>
 
-                                <img  alt="" src={facebook} />
+                                <a href="/">
+                                <img alt="" src={facebook} />
+                                </a>
 
 
-                                <img  alt="" src={instagram} />
+                                <a href="/">
+                                <img alt="" src={instagram} />
+                                </a>
 
-                                <img  alt="" src={linkedIn} />
+                                <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank">
+                                    <img
+                                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                                        alt=""
+                                        src={linkedIn}
+                                    />
+                                </a>
                             </div>
                         </div>
                         {/* </div> */}

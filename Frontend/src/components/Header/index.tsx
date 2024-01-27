@@ -28,32 +28,40 @@ export default function Header() {
               <div className="col-md-4 pr-0 text-right">
                 <div className={"icons"}>
                   <div className={"socialIcons01"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={x}
-                    />
+                    <a href="/">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={x}
+                      />
+                    </a>
                   </div>
                   <div className={"socialIcons01"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={facebook}
-                    />
+                    <a href="/">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={facebook}
+                      />
+                    </a>
                   </div>
                   <div className={"socialIcons03"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={instagram}
-                    />
+                    <a href="/">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={instagram}
+                      />
+                    </a>
                   </div>
                   <div className={"socialIcons03"}>
-                    <img
-                      className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                      alt=""
-                      src={linkedIn}
-                    />
+                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank">
+                      <img
+                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
+                        alt=""
+                        src={linkedIn}
+                      />
+                    </a>
                   </div>
                 </div>
               </div>

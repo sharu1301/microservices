@@ -1,0 +1,100 @@
+@import "../../assets/sass/main.scss";
+
+.auxwrapper {
+    padding: 40px 0;
+
+    h6 {
+        font-size: $f24;
+        color: #666666;
+    }
+
+    .aux-image {
+        background-color: #DCDCDC;
+        padding: 15px;
+        height: auto;
+        width: 100%;
+        border-radius: 8px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .aux-content {
+        padding-left: 40px;
+
+        @include breakpoint(sm) {
+            padding: 0 !important;
+            margin-top: $mt-3;
+            margin-bottom: $mt-3;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 10px;
+
+            @include breakpoint(sm) {
+                font-size: $f28;
+            }
+        }
+
+        h6 {
+            font-size: $f24;
+        }
+
+        ul {
+            padding-left: 20px;
+
+            li {
+                font-size: $f18;
+                margin-bottom: 8px;
+            }
+        }
+
+        ol {
+            padding-left: 20px;
+
+            li {
+                font-size: $f18;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .specification {
+        width: 100%;
+
+        th {
+            font-weight: normal;
+        }
+
+        th,
+        td {
+            border: 1px solid;
+            padding: 1px;
+            text-align: center;
+            color: $black;
+            font-size: $f18;
+        }
+    }
+
+    .spec-table {
+        @include breakpoint(md){
+            overflow: auto;
+        }
+        @include breakpoint(sm) {
+            overflow: auto;
+        }
+    }
+
+    .resp {
+        @include breakpoint(sm) {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 0 !important;
+        }
+    }
+}

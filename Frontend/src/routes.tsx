@@ -17,6 +17,7 @@ import CustomerMaintenance from "./pages/CustomerMaintenance";
 import Upgrades from "./pages/Upgrades";
 import Career from "./pages/Career";
 import CareerListing from "./pages/careerListing";
+import Auxiliaries from "./pages/Auxiliaries";
 
 const routes = (
   <>
@@ -38,6 +39,7 @@ const routes = (
       <Route path="/upgrades" element={<Upgrades/>} />
       <Route path="/career" element={<Career/>} />
       <Route path="/careerlisting" element={<CareerListing/>} />
+      <Route path="/auxiliaries" element={<Auxiliaries/>} />
     </Routes>
   </>
 );

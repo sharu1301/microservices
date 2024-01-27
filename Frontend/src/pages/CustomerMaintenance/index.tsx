@@ -44,23 +44,13 @@ const CustomerMaintenance = () => {
         <div className="description-section">
           <div className="container">
             <div className="row ml-0">
-              <div className="col-md-10 m-auto text-center">
+              <div className="col-md-8 m-auto text-center">
                 <h2 className="head">
-                  Customer service & injection <br /> molding machine
-                  maintenance
+                  Customer service & injection molding machine maintenance
                 </h2>
-                <p>Modernization or Adaptation of Existing Machines</p>
+                <p>Uncomplicated and fast – throughout the service life of the machine</p>
                 <p>
-                  Hinds service stands for solving problems in no time. Our
-                  technical service solutions offe quality support throughout
-                  the entire service life of your plastics injection molding
-                  machines. When you need help immediately, you can count on us
-                  - our service technicians are available in your area with
-                  comprehensive product knowledge and many years of experience.
-                  We have an extensive spare parts inventory with 24/7 parts
-                  shipment, 365 days a year. In addition, our customer service &
-                  maintenance experts are here to advise you on predictive
-                  maintenance solutions for a trouble-free production.
+                  Hinds service stands for solving problems in no time. Our technical service solutions offer quality support throughout the entire service life of your plastics injection molding machines. When you need help immediately, you can count on us - our service technicians are available in your area with comprehensive product knowledge and many years of experience. We have an extensive spare parts inventory with 24/7 parts shipment, 365 days a year. In addition, our customer service & maintenance experts are here to advise you on predictive maintenance solutions for a trouble-free production.
                 </p>
               </div>
             </div>
@@ -71,19 +61,18 @@ const CustomerMaintenance = () => {
             <div className="row ml-0">
               <div className="col-md-10 m-auto text-center parts-delivery">
                 <h2 className="head ">
-                  Do you need assistance from the Hinds service experts for your
-                  plastics injection molding machines or spare parts delivery?
+                  Do you need assistance from the ENGEL service experts for your plastics injection molding machines or spare parts delivery?
                 </h2>
                 <p className="tel">
-                  <Link to="tel:1800 1187 7718">
+                  <Link to="tel:717 764 6818 ">
                     <i className="fa-solid fa-phone"></i>
-                    1800 1187 7718
+                    +1 717 764 6818
                   </Link>
                 </p>
 
                 <p className="spd-text">
                   Charges for the hotline vary depending on the country. <br />
-                  You can find more information at Service & Support.
+                  You can find more information at Service & Support
                 </p>
               </div>
             </div>

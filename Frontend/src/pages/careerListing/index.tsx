@@ -76,38 +76,8 @@ const CareerListing = () => {
                                 <tbody>
                                     <tr>
                                         <td>01-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>02-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>02-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>03-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>16-12-2023 </td>
-                                        <td>Lorem ipsum dolor sit</td>
-                                        <td>Lorem ipsum dolor sit</td>
+                                        <td>Marketing Intern</td>
+                                        <td>Marketing/Advertising/Public Relations</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -129,7 +99,7 @@ const CareerListing = () => {
                                         malesuada pretium tristique imperdiet.
                                         Lorem ipsum dolor sit amet consectetur.
                                         malesuada pretium tristique imperdiet.</p>
-                                    <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a>
+                                    {/* <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a> */}
                                 </div>
                             </div>
                         </div>
@@ -144,7 +114,7 @@ const CareerListing = () => {
                                         malesuada pretium tristique imperdiet.
                                         Lorem ipsum dolor sit amet consectetur.
                                         malesuada pretium tristique imperdiet.</p>
-                                    <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a>
+                                    <a href="/about">Read More<i className="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +129,7 @@ const CareerListing = () => {
                                         malesuada pretium tristique imperdiet.
                                         Lorem ipsum dolor sit amet consectetur.
                                         malesuada pretium tristique imperdiet.</p>
-                                    <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a>
+                                    {/* <a href="/careerlisting">Find More<i className="fa-solid fa-arrow-right"></i></a> */}
                                 </div>
                             </div>
                         </div>

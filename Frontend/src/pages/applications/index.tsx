@@ -52,7 +52,7 @@ export default function Applications(){
           />
 
        <AppCard
-       onClickApp={()=>navigate('/product-by-category/moulding')}
+       onClickApp={()=>navigate('/product-by-category/household')}
            image={image3}
            icon={icon3}
            reverse={false}

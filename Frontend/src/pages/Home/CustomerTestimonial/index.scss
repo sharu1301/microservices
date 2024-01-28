@@ -30,7 +30,7 @@
         position: relative;
         display: flex;
         align-items:flex-end;
-        margin-bottom: 35px;
+        margin:0 18px 35px 18px;
         @include breakpoint(md) {
           max-width: 90%;
           margin: 6px;
@@ -92,7 +92,7 @@
         position: relative;
         display: flex;
         align-items:flex-end;
-        margin-bottom: 35px;
+        margin:0 18px 35px 18px;
 
         @include breakpoint(md) {
           max-width: 90%;

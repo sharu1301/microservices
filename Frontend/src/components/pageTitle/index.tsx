@@ -6,7 +6,7 @@ const PageTitle = (props: { title: string,subtitle:string }) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
-            <div className="pageTitle">{props.title}</div>
+            <div className="pageTitle">{ props.title}</div>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">

@@ -111,6 +111,7 @@
     position: relative;
     height: 66px;
     object-fit: cover;
+    cursor: pointer;
 
     @include breakpoint(md) {
       height: 40px;
@@ -162,7 +163,7 @@
   .contactUsParent {
     position: relative;
     background-color: #e21d23;
-    margin-left: 20px;
+    margin-left: 10vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -179,6 +180,9 @@
       margin-left: 10px;
       padding: 10px 14px;
       font-size: $f14;
+    }
+    @include breakpoint(xl) {
+      margin-left: 50px;
     }
 
     .contactUs {

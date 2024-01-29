@@ -31,18 +31,24 @@ export default function Gallery() {
   const [machineryImages, setMachineryImages] = useState([]);
   const [allVideos, setAllVideos] = useState([]);
   const [pictures, setPictures] = useState<Picture[]>([]);
+
+
+
+
   useEffect(() => {
     getGalleryImages();
      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  
   const getGalleryImages = () => {
-    let tempVideos: any = [];
-    let temExhibitionGallery: any = [];
-    let tempMachinery: any = [];
+    let tempVideos = [];
+    let temExhibitionGallery = [];
+    let tempMachinery = [];
     axios.get(`${exposureURL}/our-gallery`).then((response) => {
       const groups = response?.data?.groups;
       // setAllImages(response?.data?.groups);
-      groups.forEach((group: any) => {
+      groups.forEach((group) => {
         if (group.title === "Exhibition Gallery") {
           temExhibitionGallery = temExhibitionGallery.concat(
             group.photos.map((image) => ({
@@ -74,7 +80,7 @@ export default function Gallery() {
       setPictures([...tempMachinery, ...tempVideos, ...temExhibitionGallery]);
     });
   };
-  const handleChange = (event, newValue) => {
+  const handleChange = ( newValue) => {
     setValue(newValue);
   };
   return (

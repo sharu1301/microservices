@@ -96,6 +96,7 @@ const navigate=useNavigate()
                       {data?.mainImg?.map((image, index) =>
                       (
                         <img
+                        key={index}
                           src={require(`../../assets/${image}`)}
                           className='image'
                           alt=''

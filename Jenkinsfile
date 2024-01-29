@@ -43,20 +43,8 @@ pipeline {
                 script {
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
-                        if (qg.status == 'OK') {
-                            echo "Quality gate passed, generating ticket..."
-                            // Add your ticket generation code here
-                            def jiraIssue = [
-                                fields: [
-                                    project: [key: 'HIN'],
-                                    summary: 'SonarQube Quality Gates Passed',
-                                    description: "SonarQube Quality Gates passed for build ${env.BUILD_NUMBER}.",
-                                    issuetype: [name: 'Task']
-                                ]
-                            ]
-                            jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
-                        } else {
-                            // Generate ticket for failed quality gate
+                        if (qg.status != 'OK') {
+                              // Generate ticket for failed quality gate
                             echo "Quality gate failed, generating ticket..."
                             // Add your ticket generation code here
                             def jiraIssue = [
@@ -68,7 +56,8 @@ pipeline {
                                 ]
                             ]
                             jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
-                        }
+                        } 
+                        
                     }
                 }
             }
@@ -110,14 +99,14 @@ pipeline {
     }
 
     post {
-        success {
+        failure {
             script {
                 def jiraIssue = [
                     fields: [
                         project: [key: 'HIN'],
-                        summary: 'New JIRA Created on Build Success',
-                        description: 'A new Jira ticket created automatically because the build succeeded.',
-                        issuetype: [name: 'Task']
+                        summary: 'New JIRA Created on Build failed',
+                        description: 'A new Jira ticket created automatically because the build failed.',
+                        issuetype: [name: 'Bug']
                     ]
                 ]
 
@@ -125,11 +114,11 @@ pipeline {
             }
         }
 
-        failure {
+        success {
             script {
                 echo "Build failed. No Jira ticket will be created."
             }
         }
     }
 }
-/// aaded comment
+

@@ -95,7 +95,7 @@
   padding: 40px 0;
 
   .image {
-    background-color: #dcdcdc;
+    background-color: #F6F0FF;
     padding: 15px;
     height: 100%;
     width: 100%;
@@ -158,6 +158,11 @@
       padding-top: 0 !important;
     }
   }
+  .form-check-input{
+    background-color:#085B88;
+    border-color: #085B88;
+}
+
 }
 
 .feature-section {
@@ -180,8 +185,10 @@
   .fea-card {
     background-color: $white;
     border: 1px solid #e6e6e6;
-    padding: 20px;
     border-radius: 4px;
+    .fea-hr-line{
+      padding: 20px;
+    }
 
     @include breakpoint(sm) {
       margin-bottom: 20px;
@@ -189,6 +196,7 @@
 
     hr {
       width: 100%;
+      margin: 0;
     }
 
     h4 {
@@ -256,7 +264,7 @@
   }
 
   .image {
-    background-color: #dcdcdc;
+    background-color: #F6F0FF;
     padding: 15px;
     height: 100%;
     width: 100%;
@@ -304,7 +312,8 @@
     }
   }
 }
-
+.bannerBackground{
+  background-color: #F6F0FF;
 .bannerwrapper {
   position: relative;
   width: 100%;
@@ -319,7 +328,9 @@
   @include breakpoint(sm) {
     padding-top: 30px;
   }
-
+  .know-details{
+    padding-bottom: 10px;
+  }
   .left-info {
     padding-right: 40px;
 
@@ -376,7 +387,7 @@
     }
     @include breakpoint(sm) {
     }
-
+    
     span {
       background-color: #be0e14;
       padding: 8px 15px;
@@ -395,6 +406,7 @@
       margin-bottom: 6px;
     }
   }
+}
 }
 
 .right::before {

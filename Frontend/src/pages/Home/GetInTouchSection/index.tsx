@@ -22,7 +22,7 @@ const GetinTouch = () => {
                             <p>Email</p>
                             <p>hinds@rediffmail.com</p>
                             <p>Phone</p>
-                            <p>+91 +91 9312657397</p>
+                            <p>+91 9312657397</p>
                             {/* <div className='socialLinks'> */}
                             <p className="socialLinks">Find Us</p>
 

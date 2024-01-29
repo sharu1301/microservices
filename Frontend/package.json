@@ -1,6 +1,6 @@
 {
-  "name": "hind-machine",
-  "version": "1.0.0",
+  "name": "hinds-machines",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

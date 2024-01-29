@@ -181,6 +181,7 @@
       padding: 10px 14px;
       font-size: $f14;
     }
+
     @include breakpoint(xl) {
       margin-left: 50px;
     }
@@ -356,6 +357,7 @@
     top: -1px;
     min-width: auto;
   }
+
   .dropdown-menu>li:hover>.submenu {
     display: block;
   }

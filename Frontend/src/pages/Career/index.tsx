@@ -175,13 +175,14 @@ const Career = () => {
           </div>
         </div>
       </div>
+      <div className="bannerBackground">
       <div className="bannerwrapper">
         <div className="container">
           <div className="row w-100 ml-0 align-items-center">
             <div className="col-md-6 col-12">
               <div className="left-info">
                 <h2>Know How</h2>
-                <p className="text-justify">
+                <p className="text-justify know-details">
                   At HINDS Project, we are a collective of global specialists in
                   the realm of automotive engineering, rising to the occasion to
                   address the dynamic challenges of the industry. Leveraging a
@@ -262,6 +263,7 @@ const Career = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <section className="section servicesWrapper">
@@ -376,37 +378,49 @@ const Career = () => {
           <div className="row w-100 mt-3 ml-0">
             <div className="col-md-4 col-12">
               <div className="fea-card">
+                <div className="fea-hr-line">
                 <p>
                   Understanding the importance of balance, we present a variety
                   of flexible working arrangements, including options for remote
                   work and other practices to nurture a harmonious work-life
                   integration.{" "}
                 </p>
+                </div>
                 <hr />
+                <div className="fea-hr-line">
                 <h4>For your Work- Life Balance</h4>
+                </div>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="fea-card">
+                <div className="fea-hr-line">
                 <p>
                   Your health is paramount to us, which is why we're proud to
                   propose a multitude of wellness and fitness programs,
                   complemented by our canteen's dedication to seasonal and local
                   fare.{" "}
                 </p>
+                </div>
                 <hr />
+                <div className="fea-hr-line">
                 <h4>For Your Health</h4>
+                </div>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="fea-card">
+                <div className="fea-hr-line">
                 <p>
                   We are devoted to fostering your career development through
                   tailored training programs and love to jointly celebrate our
                   achievements during our many company-wide festivities.
                 </p>
+                </div>
                 <hr />
+                <div className="fea-hr-line">
                 <h4>For Your Success</h4>
+                </div>
               </div>
             </div>
             {/* <div className="col-md-4 col-12">

@@ -9,13 +9,16 @@
   justify-content: flex-start;
   flex-direction: row;
   margin-bottom: 0px;
-  .row{
+
+  .row {
     width: 100%;
     margin-bottom: 20px;
   }
-  .line{
+
+  .line {
     width: 100%;
   }
+
   p {
     color: $white;
     margin-top: 15px;
@@ -49,7 +52,8 @@
 
         i {
           margin-right: 10px;
-          @include breakpoint(sm){
+
+          @include breakpoint(sm) {
             display: none;
           }
         }
@@ -64,8 +68,9 @@
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
+
     @include breakpoint(sm) {
-    display: none;
+      display: none;
     }
   }
 
@@ -97,8 +102,32 @@
     border: 1px solid #bebebe;
     background: transparent;
     width: 80%;
-    padding: 6px 8px;
+    padding: 10px 8px;
+    color: $white !important;
     font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+  }
+
+  .arrow-btn {
+    padding: 4px 18px;
+    border: none;
+    margin-left: -58px;
+    border-radius: 4px;
+    background-color: $white;
+    outline: none;
+
+    i {
+      color: #283742;
+    }
+
+    :hover {
+      background-color: $white !important;
+    }
   }
 }
 
@@ -107,7 +136,7 @@
 
   .imgDiv {
     display: none;
-    
+
     @include breakpoint(sm) {
       margin: 20px 0px 0px 0px;
       display: flex;
@@ -123,6 +152,14 @@
 
     @include breakpoint(sm) {
       text-align: center;
+    }
+  }
+
+  svg {
+    margin-right: 8px;
+
+    @include breakpoint(sm) {
+      display: none;
     }
   }
 

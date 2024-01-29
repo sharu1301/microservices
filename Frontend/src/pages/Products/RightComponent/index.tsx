@@ -26,7 +26,7 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
         <div className="row rightComponent pt-5 d-flex w-100">
             <div className='col-md-6 rightDescription'>
                 <h4>{title}</h4>
-                <p></p>
+                <p>{description}</p>
                 <img className='responsiveImg' src={img} alt='' />
                 <div className="row">
                     <p className='highlighed'>{highlight1}</p>

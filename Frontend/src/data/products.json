@@ -161,12 +161,60 @@
             "Radial Piston type hydraulic motor enable high torque and excellent performance."
         ],
         "industry": [
-            "Pail Containers",
-            "Household",
+            "PID Control System",
+            "Robot Interface",
             "Electrical Industry",
             "Automobile & More",
             "Moulding"
         ]
-    }
+    },
+
+
+
     
+    {
+        "title": "Euro Servo R Smart Series",
+        "image":"images/productimages/EuroServoR.png",
+        "description": "Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump",
+        "features": [
+            "PID Control System",
+            "Robot Interface",
+            "TFT Color Display"
+        ],
+        "lists": [
+            "Wide tie bar distance and daylight.",
+            "Direct hydraulic clamping system enable stable and precisely controlled clamping force.",
+            "Radial Piston type hydraulic motor enable high torque and excellent performance."
+        ],
+        "industry": [
+            "PID Control System",
+            "Robot Interface",
+            "Electrical Industry",
+            "Automobile & More",
+            "Moulding"
+        ]
+    },
+
+
+
+    {
+        "title": "Euro Servo Smart Series",
+        "image":"images/productimages/EuroCPVC.png",
+        "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
+        "features": [
+            "Construction",
+            "Energy Efficient",
+            "High Productivity"
+        ],
+        "lists": [
+            "Dedicated CPVC Machine",
+            "Unscrew feature for electric motor",
+            "Separate manifolds for injection unit and clamping unit",
+            "LPMT for posion measuring for moving platen, screw travel & Ejection."
+        ],
+        "industry": [
+            "CPVC Fittings",
+            "Construction"
+        ]
+    }
 ]

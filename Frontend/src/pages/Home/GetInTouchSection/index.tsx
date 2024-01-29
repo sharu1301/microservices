@@ -40,7 +40,7 @@ const GetinTouch = () => {
                                 <img alt="" src={instagram} />
                                 </a>
 
-                                <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank">
+                                <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank" rel="noreferrer">
                                     <img
                                         className={"e3ac851901b7444af8c2c6XLogoIcon1"}
                                         alt=""

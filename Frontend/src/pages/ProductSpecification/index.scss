@@ -1,20 +1,79 @@
+@import '../../assets/sass/main.scss';
+
 .mainSectionContainer {
+    // border: 5px solid black;
+    // width: 100%;
+
+    // .machine-unit {
+
+    //     height: 100%;
+    //     width: 100%;
+    //     position: absolute;
+    //     // padding: 40px 60px;
+    //     align-items: flex-start;
+    //     display: flex;
+
+    //     @include breakpoint(md) {
+    //         overflow: scroll;
+    //         max-width: 90%;
+    //     }
+
+
+    //     .machine-content {
+    //         padding: 10px;
+    //         background-color: aliceblue;
+    //         text-align: center;
+    //         align-items: center;
+
+    //         .close {
+    //             cursor: pointer;
+    //             margin-left: 20px;
+    //         }
+
+    //         h2 {
+    //             font-size: 22px;
+    //             line-height: 30px;
+    //             margin-bottom: 20px;
+    //         }
+
+    //         h6 {
+    //             font-size: 18px;
+    //         }
+
+    //         ul {
+    //             li {
+    //                 list-style-type: none;
+    //             }
+    //         }
+
+    //         img {
+    //             height: 50px;
+    //             width: 50px;
+    //             border-radius: 50px;
+    //         }
+    //     }
+    // }
 
     display: flex;
-    padding: 30px 95px;
+    padding: 30px 95px 10px 10px;
+    justify-content: space-between;
+    align-items: center;
 
     @media screen and (max-width: 1023px) {
         padding: 30px 20px;
     }
+
     @media screen and (max-width: 500px) {
         flex-direction: column;
         padding: 30px 10px;
     }
 
     .image {
-        width: 70%;
-        height: auto;
-        @media screen and (max-width: 1023px){
+        width: 80%;
+        height: 40%;
+        
+
+        @media screen and (max-width: 1023px) {
             width: 68%;
             height: auto;
         }
@@ -33,7 +92,8 @@
         // background-color: 
         border-radius: 8px;
         background: #F6F6F6;
-        @media screen and (max-width: 1023px){
+
+        @media screen and (max-width: 1023px) {
             width: 30%;
             height: auto;
         }
@@ -47,14 +107,17 @@
         .slider {
             margin-bottom: 15px;
             margin-top: 15px;
-            .slick-slider{
+
+            .slick-slider {
                 margin: 0;
             }
-            .slick-slide img{
+
+            .slick-slide img {
                 height: auto;
                 width: 100%;
                 display: block;
             }
+
             .slick-dots li button {
                 font-size: 7px;
                 line-height: 0;
@@ -202,8 +265,9 @@
             font-weight: 700;
             margin-top: 14px;
             line-height: 150%;
+
             /* 39px */
-            @media screen and (max-width: 1023px){
+            @media screen and (max-width: 1023px) {
                 font-size: 18px;
             }
         }
@@ -229,11 +293,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .image-section{
+
+    .image-section {
         width: 60%;
+
         @media screen and (max-width: 500px) {
             width: 100%;
         }
+
         img {
             width: 100%;
             border-radius: 0;
@@ -293,7 +360,7 @@
     }
 }
 
-.reactplayer{
+.reactplayer {
     align-items: center;
     align-self: center;
     justify-content: center;

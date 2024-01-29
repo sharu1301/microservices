@@ -13,13 +13,13 @@ export default function NewsGallery() {
                     <div className='horizontalContainer'>
                         <div className='rectangleDiv'>
                             <img src={galleryImg1} width='100%' alt='' />
-                            <p className='title'>at massa nulla quisque posuere.</p>
-                            <p className='subtitle'>Lorem ipsum dolor sit amet </p>
+                            {/* <p className='title'>at massa nulla quisque posuere.</p>
+                            <p className='subtitle'>Lorem ipsum dolor sit amet </p> */}
                         </div>
                         <div className='rectangleDiv'>
                             <img src={galleryImg2} width='100%' alt='' />
-                            <p className='title' >at massa nulla quisque posuere.</p>
-                            <p className='subtitle'>Lorem ipsum dolor sit amet </p>
+                            {/* <p className='title' >at massa nulla quisque posuere.</p>
+                            <p className='subtitle'>Lorem ipsum dolor sit amet </p> */}
                         </div>
                     </div>
 

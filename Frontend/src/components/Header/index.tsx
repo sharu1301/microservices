@@ -55,7 +55,7 @@ export default function Header() {
                     </a>
                   </div>
                   <div className={"socialIcons03"}>
-                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank">
+                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank" rel="noreferrer">
                       <img
                         className={"e3ac851901b7444af8c2c6XLogoIcon1"}
                         alt=""
@@ -112,7 +112,7 @@ export default function Header() {
                         ))}
                       </ul>
                     </li> */}
-                    <li><a className="dropdown-item" href="/productlist">Auxiliary Parts</a></li>
+                    <li><a className="dropdown-item" href="/auxiliaries">Auxiliary Parts</a></li>
                   </ul>
                 </li>
 

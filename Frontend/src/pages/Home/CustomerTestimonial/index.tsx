@@ -3,10 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.scss";
-import Achievement1 from "../../../assets/images/Achievement1.png";
+
 import CustomerTestominialData from '../../../data/testimonial.json'
 
-const Sample1 = require("../../../assets/videos/Sample1.mp4");
+const Sample1 = require("../../../assets/videos/testimonial1.MOV");
+const Sample2 = require("../../../assets/videos/testimonial2.MOV");
 
 interface Testimonial {
   id: number;
@@ -27,7 +28,7 @@ const CustomerTestimonials = () => {
     dots: true,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
   };
   const handleTestimonialHover = (testimonial: Testimonial) => {
     setSelectedTestimonial(testimonial);
@@ -126,7 +127,7 @@ const CustomerTestimonials = () => {
         <div className="col-md-6 col-12 videoDiv ">
           <Slider {...VideoSettings}>
             <video src={Sample1} controls />
-            <video src={Sample1} controls />
+            <video src={Sample2} controls />
           </Slider>
         </div>
       </div>

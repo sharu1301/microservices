@@ -139,7 +139,7 @@ const navigate=useNavigate()
                       </ul>
                     </div>
 
-                    <div className={'btnContainer'} style={{ background: 'blue' }} onClick={()=>navigate('/productenquiry')}>
+                    <div className={'btnContainer mt-2'} onClick={()=>navigate('/productenquiry')}>
                       <img src={downArrow} alt='' />
                       <b>Download Broucher</b>
                     </div>

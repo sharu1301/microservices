@@ -1,7 +1,6 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import PageTitle from "../../components/pageTitle";
-import SubFooter from "../../components/subFooter";
 import "./index.scss";
 
 export default function ContactUs() {

@@ -9,7 +9,7 @@ const ProductEnquiry = () => {
     return (
         <div>
             <Header />
-            <PageTitle title="Product Enquiry" />
+            <PageTitle title="Product Enquiry" subtitle="Product Enquiry" />
             <div className="productenquiry">
                 <div className="col-md-4">
                     <p>Get a free quote</p>

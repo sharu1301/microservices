@@ -22,7 +22,7 @@ const ProductList = () => {
     return (
         <div>
             <Header />
-            <PageTitle title="Products" />
+            <PageTitle title="Products"subtitle="Products" />
 
             <div className="container mb-5">
                 <LeftImgComponent

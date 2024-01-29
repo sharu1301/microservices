@@ -8,7 +8,7 @@ const Auxiliaries = () => {
     return (
         <>
             <Header />
-            <PageTitle title="Auxiliaries" />
+            <PageTitle title="Auxiliaries" subtitle="Auxiliaries" />
             <div className="auxwrapper">
                 <div className="container">
                     <div className="row w-100 ml-0 align-items-center">

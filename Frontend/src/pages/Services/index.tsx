@@ -8,7 +8,7 @@ const Service = () => {
   return (
     <>
       <Header />
-      <PageTitle title="About Services" />
+      <PageTitle title="About Services" subtitle="About Services"/>
       <main className="ContentWrapper">
         <section className="section introWrapper">
           <div className="container">

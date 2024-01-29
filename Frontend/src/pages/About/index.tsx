@@ -66,7 +66,7 @@ function About() {
   return (
     <>
       <Header />
-      <PageTitle title="About us" />
+      <PageTitle title="About us" subtitle="About us"/>
       <main className="ContentWrapper">
         <div className="container">
           <section className="section ourStory">

@@ -8,7 +8,7 @@ const CareerListing = () => {
     return (
         <>
             <Header />
-            <PageTitle title=" Get Your Dream job with Hinds." />
+            <PageTitle title=" Get Your Dream Job with Hinds."subtitle="Career" />
             <div className="filter-section">
                 <div className="container">
                     <div className="row w-100">

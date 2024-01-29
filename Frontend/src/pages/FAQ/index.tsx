@@ -18,7 +18,7 @@ const FAQScreen = () => {
   return (
     <div>
       <Header />
-      <PageTitle title={"FAQ"} />
+      <PageTitle title={"FAQ"} subtitle="FAQ" />
       <div className="faqSection">
         <h3>Frequently Asked Questions</h3>
         <p>

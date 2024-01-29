@@ -9,7 +9,7 @@ const Updates = () => {
     return (
         <>
             <Header />
-            <PageTitle title="Updates" />
+            <PageTitle title="Get Your Dream Job with Hinds." subtitle="Updates" />
             <NewsGallery />
             <div className="article-section">
                 <div className="container">

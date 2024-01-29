@@ -81,7 +81,7 @@ export default function Gallery() {
     <>
       <Header />
       {/* <h2> Gallery</h2> */}
-      <PageTitle title={"Gallery"} />
+      <PageTitle title={"Gallery"} subtitle="Gallery"/>
       <Box
         sx={{
           borderBottom: 1,

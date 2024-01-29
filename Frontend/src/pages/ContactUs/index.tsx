@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <div>
       <Header />
-      <PageTitle title="Contact us" />
+      <PageTitle title="Contact Us" subtitle="Contact Us" />
       <div className="contact">
         <div className="container">
           <div className="row w-100 align-items-center ml-0">

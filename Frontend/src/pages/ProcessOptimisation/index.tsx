@@ -8,7 +8,7 @@ export default function Process() {
   return (
     <div className="process-optimization">
       <Header />
-      <PageTitle title="Process Optimisation" />
+      <PageTitle title="Process Optimisation"  subtitle="Process Optimisation"/>
       <main className="ContentWrapper">
         <div className="container">
           <div className="section ourstory">

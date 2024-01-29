@@ -1,6 +1,6 @@
 import React from "react";
 
-const PageTitle = (props: { title: string }) => {
+const PageTitle = (props: { title: string,subtitle:string }) => {
   return (
     <div className="pageBanner">
       <div className="container-fluid">
@@ -13,7 +13,7 @@ const PageTitle = (props: { title: string }) => {
                   <a href="/">Home</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  {props.title}
+                  {props.subtitle}
                 </li>
               </ol>
             </nav>

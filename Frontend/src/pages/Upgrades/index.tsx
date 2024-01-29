@@ -8,7 +8,7 @@ const Upgrades = () => {
     return (
         <>
             <Header />
-            <PageTitle title="Upgrades" />
+            <PageTitle title="Upgrades" subtitle="Upgrades"/>
             <div className="description-section pt-5">
                 <div className="container">
                     <div className="row ml-0">

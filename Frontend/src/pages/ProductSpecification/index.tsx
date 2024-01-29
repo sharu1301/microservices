@@ -80,7 +80,7 @@ const navigate=useNavigate()
 
     <>
       <Header />
-      <PageTitle title={productname} />
+      <PageTitle title={productname} subtitle={productname} />
       <div>
 
         {injectionData ? (

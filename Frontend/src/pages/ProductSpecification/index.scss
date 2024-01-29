@@ -4,12 +4,19 @@
     // border: 5px solid black;
     // width: 100%;
 
-   
+
 
     display: flex;
     padding: 30px 95px 10px 50px;
     justify-content: space-around;
     // align-items: center;
+
+
+    .slick-prev:before, .slick-next:before {
+        
+        color: black  !important;
+    }
+   
 
     @media screen and (max-width: 1023px) {
         padding: 30px 20px;
@@ -23,7 +30,7 @@
     .image {
         width: 80%;
         height: 40%;
-        
+
 
         @media screen and (max-width: 1023px) {
             width: 68%;

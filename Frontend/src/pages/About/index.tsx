@@ -23,15 +23,12 @@ function About() {
 
 
   useEffect(() => {
-    getCoverImage();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const getCoverImage = () => {
     axios.get(`${exposureURL}/about-us`).then((response) => {
       setCoverImages(response.data.groups[0].photos)
     })
-  }
+  }, [exposureURL])
+
+  
   const ArrowLeft = () => {
     return (
       <div className='arrows' onClick={() => ref.current.slickNext()} >
@@ -55,7 +52,7 @@ function About() {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 9,
+    slidesToScroll: 1,
     nextArrow: <></>,
     prevArrow: <></>
 

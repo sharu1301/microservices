@@ -16,15 +16,13 @@ const Achievements = () => {
         slidesToScroll: 1
     };
     useEffect(() => {
-        getAchievements();
-         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    const getAchievements = () => {
         axios.get(`${exposureURL}/achievements`).then((response) => {
             setAchievementImages(response.data.groups[0].photos)
+            // console.log('hi')
         })
-    }
+    }, [exposureURL])
+
+   
 
 
     return (

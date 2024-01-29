@@ -6,13 +6,21 @@
   }
   .MuiTabs-scroller {
     @include breakpoint(sm) {
-      overflow: scroll;
+      overflow-x: scroll !important;
+    }
+    .MuiTabs-centered{
+      @include breakpoint(sm){
+        justify-content: flex-start !important;
+
+      }
+
     }
     .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
       text-transform: capitalize;
       font-size: $f18;
+
       @include breakpoint(sm) {
-        font-size: $f12;
+        font-size: 15px;
         padding: 12px 5px;
       }
     }

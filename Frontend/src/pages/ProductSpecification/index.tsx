@@ -91,6 +91,7 @@ const navigate=useNavigate()
 
                 <div className='mainSectionContainer row'>
                   <div className='imgSlider col-md-7'>
+
                     <Slider {...MainSliderSettings}>
                       {data?.mainImg?.map((image, index) =>
                       (
@@ -102,6 +103,8 @@ const navigate=useNavigate()
                       ))}
                     </Slider>
                   </div>
+
+                  
                   <div className='detailcard col-md-5'>
                     <div>
                       <b> End Application</b>

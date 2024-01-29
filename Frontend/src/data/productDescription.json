@@ -4,7 +4,7 @@
         "mainImg": [
           
             "images/product-specification/productoverview/EuroPacSeries/EuroPac.png",
-            "images/product-specification/productoverview/EuroPacSeries/EuroPacData.jpg"
+            "images/product-specification/productoverview/EuroPacSeries/PACData.jpg"
         ],
         "title": "Euro Pac Series",
         "image": "images/productimages/EuroPac.png",
@@ -71,7 +71,7 @@
     },
     {
         "title": "Euro Pet Series",
-        "mainImg": ["images/product-specification/productoverview/EuroPETSeries/mainPET.png","images/product-specification/productoverview/EuroPETSeries/PETdescription.jpg"],
+        "mainImg": ["images/product-specification/productoverview/EuroPETSeries/mainPET.png","images/product-specification/productoverview/EuroPETSeries/PetData.jpg"],
         "image": "images/productimages/EuroPet.png",
         "description": "Heavy duty five point toggle mechanism.Higher torque radial piston hydraulic motor for screw drive.",
         "features": [

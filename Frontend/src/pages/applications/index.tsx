@@ -32,7 +32,7 @@ export default function Applications(){
     return(
         <>
           <Header/>
-          <PageTitle title="Applications"/>
+          <PageTitle title="Applications" subtitle="Applications"/>
           <AppCard
           onClickApp={()=>navigate('/product-by-category/automotive')}
            image={image1}

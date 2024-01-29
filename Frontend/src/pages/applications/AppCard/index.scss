@@ -1,5 +1,13 @@
 
-.container{
+.app-box{
+    @media (max-width:500px) {
+        padding: 0;
+     }
+    .res-img{
+        .col-md-6{
+            padding: 0;
+        }
+    }
     .cardImg2{
         display: none;
         width: 100%;
@@ -14,8 +22,11 @@
     display: flex;
     // flex-direction: row;
     padding-top: 40px;
-
-   
+    cursor: pointer;
+    @media (max-width:500px) {
+        padding: 0 10px;
+     }
+    
     .cardImg{
         width: 100%;
         height: 300px;
@@ -62,6 +73,7 @@
             letter-spacing: 0.7px;
             @media (max-width:500px) {
                 font-size: 14px;
+                padding-bottom: 10px;
             }
         }
     } 

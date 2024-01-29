@@ -103,6 +103,7 @@ const Footer = () => {
                 </p>
                 <form action="">
                   <input type="text" placeholder="Your Email Address" />
+                  <button className="arrow-btn"><i className="fa-solid fa-arrow-right"></i></button>
                 </form>
               </div>
             </div>

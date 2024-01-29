@@ -1,159 +1,181 @@
 @import "../../assets/sass/main.scss";
 
+.description-section {
+  @include breakpoint(sm) {
+    padding: 26px 0 0 0 !important;
+  }
+}
+
 .upgrades-section {
-    @include breakpoint(sm){
-        padding: 10px 0 !important;
-    }
-    .upgrade-img {
+  @include breakpoint(sm) {
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+  }
+
+  .upgrade-img {
+    height: auto;
+    width: 100%;
+
+    img {
       height: auto;
       width: 100%;
-      img {
-        height: auto;
-        width: 100%;
-        @include breakpoint(sm){
-            margin-top: $mt-2;
-        }
-      }
-    }
-  
-    .right-panel {
-      padding-left: 20px;
+
       @include breakpoint(sm) {
-        padding-left: 0;
-      }
-      .panel {
-        padding: $pt-3 $pt-2 $pt-2 $pt-2;
-        box-shadow: 0px 4px 0px #FFE1E2;
-        margin-bottom: $mt-2;
-        @include breakpoint(sm){
-          box-shadow: 0px 0px 0px $white;
-          margin-bottom: 0;
-        }
-  
-        h6 {
-          @include breakpoint(xs) {
-            font-size: $f25;
-          }
-  
-          @include breakpoint(sm) {
-            font-size: $f25;
-          }
-  
-          @include breakpoint(md) {
-            font-size: $f25;
-          }
-        }
-  
-        p {
-          font-size: $f14;
-          margin-bottom: 0;
-          margin-top: $mt-1;
-          @include breakpoint(sm) {
-            font-size: $f16;
-          }
-        }
-  
-      }
-  
-      .panel:after {
-        content: "";
-        width: 50%;
-        height: 5px;
-        display: inline-block;
-        background-color: #BE0E14;
-        top: 30px;
-        left: -20px;
-        position: relative;
-        @include breakpoint(sm){
-          display: none;
-        }
-      }
-  
-      .panel-sub {
-        padding: $pt-3 $pt-2 $pt-2 $pt-2;
-        @include breakpoint(md) {
-          padding: $pt-3 0 $pt-2 $pt-2;
-        }
-        @include breakpoint(sm) {
-          padding: $pt-3 0 0 0;
-        }
-        h6 {
-          font-size: $f24;
-          line-height: 20px;
-          @include breakpoint(xs) {
-            font-size: $f25;
-          }
-  
-          @include breakpoint(sm) {
-            font-size: 23px !important;
-            line-height: 30px !important;
-          }
-  
-          @include breakpoint(md) {
-            font-size: $f20;
-            line-height: 0;
-          }
-        }
+        margin-top: $mt-2;
       }
     }
   }
 
+  .right-panel {
+    padding-left: 20px;
+
+    @include breakpoint(sm) {
+      padding-left: 0;
+    }
+
+    .panel {
+      padding: $pt-3 $pt-2 $pt-2 $pt-2;
+      box-shadow: 0px 4px 0px #FFE1E2;
+      margin-bottom: $mt-2;
+
+      @include breakpoint(sm) {
+        box-shadow: 0px 0px 0px $white;
+        margin-bottom: 0;
+      }
+
+      h6 {
+        @include breakpoint(xs) {
+          font-size: $f25;
+        }
+
+        @include breakpoint(sm) {
+          font-size: $f25;
+        }
+
+        @include breakpoint(md) {
+          font-size: $f25;
+        }
+      }
+
+      p {
+        font-size: $f14;
+        margin-bottom: 0;
+        margin-top: $mt-1;
+
+        @include breakpoint(sm) {
+          font-size: $f16;
+        }
+      }
+
+    }
+
+    .panel:after {
+      content: "";
+      width: 50%;
+      height: 5px;
+      display: inline-block;
+      background-color: #BE0E14;
+      top: 30px;
+      left: -20px;
+      position: relative;
+
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+
+    .panel-sub {
+      padding: $pt-3 $pt-2 $pt-2 $pt-2;
+
+      @include breakpoint(md) {
+        padding: $pt-3 0 $pt-2 $pt-2;
+      }
+
+      @include breakpoint(sm) {
+        padding: $pt-3 0 0 0;
+      }
+
+      h6 {
+        font-size: $f24;
+        line-height: 20px;
+
+        @include breakpoint(xs) {
+          font-size: $f25;
+        }
+
+        @include breakpoint(sm) {
+          font-size: 23px !important;
+          line-height: 30px !important;
+        }
+
+        @include breakpoint(md) {
+          font-size: $f20;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}
+
 .upgrades-wrpper {
-    .up-img{
-        @include breakpoint(sm){
-            margin-top: $mt-2;
-        }
+  .up-img {
+    @include breakpoint(sm) {
+      margin-top: $mt-2;
     }
-    h2 {
-        font-size: $f32 !important;
-        line-height: 36px;
-        margin-bottom: 20px;
-        @include breakpoint(sm){
-            font-size: $f28 !important;
-        }
+  }
+
+  h2 {
+    font-size: $f32 !important;
+    line-height: 36px;
+    margin-bottom: 20px;
+
+    @include breakpoint(sm) {
+      font-size: $f28 !important;
     }
-    button{
-        background-color: #E21D23;
-        color: $white;
-        border: none;
-        padding: 8px 100px;
-        text-transform: capitalize;
-        font-size: $f18;
+  }
+
+  button {
+    background-color: #E21D23;
+    color: $white;
+    border: none;
+    padding: 8px 100px;
+    text-transform: capitalize;
+    font-size: $f18;
+  }
+
+  .freq-content {
+    .title {
+      font-size: $f32 !important;
+      line-height: 36px;
     }
 
-    .freq-content {
-        .title {
-            font-size: $f32 !important;
-            line-height: 36px;
-        }
+    ul {
+      padding-left: 20px;
+      margin-top: $mt-2;
 
-        ul {
-            padding-left: 20px;
-            margin-top: $mt-2;
-
-            li {
-                font-size: $f20;
-                margin-bottom: 10px;
-            }
-        }
+      li {
+        font-size: $f20;
+        margin-bottom: 10px;
+      }
     }
+  }
 }
 
 .customer-section {
-    padding: 40px 0 60px 0;
+  padding: 40px 0 60px 0;
 
-    @include breakpoint(sm) {
-        padding: 0 0 40px 0;
+  @include breakpoint(sm) {
+    padding: 0 0 40px 0;
+  }
+
+  .cust-wrapper {
+    .cust-img {
+      margin-bottom: 20px;
+
+      img {
+        height: 100px;
+        width: 103px;
+      }
     }
-
-    .cust-wrapper {
-        .cust-img {
-            margin-bottom: 20px;
-
-            img {
-                height: 100px;
-                width: 103px;
-            }
-        }
-    }
+  }
 }

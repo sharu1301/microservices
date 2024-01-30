@@ -50,7 +50,7 @@
             font-size: 20px;
             color: #363636;
             font-family: Inter;
-            
+
             @media screen and (max-width: 500px) {
                 font-size: 16px;
                 padding-top: 0px;
@@ -64,6 +64,11 @@
                 background-color: #fff;
                 width: 200px;
                 height: 200px;
+
+                @media (min-width: 1469px) {
+                    width: 230px;
+                    height: 230px;
+                }
 
                 @media screen and (max-width: 500px) {
                     width: 100px;
@@ -105,5 +110,5 @@
 }
 
 .rectangleParent:hover .title {
-    color: #BE0E14;
+    color: #BE0E14;
 }

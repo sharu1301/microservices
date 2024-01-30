@@ -72,7 +72,7 @@ const CustomerTestimonials = () => {
               <div className="scrolling-testimonials">
                 {testimonials.concat(testimonials).map((testimonial, index) => {
                    return index % 2 === 0 || index === 0 ? (
-                    <div className="testimonial-main-container">
+                    <div className="testimonial-main-container" key={index}>
                       <div
                         key={index}
                         className="testimonial-bubble-left"

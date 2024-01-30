@@ -145,6 +145,12 @@
 }
 
 .companyInformation {
+  padding-bottom: 0;
+  @include breakpoint(sm) {
+    .ptb-70{
+      padding-bottom: 0;
+    }
+  }
   p {
     color: $gray;
     font-size: 20px;
@@ -163,6 +169,7 @@
         margin-bottom: 14px;
       }
     }
+    
   }
 
   .companyInfoWrapper {
@@ -254,6 +261,7 @@
       }
       @include breakpoint(sm){
         padding: 13px 22px;
+        margin-top: -16%;
         height: 100px;
 
       }

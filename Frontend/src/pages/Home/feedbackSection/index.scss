@@ -14,7 +14,30 @@
 
         h5 {
             font-size: 19px;
-            font-weight: 800;
+            font-weight: 700;
+        }
+
+
+          .formMain {
+            background-color: $white;
+            border: 1px solid ghostwhite;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px;
+            color: gainsboro;
+            width: 90%;
+            // height: 50%;
+            // overflow-y: scroll;
+
+            .modalBg {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                h6 {
+                    font-size: 16px;
+                }
+            }
         }
     }
 

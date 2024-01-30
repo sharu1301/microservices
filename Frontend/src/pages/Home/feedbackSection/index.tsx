@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./index.scss";
 import { BsArrowRight } from "react-icons/bs";
 import IsoCertified from '../../../assets/icons/IsoCertifiedIcon.png';
@@ -7,6 +7,7 @@ import productRangeIcon from '../../../assets/icons/productRangeIcon.png';
 import supportIcon from '../../../assets/icons/supportIcon.png'
 
 const FeedbackSection = () => {
+    const [showModal, setShowModal] = useState(false)
     return (
         <>
             <div className="feedback">
@@ -18,9 +19,23 @@ const FeedbackSection = () => {
                                 Please take a moment to share your thoughts with us, so we can continue <br />
                                 to improve our services and products to better meet your needs.
                             </p>
-                            <button type="button" className="btn btn-formSubmit ml-0 mb-4" color="red" >
+                           {!showModal && (
+
+                           <button type="button" className="btn btn-formSubmit ml-0 mb-4" color="red" onClick={() => setShowModal(true)}>
                                 Write a Feedback <BsArrowRight size={22} />
-                            </button>
+                            </button>)} 
+                            {showModal && (
+                                <div className="formMain">
+                                    <div className="modalBg">
+                                        <h6>Feedback Form</h6>
+                                        <i className="fa-solid fa-xmark" onClick={()=>setShowModal(false)}></i>
+                                    </div>
+
+                                    <div data-paperform-id="ldemmvxh">
+                                    </div>
+
+                                </div>
+                            )}
                         </div>
                         <div className="col-md-6">
                             <div className="row">

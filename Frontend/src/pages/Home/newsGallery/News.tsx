@@ -122,7 +122,7 @@ const News = ({ limit }: { limit: number }) => {
               <div >
                 {articles.map((article, index) => (
 
-                  <div className="vertialContainer">
+                  <div className="vertialContainer" key={index}>
                     <div className="newsCard" onClick={() => setSelectedNews(article)}>
                       <img
                         src={

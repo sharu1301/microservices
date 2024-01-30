@@ -18,16 +18,13 @@ export default function Exhibition() {
 
 
     useEffect(() => {
-        getExhibitions();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
-
-
-    const getExhibitions = () => {
         axios.get(`${exposureURL}/exhibition`).then((response) => {            
             setExhibitionImages(response.data.groups[0].photos)
         })
-    }
+    },[exposureURL])
+
+
+   
 
     const ArrowLeft = () => {
         return (

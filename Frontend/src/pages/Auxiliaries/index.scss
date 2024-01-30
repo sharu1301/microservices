@@ -3,6 +3,15 @@
 .auxwrapper {
     padding: 40px 0;
 
+    .row {
+        border-bottom: 1px solid #CDCDCD;
+        padding-bottom: 40px;
+    }
+
+    .row:last-child {
+        border: none;
+    }
+
     h6 {
         font-size: $f24;
         color: #666666;
@@ -14,11 +23,33 @@
         height: auto;
         width: 100%;
         border-radius: 8px;
+        @include breakpoint(sm){
+            display: none;
+        }
 
         img {
             height: 100%;
             width: 100%;
             border-radius: 10px;
+        }
+    }
+
+    .resp-aux-image {
+        display: none;
+
+        @include breakpoint(sm) {
+            background-color: #DCDCDC;
+            padding: 15px;
+            height: auto;
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+            }
         }
     }
 
@@ -62,6 +93,16 @@
                 margin-bottom: 8px;
             }
         }
+
+        button {
+            border: none;
+            background-color: #E21D23;
+            color: $white;
+            text-transform: capitalize;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-top: $mt-2;
+        }
     }
 
     .specification {
@@ -82,9 +123,10 @@
     }
 
     .spec-table {
-        @include breakpoint(md){
+        @include breakpoint(md) {
             overflow: auto;
         }
+
         @include breakpoint(sm) {
             overflow: auto;
         }

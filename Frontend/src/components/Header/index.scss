@@ -5,7 +5,8 @@
   top: 0;
   z-index: 9999;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  .container{
+
+  .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -92,6 +93,12 @@
     align-items: center;
     padding: 10px 0;
 
+    @include breakpoint(sm) {
+      display: flex;
+      align-items: baseline;
+      padding: 10px 10px;
+    }
+
     ul li {
       @include breakpoint(sm) {
         padding: 7px;
@@ -104,6 +111,7 @@
     position: relative;
     height: 66px;
     object-fit: cover;
+    cursor: pointer;
 
     @include breakpoint(md) {
       height: 40px;
@@ -138,7 +146,7 @@
     @include breakpoint(md) {
       margin: 0;
       padding: 6px;
-      font-size: $f13;
+      font-size: $f14;
     }
   }
 
@@ -149,6 +157,7 @@
 
   .active {
     color: red;
+    width: 100%;
   }
 
   .contactUsParent {
@@ -172,6 +181,7 @@
       padding: 10px 14px;
       font-size: $f14;
     }
+
     @include breakpoint(xl) {
       margin-left: 50px;
     }
@@ -235,7 +245,7 @@
 
     }
 
-   
+
 
     .contactUsParent {
       margin: 0;
@@ -260,8 +270,24 @@
     min-width: 370px;
     border-top: 1px solid #BE0E14;
 
+    @include breakpoint(sm) {
+      min-width: auto;
+      top: 40px;
+      margin-left: 6px;
+    }
+
+    li {
+      @include breakpoint(sm) {
+        margin-bottom: 0 !important;
+      }
+    }
+
     .dropdown-item {
       font-size: $f16;
+
+      @include breakpoint(sm) {
+        font-size: $f14;
+      }
     }
   }
 }
@@ -323,5 +349,17 @@
     margin-right: 0.7rem;
     margin-bottom: .5rem;
   }
+  
 
+  .dropdown-menu .submenu {
+    display: none;
+    position: absolute;
+    left: 96%;
+    top: -1px;
+    min-width: auto;
+  }
+
+  .dropdown-menu>li:hover>.submenu {
+    display: block;
+  }
 }

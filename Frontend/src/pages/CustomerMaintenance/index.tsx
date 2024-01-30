@@ -40,7 +40,7 @@ const CustomerMaintenance = () => {
     <>
       <Header />
       <div className="customer-maintenance">
-        <PageTitle title="Customer Service And Maintenance" />
+        <PageTitle title="Customer Service And Maintenance" subtitle="Customer Service And Maintenance"/>
         <div className="description-section">
           <div className="container">
             <div className="row ml-0">

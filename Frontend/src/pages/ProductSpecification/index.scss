@@ -1,65 +1,22 @@
 @import '../../assets/sass/main.scss';
 
 .mainSectionContainer {
-justify-content: space-between;
-    .machine-unit {
-        
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        // padding: 40px 60px;
-        align-items: flex-start;
-        display: flex;
-
-        @include breakpoint(md) {
-            overflow: scroll;
-            max-width: 90%;
-        }
-
-
-        .machine-content {
-            padding: 10px;
-            background-color: aliceblue;
-            text-align: center;
-            align-items: center;
-            margin-top: 10%;
-            width: 40%;
-            .close {
-                cursor: pointer;
-                margin-left: 20px;
-            }
-
-            h2 {
-                font-size: 22px;
-                line-height: 30px;
-                margin-bottom: 20px;
-            }
-
-            h6 {
-                font-size: 18px;
-            }
-
-            ul {
-                li {
-                    list-style-type: none;
-                }
-            }
-
-            img {
-                height: 50px;
-                width: 50px;
-                border-radius: 50px;
-            }
-        }
-    }
-
-
-
+    // border: 5px solid black;
+    // width: 100%;
 
 
 
     display: flex;
-    padding: 30px 95px;
+    padding: 30px 95px 10px 50px;
+    justify-content: space-around;
+    // align-items: center;
+
+
+    .slick-prev:before, .slick-next:before {
+        
+        color: black  !important;
+    }
+   
 
     @media screen and (max-width: 1023px) {
         padding: 30px 20px;
@@ -71,12 +28,13 @@ justify-content: space-between;
     }
 
     .image {
-        width: 60%;
-        height: auto;
+        width: 80%;
+        height: 40%;
+
 
         @media screen and (max-width: 1023px) {
             width: 68%;
-            height: 50%;
+            height: auto;
         }
 
         @media screen and (max-width: 500px) {
@@ -86,13 +44,17 @@ justify-content: space-between;
 
 
     .detailcard {
-        width: 35%;
+        width: 28%;
         height: auto;
         padding: 25px;
         // margin: 20px;
         // background-color: 
         border-radius: 8px;
         background: #F6F6F6;
+        align-items: center;
+        ul{
+            margin-left: 20px;
+        }
 
         @media screen and (max-width: 1023px) {
             width: 30%;

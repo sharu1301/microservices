@@ -22,7 +22,7 @@ const Achievements = () => {
         })
     }, [exposureURL])
 
-   
+
 
 
     return (

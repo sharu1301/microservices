@@ -5,11 +5,11 @@
     background: $feedback-background;
     padding: 40px 0px 40px 0px;
     margin-right: 0px;
-   
+
     .secondaryfeedback {
         display: flex;
-         flex-direction: row;
-         justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-around;
         flex-wrap: wrap;
 
         h5 {
@@ -18,7 +18,7 @@
         }
 
 
-          .formMain {
+        .formMain {
             background-color: $white;
             border: 1px solid ghostwhite;
             padding: 15px;
@@ -50,21 +50,26 @@
     p {
         font-size: 13px;
         line-height: 20px;
-        @include breakpoint(sm){
+
+        @include breakpoint(sm) {
             font-size: 12px;
         }
     }
 
-    button {
-        background-color: red;
+    .feed-btn {
+        background-color: #E21D23;
         color: $white;
+        :hover{
+            background-color: #E21D23;
+            color: $white;
+        }
     }
 
     .iso {
         // flex-direction: row;
         // display: flex;
         margin-bottom: 20px;
-        
+
         display: flex;
         justify-content: space-between;
 
@@ -73,7 +78,8 @@
             height: 48px;
             width: 50px;
             margin-right: 10px;
-            @include breakpoint(sm){
+
+            @include breakpoint(sm) {
                 height: 40px;
                 width: 40px;
                 margin-right: 0;
@@ -84,7 +90,8 @@
             font-size: 15px;
             line-height: 23px;
             margin-bottom: 4px;
-            @include breakpoint(sm){
+
+            @include breakpoint(sm) {
                 font-size: 12px;
                 font-weight: bold;
             }
@@ -92,3 +99,4 @@
     }
 
 }
+

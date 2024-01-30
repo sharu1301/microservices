@@ -46,10 +46,7 @@
   width: 60%;
   /* Take the right half */
   text-align: left;
-
-  // @include breakpoint(xl){
-  //   padding: 50px 30px;
-  // }
+  
   @media (min-width: 1469px) {
     padding: 50px 150px 50px 100px;
   }
@@ -123,7 +120,6 @@ p {
   align-items: center;
   gap: 12px;
   background: #E21E24;
-  ;
   color: #FFF;
   border: none;
   cursor: pointer;
@@ -147,7 +143,9 @@ p {
     }
   }
 }
-
+.btn:hover{
+  color: $white;
+}
 button:hover {
   background-color: #b30000;
   /* Adjust the button color on hover */

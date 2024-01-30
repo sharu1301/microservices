@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Create Jira Issue') {
+        stage('Creating a Jira ticket') {
             steps {
                 script {
                     def jiraIssue = [

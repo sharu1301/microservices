@@ -1,62 +1,67 @@
 @import "../../../assets/sass/main.scss";
 
-.descContainer{
+.descContainer {
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     @media screen and (max-width: 500px) {
         padding: 40px 0;
     }
 
-   .weAreThe1 {
-    margin-block-start: 0;
-    margin-block-end: 5px;
-    font-size: 44px;
-    font-weight: 600;
-    padding: 10px;
-    line-height: 44px;
+    .weAreThe1 {
+        margin-block-start: 0;
+        margin-block-end: 5px;
+        font-size: 44px;
+        font-weight: 600;
+        padding: 10px;
+        line-height: 44px;
 
-    @media screen and (max-width: 500px) {
-        font-size: 20px; 
-        padding-bottom: 0;
-        margin: 0;
+        @media screen and (max-width: 500px) {
+            font-size: 20px;
+            padding-bottom: 0;
+            margin: 0;
+        }
     }
-    }
+
     .industrialMachinery {
         padding: 10px;
         font-size: 44px;
         font-weight: 600;
-    color: #be0e14;
-    @media screen and (max-width: 500px) {
-        font-size: 20px; 
-        line-height: 5px;
+        color: #be0e14;
+
+        @media screen and (max-width: 500px) {
+            font-size: 20px;
+            line-height: 5px;
+        }
     }
-    }
+
     .comesToIndustrialMachinery {
         font-size: 44px;
         font-weight: 600;
         margin: 0;
 
-      @media screen and (max-width: 500px) {
-        font-size: 20px; 
-        // line-height: 5px;
-        padding-top: 4px;
-    }
-    }
-    .weAreTheContainer {
-    position: relative;
-    
-    font-size: 44px;
-    font-weight: 600;
-    font-family: Inter;
-    text-align: center;
-    color: #363636;
+        @media screen and (max-width: 500px) {
+            font-size: 20px;
+            // line-height: 5px;
+            padding-top: 4px;
+        }
     }
 
-    
-    
+    .weAreTheContainer {
+        position: relative;
+
+        font-size: 44px;
+        font-weight: 600;
+        font-family: Inter;
+        text-align: center;
+        color: #363636;
+    }
+
+
+
     .hindsMachinesA1 {
         position: relative;
         padding-top: 20px;
@@ -67,33 +72,36 @@
         color: #666;
         text-align: center;
         display: inline-block;
+
         @media screen and (max-width: 500px) {
-            font-size: 14px; 
+            font-size: 14px;
             width: 90%;
         }
-    
-        }
-            .moreAboutUsParent {
-            position: relative;
-            border-radius: 4px;
-            background-color: #be0e14;
-            width: 250px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 48px;
-            box-sizing: border-box;
-            text-align: center;
-            font-size: 18px;
-            color: #fff;
-            font-family: Inter;
-            margin: 20px;
 
-            .moreAboutUs1 {
-                position: relative;
-                text-transform: capitalize;
-                font-weight: 600;
-                }
-            }
+    }
+
+    .moreAboutUsParent {
+        position: relative;
+        border-radius: 4px;
+        background-color: #be0e14;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 48px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        font-family: Inter;
+        margin: 20px;
+
+        .moreAboutUs1 {
+            position: relative;
+            text-transform: capitalize;
+            font-weight: 600;
         }
+    }
+}

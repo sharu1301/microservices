@@ -21,7 +21,7 @@ const FeedbackSection = () => {
                             </p>
                            {!showModal && (
 
-                           <button type="button" className="btn btn-formSubmit ml-0 mb-4" color="red" onClick={() => setShowModal(true)}>
+                           <button type="button" className="btn btn-formSubmit ml-0 mb-4 feed-btn" color="red" onClick={() => setShowModal(true)}>
                                 Write a Feedback <BsArrowRight size={22} />
                             </button>)} 
                             {showModal && (

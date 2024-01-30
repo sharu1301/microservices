@@ -43,6 +43,9 @@
       padding-top: 40px;
       padding-bottom: 40px;
       margin: auto;
+      .arrows{
+         cursor: pointer;
+      }
       .exhibition-slider{
          @include breakpoint(md){
             width: 80% !important;

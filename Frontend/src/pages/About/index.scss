@@ -11,6 +11,7 @@
   }
 
   .arrows {
+    cursor: pointer;
     @include breakpoint(sm) {
       display: none;
     }
@@ -101,6 +102,10 @@
 }
 
 .aboutProductsWrapper {
+  .btn-custom:hover{
+    background-color: #085b88;
+    color: $white;
+  }
   @include breakpoint(sm) {
     text-align: center;
   }

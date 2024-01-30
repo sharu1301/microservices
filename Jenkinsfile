@@ -1,14 +1,33 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'OpenJDK17'
-    }
-
     stages {
+        stage('Create Jira Issue') {
+            steps {
+                script {
+                    def jiraIssue = [
+                        fields: [
+                            project: [key: 'HIN'],
+                            summary: 'This ticket includes each stage and its corresponding status',
+                            description: "A new Jira ticket has been automatically created to display the pipeline status.With build number is:: ${env.BUILD_NUMBER}.",
+                            issuetype: [name: 'Task']
+                        ]
+                    ]
+
+                    // Capture the Jira response
+                    def jiraResponse = jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
+                    // Check if Jira issue creation was successful
+                       (jiraResponse && jiraResponse.data && jiraResponse.data.key) 
+                        def jiraIssueKey = jiraResponse.data.key
+                        currentBuild.description = "Jira Issue Key: ${jiraIssueKey}"
+                        env.JIRA_ISSUE_KEY = jiraIssueKey
+                }
+            }
+        }
+
         stage('Build Artifact') {
             steps {
-                dir('/var/lib/jenkins/workspace/Hinds Machine/Frontend') {
+                dir('/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend') {
                     script {
                         sh '''
                             export NVM_DIR="/var/lib/jenkins/.nvm"
@@ -23,11 +42,17 @@ pipeline {
                             npm install --legacy-peer-deps
                             CI=false npm run build
                         '''
+
+                        def buildResult = sh script: 'echo build failed', returnStatus: true
+                        if (buildResult != 0) {
+                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Build Failed",site: 'hindsmachines')
+                        } else {
+                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Build Success",site: 'hindsmachines')
+                        }
                     }
                 }
             }
         }
-        
         stage('SonarQube Analysis') {
             steps {
                 script {
@@ -44,28 +69,19 @@ pipeline {
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
                         if (qg.status != 'OK') {
-                              // Generate ticket for failed quality gate
-                            echo "Quality gate failed, generating ticket..."
-                            // Add your ticket generation code here
-                            def jiraIssue = [
-                                fields: [
-                                    project: [key: 'HIN'],
-                                    summary: 'SonarQube Quality Gates failed',
-                                    description: "SonarQube Quality Gates failed for build ${env.BUILD_NUMBER}.",
-                                    issuetype: [name: 'Bug']
-                                ]
-                            ]
-                            jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
-                        } 
-                        
+                            echo "Quality gate failed"
+                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Quality gate failed",site: 'hindsmachines')
+                        } else {
+                            echo "Quality gate PASS"
+                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Quality gate PASS",site: 'hindsmachines')
+                        }
                     }
                 }
-            }
+            }    
         }
-
         stage('Upload to S3') {
             steps {
-                dir("/var/lib/jenkins/workspace/Hinds Machine/Frontend/build") {
+                dir("/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend/build") {
                     script {
                         s3Upload(
                             consoleLogLevel: 'INFO',
@@ -73,7 +89,7 @@ pipeline {
                             dontWaitForConcurrentBuildCompletion: false,
                             entries: [
                                 [
-                                    bucket: 'dev-hindmachine.insigniaconsultancy.com',
+                                    bucket: 'hindm-test',
                                     excludedFile: '',
                                     flatten: false,
                                     gzipFiles: false,
@@ -92,32 +108,17 @@ pipeline {
                             profileName: 'S3-Upload',
                             userMetadata: []
                         )
+                        def s3UploadResult = sh script: 'echo s3-upload failed', returnStatus: true
+                        if (s3UploadResult != 0) {
+                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "S3 Upload Failed", site: 'hindsmachines')
+                            error "S3 Upload Failed"
+                        } else {
+                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "S3 Upload Successful", site: 'hindsmachines')
+                        }
                     }
                 }
             }
-        }
-    }
 
-    post {
-        failure {
-            script {
-                def jiraIssue = [
-                    fields: [
-                        project: [key: 'HIN'],
-                        summary: 'New JIRA Created on Build failed',
-                        description: 'A new Jira ticket created automatically because the build failed.',
-                        issuetype: [name: 'Bug']
-                    ]
-                ]
-
-                jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
-            }
-        }
-
-        success {
-            script {
-                echo "Build failed. No Jira ticket will be created."
-            }
         }
     }
 }

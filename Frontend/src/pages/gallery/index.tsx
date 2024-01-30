@@ -12,6 +12,7 @@ import Footer from "../../components/Footer";
 import "./index.scss";
 import axios from "axios";
 import MachineGallery from "./machineGallery";
+
 const TabPanel = ({ value, index, children }) => (
   <div hidden={value !== index}>
     {value === index && <Box p={3}>{children}</Box>}
@@ -23,32 +24,33 @@ interface Picture {
   name: string;
   url: string;
 }
+
+
+interface Video {
+  id: string;
+  url: string;
+  caption: string;
+}
 export default function Gallery() {
   const [value, setValue] = React.useState(0);
   const exposureURL = process.env.REACT_APP_EXPOSURE_URL;
   // const [allImages, setAllImages] = useState([]);
-  const [exhibitionImages, setExhibitionImages] = useState([]);
-  const [machineryImages, setMachineryImages] = useState([]);
-  const [allVideos, setAllVideos] = useState([]);
+  const [exhibitionImages, setExhibitionImages] = useState<Picture[]>([]);
+  const [machineryImages, setMachineryImages] = useState<Picture[]>([]);
+  const [allVideos, setAllVideos] = useState<Video[]>([]);
   const [pictures, setPictures] = useState<Picture[]>([]);
-
-
-
-
   useEffect(() => {
     getGalleryImages();
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  
   const getGalleryImages = () => {
-    let tempVideos = [];
-    let temExhibitionGallery = [];
-    let tempMachinery = [];
+    let tempVideos: any = [];
+    let temExhibitionGallery: any = [];
+    let tempMachinery: any = [];
     axios.get(`${exposureURL}/our-gallery`).then((response) => {
       const groups = response?.data?.groups;
       // setAllImages(response?.data?.groups);
-      groups.forEach((group) => {
+      groups.forEach((group: any) => {
         if (group.title === "Exhibition Gallery") {
           temExhibitionGallery = temExhibitionGallery.concat(
             group.photos.map((image) => ({
@@ -80,14 +82,14 @@ export default function Gallery() {
       setPictures([...tempMachinery, ...tempVideos, ...temExhibitionGallery]);
     });
   };
-  const handleChange = ( newValue) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
     <>
       <Header />
       {/* <h2> Gallery</h2> */}
-      <PageTitle title={"Gallery"} subtitle="Gallery"/>
+      <PageTitle title={"Gallery"} subtitle="Gallery" />
       <Box
         sx={{
           borderBottom: 1,

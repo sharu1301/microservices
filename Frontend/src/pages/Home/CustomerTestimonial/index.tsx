@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.scss";
 
-import CustomerTestominialData from '../../../data/testimonial.json'
+import CustomerTestominialData from "../../../data/testimonial.json";
+import Video from "./Video";
 
 const Sample1 = require("../../../assets/videos/testimonial1.MOV");
 const Sample2 = require("../../../assets/videos/testimonial2.MOV");
@@ -17,12 +18,15 @@ interface Testimonial {
   image: string;
 }
 
-const testimonials: Testimonial[] = CustomerTestominialData
+const testimonials: Testimonial[] = CustomerTestominialData;
 
+const videos = [Sample1, Sample2];
 
 const CustomerTestimonials = () => {
   const [selectedTestimonial, setSelectedTestimonial] =
     useState<Testimonial | null>(null);
+
+  const [currentVideo, setCurrentVideo] = useState(0);
 
   const VideoSettings = {
     dots: true,
@@ -59,7 +63,10 @@ const CustomerTestimonials = () => {
                   <h2 className="testimonial-author">
                     {selectedTestimonial.text}
                   </h2>
-                  <img src={require(`../../../assets/${selectedTestimonial.image}`)} alt="" />
+                  <img
+                    src={require(`../../../assets/${selectedTestimonial.image}`)}
+                    alt=""
+                  />
                   <h6 className="testimonial-text">
                     {selectedTestimonial.author}
                   </h6>
@@ -71,7 +78,7 @@ const CustomerTestimonials = () => {
             ) : (
               <div className="scrolling-testimonials">
                 {testimonials.concat(testimonials).map((testimonial, index) => {
-                   return index % 2 === 0 || index === 0 ? (
+                  return index % 2 === 0 || index === 0 ? (
                     <div className="testimonial-main-container" key={index}>
                       <div
                         key={index}
@@ -79,7 +86,10 @@ const CustomerTestimonials = () => {
                         onMouseEnter={() => handleTestimonialHover(testimonial)}
                       >
                         <div className="image-container">
-                        <img src={require(`../../../assets/${testimonial.image}`)} alt="" />
+                          <img
+                            src={require(`../../../assets/${testimonial.image}`)}
+                            alt=""
+                          />
                         </div>
                         <div className="testimonial-contant-details">
                           <h2 className="testimonial-author">
@@ -113,7 +123,10 @@ const CustomerTestimonials = () => {
                           </ul>
                         </div>
                         <div className="image-container">
-                        <img src={require(`../../../assets/${testimonial.image}`)} alt="" />
+                          <img
+                            src={require(`../../../assets/${testimonial.image}`)}
+                            alt=""
+                          />
                         </div>
                       </div>
                     </div>
@@ -125,9 +138,10 @@ const CustomerTestimonials = () => {
         </div>
 
         <div className="col-md-6 col-12 videoDiv ">
-          <Slider {...VideoSettings}>
-            <video src={Sample1} controls />
-            <video src={Sample2} controls />
+          <Slider {...VideoSettings} afterChange={(i) => setCurrentVideo(i)}>
+            {videos.map((item, i) => {
+              return <Video src={item} key={i} play={currentVideo === i} />;
+            })}
           </Slider>
         </div>
       </div>

@@ -6,13 +6,15 @@ import LeftImgComponent from "./LeftImgComponent";
 import RightImgComponent from "./RightComponent";
 import './index.scss';
 import EuroPacImg from "../../assets/images/productimages/EuroPac.png";
-import EuroServoImg from "../../assets/images/productimages/EuroServoR.png";
-import EuroCPVCImg from "../../assets/images/productimages/EuroCPVC.png";
+import EuroServoImg from "../../assets/images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg";
+import EuroCPVCImg from "../../assets/images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg";
 import EuroRImg from "../../assets/images/productimages/EuroR.png";
 import EuroPetImg from "../../assets/images/productimages/EuroPet.png";
 import EuroStarImg from "../../assets/images/productimages/EuroStar.png";
-import EuroPVCImg from "../../assets/images/productimages/EuroPVC.png";
+import EuroPVCImg from "../../assets/images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg";
 import EuroServoRImg from "../../assets/images/productimages/EuroServoR.png";
+
+import EuroServoSmartImg from '../../assets/images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg'
 
 
 
@@ -22,7 +24,7 @@ const ProductList = () => {
     return (
         <div>
             <Header />
-            <PageTitle title="Products"subtitle="Products" />
+            <PageTitle title="Products" subtitle="Products" />
 
             <div className="container mb-5">
                 <LeftImgComponent
@@ -37,6 +39,8 @@ const ProductList = () => {
                     highlight1={`Low power consumption`}
                     highlight2={`Hydraulic Motor`}
                     highlight3={`User friendly`}
+                    industry1={'Packaging'}
+                    industry2={'Cap & Closures'}
                 />
 
                 <RightImgComponent
@@ -50,6 +54,7 @@ const ProductList = () => {
                     highlight1={`Low power consumption`}
                     highlight2={`Hydraulic Motor`}
                     highlight3={`Air Ejection`}
+                    industry1="Pet Preform"
                 />
                 <LeftImgComponent
                     title="Euro Servo Series"
@@ -64,6 +69,9 @@ const ProductList = () => {
                     highlight1={`Air ejector`}
                     highlight2={`Hydraulics core pull`}
                     highlight3={`Water manifold`}
+                    industry1="Household"
+                    industry2="Automotive"
+                    industry3="Electrical Industry"
                 />
 
                 <RightImgComponent
@@ -77,6 +85,9 @@ const ProductList = () => {
                     highlight1={`injection capacity 40gms - 120gms`}
                     highlight2={`10.2” TFT Display`}
                     highlight3={`USB Port`}
+                    industry1="Precision Plastic"
+                    industry2="Electrical Industry"
+                    industry3="Engineering Components"
                 />
 
                 <LeftImgComponent
@@ -90,6 +101,9 @@ const ProductList = () => {
                     highlight1={`TFT Color Display`}
                     highlight2={`Energy Efficient`}
                     highlight3={`High Productivity`}
+                    industry1="CPVC Fittings"
+                    industry2="Construction"
+                    
 
                 />
 
@@ -102,7 +116,10 @@ const ProductList = () => {
                     l3={"Available in a range of 100 to 910 Ton"}
                     highlight1={`PID Control System`}
                     highlight2={`Robot Interface`}
-                    highlight3={`TFT Color Display`} />
+                    highlight3={`TFT Color Display`} 
+                    industry1="PVC Fittings"
+                    industry2="Construction"
+                    />
 
                 <LeftImgComponent
                     title="Euro R Series"
@@ -117,6 +134,9 @@ const ProductList = () => {
                     highlight1={`TFT Color Display`}
                     highlight2={`Energy saving`}
                     highlight3={`Mould Safety protection`}
+                    industry1="Electrical Industry"
+                    industry2="Automotive"
+                    industry3="Household"
                 />
 
                 <RightImgComponent
@@ -131,7 +151,40 @@ const ProductList = () => {
                     highlight1={`PID Control System`}
                     highlight2={`Robot Interface`}
                     highlight3={`TFT Color Display`}
+                    industry1="Pail Containers"
+                    industry2="Electrical Industry"
+                    industry3="Automotive"
                 />
+
+                <LeftImgComponent
+                    title={"Euro Servo Smart Series"}
+                    img={EuroServoSmartImg}
+                    description={`Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach.`}
+                    l1={"Five Point toggle clamp has reduced footprint"}
+                    l2={"10.2' Vertical TFT Colour Display"}
+                    l3={"Energy efficient Servo driven Closed loop Circuit."}
+                    highlight1={`Mould data storage`}
+                    highlight2={`Long clamp strokes`}
+                    highlight3={`TFT Color Display`} 
+                    industry1="CPVC Fittings"
+                    industry2="Construction"
+                    />
+
+
+                     <RightImgComponent
+                    title={"Euro Servo R Smart Series"}
+                    img={EuroRImg}
+                    description={`Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump.`}
+                    l1={"Nitrided Screw & barrel"}
+                    l2={"Easily Programmable & User friendly"}
+                    l3={"High response time"}
+                    highlight1={`Login Key for data safety`}
+                    highlight2={`Mould data storage`}
+                    highlight3={`TFT Color Display`}
+                    industry1="Electrical Industry"
+                    industry2="Automotive"
+                    industry3="Household"
+                     />
             </div>
 
             <SubFooter />

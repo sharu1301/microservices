@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import FAQScreen from "./pages/FAQ";
 import ContactUs from "./pages/ContactUs";
@@ -18,9 +18,21 @@ import Upgrades from "./pages/Upgrades";
 import Career from "./pages/Career";
 import CareerListing from "./pages/careerListing";
 import Auxiliaries from "./pages/Auxiliaries";
+import { useEffect } from "react";
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return null;
+};
 
 const routes = (
   <>
+  <ScrollToTop/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/faq" element={<FAQScreen />} />

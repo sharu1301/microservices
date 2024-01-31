@@ -270,7 +270,7 @@ const Career = () => {
         <div className="container">
           <div className="row ml-0 award">
             <div className="col-md-6 col-12">
-              <h2>Our Awrads</h2>
+              <h2>Our Awards</h2>
               <p className="pt-4">
                 We, Hinds Plastic Machines Pvt Ltd., provide controlled
                 Retrofitment solutions for our machines. Our service can

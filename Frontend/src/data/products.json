@@ -20,6 +20,7 @@
             "Cap & Closures"
         ]
     },
+
     {
         "title": "Euro Pet Series",
         "image":"images/productimages/EuroPet.png",
@@ -187,11 +188,12 @@
             "Radial Piston type hydraulic motor enable high torque and excellent performance."
         ],
         "industry": [
-            "PID Control System",
+           
             "Robot Interface",
             "Electrical Industry",
-            "Automobile & More",
-            "Moulding"
+            "Automobile",
+            "Moulding",
+            "Automotive"
         ]
     },
 
@@ -214,6 +216,7 @@
         ],
         "industry": [
             "CPVC Fittings",
+            "PVC Fittings",
             "Construction"
         ]
     }

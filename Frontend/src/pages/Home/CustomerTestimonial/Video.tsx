@@ -1,10 +1,9 @@
 import { useEffect, useRef } from "react";
 
-type videoType = {
-  src: string;
+interface VideoPlayerProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
   play?: boolean;
-};
-function Video(props: videoType) {
+}
+function Video(props: VideoPlayerProps) {
   const { src, play } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -19,6 +18,7 @@ function Video(props: videoType) {
       style={{ width: "100%", display: "inline-block" }}
       src={src}
       controls
+      {...props}
     />
   );
 }

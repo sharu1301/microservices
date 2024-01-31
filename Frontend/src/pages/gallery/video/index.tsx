@@ -1,6 +1,8 @@
 import ReactPlayer from "react-player";
 import "./index.scss";
+import { useState } from "react";
 export default function VideoGallery({ videoData }: { videoData: any }) {
+  const [currentVideo, setCurrentVideo] = useState(null);
   return (
     <div className="video-align container">
       {videoData?.map((images, id) => (
@@ -12,6 +14,8 @@ export default function VideoGallery({ videoData }: { videoData: any }) {
           width={"420px"}
           height={"auto"}
           className="videoFrame"
+          playing={currentVideo === id}
+          onPlay={() => setCurrentVideo(id)}
         />
       ))}
     </div>

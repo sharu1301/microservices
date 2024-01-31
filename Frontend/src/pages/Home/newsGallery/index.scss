@@ -50,15 +50,17 @@
                 margin: 10px;
                 border-radius: 12px;
                 background-color: #f5f7f7;
-                height: 347px;
+                height: 310px;
                 display: flex;
                 padding: 15px;
                 flex-direction: column;
                 align-self: flex-start;
                 justify-content: unset;
+                align-items: center;
 
                 @media screen and (max-width: 500px) {
                     width: 100%;
+                    height: auto;
 
                 }
 
@@ -118,7 +120,7 @@
                 box-shadow: 0px 0px 5px 2px #ccc;
                 margin: 10px 20px 20px 20px;
                 // overflow: hidden;
-                overflow: scroll;
+                overflow-y: scroll;
                 width: 90%;
                 height: 90%;
                 align-items: center;

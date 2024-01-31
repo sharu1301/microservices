@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./index.scss";
 import SubFooter from "../../components/subFooter";
 import PageTitle from "../../components/pageTitle";
@@ -5,6 +6,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const Upgrades = () => {
+    const navigate=useNavigate()
     return (
         <>
             <Header />
@@ -87,7 +89,7 @@ const Upgrades = () => {
                         <div className="col-md-8 col-12 text-center m-auto">
                             <h2 className="title">Using Machines Sustainably Thanks to Retrofits</h2>
                             <p>Are you aiming to utilize your injection molding machine for new applications, enhance efficiency, and simultaneously reduce energy costs? Our retrofit machine solutions are tailored to meet your requirements.</p>
-                            <button>request now</button>
+                            <button onClick={()=>navigate('/productenquiry')}>request now</button>
                         </div>
                     </div>
                 </div>

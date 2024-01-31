@@ -139,9 +139,9 @@ export default function Header() {
                   </li>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="/productlist">
+                      <button className="dropdown-item" >
                         Injection moulding machine
-                      </a>
+                      </button>
                       <ul className="submenu dropdown-menu">
                         {productData.map((list, i) => (
                           <li key={i}>

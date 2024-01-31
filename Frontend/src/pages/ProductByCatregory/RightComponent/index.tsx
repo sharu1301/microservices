@@ -17,6 +17,7 @@ interface RightImgComponentInterface {
 }
 export default function RightImgComponent({ data }: RightImgComponentInterface) {
 
+    
 
     const navigate = useNavigate();
     return (

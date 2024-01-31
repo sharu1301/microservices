@@ -732,7 +732,7 @@
             "Ethernet connection port for internet connectivity",
             "I/O diagnosis for Analog & digital",
             "High response time",
-            " Login Key for data safety"
+            "Login Key for data safety"
         ],
         "hydraulics": [
             "Energy efficient servo driven gear pump with closed loop pressure transducer feedback",

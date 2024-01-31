@@ -21,7 +21,7 @@ const GetinTouch = () => {
                             {/* <div className='socialLinks'> */}
                             <p className="socialLinks">Find Us</p>
 
-                            <div className=" imgDiv">
+                            <div className="imgDiv ml-0">
 
                                 <a href="https://www.facebook.com/hindsmachineries/" target="_blank" rel="noreferrer">
                                     <i className="fa-brands fa-facebook-f"></i>

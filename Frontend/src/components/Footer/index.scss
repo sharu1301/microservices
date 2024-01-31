@@ -68,6 +68,13 @@
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
+    a{
+      i{
+        color: $white;
+        margin-right: 8px;
+        font-size: $f18;
+      }
+    }
 
     @include breakpoint(sm) {
       display: none;
@@ -144,6 +151,13 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+    }
+    a{
+      i{
+        color: $white;
+        margin-right: 8px;
+        font-size: $f18;
+      }
     }
   }
 

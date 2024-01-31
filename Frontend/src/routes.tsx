@@ -18,6 +18,8 @@ import Upgrades from "./pages/Upgrades";
 import Career from "./pages/Career";
 import CareerListing from "./pages/careerListing";
 import Auxiliaries from "./pages/Auxiliaries";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 import { useEffect } from "react";
 
 const ScrollToTop = () => {
@@ -52,6 +54,8 @@ const routes = (
       <Route path="/career" element={<Career/>} />
       <Route path="/careerlisting" element={<CareerListing/>} />
       <Route path="/auxiliaries" element={<Auxiliaries/>} />
+      <Route path="/privacypolicy" element={<PrivacyPolicy/>}/>
+      <Route path="/termsofuse" element={<TermsOfUse/>}/>
     </Routes>
   </>
 );

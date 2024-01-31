@@ -71,7 +71,7 @@ export default function Applications(){
           />
 
         <AppCard
-        onClickApp={()=>navigate('/product-by-category/electrical')}
+        onClickApp={()=>navigate('/product-by-category/electrical industry')}
            image={image5}
            icon={icon5}
            reverse={false}

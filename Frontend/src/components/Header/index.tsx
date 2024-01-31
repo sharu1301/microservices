@@ -1,9 +1,5 @@
 import "./index.scss";
 import { useNavigate, useLocation } from "react-router-dom";
-import facebook from "../../assets/icons/facebook.png";
-import x from "../../assets/icons/x.png";
-import linkedIn from "../../assets/icons/linkedin.png";
-import instagram from "../../assets/icons/instagram.png";
 import logo from "../../assets/logo/logo.png";
 import { useState } from "react";
 import productData from "../../data/products.json";
@@ -28,43 +24,18 @@ export default function Header() {
               <div className="col-md-4 pr-0 text-right">
                 <div className={"icons"}>
                   <div className={"socialIcons01"}>
-                    <a href="/">
-                      <img
-                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                        alt=""
-                        src={x}
-                      />
+                    <a href="https://www.facebook.com/hindsmachineries/" target="_blank" rel="noreferrer">
+                      <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </div>
                   <div className={"socialIcons01"}>
-                    <a href="/">
-                      <img
-                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                        alt=""
-                        src={facebook}
-                      />
+                    <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank" rel="noreferrer">
+                      <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </div>
-                  <div className={"socialIcons03"}>
-                    <a href="/">
-                      <img
-                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                        alt=""
-                        src={instagram}
-                      />
-                    </a>
-                  </div>
-                  <div className={"socialIcons03"}>
-                    <a
-                      href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                        alt=""
-                        src={linkedIn}
-                      />
+                  <div className={"socialIcons01"}>
+                    <a href="https://www.youtube.com/channel/UCqmwpUQbu2hYXHvn4SvR8Vw" target="_blank" rel="noreferrer">
+                      <i className="fa-brands fa-youtube"></i>
                     </a>
                   </div>
                 </div>
@@ -139,9 +110,9 @@ export default function Header() {
                   </li>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="/productlist">
+                      <button className="dropdown-item" >
                         Injection moulding machine
-                      </a>
+                      </button>
                       <ul className="submenu dropdown-menu">
                         {productData.map((list, i) => (
                           <li key={i}>

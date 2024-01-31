@@ -1,11 +1,12 @@
 import "./index.scss";
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
 import { AllGalleryProps } from "../typeInterface";
 import { List } from "immutable";
 
 const AllGallery: React.FC<AllGalleryProps> = ({ pictures }) => {
   const list = List(pictures);
+  const [currentVideo, setCurrentVideo] = useState<number | null>(null);
 
   const filteredList = list.filter((item) => item.id !== undefined);
 
@@ -30,6 +31,8 @@ const AllGallery: React.FC<AllGalleryProps> = ({ pictures }) => {
             height={"inherit"}
             width={"100%"}
             className="videoFrame"
+            playing={currentVideo === id}
+            onPlay={() => setCurrentVideo(id)}
           />
         </div>
       ))}

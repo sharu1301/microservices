@@ -1,14 +1,9 @@
 import React from "react";
 import './index.scss'
 
-import facebook from '../../../assets/icons/facebook.png';
-import x from '../../../assets/icons/x.png';
-import instagram from '../../../assets/icons/instagram.png';
-import linkedIn from '../../../assets/icons/linkedin.png'
-
 const GetinTouch = () => {
     return (
-        <div className="mainDiv p-0">
+        <div className="mainDiv pt-5">
             <div className="container">
                 <div className="row w-100">
                     <div className="col-md-7 col-12">
@@ -20,33 +15,25 @@ const GetinTouch = () => {
                         <div className="contactCard m-0">
                             <h4>Get in touch to discover how Hinds Machines<br /> can elevate your production.</h4>
                             <p>Email</p>
-                            <p>hinds@rediffmail.com</p>
-                            <p>Phone</p>
-                            <p>+91 9312657397</p>
+                            <p className="mail">hinds@rediffmail.com</p>
+                            <p className="mobile">Phone</p>
+                            <p className="number">+91 9312657397</p>
                             {/* <div className='socialLinks'> */}
                             <p className="socialLinks">Find Us</p>
 
-                            <div className=" imgDiv">
-                                <a href="/">
-                                <img alt="" src={x} />
-                                </a>
+                            <div className="imgDiv ml-0">
 
-                                <a href="/">
-                                <img alt="" src={facebook} />
-                                </a>
-
-
-                                <a href="/">
-                                <img alt="" src={instagram} />
+                                <a href="https://www.facebook.com/hindsmachineries/" target="_blank" rel="noreferrer">
+                                    <i className="fa-brands fa-facebook-f"></i>
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank" rel="noreferrer">
-                                    <img
-                                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                                        alt=""
-                                        src={linkedIn}
-                                    />
+                                    <i className="fa-brands fa-linkedin-in"></i>
                                 </a>
+                                <a href="https://www.youtube.com/channel/UCqmwpUQbu2hYXHvn4SvR8Vw" target="_blank" rel="noreferrer">
+                                    <i className="fa-brands fa-youtube"></i>
+                                </a>
+
                             </div>
                         </div>
                         {/* </div> */}

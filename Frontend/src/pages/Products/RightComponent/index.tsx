@@ -16,9 +16,13 @@ interface RightImgComponentInterface {
     l4?: string
     highlight1: string,
     highlight2: string,
-    highlight3: string
+    highlight3: string,
+    industry1: string,
+    industry2?: string,
+    industry3?: string
+
 }
-export default function RightImgComponent({ title, img, description, l1, l2, l3, l4, highlight1, highlight2, highlight3 }: RightImgComponentInterface) {
+export default function RightImgComponent({ title, img, description, l1, l2, l3, l4, highlight1, highlight2, highlight3,industry1,industry2,industry3 }: RightImgComponentInterface) {
 
 
     const navigate = useNavigate();
@@ -40,7 +44,8 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
                         <li>{l3}</li>
                         {l4 && (<li>{l4}</li>)}
                     </ul>
-                    <p className='highlighed ml-0'>Industry : Packaging, Cup & Closure</p>
+                    <p className='highlighed ml-0'>
+                    Industry :{` ${industry1}${industry2 ? ', ' + industry2 : ''}${industry3 ? ', ' + industry3 : ''}`}</p>
                 {/* </div> */}
                 <div className='button' onClick={() => navigate(`/product-specification/${title}`)}><p>View Details <BsArrowRight size={22} /></p> </div>
             </div>

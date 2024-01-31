@@ -20,6 +20,7 @@
             "Cap & Closures"
         ]
     },
+
     {
         "title": "Euro Pet Series",
         "image":"images/productimages/EuroPet.png",
@@ -187,11 +188,12 @@
             "Radial Piston type hydraulic motor enable high torque and excellent performance."
         ],
         "industry": [
-            "PID Control System",
-            "Robot Interface",
+           
+        
             "Electrical Industry",
-            "Automobile & More",
-            "Moulding"
+            "Automobile",
+            "Moulding",
+            "Automotive"
         ]
     },
 
@@ -207,13 +209,14 @@
             "High Productivity"
         ],
         "lists": [
-            "Dedicated CPVC Machine",
-            "Unscrew feature for electric motor",
-            "Separate manifolds for injection unit and clamping unit",
-            "LPMT for posion measuring for moving platen, screw travel & Ejection."
+            "Five Point toggle clamp has reduced footprint",
+            "10.2' Vertical TFT Colour Display",
+            "Energy efficient Servo driven Closed loop Circuit."
+            
         ],
         "industry": [
             "CPVC Fittings",
+            "PVC Fittings",
             "Construction"
         ]
     }

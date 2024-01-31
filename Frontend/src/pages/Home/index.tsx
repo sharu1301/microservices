@@ -18,9 +18,9 @@ export default function Home() {
       <Description />
       <AllMachinery />
       <Exhibition />
+      <NewsGallery />
       <CustomerTestimonial />
       <Achievements />
-      <NewsGallery />
       <GetinTouch />
       <FeedbackSection />
       <Footer />

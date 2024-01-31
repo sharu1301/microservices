@@ -56,6 +56,7 @@ export default function Exhibition() {
     return (
         <>
             <div className='container'>
+                <div className="row w-100 ml-0">
                 <h2 className='heading pt-5'> Around The Exhibition</h2>
                 <p className='description'>Join us at the upcoming industry exhibition to explore the latest innovations and advancements in injection molding technology. Visit the Hinds Machines booth to experience firsthand our state-of-the-art machinery, tailored solutions, and expert insights that can elevate your manufacturing processes.</p>
 
@@ -73,6 +74,7 @@ export default function Exhibition() {
 
 
                     <ArrowRight />
+                </div>
                 </div>
             </div>
         </>

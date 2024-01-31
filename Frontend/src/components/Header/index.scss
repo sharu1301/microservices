@@ -183,8 +183,8 @@
     font-family: Inter;
 
     @include breakpoint(md) {
-      margin-left: 10px;
-      padding: 10px 14px;
+      margin-left: 6px !important;
+      padding: 8px 10px;
       font-size: $f14;
     }
 

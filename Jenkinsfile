@@ -117,7 +117,7 @@ pipeline {
                             dontWaitForConcurrentBuildCompletion: false,
                             entries: [
                                 [
-                                    bucket: 'hindm-test',
+                                    bucket: 'dev-hindsmachines.insigniaconsultancy.com',
                                     excludedFile: '',
                                     flatten: false,
                                     gzipFiles: false,

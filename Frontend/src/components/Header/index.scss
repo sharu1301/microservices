@@ -62,6 +62,12 @@
       align-items: center;
       justify-content: flex-start;
       max-width: 136px;
+      margin-left: 6px;
+      a{
+        i{
+          color: $white;
+        }
+      }
     }
 
     .socialIcons03 {

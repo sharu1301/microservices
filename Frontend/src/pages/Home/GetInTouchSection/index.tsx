@@ -1,11 +1,6 @@
 import React from "react";
 import './index.scss'
 
-import facebook from '../../../assets/icons/facebook.png';
-import x from '../../../assets/icons/x.png';
-import instagram from '../../../assets/icons/instagram.png';
-import linkedIn from '../../../assets/icons/linkedin.png'
-
 const GetinTouch = () => {
     return (
         <div className="mainDiv p-0">
@@ -27,26 +22,18 @@ const GetinTouch = () => {
                             <p className="socialLinks">Find Us</p>
 
                             <div className=" imgDiv">
-                                <a href="/">
-                                <img alt="" src={x} />
-                                </a>
 
-                                <a href="/">
-                                <img alt="" src={facebook} />
-                                </a>
-
-
-                                <a href="/">
-                                <img alt="" src={instagram} />
+                                <a href="https://www.facebook.com/hindsmachineries/" target="_blank" rel="noreferrer">
+                                    <i className="fa-brands fa-facebook-f"></i>
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/parveen-sharma-02678a131/?originalSubdomain=in" target="_blank" rel="noreferrer">
-                                    <img
-                                        className={"e3ac851901b7444af8c2c6XLogoIcon1"}
-                                        alt=""
-                                        src={linkedIn}
-                                    />
+                                    <i className="fa-brands fa-linkedin-in"></i>
                                 </a>
+                                <a href="https://www.youtube.com/channel/UCqmwpUQbu2hYXHvn4SvR8Vw" target="_blank" rel="noreferrer">
+                                    <i className="fa-brands fa-youtube"></i>
+                                </a>
+
                             </div>
                         </div>
                         {/* </div> */}

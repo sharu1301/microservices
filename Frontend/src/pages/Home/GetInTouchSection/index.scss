@@ -60,6 +60,12 @@
             align-items: flex-start;
             justify-content: flex-start;
             gap: 18px;
+            a{
+                i{
+                    color: $white;
+                    font-size: $f18;
+                }
+            }
 
         }
 

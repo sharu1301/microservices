@@ -15,9 +15,9 @@ const GetinTouch = () => {
                         <div className="contactCard m-0">
                             <h4>Get in touch to discover how Hinds Machines<br /> can elevate your production.</h4>
                             <p>Email</p>
-                            <p>hinds@rediffmail.com</p>
-                            <p>Phone</p>
-                            <p>+91 9312657397</p>
+                            <p className="mail">hinds@rediffmail.com</p>
+                            <p className="mobile">Phone</p>
+                            <p className="number">+91 9312657397</p>
                             {/* <div className='socialLinks'> */}
                             <p className="socialLinks">Find Us</p>
 

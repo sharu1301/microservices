@@ -13,7 +13,7 @@ export default function ContactUs() {
           <div className="row w-100 align-items-center ml-0">
             <div className="getInTouch col-md-6">
               <h4> Get in touch</h4>
-              <p>We’d love to hear from you. Please fill out this form.</p>
+              <p className="git-details">We’d love to hear from you. Please fill out this form.</p>
               <div className="row">
                 <div className="col-md-6">
                   <h6>Contact Us</h6>
@@ -21,13 +21,13 @@ export default function ContactUs() {
                   <br />
                   <a href="tel:+91 8499851252">+91 8499851252</a>
 
-                  <h6>Email Us</h6>
+                  <h6 className="email">Email Us</h6>
                   <p>info@hindsmachine.com</p>
                 </div>
 
                 <div className="col-md-6">
                   <h6>Reach Us</h6>
-                  <p>No 139, Sector 8, IMT Manesar, Gurugram,Haryana 122051</p>
+                  <p className="git-address">No 139, Sector 8, IMT Manesar, Gurugram,Haryana 122051</p>
                   <h6>WhatsApp Us</h6>
                   <a href="https://wa.me/+91 8499851142">+91 8499851142</a>
                 </div>
@@ -41,6 +41,7 @@ export default function ContactUs() {
                   allowFullScreen
                   loading="lazy"
                   title="Hinds"
+                  
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>

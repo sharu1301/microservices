@@ -255,6 +255,7 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN"
     },
+
     {
         "title": "Euro Star Series",
         "mainImg": ["images/productimages/EuroStar.png","images/product-specification/productoverview/EuroStarSeries/EuroStarSeries.jpg"],
@@ -553,7 +554,7 @@
             "Radial Piston type hydraulic motor enable high torque and excellent performance."
         ],
         "industry": [
-            "Euro R Series",
+           
             "Electrical Industry",
             "Automobile",
             "Household",
@@ -567,11 +568,9 @@
             "Low  pressure  mould safety  protection  is standard  -equipped  to prevent mould damage.",
             "Triple safety control of mechanical, electrical and hydraulic devices to ensure operator safety.",
             "Energy saving variable displacement pump.",
-            "PLC controlled machine enable quick response time, essential for high productivity and repeatability.",
-            "Low  pressure  mould safety  protection  is standard  -equipped  to prevent mould damage.",
-            "Triple safety control of mechanical, electrical and hydraulic devices to ensure operator safety.",
-            "Energy saving variable displacement pump.",
             "PLC controlled machine enable quick response time, essential for high productivity and repeatability."
+            
+            
         ],
         "sliderImages": [
             "images/product-specification/slider/EuroRSeries/2.jpg",
@@ -592,10 +591,11 @@
             "images/product-specification/productoverview/EuroRSeries/3.jpg",
             "images/product-specification/productoverview/EuroRSeries/4.jpg"
         ],
-        "Type": "Toggle",
+        "Type": "RAM",
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN"
     },
+
     {
         "title": "Euro Servo R Series",
         "mainImg": ["images/productimages/EuroServoR.png","images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"],
@@ -615,7 +615,9 @@
             "Household",
             "Electrical Industry",
             "Automobile & More",
-            "Moulding"
+            "Moulding",
+            "Automotive"
+            
         ],
         "clampingUnit": [
             "Unique Prefill Cylinder Design",
@@ -677,10 +679,11 @@
             "Accurate PID temperature control setting on screen",
             "Auto heat start up & shut down program"
         ],
-        "Type": "Toggle",
+        "Type": "RAM",
         "DriveType": "Hydraulic",
         "ClampingForce": "110 TONS TO 180 TONS "
     },
+
     {
         "title": "Euro Servo R Smart Series",
         "mainImg":[ "images/productimages/EuroServoR.png","images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"],
@@ -691,7 +694,7 @@
             "TFT Color Display"
         ],
         "lists": [
-            "Wide tie bar distance and daylight.",
+            "Nitrided Screw & barrel",
             "Direct hydraulic clamping system enable stable and precisely controlled clamping force.",
             "Radial Piston type hydraulic motor enable high torque and excellent performance."
         ],
@@ -699,7 +702,7 @@
             "PID Control System",
             "Robot Interface",
             "Electrical Industry",
-            "Automobile & More",
+            "Automotive",
             "Moulding"
         ],
         "overviewImages": [
@@ -762,10 +765,14 @@
             "Accurate PID temperature control setting on screen",
             "Auto heat start up & shut down program"
         ],
-        "Type": "Toggle",
+        "Type": "RAM",
         "DriveType": "Hydraulic",
         "ClampingForce": "110 TONS TO 180 TONS "
     },
+
+
+
+
     {
         "title": "Euro Servo Smart Series",
         "mainImg": ["images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg","images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"],
@@ -774,17 +781,19 @@
         "features": [
             "Construction",
             "Energy Efficient",
-            "High Productivity"
+            "TFT Color Display"
         ],
         "lists": [
-            "Dedicated CPVC Machine",
-            "Unscrew feature for electric motor",
-            "Separate manifolds for injection unit and clamping unit",
-            "LPMT for posion measuring for moving platen, screw travel & Ejection."
+            "Five Point toggle clamp has reduced footprint",
+            "10.2' Vertical TFT Colour Display",
+            "Energy efficient Servo driven Closed loop Circuit."
+            
         ],
         "industry": [
             "CPVC Fittings",
-            "Construction"
+            "Construction",
+            "PVC Fittings"
+            
         ],
         "overviewImages": [
             "images/product-specification/productoverview/EuroServoSmart/1.jpg",

@@ -163,8 +163,8 @@ const ProductList = () => {
                     l1={"Five Point toggle clamp has reduced footprint"}
                     l2={"10.2' Vertical TFT Colour Display"}
                     l3={"Energy efficient Servo driven Closed loop Circuit."}
-                    highlight1={`Mould data storage`}
-                    highlight2={`Long clamp strokes`}
+                    highlight1={`Construction`}
+                    highlight2={`Energy Efficient`}
                     highlight3={`TFT Color Display`} 
                     industry1="CPVC Fittings"
                     industry2="Construction"
@@ -175,8 +175,8 @@ const ProductList = () => {
                     title={"Euro Servo R Smart Series"}
                     img={EuroRImg}
                     description={`Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump.`}
-                    l1={"Nitrided Screw & barrel"}
-                    l2={"Easily Programmable & User friendly"}
+                    l1={"Direct hydraulic clamping system enable stable and precisely controlled clamping force."}
+                    l2={"Nitrided Screw & barrel"}
                     l3={"High response time"}
                     highlight1={`Login Key for data safety`}
                     highlight2={`Mould data storage`}

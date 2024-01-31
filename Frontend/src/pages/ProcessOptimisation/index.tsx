@@ -85,7 +85,7 @@ export default function Process() {
             <div className="col-md-4">
               <div className="step-card">
                 <h2>02</h2>
-                <h6>2.	Plasticizing</h6>
+                <h6>Plasticizing</h6>
                 <ul className="pl-3">
                   <li>Improving Your Plasticizing Unit</li>
                   <li>Consulting and Technical Support</li>
@@ -97,7 +97,7 @@ export default function Process() {
             <div className="col-md-4">
               <div className="step-card">
                 <h2>03</h2>
-                <h6>3.	Digital Solutions</h6>
+                <h6>Digital Solutions</h6>
                 <ul className="pl-3">
                   <li>Optimization of Injection Molding Processes throughout the Product Life Cycle</li>
                   <li>Cross-System Networking</li>

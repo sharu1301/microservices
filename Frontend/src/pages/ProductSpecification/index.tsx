@@ -106,7 +106,7 @@ const navigate=useNavigate()
                   </div>
 
                   
-                  <div className='detailcard col-md-5'>
+                  <div className='detailcard col-md-6'>
                     <div>
                       <b> End Application</b>
                       <ul>

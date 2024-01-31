@@ -74,7 +74,7 @@ export default function Header() {
                         : "dropdown-toggle"
                     }
                     data-bs-toggle="dropdown"
-                    // onClick={() => navigate("/service")}
+                  // onClick={() => navigate("/service")}
                   >
                     Services
                   </li>

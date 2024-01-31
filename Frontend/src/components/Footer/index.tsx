@@ -121,15 +121,15 @@ const Footer = () => {
               <div className="col-md-6 text-right">
                 <ul className="copyright">
                   <li>
-                    <a href="/privacy">Privacy</a>
+                    <a href="/PrivacyPolicy">Privacy</a>
                   </li>
                   <li>|</li>
                   <li>
-                    <a href="/terms">Terms of use</a>
+                    <a href="/TermsOfUse">Terms of use</a>
                   </li>
                   <li>|</li>
                   <li>
-                    <a href="/privacy">Copyright 2023 @HindsMachine</a>
+                    Copyright 2023 @HindsMachine
                   </li>
                 </ul>
               </div>

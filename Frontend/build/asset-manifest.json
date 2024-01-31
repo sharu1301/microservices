@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.13c3d406.css",
-    "main.js": "/static/js/main.b0f4ec70.js",
+    "main.css": "/static/css/main.aca85096.css",
+    "main.js": "/static/js/main.98adfef9.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.8b32501c.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.b4c96919.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.7c91115c.chunk.js",
@@ -21,20 +21,28 @@
     "static/media/exhibition_img_1.png": "/static/media/exhibition_img_1.79ba59e162431953b28b.png",
     "static/media/images.png": "/static/media/images.79ba59e162431953b28b.png",
     "static/media/5.jpg": "/static/media/5.87f1873c387e7446cdcd.jpg",
+    "static/media/mainPET.png": "/static/media/mainPET.44acd7dc6baa8613b73c.png",
+    "static/media/EuroServoImg.jpg": "/static/media/EuroServoImg.520e1b575c077027d298.jpg",
     "static/media/6.jpg": "/static/media/6.db41ddc97fabd73f2056.jpg",
     "static/media/4.jpg": "/static/media/4.a08b5b39c41e75d96a12.jpg",
+    "static/media/EUROSERVOSMARTSERIES.jpg": "/static/media/EUROSERVOSMARTSERIES.39245342cdef7e8dbfe6.jpg",
     "static/media/1.png": "/static/media/1.4ae8c36ad049d47a9c13.png",
+    "static/media/EuroStarSeries.jpg": "/static/media/EuroStarSeries.f93e948ab419b9ac1c55.jpg",
     "static/media/3.png": "/static/media/3.018394d006fd535a8f2b.png",
     "static/media/4.png": "/static/media/4.33a895eafff6f42ab88f.png",
     "static/media/5.png": "/static/media/5.a0ea2596d55677e907e7.png",
     "static/media/heroImage.png": "/static/media/heroImage.f3a79bb2ac36fa1d420e.png",
+    "static/media/EUROSERVORSMART.jpg": "/static/media/EUROSERVORSMART.f8a9b11a5f501e7b393a.jpg",
+    "static/media/PACData.jpg": "/static/media/PACData.8c6649578a5af5c200a1.jpg",
     "static/media/2.png": "/static/media/2.7ee67a7b8effa2062358.png",
     "static/media/6.png": "/static/media/6.0cc939d0ebf7605171bc.png",
     "static/media/8.png": "/static/media/8.8a4c1df8f124a3790a9f.png",
+    "static/media/PetData.jpg": "/static/media/PetData.2f5f613cab41c10ccc63.jpg",
     "static/media/heroImg2.png": "/static/media/heroImg2.059e477a13207ef38d38.png",
     "static/media/page-title-bg.png": "/static/media/page-title-bg.6ff451401408625497a1.png",
     "static/media/img7.png": "/static/media/img7.331ce04887bb49b10f45.png",
     "static/media/mainImgNumbered.png": "/static/media/mainImgNumbered.805ba91bce5bf3192286.png",
+    "static/media/mainPAC.png": "/static/media/mainPAC.805ba91bce5bf3192286.png",
     "static/media/mainImg.png": "/static/media/mainImg.70478868530015b963be.png",
     "static/media/7.png": "/static/media/7.af7f7a9916caefca8321.png",
     "static/media/bottomSlider.png": "/static/media/bottomSlider.cdbff092d1fdf8b4304a.png",
@@ -95,8 +103,8 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/arrow-down-circle.svg": "/static/media/arrow-down-circle.648ba23587b2114d7e61.svg",
-    "main.13c3d406.css.map": "/static/css/main.13c3d406.css.map",
-    "main.b0f4ec70.js.map": "/static/js/main.b0f4ec70.js.map",
+    "main.aca85096.css.map": "/static/css/main.aca85096.css.map",
+    "main.98adfef9.js.map": "/static/js/main.98adfef9.js.map",
     "reactPlayerYouTube.8b32501c.chunk.js.map": "/static/js/reactPlayerYouTube.8b32501c.chunk.js.map",
     "reactPlayerSoundCloud.b4c96919.chunk.js.map": "/static/js/reactPlayerSoundCloud.b4c96919.chunk.js.map",
     "reactPlayerVimeo.7c91115c.chunk.js.map": "/static/js/reactPlayerVimeo.7c91115c.chunk.js.map",
@@ -113,7 +121,7 @@
     "787.670aa959.chunk.js.map": "/static/js/787.670aa959.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13c3d406.css",
-    "static/js/main.b0f4ec70.js"
+    "static/css/main.aca85096.css",
+    "static/js/main.98adfef9.js"
   ]
 }

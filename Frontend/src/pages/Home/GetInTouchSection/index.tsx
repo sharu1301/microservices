@@ -3,7 +3,7 @@ import './index.scss'
 
 const GetinTouch = () => {
     return (
-        <div className="mainDiv p-0">
+        <div className="mainDiv pt-5">
             <div className="container">
                 <div className="row w-100">
                     <div className="col-md-7 col-12">

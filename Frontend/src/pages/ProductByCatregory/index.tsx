@@ -14,13 +14,19 @@ import { useParams } from "react-router-dom";
 const ProductByCategory = () => {
     const { category } = useParams();
     const selectedCategory = category || "defaultCategory";
-    // console.log('Params', category)
 
+    const capitalizeWords = (str) => {
+        return str
+            .split(' ')
+            .map(word => word?.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    };
+    const formattedHeading = capitalizeWords(category);
     return (
         <div>
             <Header />
             {/* <PageTitle title="Products By Category " /> */}
-            <HeroCategory pagetitle={selectedCategory}/>
+            <HeroCategory pagetitle={formattedHeading} />
             <div className="container mb-5">
                 {productData.filter((data) => data.industry.map(cat => cat.toLowerCase()).includes(selectedCategory))
                     .map((data: any, i) => {
@@ -28,7 +34,7 @@ const ProductByCategory = () => {
                         return (
                             (i % 2 === 0 || i === 0) ? (
                                 <LeftImgComponent
-                                key={i}
+                                    key={i}
                                     data={data}
                                 />
                             ) :

@@ -4,16 +4,18 @@
     // border: 5px solid black;
     // width: 100%;
 
-    .imgSlider{
+    .imgSlider {
         width: 600px;
-        .slick-slider{
-            .slick-next{
+
+        .slick-slider {
+            .slick-next {
                 right: 0;
             }
-            .slick-prev{
+
+            .slick-prev {
                 left: 0;
             }
-        } 
+        }
     }
 
     display: flex;
@@ -22,11 +24,12 @@
     // align-items: center;
 
 
-    .slick-prev:before, .slick-next:before {
-        
-        color: black  !important;
+    .slick-prev:before,
+    .slick-next:before {
+
+        color: black !important;
     }
-   
+
 
     @media screen and (max-width: 1023px) {
         padding: 30px 20px;

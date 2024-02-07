@@ -28,7 +28,7 @@
     }
 
     .image {
-        width: 80%;
+        width: 89%;
         height: 40%;
 
 
@@ -259,7 +259,8 @@
     align-items: center;
 
     .image-section {
-        width: 60%;
+        width: 50%;
+        height: 350px;
 
         @media screen and (max-width: 500px) {
             width: 100%;
@@ -268,6 +269,7 @@
         img {
             width: 100%;
             border-radius: 0;
+            height: 100%;
         }
     }
 

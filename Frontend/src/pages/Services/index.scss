@@ -12,7 +12,13 @@
 .section {
   @include breakpoint(sm) {
     padding-top: $pt-2 !important;
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
   }
+
 }
 
 .servicesWrapper {
@@ -21,7 +27,8 @@
       @include breakpoint(md) {
         font-size: $f28;
         line-height: 30px;
-    }
+      }
+
       @include breakpoint(sm) {
         font-size: $f28;
         line-height: 42px;
@@ -36,7 +43,12 @@
       font-size: 16.502px;
       font-weight: $fw500;
       line-height: 29.114px;
+      outline: none;
       /* 176.429% */
+    }
+
+    :focus {
+      box-shadow: none;
     }
   }
 

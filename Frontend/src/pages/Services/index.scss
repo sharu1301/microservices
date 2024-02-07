@@ -21,7 +21,8 @@
       @include breakpoint(md) {
         font-size: $f28;
         line-height: 30px;
-    }
+      }
+
       @include breakpoint(sm) {
         font-size: $f28;
         line-height: 42px;
@@ -36,107 +37,112 @@
       font-size: 16.502px;
       font-weight: $fw500;
       line-height: 29.114px;
+      outline: none;
       /* 176.429% */
     }
-  }
 
-  .col-md-7 {
-    h2 {
-      @include breakpoint(md) {
-        font-size: $f28;
-        line-height: 30px;
-      }
+    :focus {
+      box-shadow: none;
     }
   }
 
-  .box {
-    @include breakpoint(sm) {
-      display: flex !important;
-      flex-direction: column-reverse;
-
-      .service-content {
-        order: 1;
-
-        p {
-          text-align: justify;
+    .col-md-7 {
+      h2 {
+        @include breakpoint(md) {
+          font-size: $f28;
+          line-height: 30px;
         }
       }
+    }
 
-      .service-img {
-        order: 2;
+    .box {
+      @include breakpoint(sm) {
+        display: flex !important;
+        flex-direction: column-reverse;
+
+        .service-content {
+          order: 1;
+
+          p {
+            text-align: justify;
+          }
+        }
+
+        .service-img {
+          order: 2;
+        }
       }
     }
-  }
 
-  .service-img {
-    height: 100%;
-    width: 100%;
-
-    @include breakpoint(sm) {
-      margin-top: $mt-2;
-    }
-
-    img {
+    .service-img {
       height: 100%;
       width: 100%;
-    }
-  }
-}
-
-.feature-counter {
-  width: 100%;
-  min-height: 414px;
-  background: #085b88;
-  color: $white;
-
-  .counterWrapper {
-    font-family: $inter;
-
-    .counterValue {
-      font-size: 76px;
-      font-weight: 500;
-      line-height: 98.8px;
-      /* 130% */
-      letter-spacing: -4px;
-
-      @include breakpoint(md) {
-        font-size: 66px;
-      }
 
       @include breakpoint(sm) {
-        font-size: 60px;
+        margin-top: $mt-2;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
+  }
 
-    .counterLabel {
-      p {
-        color: $white;
-        font-size: $f18;
-        font-weight: 400;
-        line-height: 23.4px;
+  .feature-counter {
+    width: 100%;
+    min-height: 414px;
+    background: #085b88;
+    color: $white;
 
+    .counterWrapper {
+      font-family: $inter;
+
+      .counterValue {
+        font-size: 76px;
+        font-weight: 500;
+        line-height: 98.8px;
         /* 130% */
+        letter-spacing: -4px;
+
         @include breakpoint(md) {
-          font-size: $f16;
+          font-size: 66px;
         }
 
+        @include breakpoint(sm) {
+          font-size: 60px;
+        }
+      }
+
+      .counterLabel {
+        p {
+          color: $white;
+          font-size: $f18;
+          font-weight: 400;
+          line-height: 23.4px;
+
+          /* 130% */
+          @include breakpoint(md) {
+            font-size: $f16;
+          }
+
+        }
       }
     }
-  }
 
-  hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgb(255 255 255);
-  }
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgb(255 255 255);
+    }
 
-  h4 {
-    color: $white;
-    font-size: $f28;
-  }
+    h4 {
+      color: $white;
+      font-size: $f28;
+    }
 
-  p {
-    color: $white;
+    p {
+      color: $white;
+    }
   }
-}

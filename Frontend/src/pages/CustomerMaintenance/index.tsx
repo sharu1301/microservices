@@ -40,17 +40,21 @@ const CustomerMaintenance = () => {
     <>
       <Header />
       <div className="customer-maintenance">
-        <PageTitle title="Customer Service And Maintenance" subtitle="Customer Service And Maintenance"/>
+        <PageTitle title="Customer Service And Maintenance" subtitle="Customer Service And Maintenance" />
         <div className="description-section">
           <div className="container">
             <div className="row ml-0">
               <div className="col-md-8 m-auto text-center">
                 <h2 className="head">
-                Customer service & injection molding machine maintenance
+                  Customer service & injection molding machine maintenance
                 </h2>
                 <p>Uncomplicated and fast – throughout the service life of the machine</p>
+              </div>
+            </div>
+            <div className="row text-center">
+              <div className="col-md-10 m-auto">
                 <p>
-                Hinds service stands for solving problems in no time. Our technical service solutions offer quality support throughout the entire service life of your plastics injection molding machines. When you need help immediately, you can count on us - our service technicians are available in your area with comprehensive product knowledge and many years of experience. We have an extensive spare parts inventory with 24/7 parts shipment, 365 days a year. In addition, our customer service & maintenance experts are here to advise you on predictive maintenance solutions for a trouble-free production.
+                  Hinds service stands for solving problems in no time. Our technical service solutions offer quality support throughout the entire service life of your plastics injection molding machines. When you need help immediately, you can count on us - our service technicians are available in your area with comprehensive product knowledge and many years of experience. We have an extensive spare parts inventory with 24/7 parts shipment, 365 days a year. In addition, our customer service & maintenance experts are here to advise you on predictive maintenance solutions for a trouble-free production.
                 </p>
               </div>
             </div>
@@ -61,18 +65,18 @@ const CustomerMaintenance = () => {
             <div className="row ml-0">
               <div className="col-md-10 m-auto text-center parts-delivery">
                 <h2 className="head ">
-                Do you need assistance from the ENGEL service experts for your plastics injection molding machines or spare parts delivery?
+                  Do you need assistance from the ENGEL service experts for your plastics injection molding machines or spare parts delivery?
                 </h2>
                 <p className="tel">
                   <Link to="tel:717 764 6818 ">
                     <i className="fa-solid fa-phone"></i>
-                    +1 717 764 6818 
+                    +1 717 764 6818
                   </Link>
                 </p>
 
                 <p className="spd-text">
-                Charges for the hotline vary depending on the country. <br />
-                You can find more information at service and support
+                  Charges for the hotline vary depending on the country. <br />
+                  You can find more information at service and support
                 </p>
               </div>
             </div>
@@ -131,57 +135,49 @@ const CustomerMaintenance = () => {
             </div>
           </div>
         </section> */}
-        <div className="processWapper-main">
-          <section className="container">
-            <div className="processWrapper">
-              <div className="processWrapper-left">
-                <div className="headingPanel">
-                  <h6>Your Advantages with HINDS Retrofits</h6>
-                  <p>
-                  Experience revitalized performance and enhanced productivity with retrofits for HINDS machines and robots. Our upgrades ensure your equipment remains at the forefront of efficiency and reliability, giving you the competitive edge in today's market.
-                  </p>
-                </div>
-                <div className="processWrapper-note">
-                  <h6>Enhanced Efficiency and Reliability</h6>
-                </div>
-                <div className="processWrapper-note">
-                  <h6>Streamlined Operations and Longevity</h6>
-                </div>
-                <div className="processWrapper-note">
-                  <h6>Cutting-edge Technology Integration</h6>
+        <div className="processWapper-main upgrades-section">
+          <div className="container">
+            <div className="row ml-0">
+              <div className="col-md-7 col-12">
+                <div className="right-panel">
+                  <div className="panel bg-light">
+                    <h6>Your Advantages with HINDS Retrofits</h6>
+                    <p>Experience revitalized performance and enhanced productivity with retrofits for HINDS machines and robots. Our upgrades ensure your equipment remains at the forefront of efficiency and reliability, giving you the competitive edge in today's market.</p>
+                  </div>
+                  <div className="panel-sub pl-0 pr-0">
+                    <h6>Enhanced Efficiency and Reliability</h6>
+                  </div>
+                  <div className="panel-sub pl-0 pr-0">
+                    <h6>Streamlined Operations and Longevity</h6>
+                  </div>
+                  <div className="panel-sub pl-0 pr-0">
+                    <h6>Cutting-edge Technology Integration</h6>
+                  </div>
                 </div>
               </div>
-              <div className="processWrapper-right">
-                <div className="process-img">
-                  <img
-                    src="../../images/pages/service/our-machine.jpg"
-                    alt="service"
-                    className="img-fluid"
-                  />
+              <div className="col-md-5 col-12">
+                <div className="upgrade-img">
+                  <img src="../../images/pages/service/our-machine.jpg" alt="serivec" className="img-fluid" />
                 </div>
-                <div className="process-img-details">
-                  <p>
-                    Our service experts analyze your individual needs for
-                    machine retrofits and advise you on options for machine and
-                    automation modifications as well as increased efficiency.
-                    They ensure that the retrofits of your injection molding
-                    machine are coordinated with existing processes and your
-                    peripherals.
-                  </p>
-                </div>
+                <p className="mt-3">Our service experts analyze your individual needs for
+                  machine retrofits and advise you on options for machine and
+                  automation modifications as well as increased efficiency.
+                  They ensure that the retrofits of your injection molding
+                  machine are coordinated with existing processes and your
+                  peripherals. </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
 
         <div className="all-solutions">
           <div className="container">
             <div className="all-solutions-details">
               <h5>
-              All solutions for your injection moulding machine in the area of customer service & maintenance
+                All solutions for your injection moulding machine in the area of customer service & maintenance
               </h5>
               <p>
-              Within our extensive range of services, you'll discover the perfect solution to meet your unique challenges, no matter which service model you implement. HINDS provides all-encompassing maintenance strategies, including reactive, preventive, and predictive approaches.
+                Within our extensive range of services, you'll discover the perfect solution to meet your unique challenges, no matter which service model you implement. HINDS provides all-encompassing maintenance strategies, including reactive, preventive, and predictive approaches.
               </p>
             </div>
             <div className=" all-solutions-cards-container">
@@ -194,7 +190,7 @@ const CustomerMaintenance = () => {
                 </div>
                 <h6>Reactive Maintenance </h6>
                 <p>
-                Are your machines operating smoothly until an unexpected issue arises, necessitating immediate assistance for your injection molding machine?
+                  Are your machines operating smoothly until an unexpected issue arises, necessitating immediate assistance for your injection molding machine?
                 </p>
                 <ul>
                   <li>
@@ -220,7 +216,7 @@ const CustomerMaintenance = () => {
                 </div>
                 <h6>Preventive Maintenance for Injection Molding Machines </h6>
                 <p>
-                Do you schedule your maintenance activities to preemptively address issues before they surface?
+                  Do you schedule your maintenance activities to preemptively address issues before they surface?
                 </p>
                 <ul>
                   <li>
@@ -246,7 +242,7 @@ const CustomerMaintenance = () => {
                 </div>
                 <h6>Predictive Maintenance for the Injection Molding Machine </h6>
                 <p>
-                Are you looking to consistently monitor your machinery's health to foresee potential issues?
+                  Are you looking to consistently monitor your machinery's health to foresee potential issues?
                 </p>
                 <ul>
                   <li>

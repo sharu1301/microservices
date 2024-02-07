@@ -88,10 +88,10 @@ const Footer = () => {
                 <p>
                   Subscribe our newsletter and get all the latest information
                 </p>
-                {/* <form action=""> */}
+                <form action="">
                   <input type="text" placeholder="Your Email Address" />
                   <button className="arrow-btn"><i className="fa-solid fa-arrow-right"></i></button>
-                {/* </form> */}
+                </form>
               </div>
             </div>
           </div>

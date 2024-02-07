@@ -16,8 +16,6 @@ export default function VideoGallery({ videoData }: { videoData: any }) {
           className="videoFrame"
           playing={currentVideo === id}
           onPlay={() => setCurrentVideo(id)}
-          pip={true}
-          stopOnUnmount={false}
         />
       ))}
     </div>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './index.scss';
 import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
@@ -17,14 +16,12 @@ interface LeftImgComponentInterface {
     highlight3: string,
     industry1: string,
     industry2?: string,
-    industry3?: string,
-    highlight4?:string
+    industry3?: string
 
 }
-export default function LeftImgComponent({ title, img, description, l1, l2, l3, l4, highlight1, highlight2, highlight3, industry1, industry2, industry3 ,highlight4}: LeftImgComponentInterface) {
+export default function LeftImgComponent({ title, img, description, l1, l2, l3, l4, highlight1, highlight2, highlight3, industry1, industry2, industry3 }: LeftImgComponentInterface) {
 
     const navigate = useNavigate();
-    const[showMoreHighlight,setShowMoreHighlight]=useState(false)
 
     return (
         <div className="row leftComponent pt-5 d-flex w-100">
@@ -39,12 +36,7 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
                     <p className='highlighed'>{highlight1}</p>
                     <p className='highlighed'>{highlight2}</p>
                     <p className='highlighed'>{highlight3}</p>
-                  {highlight4  && !showMoreHighlight? (
-                     <p className='highlighed' onClick={()=>setShowMoreHighlight(true)}>+ 1 more</p>)
-                    :null}
-                    {showMoreHighlight &&(
-                        <p className='highlighed'>{highlight4}</p> 
-                    )}
+                    <p className='highlighed'>+ 3 more</p>
                 </div>
                 <div>
                     <ul>

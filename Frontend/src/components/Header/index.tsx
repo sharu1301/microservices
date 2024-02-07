@@ -101,8 +101,6 @@ export default function Header() {
                     </li>
                   </ul>
                 </li>
-
-                
                 <li className="dropdown">
                   <li
                     className="dropdown-toggle m-0 p-0"

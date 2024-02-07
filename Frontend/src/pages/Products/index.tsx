@@ -41,7 +41,6 @@ const ProductList = () => {
                     highlight3={`User friendly`}
                     industry1={'Packaging'}
                     industry2={'Cap & Closures'}
-                    highlight4={'Timer precision'}
                 />
 
                 <RightImgComponent
@@ -104,7 +103,7 @@ const ProductList = () => {
                     highlight3={`High Productivity`}
                     industry1="CPVC Fittings"
                     industry2="Construction"
-
+                    
 
                 />
 
@@ -117,10 +116,10 @@ const ProductList = () => {
                     l3={"Available in a range of 100 to 910 Ton"}
                     highlight1={`PID Control System`}
                     highlight2={`Robot Interface`}
-                    highlight3={`TFT Color Display`}
+                    highlight3={`TFT Color Display`} 
                     industry1="PVC Fittings"
                     industry2="Construction"
-                />
+                    />
 
                 <LeftImgComponent
                     title="Euro R Series"
@@ -166,13 +165,13 @@ const ProductList = () => {
                     l3={"Energy efficient Servo driven Closed loop Circuit."}
                     highlight1={`Construction`}
                     highlight2={`Energy Efficient`}
-                    highlight3={`TFT Color Display`}
+                    highlight3={`TFT Color Display`} 
                     industry1="CPVC Fittings"
                     industry2="Construction"
-                />
+                    />
 
 
-                <RightImgComponent
+                     <RightImgComponent
                     title={"Euro Servo R Smart Series"}
                     img={EuroRImg}
                     description={`Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump.`}
@@ -185,7 +184,7 @@ const ProductList = () => {
                     industry1="Electrical Industry"
                     industry2="Automotive"
                     industry3="Household"
-                />
+                     />
             </div>
 
             <SubFooter />

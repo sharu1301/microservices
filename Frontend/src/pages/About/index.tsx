@@ -28,7 +28,7 @@ function About() {
     })
   }, [exposureURL])
 
-
+  
   const ArrowLeft = () => {
     return (
       <div className='arrows' onClick={() => ref.current.slickNext()} >
@@ -50,9 +50,7 @@ function About() {
     dots: false,
     fade: true,
     infinite: true,
-    speed: 1000,
-    autoplay: true,
-
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <></>,
@@ -65,7 +63,7 @@ function About() {
   return (
     <>
       <Header />
-      <PageTitle title="About us" subtitle="About us" />
+      <PageTitle title="About us" subtitle="About us"/>
       <main className="ContentWrapper">
         <div className="container">
           <section className="section ourStory">
@@ -157,7 +155,7 @@ function About() {
                     </div>
                     <h4 className="text-center">Dedicated Support</h4>
                     <p>
-                      Experience exceptional support with Hinds Plastic Machines Pvt Ltd. Our commitment to support goes beyond product delivery. We stand by our clients, offering responsive and personalized assistance at every stage. Our team ensures your experience with our machines is seamless, backed by a reliable network of professionals ready to assist you.
+                    Experience exceptional support with Hinds Plastic Machines Pvt Ltd. Our commitment to support goes beyond product delivery. We stand by our clients, offering responsive and personalized assistance at every stage. Our team ensures your experience with our machines is seamless, backed by a reliable network of professionals ready to assist you.
                     </p>
                   </div>
                 </div>
@@ -172,10 +170,10 @@ function About() {
             <div className="col-md-6">
               <div className="left-content">
                 <div className="section_head mb-3">
-                  Precision Performance, Enhanced Production
+                Precision Performance, Enhanced Production
                 </div>
                 <p>
-                  <b>Injection Moulding Machines: </b>Uncover precision engineering and robust performance with our Injection Moulding Machines. Hinds Plastic Machines Pvt Ltd proudly introduces state-of-the-art machines designed to meet diverse manufacturing needs. Engineered for efficiency and reliability, our machines elevate production processes, empowering your manufacturing capabilities.
+                <b>Injection Moulding Machines: </b>Uncover precision engineering and robust performance with our Injection Moulding Machines. Hinds Plastic Machines Pvt Ltd proudly introduces state-of-the-art machines designed to meet diverse manufacturing needs. Engineered for efficiency and reliability, our machines elevate production processes, empowering your manufacturing capabilities.
                 </p>
               </div>
               <div className="responsive-img">
@@ -198,7 +196,7 @@ function About() {
                 />
               </div>
               <p className="mt-4">
-                <b>Auxiliary Equipments: </b>Maximize operational efficiency with our seamlessly integrated Auxiliary Equipments. At Hinds Plastic Machines Pvt Ltd, we understand the pivotal role of support in manufacturing. Our carefully curated range of Auxiliary Equipments offers comprehensive solutions for a streamlined production workflow. From material handling to temperature control, trust us to empower your manufacturing success.
+              <b>Auxiliary Equipments: </b>Maximize operational efficiency with our seamlessly integrated Auxiliary Equipments. At Hinds Plastic Machines Pvt Ltd, we understand the pivotal role of support in manufacturing. Our carefully curated range of Auxiliary Equipments offers comprehensive solutions for a streamlined production workflow. From material handling to temperature control, trust us to empower your manufacturing success.
               </p>
               <div className="responsive-img">
                 <img src="../../../images/pages/about-p1.png" className="img-fluid" alt="responsive" />
@@ -239,7 +237,7 @@ function About() {
                   <div className="company-content">
                     <h6>Why Hinds Plastic Machines</h6>
                     <p>
-                      Choose Hinds Plastic Machines for a journey that spans from the roots of engineering passion to the forefront of industry innovation. With a legacy marked by precision, dedication, and a deep understanding of manufacturing needs, we stand as the trusted partner for those seeking high-quality, efficient, and sustainable plastic processing solutions. Join us in shaping the future of manufacturing.
+                    Choose Hinds Plastic Machines for a journey that spans from the roots of engineering passion to the forefront of industry innovation. With a legacy marked by precision, dedication, and a deep understanding of manufacturing needs, we stand as the trusted partner for those seeking high-quality, efficient, and sustainable plastic processing solutions. Join us in shaping the future of manufacturing.
                     </p>
                   </div>
                 </div>
@@ -254,7 +252,7 @@ function About() {
                   <div className="company-content">
                     <h6>Our Mission</h6>
                     <p>
-                      Driven by a passion for innovation and engineering excellence, Hinds Plastic Machines is on a mission to revolutionize the plastic industry. Committed to delivering high-quality, efficient, and sustainable plastic processing solutions, our mission is to empower manufacturers with state-of-the-art machines that redefine industry standards.
+                    Driven by a passion for innovation and engineering excellence, Hinds Plastic Machines is on a mission to revolutionize the plastic industry. Committed to delivering high-quality, efficient, and sustainable plastic processing solutions, our mission is to empower manufacturers with state-of-the-art machines that redefine industry standards.
                     </p>
                   </div>
                 </div>
@@ -269,7 +267,7 @@ function About() {
                   <div className="company-content">
                     <h6>Our Vision</h6>
                     <p>
-                      Hinds Plastic Machines envisions a future where precision and sustainability converge in the world of plastic processing. Our vision is to be a global leader, recognized for pioneering advancements in machine manufacturing. We aspire to shape a manufacturing landscape where efficiency, reliability, and environmental responsibility harmonize effortlessly.
+                    Hinds Plastic Machines envisions a future where precision and sustainability converge in the world of plastic processing. Our vision is to be a global leader, recognized for pioneering advancements in machine manufacturing. We aspire to shape a manufacturing landscape where efficiency, reliability, and environmental responsibility harmonize effortlessly.
                     </p>
                   </div>
                 </div>

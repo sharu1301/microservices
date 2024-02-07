@@ -33,7 +33,8 @@ const navigate=useNavigate()
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    speed: 500,
+    speed: 1000,
+    autoplay:true,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <></>,
@@ -109,7 +110,7 @@ const navigate=useNavigate()
                   <div className='detailcard col-md-6'>
                     <div>
                       <b> End Application</b>
-                      <ul>
+                      <ul className='pl-4'>
                         {data?.industry?.map((industries, i) => (
                           <li key={i}>{industries}</li>
                         ))}
@@ -130,9 +131,9 @@ const navigate=useNavigate()
                     </div>
 
 
-                    <div>
+                    <div className='mt-5 mb-4'>
                       <b>Standard Features</b>
-                      <ul>
+                      <ul className='pl-4'>
                         {data?.standardFeatures?.map((features, index) => (
                           <li key={index}>{features}</li>
                         ))}

@@ -5,9 +5,11 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding: 60px 0 60px 0;
-    @include breakpoint(sm){
-        padding:60px 0 32px 0;
+
+    @include breakpoint(sm) {
+        padding: 60px 0 32px 0;
     }
+
     .container {
         padding: 0 10px;
     }
@@ -39,30 +41,36 @@
             /* 133.333% */
             letter-spacing: 0.36px;
             margin-bottom: 11px;
-            @include breakpoint(sm){
+
+            @include breakpoint(sm) {
                 margin-bottom: 7px;
             }
         }
-        .git-address{
+
+        .git-address {
             margin-bottom: 31px;
-            @include breakpoint(sm){
+
+            @include breakpoint(sm) {
                 margin-bottom: 0;
             }
         }
+
         h6 {
             margin-top: 31px;
             font-family: Inter;
             font-size: 16px;
             font-weight: 600;
+
             // .email{
             //     // margin-top: 31px;
             //     padding-top: 31px !important;
             // }
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 margin-top: 24px;
             }
         }
-        h6:nth-child(2){
+
+        h6:nth-child(2) {
             margin-top: 31px !important;
         }
 
@@ -75,11 +83,12 @@
                 display: none;
             }
         }
-
     }
 
     .dataForm {
         background: #F9F9F9;
+        padding: 10px;
+
         @include breakpoint(sm) {
             padding: 0;
             width: 94%;

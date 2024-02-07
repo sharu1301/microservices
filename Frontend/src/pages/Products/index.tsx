@@ -41,6 +41,7 @@ const ProductList = () => {
                     highlight3={`User friendly`}
                     industry1={'Packaging'}
                     industry2={'Cap & Closures'}
+                    highlight4={'Timer precision'}
                 />
 
                 <RightImgComponent

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './index.scss';
 import { BsArrowRight } from "react-icons/bs";
 
@@ -19,13 +19,15 @@ interface RightImgComponentInterface {
     highlight3: string,
     industry1: string,
     industry2?: string,
-    industry3?: string
+    industry3?: string,
+    highlight4?:string
 
 }
-export default function RightImgComponent({ title, img, description, l1, l2, l3, l4, highlight1, highlight2, highlight3,industry1,industry2,industry3 }: RightImgComponentInterface) {
+export default function RightImgComponent({ title, img, description, l1, l2, l3, l4, highlight1, highlight2, highlight3,industry1,industry2,industry3,highlight4 }: RightImgComponentInterface) {
 
 
     const navigate = useNavigate();
+    const[showMoreHighlight,setShowMoreHighlight]=useState(false)
     return (
         <div className="row rightComponent pt-5 d-flex w-100">
             <div className='col-md-6 rightDescription'>
@@ -37,6 +39,12 @@ export default function RightImgComponent({ title, img, description, l1, l2, l3,
                     <p className='highlighed'>{highlight2}</p>
                     <p className='highlighed'>{highlight3}</p>
                     {/* <p className='highlighed' onClick={()=>}>+ 3 more</p> */}
+                    {highlight4 && !showMoreHighlight? (
+                     <p className='highlighed more' onClick={()=>setShowMoreHighlight(true)}>+ 1 more</p>)
+                    :null}
+                    {showMoreHighlight && (
+                        <p className='highlighed'>{highlight4}</p> 
+                    )}
                     </div>
                     <ul>
                         <li>{l1}</li>

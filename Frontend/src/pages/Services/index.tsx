@@ -26,7 +26,7 @@ const Service = () => {
               <div className="col-md-12 text-center">
                 <div className="introImage pt-4">
                   <img
-                    src="../../images/pages/service-intro.png"
+                    src="../../images/pages/service-intro.jpg"
                     alt=""
                     className="img-fluid"
                   />

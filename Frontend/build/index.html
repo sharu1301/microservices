@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <base href="/" />
     <meta charset="utf-8" />
     <link rel="icon" href="/logo.png" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -30,8 +31,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous" />
     <title>Hinds Machines</title>
-    <script defer="defer" src="/static/js/main.98adfef9.js"></script>
-    <link href="/static/css/main.aca85096.css" rel="stylesheet">
+    <script defer="defer" src="/static/js/main.78f510e6.js"></script>
+    <link href="/static/css/main.75a4825d.css" rel="stylesheet">
 </head>
 
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
@@ -43,25 +44,25 @@
             (), document.addEventListener("DOMContentLoaded",
                 (function () {
                     document.querySelectorAll(".dropdown-menu").
-                        forEach((function (n) {
-                            n.addEventListener("click", (function (n) { n.stopPropagation() }))
-                        })), window.innerWidth < 992 &&
-                        (document.querySelectorAll(".navbar .dropdown").forEach((function (n) {
-                            n.addEventListener("hidden.bs.dropdown", (function () {
-                                this.querySelectorAll(".submenu").forEach((function (n) { n.style.display = "none" }))
-                            }))
-                        })),
-                            document.querySelectorAll(".dropdown-menu a").forEach((function (n) {
-                                n.addEventListener("click", (function (n) {
-                                    let e = this.nextElementSibling; e
-                                        && e.classList.contains("submenu") && (n.preventDefault(), console.log(e),
-                                            "block" == e.style.display ? e.style.display = "none" :
-                                                e.style.display = "block")
-                                }))
+                    forEach((function (n) {
+                        n.addEventListener("click", (function (n) { n.stopPropagation() }))
+                    })), window.innerWidth < 992 &&
+                    (document.querySelectorAll(".navbar .dropdown").forEach((function (n) {
+                        n.addEventListener("hidden.bs.dropdown", (function () {
+                            this.querySelectorAll(".submenu").forEach((function (n) { n.style.display = "none" }))
+                        }))
+                    })),
+                        document.querySelectorAll(".dropdown-menu a").
+                            forEach((function (n) {
+                                n.addEventListener("click",
+                                    (function (n) {
+                                        let e = this.nextElementSibling; e &&
+                                            e.classList.contains("submenu") && (n.preventDefault(), console.log(e), "block" == e.style.display ? e.style.display = "none" : e.style.display = "block")
+                                    }))
                             })))
-                }))
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                }))</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <div id="root"></div>
 </body>

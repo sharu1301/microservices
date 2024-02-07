@@ -222,7 +222,7 @@ const navigate=useNavigate()
                   </div>
 
                   <div className='paraContainer'>
-                    <p>Click to Zoom</p>
+                    {/* <p>Click to Zoom</p> */}
                   </div>
 
                 </div>

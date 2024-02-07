@@ -12,9 +12,10 @@
 .section {
   @include breakpoint(sm) {
     padding-top: $pt-2 !important;
+
     .img-fluid {
       max-width: 100%;
-       height: auto;
+      height: auto;
     }
   }
 
@@ -51,103 +52,103 @@
     }
   }
 
-    .col-md-7 {
-      h2 {
-        @include breakpoint(md) {
-          font-size: $f28;
-          line-height: 30px;
-        }
+  .col-md-7 {
+    h2 {
+      @include breakpoint(md) {
+        font-size: $f28;
+        line-height: 30px;
       }
     }
+  }
 
-    .box {
-      @include breakpoint(sm) {
-        display: flex !important;
-        flex-direction: column-reverse;
+  .box {
+    @include breakpoint(sm) {
+      display: flex !important;
+      flex-direction: column-reverse;
 
-        .service-content {
-          order: 1;
+      .service-content {
+        order: 1;
 
-          p {
-            text-align: justify;
-          }
-        }
-
-        .service-img {
-          order: 2;
+        p {
+          text-align: justify;
         }
       }
+
+      .service-img {
+        order: 2;
+      }
+    }
+  }
+
+  .service-img {
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint(sm) {
+      margin-top: $mt-2;
     }
 
-    .service-img {
+    img {
       height: 100%;
       width: 100%;
+    }
+  }
+}
+
+.feature-counter {
+  width: 100%;
+  min-height: 414px;
+  background: #085b88;
+  color: $white;
+
+  .counterWrapper {
+    font-family: $inter;
+
+    .counterValue {
+      font-size: 76px;
+      font-weight: 500;
+      line-height: 98.8px;
+      /* 130% */
+      letter-spacing: -4px;
+
+      @include breakpoint(md) {
+        font-size: 66px;
+      }
 
       @include breakpoint(sm) {
-        margin-top: $mt-2;
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
+        font-size: 60px;
       }
     }
-  }
 
-  .feature-counter {
-    width: 100%;
-    min-height: 414px;
-    background: #085b88;
-    color: $white;
+    .counterLabel {
+      p {
+        color: $white;
+        font-size: $f18;
+        font-weight: 400;
+        line-height: 23.4px;
 
-    .counterWrapper {
-      font-family: $inter;
-
-      .counterValue {
-        font-size: 76px;
-        font-weight: 500;
-        line-height: 98.8px;
         /* 130% */
-        letter-spacing: -4px;
-
         @include breakpoint(md) {
-          font-size: 66px;
+          font-size: $f16;
         }
 
-        @include breakpoint(sm) {
-          font-size: 60px;
-        }
       }
-
-      .counterLabel {
-        p {
-          color: $white;
-          font-size: $f18;
-          font-weight: 400;
-          line-height: 23.4px;
-
-          /* 130% */
-          @include breakpoint(md) {
-            font-size: $f16;
-          }
-
-        }
-      }
-    }
-
-    hr {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      border: 0;
-      border-top: 1px solid rgb(255 255 255);
-    }
-
-    h4 {
-      color: $white;
-      font-size: $f28;
-    }
-
-    p {
-      color: $white;
     }
   }
+
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgb(255 255 255);
+  }
+
+  h4 {
+    color: $white;
+    font-size: $f28;
+  }
+
+  p {
+    color: $white;
+  }
+}

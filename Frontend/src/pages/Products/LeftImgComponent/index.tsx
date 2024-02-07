@@ -40,7 +40,7 @@ export default function LeftImgComponent({ title, img, description, l1, l2, l3, 
                     <p className='highlighed'>{highlight2}</p>
                     <p className='highlighed'>{highlight3}</p>
                     {highlight4 && !showMoreHighlight? (
-                     <p className='highlighed' onClick={()=>setShowMoreHighlight(true)}>+ 1 more</p>)
+                     <p className='highlighed more' onClick={()=>setShowMoreHighlight(true)}>+ 1 more</p>)
                     :null}
                     {showMoreHighlight && (
                         <p className='highlighed'>{highlight4}</p> 

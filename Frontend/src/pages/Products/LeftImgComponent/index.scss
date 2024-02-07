@@ -61,7 +61,9 @@
             width: auto;
             display: inline-block;
         }
-
+        .more{
+            cursor: pointer;
+        }
         ul {
             list-style-type: disc;
             margin: 5px 5px 5px 20px;

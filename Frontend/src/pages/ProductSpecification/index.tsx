@@ -33,11 +33,13 @@ const navigate=useNavigate()
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <></>,
     prevArrow: <></>,
+    autoplay: true,
+    
 
   };
 

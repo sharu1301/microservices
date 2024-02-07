@@ -33,6 +33,8 @@ const AllGallery: React.FC<AllGalleryProps> = ({ pictures }) => {
             className="videoFrame"
             playing={currentVideo === id}
             onPlay={() => setCurrentVideo(id)}
+            pip={true}
+            stopOnUnmount={false}
           />
         </div>
       ))}

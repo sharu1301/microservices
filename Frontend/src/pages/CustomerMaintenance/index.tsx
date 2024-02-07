@@ -48,7 +48,7 @@ const CustomerMaintenance = () => {
                 <h2 className="head">
                   Customer service & injection molding machine maintenance
                 </h2>
-                <p>Uncomplicated and fast – throughout the service life of the machine</p>
+                <p >Uncomplicated and fast – throughout the service life of the machine</p>
               </div>
             </div>
             <div className="row text-center">
@@ -65,7 +65,7 @@ const CustomerMaintenance = () => {
             <div className="row ml-0">
               <div className="col-md-10 m-auto text-center parts-delivery">
                 <h2 className="head ">
-                  Do you need assistance from the ENGEL service experts for your plastics injection molding machines or spare parts delivery?
+                  Do you need assistance from the Hinds Machine service experts for your plastics injection molding machines or spare parts delivery?
                 </h2>
                 <p className="tel">
                   <Link to="tel:717 764 6818 ">

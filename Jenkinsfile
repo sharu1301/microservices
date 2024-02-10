@@ -2,34 +2,7 @@ pipeline {
     agent any
 
     stages {
-        // Stage 1: Creating a Jira ticket
-        stage('Creating a Jira ticket.') {
-            steps {
-                script {
-                    // Define Jira issue details
-                    def jiraIssue = [
-                        fields: [
-                            project: [key: 'HIN'],
-                            summary: 'This ticket includes each stage and its corresponding status',
-                            description: "A new Jira ticket has been automatically created to display the pipeline status. With build number is:: ${env.BUILD_NUMBER}.",
-                            issuetype: [name: 'Task']
-                        ]
-                    ]
 
-                    // Capture the Jira response
-                    def jiraResponse = jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
-                    
-                    // Check if Jira issue creation was successful
-                    if (jiraResponse && jiraResponse.data && jiraResponse.data.key) {
-                        def jiraIssueKey = jiraResponse.data.key
-                        
-                        // Update Jenkins build description with Jira Issue Key
-                        currentBuild.description = "Jira Issue Key: ${jiraIssueKey}"
-                        env.JIRA_ISSUE_KEY = jiraIssueKey
-                    }
-                }
-            }
-        }
 
         // Stage 2: Build Artifact
         stage('Build Artifact') {
@@ -55,15 +28,7 @@ pipeline {
                             CI=false npm run build
                         '''
 
-                        // Check build result
-                        def buildResult = sh script: 'echo build failed', returnStatus: true
-                        if (buildResult != 0) {
-                            // If build fails, add a comment to the Jira ticket
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Build Failed", site: 'hindsmachines')
-                        } else {
-                            // If build is successful, add a comment to the Jira ticket
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Build Success", site: 'hindsmachines')
-                        }
+                       
                     }
                 }
             }
@@ -92,14 +57,6 @@ pipeline {
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
                         
-                        // Check Quality Gate status and update Jira ticket
-                        if (qg.status != 'OK') {
-                            echo "Quality gate failed"
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Quality gate failed", site: 'hindsmachines')
-                        } else {
-                            echo "Quality gate PASS"
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Quality gate PASS", site: 'hindsmachines')
-                        }
                     }
                 }
             }    
@@ -138,20 +95,10 @@ pipeline {
                         )
 
                         // Check S3 upload result
-                        def s3UploadResult = sh script: 'echo s3-upload failed', returnStatus: true
-                        if (s3UploadResult != 0) {
-                            // If S3 upload fails, add a comment to the Jira ticket and fail the build
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "S3 Upload Failed", site: 'hindsmachines')
-                            error "S3 Upload Failed"
-                        } else {
-                            // If S3 upload is successful, add a comment to the Jira ticket
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "S3 Upload Successful", site: 'hindsmachines')
-                        }
+                       
                     }
                 }
             }
         }
     }
 }
-
-//

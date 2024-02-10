@@ -2,8 +2,6 @@ pipeline {
     agent any
 
     stages {
-
-
         // Stage 2: Build Artifact
         stage('Build Artifact') {
             steps {
@@ -27,8 +25,6 @@ pipeline {
                             npm install --legacy-peer-deps
                             CI=false npm run build
                         '''
-
-                       
                     }
                 }
             }
@@ -56,7 +52,6 @@ pipeline {
                     // Wait for Quality Gate results
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
-                        
                     }
                 }
             }    
@@ -95,12 +90,13 @@ pipeline {
                         )
 
                         // Check S3 upload result
-                       
                     }
                 }
             }
         }
-        post {
+    }
+
+    post {
         always {
             // Email notification for success or failure
             emailext subject: "Jenkins Build: \${currentBuild.result}", 
@@ -111,7 +107,6 @@ pipeline {
                      from: 'hingesdesigns@gmail.com',
                      attachLog: true,
                      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-            }
         }
     }
 }

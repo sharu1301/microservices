@@ -104,7 +104,7 @@ pipeline {
                      to: 'hingesdesigns@gmail.com', // Replace with the recipient email address
                      mimeType: 'text/html',
                      replyTo: 'hingesdesigns@gmail.com',
-                     from: 'hingesdesigns@gmail.com',
+                     from: 'shaik@insigniaconsultancy.com',
                      attachLog: true,
                      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }

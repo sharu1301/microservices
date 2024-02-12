@@ -101,10 +101,10 @@ pipeline {
             // Email notification for success or failure
             emailext subject: "Jenkins Build: \${currentBuild.result}", 
                      body: "Build result: \${currentBuild.result}",
-                     to: 'hingesdesigns@gmail.com', // Replace with the recipient email address
+                     to: 'hindsmachines@gmail.com', // Replace with the recipient email address
                      mimeType: 'text/html',
-                     replyTo: 'hingesdesigns@gmail.com',
-                     from: 'shaik@insigniaconsultancy.com',
+                     replyTo: 'hindsmachines@gmail.com',
+                     from: 'hingesdesigns@gmail.com',
                      attachLog: true,
                      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }

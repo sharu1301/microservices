@@ -96,22 +96,26 @@ pipeline {
         }
     }
     post {
-        success {
-            emailext(
-                body: 'This mail is from Jenkins. The build is successful.',
-                recipientProviders: [developers()],
-                subject: 'Hindsmachines Build Success',
-                to: 'shaik@insigniaconsultancy.com,sridhar98855@gmail.com,sridhar.k@insigniaconsultancy.com'
-            )
-        }
-        failure {
-            emailext(
-                body: 'This mail is from Jenkins. The build has failed.',
-                recipientProviders: [developers()],
-                subject: 'Hindsmachines Build Failure',
-                to: 'shaik@insigniaconsultancy.com,sridhar98855@gmail.com,sridhar.k@insigniaconsultancy.com'
-            )
+        always {
+            script {
+                def buildStatus = currentBuild.result
+                if (buildStatus == 'FAILURE') {
+                    emailext(
+                        body: 'This mail is from Jenkins. The build has failed. Error message: ${BUILD_LOG, maxLines=10}',
+                        recipientProviders: [developers()],
+                        subject: 'Hindsmachines Build Failure',
+                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'
+                    )
+                } 
+                else {
+                    emailext(
+                        body: 'This mail is from Jenkins. The build is successful.',
+                        recipientProviders: [developers()],
+                        subject: 'Hindsmachines Build Success',
+                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'
+                    )
+                }
+            }
         }
     }
-}
 

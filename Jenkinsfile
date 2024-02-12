@@ -95,18 +95,16 @@ pipeline {
             }
         }
     }
-
     post {
-        always {
-            // Email notification for success or failure
-            emailext subject: "Jenkins Build: \${currentBuild.result}", 
-                     body: "Build result: \${currentBuild.result}",
-                     to: 'hindsmachines@gmail.com', // Replace with the recipient email address
-                     mimeType: 'text/html',
-                     replyTo: 'hindsmachines@gmail.com',
-                     from: 'hingesdesigns@gmail.com',
-                     attachLog: true,
-                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+    always {
+        script {
+            emailext(
+                body: 'This mail is from Jenkins',
+                recipientProviders: [developers()],
+                subject: 'This mail is from hindsmachines build is success',
+                to: 'shaik@insigniaconsultancy.com,sridhar98855@gmail.com,sridhar.k@insigniaconsultancy.com'
+                )
+            }
         }
     }
 }

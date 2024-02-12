@@ -96,15 +96,22 @@ pipeline {
         }
     }
     post {
-    always {
-        script {
+        success {
             emailext(
-                body: 'This mail is from Jenkins',
+                body: 'This mail is from Jenkins. The build is successful.',
                 recipientProviders: [developers()],
-                subject: 'This mail is from hindsmachines build is success',
+                subject: 'Hindsmachines Build Success',
                 to: 'shaik@insigniaconsultancy.com,sridhar98855@gmail.com,sridhar.k@insigniaconsultancy.com'
-                )
-            }
+            )
+        }
+        failure {
+            emailext(
+                body: 'This mail is from Jenkins. The build has failed.',
+                recipientProviders: [developers()],
+                subject: 'Hindsmachines Build Failure',
+                to: 'shaik@insigniaconsultancy.com,sridhar98855@gmail.com,sridhar.k@insigniaconsultancy.com'
+            )
         }
     }
 }
+

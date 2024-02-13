@@ -125,13 +125,13 @@ pipeline {
                         body: 'This mail is from Jenkins. The build has failed. Error message: ${BUILD_LOG, maxLines=10}',
                         recipientProviders: [developers()],
                         subject: 'Hindsmachines Build Failure',
-                        to: 'shaik@insigniaconsultancy.com'
+                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
                     )
                 }
 
                 // Include webhook information in the email body
                 def emailBody = """
-                    Greetings,
+                    
                     This mail is from Jenkins.
                     ${env.WEBHOOK_INFO}
 
@@ -143,7 +143,7 @@ pipeline {
                     // Existing email configuration
                     recipientProviders: [developers()],
                     subject: 'Hindsmachines Build Failure',
-                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'
+                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
                 )
             }
         }

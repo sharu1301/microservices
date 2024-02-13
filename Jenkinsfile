@@ -2,6 +2,25 @@ pipeline {
     agent any
 
     stages {
+        // Stage 1: Handle GitLab Webhook
+        stage('Handle GitLab Webhook') {
+            when {
+                expression {
+                    env.BRANCH_NAME == null
+                }
+            }
+            steps {
+                script {
+                    // Extract Git information
+                    def commitMessage = sh(script: 'git log --format=%B -n 1 HEAD', returnStdout: true).trim()
+                    def committerEmail = sh(script: 'git log -1 --pretty=format:"%ae"', returnStdout: true).trim()
+                    def commitAuthor = sh(script: 'git log -1 --pretty=format:"%an"', returnStdout: true).trim()
+
+                    // Store webhook information in environment variable
+                    env.WEBHOOK_INFO = "Commit pushed by: ${commitAuthor} (${committerEmail})\nCommit Comment: ${commitMessage}"
+                }
+            }
+        }
         // Stage 2: Build Artifact
         stage('Build Artifact') {
             steps {
@@ -98,24 +117,36 @@ pipeline {
     post {
         always {
             script {
+                // Existing post-build steps
                 def buildStatus = currentBuild.result
                 if (buildStatus == 'FAILURE') {
                     emailext(
-                        body: 'Sorry, This mail is from Jenkins. The build has failed of hindsmachines. Error message: ${BUILD_LOG, maxLines=10}',
+                        // ... (your existing failure email configuration)
+                        body: 'This mail is from Jenkins. The build has failed. Error message: ${BUILD_LOG, maxLines=10}',
                         recipientProviders: [developers()],
-                        subject: 'hindsmachines Build Failure',
-                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,bharathkumar.m@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
-                    )
-                } 
-                else {
-                    emailext(
-                        body: 'Greetings, This mail is from Jenkins. The build is successful of hindsmachines.',
-                        recipientProviders: [developers()],
-                        subject: 'hindsmachines Build Success',
-                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,bharathkumar.m@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                        subject: 'Hindsmachines Build Failure',
+                        to: 'shaik@insigniaconsultancy.com'
                     )
                 }
+
+                // Include webhook information in the email body
+                def emailBody = """
+                    Greetings,
+                    This mail is from Jenkins.
+                    ${env.WEBHOOK_INFO}
+
+                    Build ${currentBuild.result == 'FAILURE' ? 'failed' : 'successful'} of hindsmachines.
+                """
+                
+                emailext(
+                    body: emailBody,
+                    // Existing email configuration
+                    recipientProviders: [developers()],
+                    subject: 'Hindsmachines Build Failure',
+                    to: 'shaik@insigniaconsultancy.com'
+                )
             }
         }
     }
 }
+

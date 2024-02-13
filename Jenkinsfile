@@ -58,7 +58,7 @@ pipeline {
 
                     // Run SonarQube analysis
                     withSonarQubeEnv('SonarQube') {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=HINDS-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=HIND-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
                     }
                 }
             }
@@ -143,7 +143,7 @@ pipeline {
                     // Existing email configuration
                     recipientProviders: [developers()],
                     subject: 'Hindsmachines Build Failure',
-                    to: 'shaik@insigniaconsultancy.com'
+                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'
                 )
             }
         }

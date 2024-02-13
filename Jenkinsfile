@@ -96,45 +96,26 @@ pipeline {
         }
     }
     post {
-    always {
-        script {
-            def buildStatus = currentBuild.result
-            if (buildStatus == 'FAILURE') {
-                emailext(
-                    // ... (your existing failure email configuration)
-                    body: 'This mail is from Jenkins. The build has failed. Error message: ${BUILD_LOG, maxLines=10}',
-                    recipientProviders: [developers()],
-                    subject: 'Hindsmachines Build Failure',
-                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'    
-                )
-            } else {
-                emailext(
-                    // ... (your existing success email configuration)
-                    body: 'This mail is from Jenkins. The build is successful.',
-                    recipientProviders: [developers()],
-                    subject: 'Hindsmachines Build Success',
-                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'
-                )
+        always {
+            script {
+                def buildStatus = currentBuild.result
+                if (buildStatus == 'FAILURE') {
+                    emailext(
+                        body: 'Sorry, This mail is from Jenkins. The build has failed of hindsmachines. Error message: ${BUILD_LOG, maxLines=10}',
+                        recipientProviders: [developers()],
+                        subject: 'hindsmachines Build Failure',
+                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,bharathkumar.m@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                    )
+                } 
+                else {
+                    emailext(
+                        body: 'Greetings, This mail is from Jenkins. The build is successful of hindsmachines.',
+                        recipientProviders: [developers()],
+                        subject: 'hindsmachines Build Success',
+                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,bharathkumar.m@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                    )
+                }
             }
         }
     }
-    success {
-        script {
-            // Access GitLab webhook information
-            def gitlabWebhookUrl = env.GITLAB_WEBHOOK_URL
-            def gitlabEventName = env.GITLAB_EVENT_NAME
-            def gitlabBranch = env.GITLAB_BRANCH
-            def gitlabSourceBranch = env.GITLAB_SOURCE_BRANCH
-
-            // Include GitLab webhook information in success email
-            emailext(
-                body: "This mail is from Jenkins. The build is successful.\nGitLab Webhook Information:\nWebhook URL: ${gitlabWebhookUrl}\nEvent Name: ${gitlabEventName}\nBranch: ${gitlabBranch}\nSource Branch: ${gitlabSourceBranch}",
-                // ... (your existing success email configuration)
-                recipientProviders: [developers()],
-                subject: 'Hindsmachines Build Success',
-                to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com'
-            )
-        }
-    }
-}
 }

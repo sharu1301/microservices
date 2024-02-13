@@ -58,7 +58,7 @@ pipeline {
 
                     // Run SonarQube analysis
                     withSonarQubeEnv('SonarQube') {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName=HIND-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
+                        sh "${scannerHome}/bin/sonar-scanner projectName=HINDS-MACHINE -Dsonar.projectKey=HINDS-MACHINE-KEY"
                     }
                 }
             }

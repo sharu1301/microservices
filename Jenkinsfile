@@ -142,7 +142,7 @@ pipeline {
                     body: emailBody,
                     // Existing email configuration
                     recipientProviders: [developers()],
-                    subject: 'Hindsmachines Build Failure',
+                    subject: 'Hindsmachines Build successful',
                     to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
                 )
             }

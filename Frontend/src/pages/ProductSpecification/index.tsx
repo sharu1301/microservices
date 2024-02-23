@@ -13,6 +13,8 @@ import ReactPlayer from "react-player";
 import blowMouldingData from "../../data/blowMouldingList.json";
 import injectionMouldingData from "../../data/productDescription.json";
 import SectionModal from "../../components/SectionModal";
+import ImageMapperComponent from "../../components/ImageMapperComponent";
+import mainImg from "../../assets/images/product-specification/mainImg.png";
 
 export default function ProductSpecification() {
   const navigate = useNavigate();
@@ -66,6 +68,10 @@ export default function ProductSpecification() {
     <>
       <Header />
       <PageTitle title={productname} subtitle={productname} />
+      <ImageMapperComponent
+        src={mainImg}
+        areas={[{ name: "unit 1", shape: "rect", coords: [40, 40, 60, 60] }]}
+      />
       <SectionModal />
       <div>
         {injectionData

@@ -12,10 +12,10 @@ import Unit2 from "../assets/images/product-specification/productoverview/EuroPa
 import Unit3 from "../assets/images/product-specification/productoverview/EuroPacSeries/3.png";
 import Unit4 from "../assets/images/product-specification/productoverview/EuroPacSeries/4.png";
 
-const SectionModal = () => {
+const SectionModal = ({props}) => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedUnit, setSelectedUnit] = useState(0);
-
+console.log("Props 18=======>",props)
   const handleClick = (unit) => {
     setOpenModal(true);
     setSelectedUnit(unit);
@@ -43,7 +43,7 @@ const SectionModal = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      {/* <img src={mainImg} alt="main" style={{ display: "block" }} /> */}
+      <img src={require(`../assets/${props.image}`)} alt="main" style={{ display: "block" }} />
       <div
         style={{
           position: "absolute",

@@ -76,7 +76,7 @@ export default function ProductSpecification() {
     <>
       <Header />
       <PageTitle title={productname} subtitle={productname} />
-      <SectionModal />
+      
       <div>
 
         {/* {injectionData ? ( */}
@@ -87,16 +87,16 @@ export default function ProductSpecification() {
 
               <div className='mainSectionContainer row'>
                 <div className='imgSlider col-md-7'>
-
+                <SectionModal image={data.mainImg}/>
                   {/* <Slider {...MainSliderSettings}>
                     {data?.mainImg?.map((image, index) =>
                     ( */}
-                      <img
+                      {/* <img
                         key={index}
                         src={require(`../../assets/${data.mainImg}`)}
                         className='image'
                         alt=''
-                        style={{ cursor: 'pointer' }} />
+                        style={{ cursor: 'pointer' }} /> */}
                     {/* ))} */}
                   {/* </Slider> */}
                 </div>

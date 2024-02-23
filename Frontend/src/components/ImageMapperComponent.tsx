@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ImageMapper from "react-image-mapper";
+import ImageMapper from "react-img-mapper";
 
 interface ImageMapperProps {
   src: string;

@@ -1,9 +1,7 @@
 @import '../../assets/sass/main.scss';
 
 .mainSectionContainer {
-    // border: 5px solid black;
-    // width: 100%;
-
+   
     .imgSlider {
         width: 600px;
 
@@ -20,7 +18,7 @@
 
     display: flex;
     padding: 30px 95px 10px 50px;
-    justify-content: space-around;
+    justify-content: space-between;
     // align-items: center;
 
 
@@ -41,12 +39,12 @@
     }
 
     .image {
-        width: auto;
-        height: 60%;
+        width: '70%';
+        height: 50%;
 
 
         @media screen and (max-width: 1023px) {
-            width: 68%;
+            width: 50%;
             height: auto;
         }
 

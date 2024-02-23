@@ -26,7 +26,8 @@ export default function ProductSpecification() {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    speed: 500,
+    speed: 1000,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <></>,
@@ -92,7 +93,7 @@ export default function ProductSpecification() {
                     <div className="detailcard col-md-6">
                       <div>
                         <b> End Application</b>
-                        <ul>
+                        <ul className="pl-4">
                           {data?.industry?.map((industries, i) => (
                             <li key={i}>{industries}</li>
                           ))}
@@ -110,9 +111,9 @@ export default function ProductSpecification() {
                           ))}
                         </Slider>
                       </div>
-                      <div>
+                      <div className="mt-5 mb-4">
                         <b>Standard Features</b>
-                        <ul>
+                        <ul className="pl-4">
                           {data?.standardFeatures?.map((features, index) => (
                             <li key={index}>{features}</li>
                           ))}
@@ -213,7 +214,7 @@ export default function ProductSpecification() {
                       ))}
                     </div>
                     <div className="paraContainer">
-                      <p>Click to Zoom</p>
+                      {/* <p>Click to Zoom</p> */}
                     </div>
                   </div>
                 </div>

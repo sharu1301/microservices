@@ -78,7 +78,7 @@ export default function Header() {
                   >
                     Services
                   </li>
-                  <ul className="dropdown-menu">
+                  <ul className="dropdown-menu service-drop">
                     <li>
                       <a className="dropdown-item" href="/service">
                         About Services
@@ -110,7 +110,7 @@ export default function Header() {
                   </li>
                   <ul className="dropdown-menu">
                     <li>
-                      <button className="dropdown-item" >
+                      <button className="dropdown-item" onClick={()=>navigate('/productlist')} >
                         Injection moulding machine
                       </button>
                       <ul className="submenu dropdown-menu">

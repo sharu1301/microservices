@@ -2,39 +2,29 @@ pipeline {
     agent any
 
     stages {
-        // Stage 1: Creating a Jira ticket
-        stage('Creating a Jira ticket.') {
+        // Stage 1: Handle GitLab Webhook
+        stage('Handle GitLab Webhook') {
+            when {
+                expression {
+                    env.BRANCH_NAME == null
+                }
+            }
             steps {
                 script {
-                    // Define Jira issue details
-                    def jiraIssue = [
-                        fields: [
-                            project: [key: 'HIN'],
-                            summary: 'This ticket includes each stage and its corresponding status',
-                            description: "A new Jira ticket has been automatically created to display the pipeline status. With build number is:: ${env.BUILD_NUMBER}.",
-                            issuetype: [name: 'Task']
-                        ]
-                    ]
+                    // Extract Git information
+                    def commitMessage = sh(script: 'git log --format=%B -n 1 HEAD', returnStdout: true).trim()
+                    def committerEmail = sh(script: 'git log -1 --pretty=format:"%ae"', returnStdout: true).trim()
+                    def commitAuthor = sh(script: 'git log -1 --pretty=format:"%an"', returnStdout: true).trim()
 
-                    // Capture the Jira response
-                    def jiraResponse = jiraNewIssue(issue: jiraIssue, site: 'hindsmachines', credentialsId: 'Jira-Jenkins-Integration')
-                    
-                    // Check if Jira issue creation was successful
-                    if (jiraResponse && jiraResponse.data && jiraResponse.data.key) {
-                        def jiraIssueKey = jiraResponse.data.key
-                        
-                        // Update Jenkins build description with Jira Issue Key
-                        currentBuild.description = "Jira Issue Key: ${jiraIssueKey}"
-                        env.JIRA_ISSUE_KEY = jiraIssueKey
-                    }
+                    // Store webhook information in environment variable
+                    env.WEBHOOK_INFO = "Commit pushed by: ${commitAuthor} (${committerEmail})\nCommit Comment: ${commitMessage}"
                 }
             }
         }
-
         // Stage 2: Build Artifact
         stage('Build Artifact') {
             steps {
-                dir('/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend') {
+                dir('/var/lib/jenkins/workspace/Hinds Machine/Frontend') {
                     script {
                         sh '''
                             # Set up Node.js environment
@@ -54,16 +44,6 @@ pipeline {
                             npm install --legacy-peer-deps
                             CI=false npm run build
                         '''
-
-                        // Check build result
-                        def buildResult = sh script: 'echo build failed', returnStatus: true
-                        if (buildResult != 0) {
-                            // If build fails, add a comment to the Jira ticket
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Build Failed", site: 'hindsmachines')
-                        } else {
-                            // If build is successful, add a comment to the Jira ticket
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Build Success", site: 'hindsmachines')
-                        }
                     }
                 }
             }
@@ -91,15 +71,6 @@ pipeline {
                     // Wait for Quality Gate results
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
-                        
-                        // Check Quality Gate status and update Jira ticket
-                        if (qg.status != 'OK') {
-                            echo "Quality gate failed"
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Quality gate failed", site: 'hindsmachines')
-                        } else {
-                            echo "Quality gate PASS"
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "Quality gate PASS", site: 'hindsmachines')
-                        }
                     }
                 }
             }    
@@ -108,7 +79,7 @@ pipeline {
         // Stage 5: Upload to S3
         stage('Upload to S3') {
             steps {
-                dir("/var/lib/jenkins/workspace/Test-automation/ics-ics-hind-machine/Frontend/build") {
+                dir("/var/lib/jenkins/workspace/Hinds Machine/Frontend/build") {
                     script {
                         // Upload artifacts to S3 bucket
                         s3Upload(
@@ -138,20 +109,44 @@ pipeline {
                         )
 
                         // Check S3 upload result
-                        def s3UploadResult = sh script: 'echo s3-upload failed', returnStatus: true
-                        if (s3UploadResult != 0) {
-                            // If S3 upload fails, add a comment to the Jira ticket and fail the build
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "S3 Upload Failed", site: 'hindsmachines')
-                            error "S3 Upload Failed"
-                        } else {
-                            // If S3 upload is successful, add a comment to the Jira ticket
-                            jiraAddComment(idOrKey: env.JIRA_ISSUE_KEY, comment: "S3 Upload Successful", site: 'hindsmachines')
-                        }
                     }
                 }
             }
         }
     }
+    post {
+        always {
+            script {
+                // Existing post-build steps
+                def buildStatus = currentBuild.result
+                if (buildStatus == 'FAILURE') {
+                    emailext(
+                        // ... (your existing failure email configuration)
+                        body: 'This mail is from Jenkins. The build has failed. Error message: ${BUILD_LOG, maxLines=10}',
+                        recipientProviders: [developers()],
+                        subject: 'Hindsmachines Build Failure',
+                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                    )
+                }
+
+                // Include webhook information in the email body
+                def emailBody = """
+                    
+                    This mail is from Jenkins.
+                    ${env.WEBHOOK_INFO}
+
+                    Build ${currentBuild.result == 'FAILURE' ? 'failed' : 'successful'} of hindsmachines.
+                """
+                
+                emailext(
+                    body: emailBody,
+                    // Existing email configuration
+                    recipientProviders: [developers()],
+                    subject: 'Hindsmachines Build successful',
+                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                )
+            }
+        }
+    }
 }
 
-//

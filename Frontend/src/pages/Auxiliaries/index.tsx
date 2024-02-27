@@ -239,7 +239,7 @@ const Auxiliaries = () => {
                     <div className="row w-100 ml-0 mt-5 align-items-center">
                         <div className="col-md-5">
                             <div className="aux-image">
-                                <img src="../../images/pages/auxiliaries/plc-controller.png" alt="hopper" />
+                                <img src="../../images/pages/auxiliaries/controller.png" alt="hopper" />
                             </div>
                             <div className="resp-aux-image">
                                 <img src="../../images/pages/auxiliaries/oven.png" alt="hopper" />

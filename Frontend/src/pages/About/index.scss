@@ -6,12 +6,14 @@
 
 .ourStory {
   align-items: center;
+
   h6 {
     font-size: $f22;
   }
 
   .arrows {
     cursor: pointer;
+
     @include breakpoint(sm) {
       display: none;
     }
@@ -33,14 +35,16 @@
         margin: 0;
         width: 100%;
       }
+
       .slick-slider {
         margin: 0;
       }
     }
-    .img-fluid{
-  max-width: 100%;
-  height: 420px;
-}
+
+    .img-fluid {
+      max-width: 100%;
+      height: 420px;
+    }
   }
 
   @include breakpoint(sm) {
@@ -106,10 +110,11 @@
 }
 
 .aboutProductsWrapper {
-  .btn-custom:hover{
+  .btn-custom:hover {
     background-color: #085b88;
     color: $white;
   }
+
   @include breakpoint(sm) {
     text-align: center;
   }
@@ -155,11 +160,13 @@
 
 .companyInformation {
   padding-bottom: 0;
+
   @include breakpoint(sm) {
-    .ptb-70{
+    .ptb-70 {
       padding-bottom: 0;
     }
   }
+
   p {
     color: $gray;
     font-size: 20px;
@@ -178,7 +185,7 @@
         margin-bottom: 14px;
       }
     }
-    
+
   }
 
   .companyInfoWrapper {
@@ -188,8 +195,9 @@
       position: relative;
       display: flex;
       justify-content: space-between;
+
       &:not(:last-child) {
-        padding-bottom: 50px;
+        padding-bottom: 20px;
       }
 
       .icon {
@@ -215,6 +223,7 @@
         }
       }
     }
+
     .company {
       &::before {
         content: "";
@@ -228,11 +237,13 @@
         @include breakpoint(xs) {
           left: 10.5%;
         }
+
         @include breakpoint(sm) {
           left: 11.5%;
         }
       }
     }
+
     .company:last-child {
       &::before {
         border-left: 0px;
@@ -243,10 +254,14 @@
   .company-statistics {
     width: 100%;
     position: relative;
+    // border: 1px solid black;
 
     .profile-image {
+      
+
       img {
         border-radius: 16px;
+        height: 450px;
       }
 
       @include breakpoint(md) {
@@ -270,7 +285,8 @@
         margin-top: -9%;
         padding: 25px 26px;
       }
-      @include breakpoint(sm){
+
+      @include breakpoint(sm) {
         padding: 13px 22px;
         margin-top: -16%;
         height: 100px;
@@ -288,7 +304,8 @@
         left: 0;
         background: #085b88;
         mix-blend-mode: multiply;
-        @include breakpoint(sm){
+
+        @include breakpoint(sm) {
           height: 110px;
         }
       }
@@ -303,8 +320,9 @@
           font-size: 37px;
           font-weight: 800;
           line-height: 150%;
-          @include breakpoint(sm){
-             font-size: 20px;
+
+          @include breakpoint(sm) {
+            font-size: 20px;
           }
         }
 
@@ -312,13 +330,14 @@
           font-size: 15px;
           font-weight: 600;
           line-height: 18px;
-          @include breakpoint(sm){
+
+          @include breakpoint(sm) {
             font-size: 12px;
           }
         }
       }
 
-      .counter-box + .counter-box {
+      .counter-box+.counter-box {
         &::after {
           content: "";
           width: 0px;
@@ -338,6 +357,8 @@
     }
   }
 }
+
+
 // .img-fluid{
 //   max-width: 100%;
 //   height: 420px;

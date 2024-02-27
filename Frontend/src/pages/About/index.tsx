@@ -273,6 +273,8 @@ function About() {
                 </div>
               </div>
             </div>
+
+            
             <div className="col-sm-7 col-md-12 col-lg-7">
               <div className="company-statistics">
                 <div className="profile-image">
@@ -280,6 +282,7 @@ function About() {
                     src="../../../images/pages/ourStory.png"
                     alt=""
                     className="img-fluid"
+                  
                   />
                 </div>
                 <div className="counterWrapper">

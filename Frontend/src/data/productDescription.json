@@ -1,10 +1,7 @@
 [
     {
-        "id": "1",
-        "mainImg": 
-            "images/product-specification/productoverview/EuroPacSeries/mainPAC.png",
-            
-        
+        "id": 1,
+        "mainImg": "images/product-specification/productoverview/EuroPacSeries/mainPAC.jpg",
         "title": "Euro Pac Series",
         "image": "images/productimages/EuroPac.png",
         "description": "High speed hydraulic motor on screw drive for high plascizing rate. Energy efficient DFE series electronic variable pump for high output",
@@ -69,11 +66,9 @@
         ]
     },
     {
+        "id": 2,
         "title": "Euro Pet Series",
-        "mainImg": [
-            "images/product-specification/productoverview/EuroPETSeries/mainPET.png",
-            "images/product-specification/productoverview/EuroPETSeries/PetData.jpg"
-        ],
+        "mainImg": "images/product-specification/productoverview/EuroPETSeries/mainPET.jpg",
         "image": "images/productimages/EuroPet.png",
         "description": "Heavy duty five point toggle mechanism.Higher torque radial piston hydraulic motor for screw drive.",
         "features": [
@@ -137,11 +132,9 @@
         ]
     },
     {
+        "id": 3,
         "title": "Euro Servo Series",
-        "mainImg": [
-            "images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"
-        ],
+        "mainImg": "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
         "image": "images/productimages/EuroSurvo.png",
         "description": "Energy efficient Servo Driven gear pump with closed loop pressure transducer feedback",
         "features": [
@@ -233,6 +226,14 @@
             "I/O diagnosis for analog & digital",
             "Mould data storage"
         ],
+        "controlPanel": [
+            "Control Panel design as per IO6 Standard",
+            "Each point safety ensure with MCB",
+            "Proper earthing and neutral point",
+            "Low and Hight voltage safety.",
+            "Energy meter for hourly unit consumed",
+            "SSr relay with heatsink for heaters control"
+        ],
         "standardFeatures": [
             "10.2 vertical TFT colour display with alpha numeric keypad",
             "Visual & Audible alarm",
@@ -257,11 +258,9 @@
         "ClampingForce": "110-180 KN"
     },
     {
+        "id": 4,
         "title": "Euro Star Series",
-        "mainImg": [
-            "images/productimages/EuroStar.png",
-            "images/product-specification/productoverview/EuroStarSeries/EuroStarSeries.jpg"
-        ],
+        "mainImg": "images/product-specification/productoverview/EuroStarSeries/EuroStarSeriesD.jpg",
         "description": "High Caliber machine to satisfy your needs for the production of high speed, superior precision parts.",
         "features": [
             "injection capacity 40gms - 120gms",
@@ -331,11 +330,12 @@
         ]
     },
     {
+        "id": 5,
         "title": "Euro (CPVC) Series",
-        "mainImg": [
-            "images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"
-        ],
+        "mainImg": 
+            "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
+            
+        
         "image": "images/productimages/EuroSurvo.png",
         "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
         "features": [
@@ -440,11 +440,11 @@
         "ClampingForce": "110-180 KN"
     },
     {
+        "id": 6,
         "title": "Euro (PVC) Series",
-        "mainImg": [
-            "images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"
-        ],
+        "mainImg": 
+            "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
+           
         "description": "Polyvinyl chloride (PVC) is a versatile thermoplastic material that is used in the production of hundreds of products.",
         "features": [
             "PID Control System",
@@ -546,12 +546,15 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN"
     },
+
+
+
     {
+        "id": 7,
         "title": "Euro R Series",
-        "mainImg": [
-            "images/productimages/EuroR.png",
-            "images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"
-        ],
+        "mainImg": 
+              "images/product-specification/productoverview/EuroRSeries/EuroServoRSeries.jpg"
+        ,
         "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
         "features": [
             "TFT Color Display",
@@ -601,12 +604,11 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN"
     },
+
     {
+        "id": 8,
         "title": "Euro Servo R Series",
-        "mainImg": [
-            "images/productimages/EuroServoR.png",
-            "images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"
-        ],
+        "mainImg": "images/product-specification/productoverview/EuroRSeries/EuroServoRSeries.jpg",
         "description": "Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump",
         "features": [
             "PID Control System",
@@ -690,12 +692,11 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110 TONS TO 180 TONS "
     },
+
     {
+        "id": 9,
         "title": "Euro Servo R Smart Series",
-        "mainImg": [
-            "images/productimages/EuroServoR.png",
-            "images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"
-        ],
+        "mainImg": "images/product-specification/productoverview/EuroRSeries/EuroServoRSeries.jpg",
         "description": "Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump",
         "features": [
             "PID Control System",
@@ -778,12 +779,12 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110 TONS TO 180 TONS "
     },
+    
     {
+        "id": 10,
         "title": "Euro Servo Smart Series",
-        "mainImg": [
-            "images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg",
-            "images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"
-        ],
+        "mainImg":"images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
+           
         "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
         "features": [
             "Construction",

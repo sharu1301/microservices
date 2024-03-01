@@ -127,12 +127,16 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
   };
 
   const handleClick = (area: { name: string } | any) => {
-    console.log("Hanlde zCLick area", area)
-    setOpenModal(true);
+    console.log("Handle Click area", area);
+    const modalTrigger = document.getElementById("exampleModalTrigger");
+    if (modalTrigger) {
+      modalTrigger.click();
+    }
     setSelectedUnit(area.name || "");
-    setSelectedUnitData(area.data)
-    setTitle(area.title)
+    setSelectedUnitData(area.data);
+    setTitle(area.title);
   };
+
 
   const handleCloseModal = () => {
     setOpenModal(false);
@@ -140,19 +144,59 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
   };
 
   return (
-    <div style={{}}>
+    <div style={{}} data-bs-toggle="modal" data-bs-target="#exampleModal">
       <ImageMapper
         src={require(`../../assets/${src}`)}
         width={imageDimensions.width / 1.8}
         height={imageDimensions.height / 1.2}
         map={{ name: "image-map", areas: scaledAreas }}
         onClick={(area) => handleClick(area)}
-        // className=""
 
-
+      // className=""
       />
+
+
+
+      <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h6 className="modal-title" id="exampleModalLabel">{title}</h6>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              {selectedUnit && (
+                <div>
+                  {/* <DialogTitle className="title">{title}</DialogTitle> */}
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
+
+                    <img
+                      src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                      alt={`Unit ${selectedUnit}`}
+                      style={{ width: "150px", height: '220px', marginRight: '20px', }}
+                    />
+                    <div className="pl-3">
+
+                      <ul>
+                        {selectedUnitData?.map((listData, i) => (
+                          <li key={i} className="listData">{listData}</li>)
+                        )}
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div> */}
+          </div>
+        </div>
+      </div>
       {/* <div style={{  }}> */}
-      <Dialog
+      {/* <Dialog
         aria-describedby="alert-dialog-slide-description"
         maxWidth={'sm'}
         TransitionComponent={Transition}
@@ -162,8 +206,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         onClose={handleCloseModal}
         style={{}}
       >
-        {/* <DialogTitle>Unit {selectedUnit}</DialogTitle> */}
-        {/* <DialogTitle> {JSON.stringify(getImageByUnit(selectedUnit))}</DialogTitle> */}
+    
         <DialogContent>
           {selectedUnit && (
             <div>
@@ -191,7 +234,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         <DialogActions>
           <Button onClick={handleCloseModal}>Close</Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}
       {/* </div> */}
     </div>
   );

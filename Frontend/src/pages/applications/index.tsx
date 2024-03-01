@@ -6,8 +6,8 @@ import PageTitle from '../../components/pageTitle';
 import AppCard from './AppCard';
 
 
-import image1 from '../../assets/images/applications/img1.jpg';
-import image2 from '../../assets/images/applications/img2.png';
+import image1 from '../../assets/images/applications/automotiveIndustry.jpg';
+import image2 from '../../assets/images/product-specification/slider/EuroPacSeries/1.jpg';
 import image3 from '../../assets/images/applications/img3.png';
 import image4 from '../../assets/images/applications/img4.png';
 import image5 from '../../assets/images/product-specification/slider/EuroStarSeries/3.jpg';

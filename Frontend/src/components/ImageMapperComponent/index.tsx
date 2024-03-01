@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
+import Modal from "react-animated-modal";
 
 interface ImageMapperProps {
   allData: any;
@@ -88,25 +89,38 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
           calculatePercentY(area.coords[3]),
         ],
         preFillColor: "transparent",
-        // strokeColor: "yellow",
+        // fillColor: "transaprent",
+        // responsive: true,
+        strokeColor: "red",
+      };
+    }
+    else if (area.shape === "poly") {
+      const scaledCoords = area.coords.map((coord, index) => {
+        return index % 2 === 0
+          ? calculatePercentX(coord)
+          : calculatePercentY(coord);
+      });
+      return {
+        ...area,
+        coords: scaledCoords,
       };
     }
     return area;
   });
 
   const getImageByUnit = (unit: string) => {
-    console.log("Image--1", allData.overviewImages[0], unit)
+    // console.log("Image--1", allData.overviewImages[0], unit)
     switch (unit) {
       case "unit 1":
-        return require(`../../assets/${allData.overviewImages[0]}`);
+        return require(`../../assets/${allData?.overviewImages[0]}`);
       case "unit 2":
-        return require(`../../assets/${allData.overviewImages[1]}`);
+        return require(`../../assets/${allData?.overviewImages[1]}`);
       case "unit 3":
-        return require(`../../assets/${allData.overviewImages[2]}`);
+        return require(`../../assets/${allData?.overviewImages[2]}`);
       case "unit 4":
-        return require(`../../assets/${allData.overviewImages[3]}`);
+        return require(`../../assets/${allData?.overviewImages[3]}`);
       case "unit 5":
-        return require(`../../assets/${allData.overviewImages[4]}`);
+        return require(`../../assets/${allData?.overviewImages[4]}`);
       // default:
       //   return null;
     }
@@ -130,51 +144,54 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
       <ImageMapper
         src={require(`../../assets/${src}`)}
         width={imageDimensions.width / 1.8}
-        height={imageDimensions.height/1.2}
+        height={imageDimensions.height / 1.2}
         map={{ name: "image-map", areas: scaledAreas }}
         onClick={(area) => handleClick(area)}
+        // className=""
+
+
       />
       {/* <div style={{  }}> */}
-        <Dialog
-          aria-describedby="alert-dialog-slide-description"
-          maxWidth={'sm'}
-          TransitionComponent={Transition}
-          // id="modal" 
-          // className="modal"
-          open={openModal}
-          onClose={handleCloseModal}
-          style={{ }}
-        >
-          {/* <DialogTitle>Unit {selectedUnit}</DialogTitle> */}
-          {/* <DialogTitle> {JSON.stringify(getImageByUnit(selectedUnit))}</DialogTitle> */}
-          <DialogContent>
-            {selectedUnit && (
-              <div>
-                <DialogTitle className="title">{title}</DialogTitle>
-                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start',  }}>
+      <Dialog
+        aria-describedby="alert-dialog-slide-description"
+        maxWidth={'sm'}
+        TransitionComponent={Transition}
+        // id="modal" 
+        // className="modal"
+        open={openModal}
+        onClose={handleCloseModal}
+        style={{}}
+      >
+        {/* <DialogTitle>Unit {selectedUnit}</DialogTitle> */}
+        {/* <DialogTitle> {JSON.stringify(getImageByUnit(selectedUnit))}</DialogTitle> */}
+        <DialogContent>
+          {selectedUnit && (
+            <div>
+              <DialogTitle className="title">{title}</DialogTitle>
+              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
 
-                  <img
-                    src={getImageByUnit(selectedUnit)}
-                    alt={`Unit ${selectedUnit}`}
-                    style={{ width: "150px", height: '220px',marginRight:'20px', }}
-                  />
-                  <div className="pl-3">
+                <img
+                  src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                  alt={`Unit ${selectedUnit}`}
+                  style={{ width: "150px", height: '220px', marginRight: '20px', }}
+                />
+                <div className="pl-3">
 
-                    <ul>
-                      {selectedUnitData?.map((listData, i) => (
-                        <li key={i} className="listData">{listData}</li>)
-                      )}
-                    </ul>
+                  <ul>
+                    {selectedUnitData?.map((listData, i) => (
+                      <li key={i} className="listData">{listData}</li>)
+                    )}
+                  </ul>
 
-                  </div>
                 </div>
               </div>
-            )}
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleCloseModal}>Close</Button>
-          </DialogActions>
-        </Dialog>
+            </div>
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseModal}>Close</Button>
+        </DialogActions>
+      </Dialog>
       {/* </div> */}
     </div>
   );

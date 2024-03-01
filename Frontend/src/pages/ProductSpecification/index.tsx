@@ -56,11 +56,6 @@ export default function ProductSpecification() {
     <>
       <Header />
       <PageTitle title={productname} subtitle={productname} />
-      {/* <ImageMapperComponent
-        src={mainImg}
-        areas={[{ name: "unit 1", shape: "rect", coords: [40, 40, 60, 60] }]}
-      /> */}
-
       <div>
         {injectionData
           ? injectionMouldingData
@@ -72,16 +67,19 @@ export default function ProductSpecification() {
               <div key={index}>
                 <div className="mainSectionContainer row">
                   <div className="imgSlider col-md-7">
-                    {data.id === 1 && (<ImageMapperComponent
-                      src={data?.mainImg}
-                      allData={data}
-                      areas={[
-                        { name: "unit 1", shape: "rect", coords: [35, 35, 46, 48], data: data.injectionUnit, title: 'Injection Unit' },
-                        { name: "unit 2", shape: "rect", coords: [22, 45, 26, 28], data: data.controls, title: 'Display Unit' },
-                        { name: "unit 3", shape: "rect", coords: [12.3, 50, 21.9, 28], data: data.clampingUnit, title: 'Clamping Unit' },
-                        { name: "unit 4", shape: "rect", coords: [25, 68, 46, 55], data: data.injectionUnit, title: 'Injection Unit' }
-                      ]}
-                    />)}
+                    {data.id === 1 && (
+
+
+                      <ImageMapperComponent
+                        src={data?.mainImg}
+                        allData={data}
+                        areas={[
+                          { name: "unit 1", shape: "rect", coords: [35, 35, 46, 48], data: data.injectionUnit, title: 'Injection Unit' },
+                           { name: "unit 2", shape: "rect", coords: [22, 45, 26, 28], data: data.controls, title: 'Display Unit' },
+                           { name: "unit 3", shape: "rect", coords: [12.3, 50, 21.9, 28], data: data.clampingUnit, title: 'Clamping Unit' },
+                           { name: "unit 4", shape: "rect", coords: [25, 68, 46, 55], data: [], title: '' }
+                        ]}
+                      />)}
 
                     {data.id === 2 && (<ImageMapperComponent
                       src={data?.mainImg}
@@ -154,36 +152,36 @@ export default function ProductSpecification() {
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [1, 25, 18, 43], data: data.clampingUnit, title: 'Clamping Unit' },
                           { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.hydraulics, title: 'Hydraulics Unit' },
-                         { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
-                           { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
-                         
+                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
+
                         ]}
                       />)}
-                      {data.id === 8 && (
+                    {data.id === 8 && (
                       <ImageMapperComponent
                         src={data?.mainImg}
                         allData={data}
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [1, 25, 18, 43], data: data.clampingUnit, title: 'Clamping Unit' },
                           { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.hydraulics, title: 'Hydraulics Unit' },
-                         { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
-                           { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
-                         
+                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
+
                         ]}
                       />)}
-                        {data.id === 9 && (
+                    {data.id === 9 && (
                       <ImageMapperComponent
                         src={data?.mainImg}
                         allData={data}
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [1, 25, 18, 43], data: data.clampingUnit, title: 'Clamping Unit' },
                           { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.hydraulics, title: 'Hydraulics Unit' },
-                         { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
-                           { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
-                         
+                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
+
                         ]}
                       />)}
-                      {data.id === 10 && (
+                    {data.id === 10 && (
                       <ImageMapperComponent
                         src={data?.mainImg}
                         allData={data}

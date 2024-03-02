@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 112px 40px 106px;
+    // padding: 40px 112px 40px 106px;
 
     @media screen and (max-width: 1024px) {
         padding: 40px 36px;
@@ -29,7 +29,7 @@
     }
 
     .ourGallery {
-        width: 60%;
+        // width: 60%;
         height: 100%;
 
         @media screen and (max-width: 500px) {
@@ -44,6 +44,7 @@
             @media screen and (max-width: 500px) {
                 flex-direction: column;
                 width: 100%;
+                padding: 0;
             }
 
             .rectangleDiv {
@@ -98,7 +99,7 @@
     }
 
     .ourNews {
-        width: 40%;
+        // width: 40%;
         // height: 100%;
         @media screen and (max-width: 500px) {
             width: 90%;
@@ -192,6 +193,7 @@
             width: 100%;
             margin-left: 10px;
             margin-top: 20px;
+            padding: 0;
         }
 
         .vertialContainer {
@@ -315,4 +317,12 @@
 .row.paused {
 
     animation-play-state: paused;
+}
+.md-none{
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+.md-block{
+    display: none;
 }

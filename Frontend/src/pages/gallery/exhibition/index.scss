@@ -5,7 +5,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 18vw;
   grid-auto-rows: 18vw;
-  padding: 0 85px;
   @include breakpoint(md) {
     display: flex;
     flex-direction: column;

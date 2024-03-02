@@ -1,3 +1,5 @@
+@import "../../assets/sass/main.scss";
+
 .css-zw3mfo-MuiModal-root-MuiDialog-root {
     position: fixed;
     z-index: 1300;
@@ -15,5 +17,26 @@
 
     .listData {
         // text-align: right;
+    }
+}
+.mainSectionContainer{
+    .modal-dialog{
+        margin: 100px auto;
+        .modal-header{
+            padding: 10px 10px 0 10px;
+            border-bottom: none;
+            h6{
+                font-size: $f22;
+                color: #BE0E14;
+                margin-left: 125px;
+            }
+        }
+        .modal-body{
+            ul{
+                li{
+                    font-size: 13px;
+                }
+            }
+        }
     }
 }

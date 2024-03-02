@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
-import Modal from "react-animated-modal";
+
 
 interface ImageMapperProps {
   allData: any;
@@ -158,35 +158,44 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
 
 
       <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-dialog modal-dialog-centered h-100">
           <div className="modal-content">
             <div className="modal-header">
               <h6 className="modal-title" id="exampleModalLabel">{title}</h6>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
             </div>
-            <div className="modal-body">
-              {selectedUnit && (
-                <div>
-                  {/* <DialogTitle className="title">{title}</DialogTitle> */}
-                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
+            <div className="modal-body pr-0">
+              <div className="container p-0">
+                
+                  {selectedUnit && (
+                    <div  className="row">
+                      {/* <DialogTitle className="title">{title}</DialogTitle> */}
+                      {/* <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}> */}
 
-                    <img
-                      src={getImageByUnit(selectedUnit ? selectedUnit : "")}
-                      alt={`Unit ${selectedUnit}`}
-                      style={{ width: "150px", height: '220px', marginRight: '20px', }}
-                    />
-                    <div className="pl-3">
+                      <div className="col-md-3 d-flex align-items-center">
+                        <img
+                          src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                          alt={`Unit ${selectedUnit}`}
+                          style={{ width: "150px", height: '220px', position:"absolute", left:"-120px", top:"-40px"}}
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="pl-3">
 
-                      <ul>
-                        {selectedUnitData?.map((listData, i) => (
-                          <li key={i} className="listData">{listData}</li>)
-                        )}
-                      </ul>
+                          <ul>
+                            {selectedUnitData?.map((listData, i) => (
+                              <li key={i} className="listData">{listData}</li>)
+                            )}
+                          </ul>
 
+                        </div>
+                      </div>
+                      {/* </div> */}
                     </div>
-                  </div>
-                </div>
-              )}
+                  )}
+               
+              </div>
+
             </div>
             {/* <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>

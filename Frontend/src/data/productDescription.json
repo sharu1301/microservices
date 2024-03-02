@@ -125,10 +125,10 @@
         "ClampingForce": "110-180 KN",
         "overviewImages": [
             "images/product-specification/productoverview/EuroPETSeries/1.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/2.png",
+            "images/product-specification/productoverview/EuroPETSeries/2.jpg",
             "images/product-specification/productoverview/EuroPETSeries/3.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/4.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/5.jpg"
+            "images/product-specification/productoverview/EuroPETSeries/4.png"
+            
         ]
     },
     {
@@ -165,10 +165,11 @@
             "images/product-specification/slider/EuroServoSeries/10.jpg"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroServoSeries/1.png",
-            "images/product-specification/productoverview/EuroServoSeries/2.png",
-            "images/product-specification/productoverview/EuroServoSeries/3.png",
-            "images/product-specification/productoverview/EuroServoSeries/4.png"
+            "images/product-specification/productoverview/EuroServoSeries/1.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/2.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/3.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/4.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/5.jpg"
         ],
         "clampingUnit": [
             "Wide tie bar distance & daylight",
@@ -287,10 +288,10 @@
             "images/product-specification/slider/EuroStarSeries/8.jpg"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroStarSeries/1.png",
-            "images/product-specification/productoverview/EuroStarSeries/2.png",
-            "images/product-specification/productoverview/EuroStarSeries/3.png",
-            "images/product-specification/productoverview/EuroStarSeries/4.png"
+            "images/product-specification/productoverview/EuroStarSeries/1.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/2.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/3.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/5.jpg"
         ],
         "heavydutyclampingunit": [
             "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.",

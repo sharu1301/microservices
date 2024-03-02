@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ImageMapper from "react-img-mapper";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Slide,
-} from "@mui/material";
-import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
 
 
@@ -17,14 +8,7 @@ interface ImageMapperProps {
   src: string;
   areas: { name: string; shape: string; coords: number[]; data: any; title: string; }[];
 }
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>;
-  },
-  ref: React.Ref<unknown>,
-) {
-  return <Slide direction="left" ref={ref} {...props} />;
-});
+
 
 
 
@@ -166,34 +150,34 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
             </div>
             <div className="modal-body pr-0">
               <div className="container p-0">
-                
-                  {selectedUnit && (
-                    <div  className="row">
-                      {/* <DialogTitle className="title">{title}</DialogTitle> */}
-                      {/* <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}> */}
 
-                      <div className="col-md-3 d-flex align-items-center">
-                        <img
-                          src={getImageByUnit(selectedUnit ? selectedUnit : "")}
-                          alt={`Unit ${selectedUnit}`}
-                          style={{ width: "150px", height: '220px', position:"absolute", left:"-120px", top:"-40px"}}
-                        />
-                      </div>
-                      <div className="col-md-9">
-                        <div className="pl-3">
+                {selectedUnit && (
+                  <div className="row">
+                    {/* <DialogTitle className="title">{title}</DialogTitle> */}
+                    {/* <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}> */}
 
-                          <ul>
-                            {selectedUnitData?.map((listData, i) => (
-                              <li key={i} className="listData">{listData}</li>)
-                            )}
-                          </ul>
-
-                        </div>
-                      </div>
-                      {/* </div> */}
+                    <div className="col-md-3 d-flex align-items-center">
+                      <img
+                        src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                        alt={`Unit ${selectedUnit}`}
+                        style={{ width: "150px", height: '220px', position: "absolute", left: "-120px", top: "-40px" }}
+                      />
                     </div>
-                  )}
-               
+                    <div className="col-md-9">
+                      <div className="pl-3">
+
+                        <ul>
+                          {selectedUnitData?.map((listData, i) => (
+                            <li key={i} className="listData">{listData}</li>)
+                          )}
+                        </ul>
+
+                      </div>
+                    </div>
+                    {/* </div> */}
+                  </div>
+                )}
+
               </div>
 
             </div>

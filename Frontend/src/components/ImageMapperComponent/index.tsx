@@ -1,15 +1,31 @@
 import React, { useState, useEffect } from "react";
 import ImageMapper from "react-img-mapper";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  Slide,
+} from "@mui/material";
+import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
 
 
 interface ImageMapperProps {
   allData: any;
   src: string;
-  name:string
+  name:string;
   areas: { name: string; shape: string; coords: number[]; data: any; title: string; }[];
 }
-
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>;
+  },
+  ref: React.Ref<unknown>,
+) {
+  return <Slide direction="left" ref={ref} {...props} />;
+});
 
 
 
@@ -113,18 +129,13 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
 };
 
 
-
   const handleClick = (area: { name: string } | any) => {
-    console.log("Handle Click area", area);
-    const modalTrigger = document.getElementById("exampleModalTrigger");
-    if (modalTrigger) {
-      modalTrigger.click();
-    }
+    console.log("Hanlde zCLick area", area)
+    setOpenModal(true);
     setSelectedUnit(area.name || "");
-    setSelectedUnitData(area.data);
-    setTitle(area.title);
+    setSelectedUnitData(area.data)
+    setTitle(area.title)
   };
-
 
   const handleCloseModal = () => {
     setOpenModal(false);
@@ -132,72 +143,19 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
   };
 
   return (
-    <div style={{}} data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <div style={{}}>
       <ImageMapper
         src={require(`../../assets/${src}`)}
         width={imageDimensions.width / 1.8}
         height={imageDimensions.height / 1.2}
         map={{ name: "image-map", areas: scaledAreas }}
         onClick={(area) => handleClick(area)}
+        // className=""
 
-      // className=""
+
       />
-
-
-
-      <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered h-100">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h6 className="modal-title" id="exampleModalLabel">{title?title:""}</h6>
-              {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
-            </div>
-            <div className="modal-body pr-0">
-              <div className="container p-0">
-
-                {selectedUnit && (
-                  <div className="row">
-                    {/* <DialogTitle className="title">{title}</DialogTitle> */}
-                    {/* <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}> */}
-
-                    <div className="col-md-3 d-flex align-items-center">
-                      <img
-                        src={getImageByUnit(selectedUnit ? selectedUnit : "",name)}
-                        alt={`Unit ${selectedUnit}`}
-                        style={{
-                          width: "150px",
-                          height: '220px',
-                          position: "absolute", left: "-120px", top: "-40px"
-                        }}
-                      />
-                    </div>
-                    <div className="col-md-9">
-                      <div className="pl-3">
-
-                        <ul>
-                          {selectedUnitData?.map((listData, i) => (
-                            <li key={i} className="listData">{listData}</li>)
-                          )}
-                        </ul>
-
-                      </div>
-                    </div>
-                    {/* </div> */}
-                  </div>
-                )}
-
-              </div>
-
-            </div>
-            {/* <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-            </div> */}
-          </div>
-        </div>
-      </div>
       {/* <div style={{  }}> */}
-      {/* <Dialog
+      <Dialog
         aria-describedby="alert-dialog-slide-description"
         maxWidth={'sm'}
         TransitionComponent={Transition}
@@ -207,7 +165,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         onClose={handleCloseModal}
         style={{}}
       >
-    
+        
         <DialogContent>
           {selectedUnit && (
             <div>
@@ -215,7 +173,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
 
                 <img
-                  src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                  src={getImageByUnit(selectedUnit ? selectedUnit : "",name)}
                   alt={`Unit ${selectedUnit}`}
                   style={{ width: "150px", height: '220px', marginRight: '20px', }}
                 />
@@ -235,7 +193,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         <DialogActions>
           <Button onClick={handleCloseModal}>Close</Button>
         </DialogActions>
-      </Dialog> */}
+      </Dialog>
       {/* </div> */}
     </div>
   );

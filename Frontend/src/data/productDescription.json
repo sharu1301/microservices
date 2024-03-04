@@ -356,9 +356,11 @@
             "Construction"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroCPVCSeries/1.png",
-            "images/product-specification/productoverview/EuroCPVCSeries/2.jpg",
-            "images/product-specification/productoverview/EuroCPVCSeries/3.jpg"
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 4.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 5.jpg"
         ],
         "clampingUnit": [
             "Wide tie bar distance & daylight",
@@ -368,7 +370,7 @@
             "Auto mould height adjustment for quick mould change",
             "Low pressure precise mould protection",
             "Tripple safety control of mechanical, electrical & hydraulic devices to ensure operator safety.",
-            " Automatic centralised lubrication system with motorized pump."
+            "Automatic centralised lubrication system with motorized pump."
         ],
         "injectionUnit": [
             "Nitrided screw & barrel, wear resistant screw tip assembly",
@@ -394,6 +396,14 @@
             "Set & actual temperature data with graphical display",
             "Soak timer for cold start protection"
         ],
+        "hydraulics": [
+            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback",
+            "Separate manifolds for injection unit and clamping unit",
+            "All hydraulics seals are as per ISO Standards",
+            "Oil temperature indication with alarm",
+            "Return line & suction filter provided to clean the oil",
+            "Ergonomic hydraulics layout for easy approach & easy for maintenance"
+        ],
         "controls": [
             "10.2'vertical TFT colour display with alpha numeric keypad",
             "Actual injection speed & pressure with graphical display",
@@ -404,13 +414,8 @@
             "Alarm history provide to recall the fault analysis",
             "Visual & Audible alarm",
             "I/O diagnosis for analog & digital",
-            "Mould data storage",
-            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback",
-            "Separate manifolds for injection unit and clamping unit",
-            "All hydraulics seals are as per ISO Standards",
-            "Oil temperature indication with alarm",
-            "Return line & suction filter provided to clean the oil",
-            "Ergonomic hydraulics layout for easy approach & easy for maintenance"
+            "Mould data storage"
+          
         ],
         "optionalFeatures": [
             "Air ejector",

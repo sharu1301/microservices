@@ -112,9 +112,9 @@ export default function ProductSpecification() {
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [5, 10, 12, 30], data: data.heavydutyclampingunit, title: 'Heavy Duty Clamping Unit' },
                           { name: "unit 2", shape: "rect", coords: [14, 36, 22, 16], data: data.lowmaintenanceclampingunit, title: 'Low Maintenance Clamping Unit' },
-                          { name: "unit 3", shape: "rect", coords: [23, 38, 28, 10], data: data.injectionUnit, title: 'Control Unit' },
-                          { name: "unit 4", shape: "rect", coords: [34, 23, 43, 38], data: data.controlPanel, title: 'Injection Panel' },
-                          { name: "unit 5", shape: "rect", coords: [25, 67, 43, 45], data: data?.controls, title: 'HMI' },
+                          { name: "unit 3", shape: "rect", coords: [23, 38, 28, 10], data: data.controlUnit, title: 'Control Unit' },
+                          { name: "unit 4", shape: "rect", coords: [34, 23, 43, 38], data: data.injectionunit, title: 'Injection Unit' },
+                          { name: "unit 5", shape: "rect", coords: [25, 67, 43, 45], data: [], title: '' },
                         ]}
                       />)}
                     {data.id === 5 && (

@@ -105,8 +105,8 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         return require(`../../assets/${allData?.overviewImages[3]}`);
       case "unit 5":
         return require(`../../assets/${allData?.overviewImages[4]}`);
-      // default:
-      //   return null;
+      default:
+        return "";
     }
   };
 
@@ -145,7 +145,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         <div className="modal-dialog modal-dialog-centered h-100">
           <div className="modal-content">
             <div className="modal-header">
-              <h6 className="modal-title" id="exampleModalLabel">{title}</h6>
+              <h6 className="modal-title" id="exampleModalLabel">{title?title:""}</h6>
               {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
             </div>
             <div className="modal-body pr-0">
@@ -160,7 +160,11 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
                       <img
                         src={getImageByUnit(selectedUnit ? selectedUnit : "")}
                         alt={`Unit ${selectedUnit}`}
-                        style={{ width: "150px", height: '220px', position: "absolute", left: "-120px", top: "-40px" }}
+                        style={{
+                          width: "150px",
+                          height: '220px',
+                          position: "absolute", left: "-120px", top: "-40px"
+                        }}
                       />
                     </div>
                     <div className="col-md-9">

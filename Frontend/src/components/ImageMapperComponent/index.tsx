@@ -6,6 +6,7 @@ import './index.scss'
 interface ImageMapperProps {
   allData: any;
   src: string;
+  name:string
   areas: { name: string; shape: string; coords: number[]; data: any; title: string; }[];
 }
 
@@ -16,6 +17,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
   src,
   areas,
   allData,
+  name
 }) => {
   const [imageDimensions, setImageDimensions] = useState({
     width: 0,
@@ -92,23 +94,25 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
     return area;
   });
 
-  const getImageByUnit = (unit: string) => {
-    // console.log("Image--1", allData.overviewImages[0], unit)
-    switch (unit) {
-      case "unit 1":
-        return require(`../../assets/${allData?.overviewImages[0]}`);
-      case "unit 2":
-        return require(`../../assets/${allData?.overviewImages[1]}`);
-      case "unit 3":
-        return require(`../../assets/${allData?.overviewImages[2]}`);
-      case "unit 4":
-        return require(`../../assets/${allData?.overviewImages[3]}`);
-      case "unit 5":
-        return require(`../../assets/${allData?.overviewImages[4]}`);
-      default:
-        return "";
+  const getImageByUnit = (unit: string, series: string) => {
+    const seriesData = allData;
+    console.log("seriesData", series, unit, seriesData);
+    if (seriesData && seriesData.overviewImages) {
+        const imageName = `${unit}.jpg`;
+        console.log("imageName", imageName);
+        const imagePath = `images/product-specification/productoverview/${series}/${imageName}`;
+        console.log("imagePath", imagePath);
+        const imageIndex = seriesData.overviewImages.indexOf(imagePath);
+        console.log('image Index', imageIndex);
+        if (imageIndex !== -1) {
+            console.log("Image found:", imageName);
+            return require(`../../assets/${imagePath}`);
+        }
     }
-  };
+    return "";
+};
+
+
 
   const handleClick = (area: { name: string } | any) => {
     console.log("Handle Click area", area);
@@ -158,7 +162,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
 
                     <div className="col-md-3 d-flex align-items-center">
                       <img
-                        src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                        src={getImageByUnit(selectedUnit ? selectedUnit : "",name)}
                         alt={`Unit ${selectedUnit}`}
                         style={{
                           width: "150px",

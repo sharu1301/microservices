@@ -73,6 +73,7 @@ export default function ProductSpecification() {
                       <ImageMapperComponent
                         src={data?.mainImg}
                         allData={data}
+                        name="EuroPacSeries"
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [35, 35, 46, 48], data: data.injectionUnit, title: 'Injection Unit' },
                            { name: "unit 2", shape: "rect", coords: [22, 45, 26, 28], data: data.controls, title: 'Display Unit' },
@@ -83,6 +84,7 @@ export default function ProductSpecification() {
 
                     {data.id === 2 && (<ImageMapperComponent
                       src={data?.mainImg}
+                      name="EuroPETSeries"
                       allData={data}
                       areas={[
                         { name: "unit 1", shape: "rect", coords: [22, 43, 29, 60], data: data.injectionUnit, title: '' },
@@ -94,6 +96,7 @@ export default function ProductSpecification() {
 
                     {data.id === 3 && (
                       <ImageMapperComponent
+                      name="EuroServoSeries"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -107,6 +110,7 @@ export default function ProductSpecification() {
 
                     {data.id === 4 && (
                       <ImageMapperComponent
+                      name="EuroStarSeries"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -119,6 +123,7 @@ export default function ProductSpecification() {
                       />)}
                     {data.id === 5 && (
                       <ImageMapperComponent
+                      name="EuroCPVCSeries"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -132,6 +137,7 @@ export default function ProductSpecification() {
 
                     {data.id === 6 && (
                       <ImageMapperComponent
+                      name="EuroPVCSeries"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -147,6 +153,7 @@ export default function ProductSpecification() {
 
                     {data.id === 7 && (
                       <ImageMapperComponent
+                      name="EuroRSeries"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -159,6 +166,7 @@ export default function ProductSpecification() {
                       />)}
                     {data.id === 8 && (
                       <ImageMapperComponent
+                      // name="EurCSeries"
                         src={data?.mainImg}
                         allData={data}
                         areas={[

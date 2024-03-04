@@ -85,10 +85,10 @@ export default function ProductSpecification() {
                       src={data?.mainImg}
                       allData={data}
                       areas={[
-                        { name: "unit 1", shape: "rect", coords: [22, 43, 29, 60], data: data.injectionUnit, title: 'Injection Unit' },
-                        { name: "unit 2", shape: "rect", coords: [17, 72, 24, 62], data: data.controls, title: 'Display Unit' },
-                        { name: "unit 3", shape: "rect", coords: [12.3, 58, 21.9, 43], data: data.clampingUnit, title: 'Clamping Unit' },
-                        { name: "unit 4", shape: "rect", coords: [37, 67, 43, 56], data: data.injectionUnit, title: 'Injection Unit' }
+                        { name: "unit 1", shape: "rect", coords: [22, 43, 29, 60], data: data.injectionUnit, title: '' },
+                        { name: "unit 2", shape: "rect", coords: [17, 72, 24, 62], data: data.controls, title: '' },
+                        { name: "unit 3", shape: "rect", coords: [12.3, 58, 21.9, 43], data: data.clampingUnit, title: '' },
+                        { name: "unit 4", shape: "rect", coords: [37, 67, 43, 56], data: data.injectionUnit, title: '' }
                       ]}
                     />)}
 
@@ -97,11 +97,11 @@ export default function ProductSpecification() {
                         src={data?.mainImg}
                         allData={data}
                         areas={[
-                          { name: "unit 1", shape: "rect", coords: [0, 15, 10, 38], data: data.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 2", shape: "rect", coords: [35, 23, 46, 40], data: data.hydraulics, title: 'Hydraulics Unit' },
-                          { name: "unit 3", shape: "rect", coords: [50, 36, 46.9, 25], data: data.injectionUnit, title: 'Injection Unit' },
-                          { name: "unit 4", shape: "rect", coords: [47, 50, 33, 65], data: data.controlPanel, title: 'Control Panel' },
-                          { name: "unit 5", shape: "rect", coords: [21, 37, 25, 14], data: data.controls, title: 'HMI' },
+                          { name: "unit 1", shape: "rect", coords: [0, 15, 10, 38], data: data?.clampingUnit, title: 'Clamping Unit' },
+                          { name: "unit 2", shape: "rect", coords: [35, 23, 46, 40], data: data?.hydraulics, title: 'Hydraulics Unit' },
+                          { name: "unit 3", shape: "rect", coords: [50, 36, 46.9, 25], data: data?.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [47, 50, 33, 65], data: data?.controlPanel, title: 'Control Panel' },
+                          { name: "unit 5", shape: "rect", coords: [21, 37, 25, 14], data: data?.controls, title: 'HMI' },
                         ]}
                       />)}
 
@@ -110,11 +110,11 @@ export default function ProductSpecification() {
                         src={data?.mainImg}
                         allData={data}
                         areas={[
-                          { name: "unit 1", shape: "rect", coords: [5, 10, 12, 30], data: data.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 2", shape: "rect", coords: [14, 36, 22, 16], data: data.hydraulics, title: 'Hydraulics Unit' },
-                          { name: "unit 3", shape: "rect", coords: [23, 38, 28, 10], data: data.injectionUnit, title: 'Injection Unit' },
-                          { name: "unit 4", shape: "rect", coords: [34, 23, 43, 38], data: data.controlPanel, title: 'Control Panel' },
-                          { name: "unit 5", shape: "rect", coords: [25, 67, 43, 45], data: data.controls, title: 'HMI' },
+                          { name: "unit 1", shape: "rect", coords: [5, 10, 12, 30], data: data.heavydutyclampingunit, title: 'Heavy Duty Clamping Unit' },
+                          { name: "unit 2", shape: "rect", coords: [14, 36, 22, 16], data: data.lowmaintenanceclampingunit, title: 'Low Maintenance Clamping Unit' },
+                          { name: "unit 3", shape: "rect", coords: [23, 38, 28, 10], data: data.controlUnit, title: 'Control Unit' },
+                          { name: "unit 4", shape: "rect", coords: [34, 23, 43, 38], data: data.injectionunit, title: 'Injection Unit' },
+                          { name: "unit 5", shape: "rect", coords: [25, 67, 43, 45], data: [], title: '' },
                         ]}
                       />)}
                     {data.id === 5 && (

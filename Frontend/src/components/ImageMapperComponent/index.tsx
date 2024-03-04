@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ImageMapper from "react-img-mapper";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Slide,
-} from "@mui/material";
-import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
 
 
@@ -17,14 +8,7 @@ interface ImageMapperProps {
   src: string;
   areas: { name: string; shape: string; coords: number[]; data: any; title: string; }[];
 }
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>;
-  },
-  ref: React.Ref<unknown>,
-) {
-  return <Slide direction="left" ref={ref} {...props} />;
-});
+
 
 
 
@@ -121,8 +105,8 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         return require(`../../assets/${allData?.overviewImages[3]}`);
       case "unit 5":
         return require(`../../assets/${allData?.overviewImages[4]}`);
-      // default:
-      //   return null;
+      default:
+        return "";
     }
   };
 
@@ -161,39 +145,43 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         <div className="modal-dialog modal-dialog-centered h-100">
           <div className="modal-content">
             <div className="modal-header">
-              <h6 className="modal-title" id="exampleModalLabel">{title}</h6>
+              <h6 className="modal-title" id="exampleModalLabel">{title?title:""}</h6>
               {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
             </div>
             <div className="modal-body pr-0">
               <div className="container p-0">
-                
-                  {selectedUnit && (
-                    <div  className="row">
-                      {/* <DialogTitle className="title">{title}</DialogTitle> */}
-                      {/* <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}> */}
 
-                      <div className="col-md-3 d-flex align-items-center">
-                        <img
-                          src={getImageByUnit(selectedUnit ? selectedUnit : "")}
-                          alt={`Unit ${selectedUnit}`}
-                          style={{ width: "150px", height: '220px', position:"absolute", left:"-120px", top:"-40px"}}
-                        />
-                      </div>
-                      <div className="col-md-9">
-                        <div className="pl-3">
+                {selectedUnit && (
+                  <div className="row">
+                    {/* <DialogTitle className="title">{title}</DialogTitle> */}
+                    {/* <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}> */}
 
-                          <ul>
-                            {selectedUnitData?.map((listData, i) => (
-                              <li key={i} className="listData">{listData}</li>)
-                            )}
-                          </ul>
-
-                        </div>
-                      </div>
-                      {/* </div> */}
+                    <div className="col-md-3 d-flex align-items-center">
+                      <img
+                        src={getImageByUnit(selectedUnit ? selectedUnit : "")}
+                        alt={`Unit ${selectedUnit}`}
+                        style={{
+                          width: "150px",
+                          height: '220px',
+                          position: "absolute", left: "-120px", top: "-40px"
+                        }}
+                      />
                     </div>
-                  )}
-               
+                    <div className="col-md-9">
+                      <div className="pl-3">
+
+                        <ul>
+                          {selectedUnitData?.map((listData, i) => (
+                            <li key={i} className="listData">{listData}</li>)
+                          )}
+                        </ul>
+
+                      </div>
+                    </div>
+                    {/* </div> */}
+                  </div>
+                )}
+
               </div>
 
             </div>

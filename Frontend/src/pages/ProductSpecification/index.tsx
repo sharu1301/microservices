@@ -158,39 +158,42 @@ export default function ProductSpecification() {
                         allData={data}
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [1, 25, 18, 43], data: data.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.hydraulics, title: 'Hydraulics Unit' },
-                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
-                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
+                          { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.hmi, title: 'HMI' },
+                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.hydraulics, title: 'Hydraulics Unit' },
 
                         ]}
                       />)}
+
                     {data.id === 8 && (
                       <ImageMapperComponent
-                      // name="EurCSeries"
+                       name="EuroServoR"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [1, 25, 18, 43], data: data.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.hydraulics, title: 'Hydraulics Unit' },
-                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
-                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
+                          { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.hmi, title: 'HMI' },
+                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.hydraulics, title: 'Hydraulics Unit' },
 
                         ]}
                       />)}
                     {data.id === 9 && (
                       <ImageMapperComponent
+                      name="EuroRSmart"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
                           { name: "unit 1", shape: "rect", coords: [1, 25, 18, 43], data: data.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.hydraulics, title: 'Hydraulics Unit' },
-                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.injectionUnit, title: 'Injection Unit' },
-                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.controlPanel, title: 'Control Panel' },
+                          { name: "unit 2", shape: "rect", coords: [42, 23, 46, 37], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 3", shape: "rect", coords: [35, 41, 31, 23], data: data.hmi, title: 'HMI' },
+                          { name: "unit 4", shape: "rect", coords: [54, 46, 40, 65], data: data.hydraulics, title: 'Hydraulics Unit' },
 
                         ]}
                       />)}
                     {data.id === 10 && (
                       <ImageMapperComponent
+                      name="EuroServoSmart"
                         src={data?.mainImg}
                         allData={data}
                         areas={[

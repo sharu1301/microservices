@@ -116,7 +116,7 @@
             //     animation: scrollTestimonials 10s linear infinite;
             // }
             .news-detail {
-                padding: 20px;
+                padding: 10px 0 0 0;
                 background-color: $white;
                 box-shadow: 0px 0px 5px 2px #ccc;
                 margin: 10px 20px 20px 20px;
@@ -134,7 +134,7 @@
                 }
                 .close {
                     cursor: pointer;
-                    margin-left: 20px;
+                    padding: 0 6px 6px 6px;
                 }
 
                 .news-header {
@@ -169,9 +169,8 @@
                     }
 
                     .modalNewsImg {
-                        align-self: center;
-                        height: 200px;
-                        width: 200px;
+                        height:100%;
+                        width: 100%;
                     }
                 }
 

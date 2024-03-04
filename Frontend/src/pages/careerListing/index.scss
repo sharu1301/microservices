@@ -120,6 +120,7 @@
         border: none;
         font-size: $f26;
         line-height: 34px;
+        cursor: default;
         @include breakpoint(sm){
                 font-size: $f28;
             }

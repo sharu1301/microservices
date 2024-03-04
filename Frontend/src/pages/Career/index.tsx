@@ -377,7 +377,7 @@ const Career = () => {
           </div>
           <div className="row w-100 mt-3 ml-0">
             <div className="col-md-4 col-12">
-              <div className="fea-card">
+              <div className="fea-card h-100">
                 <div className="fea-hr-line">
                 <p>
                   Understanding the importance of balance, we present a variety
@@ -393,7 +393,7 @@ const Career = () => {
               </div>
             </div>
             <div className="col-md-4 col-12">
-              <div className="fea-card">
+              <div className="fea-card h-100">
                 <div className="fea-hr-line">
                 <p>
                   Your health is paramount to us, which is why we're proud to
@@ -409,7 +409,7 @@ const Career = () => {
               </div>
             </div>
             <div className="col-md-4 col-12">
-              <div className="fea-card">
+              <div className="fea-card h-100">
                 <div className="fea-hr-line">
                 <p>
                   We are devoted to fostering your career development through
@@ -424,7 +424,7 @@ const Career = () => {
               </div>
             </div>
             {/* <div className="col-md-4 col-12">
-                            <div className="fea-card">
+                            <div className="fea-card h-100">
                                 <p>Lorem ipsum dolor sit amet consectetur.
                                     Consequat nunc aliquam facilisi sollicitudin
                                     ullamcorper vitae aliquam sed massa.
@@ -435,7 +435,7 @@ const Career = () => {
                             </div>
                         </div>
                         <div className="col-md-4 col-12 mt-4">
-                            <div className="fea-card">
+                            <div className="fea-card h-100">
                                 <p>Lorem ipsum dolor sit amet consectetur.
                                     Consequat nunc aliquam facilisi sollicitudin
                                     ullamcorper vitae aliquam sed massa.
@@ -447,7 +447,7 @@ const Career = () => {
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="fea-card">
+                            <div className="fea-card h-100">
                                 <p>Lorem ipsum dolor sit amet consectetur.
                                     Consequat nunc aliquam facilisi sollicitudin
                                     ullamcorper vitae aliquam sed massa.

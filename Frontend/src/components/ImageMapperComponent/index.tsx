@@ -10,12 +10,12 @@ import {
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
-
+import { styled } from '@mui/material/styles';
 
 interface ImageMapperProps {
   allData: any;
   src: string;
-  name:string;
+  name: string;
   areas: { name: string; shape: string; coords: number[]; data: any; title: string; }[];
 }
 const Transition = React.forwardRef(function Transition(
@@ -26,6 +26,14 @@ const Transition = React.forwardRef(function Transition(
 ) {
   return <Slide direction="left" ref={ref} {...props} />;
 });
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {
+    padding: theme.spacing(2),
+  },
+  '& .MuiDialogActions-root': {
+    padding: theme.spacing(1),
+  },
+}));
 
 
 
@@ -114,19 +122,19 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
     const seriesData = allData;
     console.log("seriesData", series, unit, seriesData);
     if (seriesData && seriesData.overviewImages) {
-        const imageName = `${unit}.jpg`;
-        console.log("imageName", imageName);
-        const imagePath = `images/product-specification/productoverview/${series}/${imageName}`;
-        console.log("imagePath", imagePath);
-        const imageIndex = seriesData.overviewImages.indexOf(imagePath);
-        console.log('image Index', imageIndex);
-        if (imageIndex !== -1) {
-            console.log("Image found:", imageName);
-            return require(`../../assets/${imagePath}`);
-        }
+      const imageName = `${unit}.jpg`;
+      console.log("imageName", imageName);
+      const imagePath = `images/product-specification/productoverview/${series}/${imageName}`;
+      console.log("imagePath", imagePath);
+      const imageIndex = seriesData.overviewImages.indexOf(imagePath);
+      console.log('image Index', imageIndex);
+      if (imageIndex !== -1) {
+        console.log("Image found:", imageName);
+        return require(`../../assets/${imagePath}`);
+      }
     }
     return "";
-};
+  };
 
 
   const handleClick = (area: { name: string } | any) => {
@@ -150,54 +158,71 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         height={imageDimensions.height / 1.2}
         map={{ name: "image-map", areas: scaledAreas }}
         onClick={(area) => handleClick(area)}
-        // className=""
+      // className=""
 
 
       />
       {/* <div style={{  }}> */}
-      {selectedUnit && (
-      <Dialog
-        // aria-describedby="alert-dialog-slide-description"
-        maxWidth={'md'}
-        TransitionComponent={Transition}
-        // id="modal" 
-        // className="modal"
-        open={openModal}
-        onClose={handleCloseModal}
-        style={{}}
-      >
-        
-        <DialogContent>
+      {selectedUnitData?.length != 0 ? (
+        <Dialog
+          // aria-describedby="alert-dialog-slide-description"
+          maxWidth={'md'}
+          TransitionComponent={Transition}
+          // id="modal" 
+          // className="modal"
+          open={openModal}
+          onClose={handleCloseModal}
+          style={{}}
+        >      <DialogTitle className="title">{title}</DialogTitle>
 
-            <div>
-              
-              <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
 
-                <div className="col-md-4">
+          <DialogContent>
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
+
+              <div className="col-md-4">
                 <img
-                  src={getImageByUnit(selectedUnit ? selectedUnit : "",name)}
+                  src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
                   alt={`Unit ${selectedUnit}`}
                   style={{}}
                 />
-                </div>
-                <div className="pl-3 col-md-8">
-                <DialogTitle className="title">{title}</DialogTitle>
-                  <ul>
-                    {selectedUnitData?.map((listData, i) => (
-                      <li key={i} className="listData">{listData}</li>)
-                    )}
-                  </ul>
+              </div>
+              <div className="pl-3 col-md-8">
 
-                </div>
+                <ul>
+                  {selectedUnitData?.map((listData, i) => (
+                    <li key={i} className="listData">{listData}</li>)
+                  )}
+                </ul>
+
               </div>
             </div>
-          
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseModal}>Close</Button>
-        </DialogActions>
-      </Dialog>
-      )}
+
+          </DialogContent>
+
+
+
+          <DialogActions>
+            <Button onClick={handleCloseModal}>Close</Button>
+          </DialogActions>
+        </Dialog>) :
+        <Dialog open={openModal}
+          onClose={handleCloseModal}
+        // maxWidth={'sm'}
+        >
+          <DialogTitle className="title">{title}</DialogTitle>
+          <div className="row">
+            <div className="col-md-4">
+              <DialogContent>
+              <img
+                className="dialogImg"
+                src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
+                alt={`Unit ${selectedUnit}`}
+              // style={{height:'40%',width:'50%'}}
+              />
+            </DialogContent>
+            </div>
+          </div>
+        </Dialog>}
       {/* </div> */}
     </div>
   );

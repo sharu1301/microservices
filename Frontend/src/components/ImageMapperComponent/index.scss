@@ -18,9 +18,11 @@
         margin-right: 20px;
     }
 
+   
     .title {
         color: red;
         font-weight: 700;
+        text-align: center;
     }
 
     .listData {
@@ -55,3 +57,12 @@
 // .css-ypiqx9-MuiDialogContent-root{
 //     padding: 0 !important;
 // }
+.dialogImg {
+    width: 50% !important;
+    height: 50% !important;
+    // left: 0px !important;
+     position: relative !important;
+    box-shadow: 2px;
+    border-radius: 8px;
+    align-self: flex-start;
+}

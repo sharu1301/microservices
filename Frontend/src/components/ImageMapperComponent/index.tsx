@@ -155,9 +155,10 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
 
       />
       {/* <div style={{  }}> */}
+      {selectedUnit && (
       <Dialog
-        aria-describedby="alert-dialog-slide-description"
-        maxWidth={'sm'}
+        // aria-describedby="alert-dialog-slide-description"
+        maxWidth={'md'}
         TransitionComponent={Transition}
         // id="modal" 
         // className="modal"
@@ -167,18 +168,20 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
       >
         
         <DialogContent>
-          {selectedUnit && (
+
             <div>
-              <DialogTitle className="title">{title}</DialogTitle>
+              
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
 
+                <div className="col-md-4">
                 <img
                   src={getImageByUnit(selectedUnit ? selectedUnit : "",name)}
                   alt={`Unit ${selectedUnit}`}
-                  style={{ width: "150px", height: '220px', marginRight: '20px', }}
+                  style={{}}
                 />
-                <div className="pl-3">
-
+                </div>
+                <div className="pl-3 col-md-8">
+                <DialogTitle className="title">{title}</DialogTitle>
                   <ul>
                     {selectedUnitData?.map((listData, i) => (
                       <li key={i} className="listData">{listData}</li>)
@@ -188,12 +191,13 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
                 </div>
               </div>
             </div>
-          )}
+          
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseModal}>Close</Button>
         </DialogActions>
       </Dialog>
+      )}
       {/* </div> */}
     </div>
   );

@@ -1,9 +1,13 @@
 @import '../../assets/sass/main.scss';
 
 .mainSectionContainer {
-   
+
     .imgSlider {
         width: 600px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
 
         .slick-slider {
             .slick-next {
@@ -13,6 +17,12 @@
             .slick-prev {
                 left: 0;
             }
+        }
+    }
+
+    .imgslider-section {
+        @media (max-width: 767px) {
+            display: block !important;
         }
     }
 

@@ -70,6 +70,7 @@ export default function ProductSpecification() {
                   <div className="imgSlider col-md-7">
                     {data.id === 1 && (
                       <ImageMapperComponent
+                      forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         name="EuroPacSeries"
@@ -84,6 +85,7 @@ export default function ProductSpecification() {
                     {data.id === 2 && (<ImageMapperComponent
                       src={data?.mainImg}
                       name="EuroPETSeries"
+                      forScreen="desktop"
                       allData={data}
                       areas={[
                         { name: "unit 1", shape: "rect", coords: [22, 43, 29, 60], data: data.injectionUnit, title: '' },
@@ -96,6 +98,7 @@ export default function ProductSpecification() {
                     {data.id === 3 && (
                       <ImageMapperComponent
                         name="EuroServoSeries"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -110,6 +113,7 @@ export default function ProductSpecification() {
                     {data.id === 4 && (
                       <ImageMapperComponent
                         name="EuroStarSeries"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -123,6 +127,7 @@ export default function ProductSpecification() {
                     {data.id === 5 && (
                       <ImageMapperComponent
                         name="EuroCPVCSeries"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -137,6 +142,7 @@ export default function ProductSpecification() {
                     {data.id === 6 && (
                       <ImageMapperComponent
                         name="EuroPVCSeries"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -153,6 +159,7 @@ export default function ProductSpecification() {
                     {data.id === 7 && (
                       <ImageMapperComponent
                         name="EuroRSeries"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -166,6 +173,7 @@ export default function ProductSpecification() {
 
                     {data.id === 8 && (
                       <ImageMapperComponent
+                      forScreen="desktop"
                         name="EuroServoR"
                         src={data?.mainImg}
                         allData={data}
@@ -180,6 +188,7 @@ export default function ProductSpecification() {
                     {data.id === 9 && (
                       <ImageMapperComponent
                         name="EuroRSmart"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -193,6 +202,7 @@ export default function ProductSpecification() {
                     {data.id === 10 && (
                       <ImageMapperComponent
                         name="EuroServoSmart"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         areas={[
@@ -205,21 +215,32 @@ export default function ProductSpecification() {
                       />)}
                     {/* <SectionModal image={data?.mainImg} /> */}
 
+
+
+
                   </div>
                   {/* for Mobile */}
                   <div className="imgslider-section col-md-7 d-none">
                     {data.id === 1 && (
                       <ImageMapperComponent
+                        forScreen="mobile"
                         src={data?.mainImg}
                         allData={data}
                         name="EuroPacSeries"
                         areas={[
-                          { name: "unit 1", shape: "rect", coords: [35, 35, 46, 48], data: data.injectionUnit, title: 'Injection Unit' },
-                          { name: "unit 2", shape: "rect", coords: [22, 45, 26, 28], data: data.controls, title: 'Display Unit' },
-                          { name: "unit 3", shape: "rect", coords: [12.3, 50, 21.9, 28], data: data.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 4", shape: "rect", coords: [25, 68, 46, 55], data: [], title: '' }
+                          { name: "unit 1", shape: "rect", coords: [65, 20, 46, 48], data: data.injectionUnit, title: 'Injection Unit' },
+                          // { name: "unit 2", shape: "rect", coords: [22, 45, 26, 28], data: data.controls, title: 'Display Unit' },
+                          // { name: "unit 3", shape: "rect", coords: [12.3, 50, 21.9, 28], data: data.clampingUnit, title: 'Clamping Unit' },
+                          // { name: "unit 4", shape: "rect", coords: [25, 68, 46, 55], data: [], title: '' }
                         ]}
                       />)}
+
+
+
+
+
+
+
                   </div>
                   <div className="detailcard col-md-6">
                     <div>

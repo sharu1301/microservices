@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ImageMapper from "react-img-mapper";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Slide,
-} from "@mui/material";
-import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -20,23 +11,8 @@ interface ImageMapperProps {
   src: string;
   name: string;
   areas: { name: string; shape: string; coords: number[]; data: any; title: string; }[];
+  forScreen: string
 }
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<any, any>;
-  },
-  ref: React.Ref<unknown>,
-) {
-  return <Slide direction="left" ref={ref} {...props} />;
-});
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
 
 
 
@@ -44,7 +20,8 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
   src,
   areas,
   allData,
-  name
+  name,
+  forScreen
 }) => {
   const [imageDimensions, setImageDimensions] = useState({
     width: 0,
@@ -108,7 +85,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
           calculatePercentY(area.coords[3]),
         ],
         preFillColor: "transparent",
-        // fillColor: "transaprent",
+        fillColor: "transaprent",
         // responsive: true,
         strokeColor: "red",
       };
@@ -163,14 +140,11 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
     <div style={{}}>
       <ImageMapper
         src={require(`../../assets/${src}`)}
-        width={imageDimensions.width / 1.8}
-        height={imageDimensions.height / 1.2}
-        // map={{ name: "image-map", areas: scaledAreas }}
-        // onClick={(area) => handleClick(area)}
-        // className=""
-
+        width={forScreen === "mobile" ? imageDimensions.width / 1.1 : imageDimensions.width / 1.8}
+        height={forScreen === "mobile" ? imageDimensions.height / 2 : imageDimensions.height / 1.2}
         map={{
-          name: "image-map", areas: areas.map(area => ({
+          name: "image-map",
+          areas: areas.map((area) => ({
             ...area,
             coords: area.coords.map((coord, index) => {
               if (index % 2 === 0) {
@@ -178,8 +152,11 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
               } else {
                 return calculatePercentY(coord);
               }
-            })
-          }))
+            }),
+            strokeColor: "red", // Add strokeColor property
+            preFillColor: "transparent",
+            fillColor: "transaprent",
+          })),
         }}
         onClick={(area) => handleClick(area)}
       />
@@ -194,7 +171,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}
       >
         <div style={{ position: 'fixed', top: '64%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
-          
+
           <div className="row">
             <div className="col-md-5 d-flex justify-content-center">
               <div className="image-section">
@@ -207,7 +184,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
               </div>
             </div>
             <div className="col-md-7">
-            <h2 id="modal-title">{title}</h2>
+              <h2 id="modal-title">{title}</h2>
               {selectedUnitData && selectedUnitData.length > 0 ? (
                 <ul>
                   {selectedUnitData.map((data: any, index: number) => (
@@ -215,7 +192,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
                   ))}
                 </ul>
               ) : (
-                <p style={{paddingTop: '60px'}}>No data available for this unit.</p>
+                <p style={{ paddingTop: '60px' }}>No data available for this unit.</p>
               )}
             </div>
           </div>
@@ -225,80 +202,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
 
 
 
-      {/* <Dialog
-        fullScreen={fullScreen}
-        aria-labelledby="responsive-dialog-title"
-        // aria-describedby="alert-dialog-slide-description"
-        maxWidth={'md'}
-        TransitionComponent={Transition}
-        // id="modal" 
-        // className="modal"
-        open={openModal}
-        onClose={handleCloseModal}
-        style={{}}
-      >      <DialogTitle className="title">{title}</DialogTitle>
 
-
-        {selectedUnitData?.length != 0 ? (<DialogContent>
-          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', top: '0pxs' }}>
-
-            <div className="col-md-4" style={{ zIndex: '1', position: 'relative', right: '0px',
-             height: '200px', width: '280px', paddingRight:'12px'}}>
-              <img
-                src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
-                alt={`Unit ${selectedUnit}`}
-                style={{ borderRadius: '10px' }}
-              />
-            </div>
-            <div className="pl-6 col-md-8">
-
-              <ul>
-                {selectedUnitData?.map((listData, i) => (
-                  <li key={i} className="listData">{listData}</li>)
-                )}
-              </ul>
-
-            </div>
-
-          </div>
-
-        </DialogContent>) :
-          <DialogContent>
-            <div className="col-md-12" style={{ zIndex: '1', position: 'relative', right: '0px', height: '250px', width: '350px' }}>
-              <img
-                src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
-                alt={`Unit ${selectedUnit}`}
-                style={{ borderRadius: '10px' }}
-              />
-            </div>
-          </DialogContent>}
-
-
-
-        <DialogActions>
-          <Button onClick={handleCloseModal}>Close</Button>
-        </DialogActions>
-      </Dialog> */}
-      {/* //) :
-        // <BootstrapDialog open={openModal}
-        //   onClose={handleCloseModal}
-        // // maxWidth={'sm'}
-        // >
-        //   <DialogTitle className="title">{title}</DialogTitle>
-        //   <div className="row">
-        //     <div className="col-md-4">
-        //       <DialogContent>
-        //       <img
-        //         className="dialogImg"
-        //         src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
-        //         alt={`Unit ${selectedUnit}`}
-        //       // style={{height:'40%',width:'50%'}}
-        //       />
-        //     </DialogContent>
-        //     </div>
-        //   </div>
-        // </BootstrapDialog>} */}
-      {/* </div> */}
     </div>
   );
 };

@@ -191,20 +191,23 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         onClose={handleCloseModal}
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}
       >
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', 
-        backgroundColor: 'white', padding: '20px' }}>
-          <h2 id="modal-title">{title}</h2>
+        <div style={{ position: 'fixed', top: '64%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+          
           <div className="row">
             <div className="col-md-5 d-flex justify-content-center">
-              <img
-                // className="img-fluid"
-                src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
-                alt={`Unit ${selectedUnit}`}
-                style={{ borderRadius: '10px' }}
-              />
+              <div className="image-section">
+                <img
+                  // className="img-fluid"
+                  src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
+                  alt={`Unit ${selectedUnit}`}
+                  style={{ borderRadius: '10px' }}
+                />
+              </div>
             </div>
             <div className="col-md-7">
+            <h2 id="modal-title">{title}</h2>
               {selectedUnitData && selectedUnitData.length > 0 ? (
                 <ul>
                   {selectedUnitData.map((data: any, index: number) => (
@@ -212,7 +215,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
                   ))}
                 </ul>
               ) : (
-                <p>No data available for this unit.</p>
+                <p style={{paddingTop: '60px'}}>No data available for this unit.</p>
               )}
             </div>
           </div>

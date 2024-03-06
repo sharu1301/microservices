@@ -11,6 +11,9 @@ import {
 import { TransitionProps } from "@mui/material/transitions";
 import './index.scss'
 import { styled } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+import Modal from '@mui/material/Modal';
 
 interface ImageMapperProps {
   allData: any;
@@ -70,6 +73,12 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+
 
   const calculatePercentX = (percentX: number) => {
     return Math.round((percentX / 100) * imageDimensions.width);
@@ -156,73 +165,136 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         src={require(`../../assets/${src}`)}
         width={imageDimensions.width / 1.8}
         height={imageDimensions.height / 1.2}
-        map={{ name: "image-map", areas: scaledAreas }}
+        // map={{ name: "image-map", areas: scaledAreas }}
+        // onClick={(area) => handleClick(area)}
+        // className=""
+
+        map={{
+          name: "image-map", areas: areas.map(area => ({
+            ...area,
+            coords: area.coords.map((coord, index) => {
+              if (index % 2 === 0) {
+                return calculatePercentX(coord);
+              } else {
+                return calculatePercentY(coord);
+              }
+            })
+          }))
+        }}
         onClick={(area) => handleClick(area)}
-      // className=""
-
-
       />
       {/* <div style={{  }}> */}
-      {selectedUnitData?.length != 0 ? (
-        <Dialog
-          // aria-describedby="alert-dialog-slide-description"
-          maxWidth={'md'}
-          TransitionComponent={Transition}
-          // id="modal" 
-          // className="modal"
-          open={openModal}
-          onClose={handleCloseModal}
-          style={{}}
-        >      <DialogTitle className="title">{title}</DialogTitle>
+      {/* {selectedUnitData?.length != 0 ? ( */}
 
-
-          <DialogContent>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', }}>
-
-              <div className="col-md-4">
-                <img
-                  src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
-                  alt={`Unit ${selectedUnit}`}
-                  style={{}}
-                />
-              </div>
-              <div className="pl-3 col-md-8">
-
-                <ul>
-                  {selectedUnitData?.map((listData, i) => (
-                    <li key={i} className="listData">{listData}</li>)
-                  )}
-                </ul>
-
-              </div>
-            </div>
-
-          </DialogContent>
-
-
-
-          <DialogActions>
-            <Button onClick={handleCloseModal}>Close</Button>
-          </DialogActions>
-        </Dialog>) :
-        <Dialog open={openModal}
-          onClose={handleCloseModal}
-        // maxWidth={'sm'}
-        >
-          <DialogTitle className="title">{title}</DialogTitle>
+      <Modal
+        open={openModal}
+        onClose={handleCloseModal}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+      >
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', 
+        backgroundColor: 'white', padding: '20px' }}>
+          <h2 id="modal-title">{title}</h2>
           <div className="row">
-            <div className="col-md-4">
-              <DialogContent>
+            <div className="col-md-5 d-flex justify-content-center">
               <img
-                className="dialogImg"
+                // className="img-fluid"
                 src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
                 alt={`Unit ${selectedUnit}`}
-              // style={{height:'40%',width:'50%'}}
+                style={{ borderRadius: '10px' }}
               />
-            </DialogContent>
+            </div>
+            <div className="col-md-7">
+              {selectedUnitData && selectedUnitData.length > 0 ? (
+                <ul>
+                  {selectedUnitData.map((data: any, index: number) => (
+                    <li key={index}>{data}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>No data available for this unit.</p>
+              )}
             </div>
           </div>
-        </Dialog>}
+          <button onClick={handleCloseModal}>Close</button>
+        </div>
+      </Modal>
+
+
+
+      {/* <Dialog
+        fullScreen={fullScreen}
+        aria-labelledby="responsive-dialog-title"
+        // aria-describedby="alert-dialog-slide-description"
+        maxWidth={'md'}
+        TransitionComponent={Transition}
+        // id="modal" 
+        // className="modal"
+        open={openModal}
+        onClose={handleCloseModal}
+        style={{}}
+      >      <DialogTitle className="title">{title}</DialogTitle>
+
+
+        {selectedUnitData?.length != 0 ? (<DialogContent>
+          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', top: '0pxs' }}>
+
+            <div className="col-md-4" style={{ zIndex: '1', position: 'relative', right: '0px',
+             height: '200px', width: '280px', paddingRight:'12px'}}>
+              <img
+                src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
+                alt={`Unit ${selectedUnit}`}
+                style={{ borderRadius: '10px' }}
+              />
+            </div>
+            <div className="pl-6 col-md-8">
+
+              <ul>
+                {selectedUnitData?.map((listData, i) => (
+                  <li key={i} className="listData">{listData}</li>)
+                )}
+              </ul>
+
+            </div>
+
+          </div>
+
+        </DialogContent>) :
+          <DialogContent>
+            <div className="col-md-12" style={{ zIndex: '1', position: 'relative', right: '0px', height: '250px', width: '350px' }}>
+              <img
+                src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
+                alt={`Unit ${selectedUnit}`}
+                style={{ borderRadius: '10px' }}
+              />
+            </div>
+          </DialogContent>}
+
+
+
+        <DialogActions>
+          <Button onClick={handleCloseModal}>Close</Button>
+        </DialogActions>
+      </Dialog> */}
+      {/* //) :
+        // <BootstrapDialog open={openModal}
+        //   onClose={handleCloseModal}
+        // // maxWidth={'sm'}
+        // >
+        //   <DialogTitle className="title">{title}</DialogTitle>
+        //   <div className="row">
+        //     <div className="col-md-4">
+        //       <DialogContent>
+        //       <img
+        //         className="dialogImg"
+        //         src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
+        //         alt={`Unit ${selectedUnit}`}
+        //       // style={{height:'40%',width:'50%'}}
+        //       />
+        //     </DialogContent>
+        //     </div>
+        //   </div>
+        // </BootstrapDialog>} */}
       {/* </div> */}
     </div>
   );

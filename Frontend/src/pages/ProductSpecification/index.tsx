@@ -70,7 +70,7 @@ export default function ProductSpecification() {
                   <div className="imgSlider col-md-7">
                     {data.id === 1 && (
                       <ImageMapperComponent
-                      forScreen="desktop"
+                        forScreen="desktop"
                         src={data?.mainImg}
                         allData={data}
                         name="EuroPacSeries"
@@ -173,7 +173,7 @@ export default function ProductSpecification() {
 
                     {data.id === 8 && (
                       <ImageMapperComponent
-                      forScreen="desktop"
+                        forScreen="desktop"
                         name="EuroServoR"
                         src={data?.mainImg}
                         allData={data}
@@ -235,19 +235,19 @@ export default function ProductSpecification() {
                         ]}
                       />)}
 
-                      {data.id === 2 && (<ImageMapperComponent
+                    {data.id === 2 && (<ImageMapperComponent
                       src={data?.mainImg}
                       name="EuroPETSeries"
                       forScreen="mobile"
                       allData={data}
                       areas={[
-                        { name: "unit 1", shape: "rect", coords: [22, 43, 29, 60], data: data.injectionUnit, title: '' },
-                        // { name: "unit 2", shape: "rect", coords: [17, 72, 24, 62], data: data.controls, title: '' },
-                        // { name: "unit 3", shape: "rect", coords: [12.3, 58, 21.9, 43], data: data.clampingUnit, title: '' },
-                        // { name: "unit 4", shape: "rect", coords: [37, 67, 43, 56], data: data.injectionUnit, title: '' }
+                        { name: "unit 1", shape: "rect", coords: [36, 26, 48, 36], data: data.injectionUnit, title: '' },
+                        { name: "unit 2", shape: "rect", coords: [28, 43, 40, 37], data: data.controls, title: '' },
+                        { name: "unit 3", shape: "rect", coords: [20, 36, 35, 26], data: data.clampingUnit, title: '' },
+                        { name: "unit 4", shape: "rect", coords: [60, 34, 70, 40], data: data.injectionUnit, title: '' }
                       ]}
                     />)}
-                    
+
                     {data.id === 3 && (
                       <ImageMapperComponent
                         name="EuroServoSeries"
@@ -255,14 +255,60 @@ export default function ProductSpecification() {
                         src={data?.mainImg}
                         allData={data}
                         areas={[
-                         
+
                           { name: "unit 1", shape: "rect", coords: [0, 9, 18, 23], data: data?.clampingUnit, title: 'Clamping Unit' },
-                          { name: "unit 2", shape: "rect", coords: [54, 30, 77, 40], data: data?.hydraulics, title: 'Hydraulics Unit' },
-                          { name: "unit 3", shape: "rect", coords: [40, 16, 46.9, 25], data: data?.injectionUnit, title: 'Injection Unit' },
-                          // { name: "unit 4", shape: "rect", coords: [47, 50, 33, 65], data: data?.controlPanel, title: 'Control Panel' },
-                          // { name: "unit 5", shape: "rect", coords: [21, 37, 25, 14], data: data?.controls, title: 'HMI' },
+                          { name: "unit 2", shape: "rect", coords: [57, 14, 75, 24], data: data?.hydraulics, title: 'Hydraulics Unit' },
+                          { name: "unit 3", shape: "rect", coords: [77, 16, 84, 25], data: data?.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [54, 30, 77, 40], data: data?.controlPanel, title: 'Control Panel' },
+                          { name: "unit 5", shape: "rect", coords: [34, 22, 41, 8], data: data?.controls, title: 'HMI' },
                         ]}
                       />)}
+
+                    {data.id === 4 && (
+                      <ImageMapperComponent
+                        name="EuroStarSeries"
+                        forScreen="mobile"
+                        src={data?.mainImg}
+                        allData={data}
+                        areas={[
+                          { name: "unit 1", shape: "rect", coords: [8, 5, 20, 18], data: data.heavydutyclampingunit, title: 'Heavy Duty Clamping Unit' },
+                          { name: "unit 2", shape: "rect", coords: [23, 19, 36, 9], data: data.lowmaintenanceclampingunit, title: 'Low Maintenance Clamping Unit' },
+                          { name: "unit 3", shape: "rect", coords: [37, 23, 46, 6], data: data.controlUnit, title: 'Control Unit' },
+                          { name: "unit 4", shape: "rect", coords: [56, 13, 70, 23], data: data.injectionunit, title: 'Injection Unit' },
+                          { name: "unit 5", shape: "rect", coords: [42, 27, 70, 40], data: [], title: '' },
+                        ]}
+                      />)}
+
+                    {data.id === 5 && (
+                      <ImageMapperComponent
+                        name="EuroCPVCSeries"
+                        forScreen="mobile"
+                        src={data?.mainImg}
+                        allData={data}
+                        areas={[
+                          { name: "unit 1", shape: "rect", coords: [0, 9, 18, 23], data: data.clampingUnit, title: 'Clamping Unit' },
+                          { name: "unit 2", shape: "rect", coords: [57, 14, 75, 24], data: data.hydraulics, title: 'Hydraulics Unit' },
+                          { name: "unit 3", shape: "rect", coords: [77, 16, 84, 25], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [54, 30, 77, 40], data: data.controlPanel, title: 'Control Panel' },
+                          { name: "unit 5", shape: "rect", coords: [34, 22, 41, 8], data: data.controls, title: 'HMI' },
+                        ]}
+                      />)}
+
+                    {data.id === 6 && (
+                      <ImageMapperComponent
+                        name="EuroPVCSeries"
+                        forScreen="mobile"
+                        src={data?.mainImg}
+                        allData={data}
+                        areas={[
+                          { name: "unit 1", shape: "rect", coords: [0, 9, 18, 23], data: data.clampingUnit, title: 'Clamping Unit' },
+                          { name: "unit 2", shape: "rect", coords: [57, 14, 75, 24], data: data.hydraulics, title: 'Hydraulics Unit' },
+                          { name: "unit 3", shape: "rect", coords: [77, 16, 84, 25], data: data.injectionUnit, title: 'Injection Unit' },
+                          { name: "unit 4", shape: "rect", coords: [54, 30, 77, 40], data: data.controlPanel, title: 'Control Panel' },
+                          { name: "unit 5", shape: "rect", coords: [34, 22, 41, 8], data: data.controls, title: 'HMI' },
+                        ]}
+                      />)}
+
                   </div>
                   <div className="detailcard col-md-6">
                     <div>

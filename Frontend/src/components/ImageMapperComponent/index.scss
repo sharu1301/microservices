@@ -51,7 +51,7 @@
             height: 100%;
             position: absolute;
             z-index: 1;
-            left: -45px;
+            left: -80px;
             border-radius: 10px;
             margin-right: 20px;
         }
@@ -60,4 +60,12 @@
 #modal-title{
     font-size: 24px !important;
     color: #e21d23;
+    display: inline;
+}
+.close{
+    float: right;
+    margin-top: 14px;
+}
+.img-mapper-area-highlighted {
+    cursor: pointer;
 }

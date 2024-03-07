@@ -153,7 +153,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
                 return calculatePercentY(coord);
               }
             }),
-            strokeColor: "red", // Add strokeColor property
+            strokeColor: "transparent", // Add strokeColor property
             preFillColor: "transparent",
             fillColor: "transaprent",
           })),
@@ -170,21 +170,22 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
         aria-describedby="modal-description"
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}
       >
-        <div style={{ position: 'fixed', top: '64%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white' }}>
+        <div style={{ position: 'fixed', top: '64%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor: 'white', padding: '20px' }}>
 
           <div className="row">
             <div className="col-md-5 d-flex justify-content-center">
-              <div className="image-section">
+              {getImageByUnit(selectedUnit, name) && (<div className="image-section">
                 <img
                   // className="img-fluid"
                   src={getImageByUnit(selectedUnit ? selectedUnit : "", name)}
                   alt={`Unit ${selectedUnit}`}
                   style={{ borderRadius: '10px' }}
                 />
-              </div>
+              </div>)}
             </div>
             <div className="col-md-7">
               <h2 id="modal-title">{title}</h2>
+              <button type="button" className="close" onClick={handleCloseModal}><i className="fa-solid fa-xmark"></i></button>
               {selectedUnitData && selectedUnitData.length > 0 ? (
                 <ul>
                   {selectedUnitData.map((data: any, index: number) => (
@@ -196,7 +197,7 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
               )}
             </div>
           </div>
-          <button onClick={handleCloseModal}>Close</button>
+          {/* <button onClick={handleCloseModal}>Close</button> */}
         </div>
       </Modal>
 

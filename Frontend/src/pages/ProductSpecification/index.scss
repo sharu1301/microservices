@@ -288,7 +288,11 @@
             width: auto;
             border-radius: 0;
             height: 100%;
+            max-width: 550px;
             @media screen and (max-width: 500px) {
+                width: 100%;
+            }
+            @include breakpoint(md){
                 width: 100%;
             }
         }
@@ -333,6 +337,10 @@
             @media screen and (max-width: 500px) {
                 width: 100%;
                 height: auto;
+            }
+            @include breakpoint(md){
+                width: 62px;
+                height: 70px;
             }
         }
 

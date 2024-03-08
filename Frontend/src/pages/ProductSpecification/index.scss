@@ -285,9 +285,12 @@
         }
 
         img {
-            width: 100%;
+            width: auto;
             border-radius: 0;
             height: 100%;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
         }
     }
 
@@ -325,9 +328,11 @@
         .image {
             width: 100px;
             cursor: pointer;
+            height: 100px;
 
             @media screen and (max-width: 500px) {
                 width: 100%;
+                height: auto;
             }
         }
 

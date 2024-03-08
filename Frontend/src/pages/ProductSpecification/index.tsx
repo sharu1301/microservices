@@ -398,7 +398,7 @@ export default function ProductSpecification() {
                   </div>
                 </div>
                 <div className="bottomSlider">
-                  <div className="image-section">
+                  <div className="image-section text-center">
                     <img
                       src={
                         footerImg ||

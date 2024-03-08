@@ -22,6 +22,7 @@
         font-size: $f28;
         margin-bottom: 30px;
         margin-top: 30px;
+        cursor: default;
         @include breakpoint(sm){
             margin-bottom: 0;
         }

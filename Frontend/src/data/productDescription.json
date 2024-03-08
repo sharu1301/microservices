@@ -1,11 +1,7 @@
 [
     {
-        "id": "1",
-        "mainImg": [
-          
-            "images/product-specification/productoverview/EuroPacSeries/EuroPac.png",
-            "images/product-specification/productoverview/EuroPacSeries/PACData.jpg"
-        ],
+        "id": 1,
+        "mainImg": "images/product-specification/productoverview/EuroPacSeries/mainPAC.jpg",
         "title": "Euro Pac Series",
         "image": "images/productimages/EuroPac.png",
         "description": "High speed hydraulic motor on screw drive for high plascizing rate. Energy efficient DFE series electronic variable pump for high output",
@@ -63,15 +59,16 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN",
         "overviewImages": [
-            "images/product-specification/productoverview/EuroPacSeries/1.png",
-            "images/product-specification/productoverview/EuroPacSeries/2.png",
-            "images/product-specification/productoverview/EuroPacSeries/3.png",
-            "images/product-specification/productoverview/EuroPacSeries/4.png"
+            "images/product-specification/productoverview/EuroPacSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroPacSeries/unit 4.jpg"
         ]
     },
     {
+        "id": 2,
         "title": "Euro Pet Series",
-        "mainImg": ["images/product-specification/productoverview/EuroPETSeries/mainPET.png","images/product-specification/productoverview/EuroPETSeries/PetData.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroPETSeries/mainPET.jpg",
         "image": "images/productimages/EuroPet.png",
         "description": "Heavy duty five point toggle mechanism.Higher torque radial piston hydraulic motor for screw drive.",
         "features": [
@@ -127,17 +124,16 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN",
         "overviewImages": [
-            "images/product-specification/productoverview/EuroPETSeries/1.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/2.png",
-            "images/product-specification/productoverview/EuroPETSeries/3.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/4.jpg",
-            "images/product-specification/productoverview/EuroPETSeries/5.jpg"
+            "images/product-specification/productoverview/EuroPETSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroPETSeries/unit 4.jpg"
         ]
     },
-
     {
+        "id": 3,
         "title": "Euro Servo Series",
-        "mainImg": ["images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg","images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
         "image": "images/productimages/EuroSurvo.png",
         "description": "Energy efficient Servo Driven gear pump with closed loop pressure transducer feedback",
         "features": [
@@ -168,27 +164,26 @@
             "images/product-specification/slider/EuroServoSeries/10.jpg"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroServoSeries/1.png",
-            "images/product-specification/productoverview/EuroServoSeries/2.png",
-            "images/product-specification/productoverview/EuroServoSeries/3.png",
-            "images/product-specification/productoverview/EuroServoSeries/4.png"
+            "images/product-specification/productoverview/EuroServoSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/unit 4.jpg",
+            "images/product-specification/productoverview/EuroServoSeries/unit 5.jpg"
         ],
         "clampingUnit": [
-            "Wide tie bar distance & daylight",
-            "Robust five point vertical toggle clamp mechanism",
-            "Five stage clamping speed & pressure",
-            "Linear position transducer for accurate clamp position control",
-            "Auto mould height adjustment for quick mould change",
-            "Low pressure precise mould protection",
-            "Tripple safety control of mechanical",
-            "electrical & hydraulic devices to ensure operator safety",
-            "Automatic centralised lubrication system with motorized pump"
+            "Five Point toggle clamp has reduced footprint",
+            "Toggle Clamp provides a faster & Shorter Cycle time",
+            "Large tie bar distance",
+            "Long clamp strokes",
+            "Low Pressure precise Mould Safety",
+            "Auto Mould Height tonnage adjustment",
+            "Automatic grease lubrication for clamping unit"
         ],
         "injectionUnit": [
-            "Nitrided screw & barrel, wear resistant screw tip assembly",
-            "Three option screw dia available for customer choice",
-            "Five stage injection speed & pressure control",
-            "Variable back pressure control",
+            "Distributes the load equally across screw centreline",
+            "Injection unit on Linear Guide & Roller skates",
+            "Nitrated screw % Barrel",
+            "Variable Back Pressure Proportional Control",
             "Linear position transducer for accurate injection position control",
             "Screw driven by high torque radial piston motor",
             "Injection decompression before/after refilling or both",
@@ -217,17 +212,20 @@
             "Soak timer for cold start protection"
         ],
         "controls": [
-            "10.2 vertical TFT colour display with alpha numeric keypad",
-            "Actual injection speed & pressure with graphical display",
-            "Configure different level of password for different users",
-            "Easily programmable & user friendly",
-            "USB port provided to copy data or production report",
-            "Ethernet connection port for internet connectivity",
-            "Timer precision with 0.01second",
-            "Alarm history provide to recall the fault analysis",
-            "Visual & Audible alarm",
-            "I/O diagnosis for analog & digital",
-            "Mould data storage"
+            "Control Panel design as per IP6",
+            "Standard Each Point safety ensure with MCB",
+            "Proper Earthing & Neutral Point",
+            "Low & High Voltage safety",
+            "Energy Meter for hourly unit consumed.",
+            "SSR relay with heat sink for heaters control "
+        ],
+        "controlPanel": [
+            "Control Panel design as per IO6 Standard",
+            "Each point safety ensure with MCB",
+            "Proper earthing and neutral point",
+            "Low and Hight voltage safety.",
+            "Energy meter for hourly unit consumed",
+            "SSr relay with heatsink for heaters control"
         ],
         "standardFeatures": [
             "10.2 vertical TFT colour display with alpha numeric keypad",
@@ -252,10 +250,10 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110-180 KN"
     },
-
     {
+        "id": 4,
         "title": "Euro Star Series",
-        "mainImg": ["images/productimages/EuroStar.png","images/product-specification/productoverview/EuroStarSeries/EuroStarSeries.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroStarSeries/EuroStarSeriesD.jpg",
         "description": "High Caliber machine to satisfy your needs for the production of high speed, superior precision parts.",
         "features": [
             "injection capacity 40gms - 120gms",
@@ -282,10 +280,10 @@
             "images/product-specification/slider/EuroStarSeries/8.jpg"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroStarSeries/1.png",
-            "images/product-specification/productoverview/EuroStarSeries/2.png",
-            "images/product-specification/productoverview/EuroStarSeries/3.png",
-            "images/product-specification/productoverview/EuroStarSeries/4.png"
+            "images/product-specification/productoverview/EuroStarSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroStarSeries/unit 5.jpg"
         ],
         "heavydutyclampingunit": [
             "Hydraulic clamping for uniform distribution of clamping force, therefore it is the best suited for the production of precise, small parts.",
@@ -296,7 +294,7 @@
             "Moving platen moves on guide rails bearings with wide skates supporting pads.",
             "Bush less tie bars requires no lubrication, Thus "
         ],
-        "b&rsmartmold-advanceduserfriendlycontrol": [
+        "controlUnit": [
             "10.2 vertical TFT colour display with alpha numeric keypad",
             "Configure different level of password for different users",
             "Easily programmable & user friendly",
@@ -325,8 +323,9 @@
         ]
     },
     {
+        "id": 5,
         "title": "Euro (CPVC) Series",
-        "mainImg": ["images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg","images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
         "image": "images/productimages/EuroSurvo.png",
         "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
         "features": [
@@ -345,9 +344,11 @@
             "Construction"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroCPVCSeries/1.png",
-            "images/product-specification/productoverview/EuroCPVCSeries/2.jpg",
-            "images/product-specification/productoverview/EuroCPVCSeries/3.jpg"
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 4.jpg",
+            "images/product-specification/productoverview/EuroCPVCSeries/unit 5.jpg"
         ],
         "clampingUnit": [
             "Wide tie bar distance & daylight",
@@ -357,7 +358,7 @@
             "Auto mould height adjustment for quick mould change",
             "Low pressure precise mould protection",
             "Tripple safety control of mechanical, electrical & hydraulic devices to ensure operator safety.",
-            " Automatic centralised lubrication system with motorized pump."
+            "Automatic centralised lubrication system with motorized pump."
         ],
         "injectionUnit": [
             "Nitrided screw & barrel, wear resistant screw tip assembly",
@@ -383,6 +384,14 @@
             "Set & actual temperature data with graphical display",
             "Soak timer for cold start protection"
         ],
+        "hydraulics": [
+            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback",
+            "Separate manifolds for injection unit and clamping unit",
+            "All hydraulics seals are as per ISO Standards",
+            "Oil temperature indication with alarm",
+            "Return line & suction filter provided to clean the oil",
+            "Ergonomic hydraulics layout for easy approach & easy for maintenance"
+        ],
         "controls": [
             "10.2'vertical TFT colour display with alpha numeric keypad",
             "Actual injection speed & pressure with graphical display",
@@ -393,13 +402,7 @@
             "Alarm history provide to recall the fault analysis",
             "Visual & Audible alarm",
             "I/O diagnosis for analog & digital",
-            "Mould data storage",
-            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback",
-            "Separate manifolds for injection unit and clamping unit",
-            "All hydraulics seals are as per ISO Standards",
-            "Oil temperature indication with alarm",
-            "Return line & suction filter provided to clean the oil",
-            "Ergonomic hydraulics layout for easy approach & easy for maintenance"
+            "Mould data storage"
         ],
         "optionalFeatures": [
             "Air ejector",
@@ -431,9 +434,9 @@
         "ClampingForce": "110-180 KN"
     },
     {
+        "id": 6,
         "title": "Euro (PVC) Series",
-        "mainImg": ["images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg","images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"],
-       
+        "mainImg": "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
         "description": "Polyvinyl chloride (PVC) is a versatile thermoplastic material that is used in the production of hundreds of products.",
         "features": [
             "PID Control System",
@@ -450,9 +453,11 @@
             "Construction"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroPVCSeries/2.jpg",
-            "images/product-specification/productoverview/EuroPVCSeries/3.jpg",
-            "images/product-specification/productoverview/EuroPVCSeries/4.jpg"
+            "images/product-specification/productoverview/EuroPVCSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroPVCSeries/unit 2.jpg",
+            "images/product-specification/productoverview/EuroPVCSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroPVCSeries/unit 4.jpg",
+            "images/product-specification/productoverview/EuroPVCSeries/unit 5.jpg"
         ],
         "clampingUnit": [
             "Wide tie bar distance & daylight",
@@ -536,8 +541,9 @@
         "ClampingForce": "110-180 KN"
     },
     {
+        "id": 7,
         "title": "Euro R Series",
-        "mainImg": ["images/productimages/EuroR.png","images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroRSeries/EuroServoRSeries.jpg",
         "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
         "features": [
             "TFT Color Display",
@@ -551,7 +557,6 @@
             "Radial Piston type hydraulic motor enable high torque and excellent performance."
         ],
         "industry": [
-           
             "Electrical Industry",
             "Automobile",
             "Household",
@@ -566,8 +571,6 @@
             "Triple safety control of mechanical, electrical and hydraulic devices to ensure operator safety.",
             "Energy saving variable displacement pump.",
             "PLC controlled machine enable quick response time, essential for high productivity and repeatability."
-            
-            
         ],
         "sliderImages": [
             "images/product-specification/slider/EuroRSeries/2.jpg",
@@ -581,19 +584,51 @@
             "images/product-specification/slider/EuroRSeries/10.jpg"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroRSeries/1.png",
-            "images/product-specification/productoverview/EuroRSeries/2.png",
-            "images/product-specification/productoverview/EuroRSeries/3.jpg",
-            "images/product-specification/productoverview/EuroRSeries/4.jpg"
+            "images/product-specification/productoverview/EuroRSeries/unit 1.jpg",
+            "images/product-specification/productoverview/EuroRSeries/unit 3.jpg",
+            "images/product-specification/productoverview/EuroRSeries/unit 4.jpg"
         ],
         "Type": "RAM",
         "DriveType": "Hydraulic",
-        "ClampingForce": "110-180 KN"
+        "ClampingForce": "110-180 KN",
+        "injectionUnit": [
+            "Nitrided Screw & barrel",
+            "Twin Cylinder Injection Unit",
+            "Distributes the load equally across screw centreline",
+            "Injection unit on Linear Guide & Roller skates",
+            "Variable Back Pressure Proportional Control",
+            "Screw Driven by high torque radial Piston Motor"
+        ],
+        "hydraulics": [
+            "Energy efficient servo driven gear pump with closed loop pressure transducer feedback",
+            "Separate manifolds for injection unit and clamping unit",
+            "Ergonomic hydraulics layout for easy approach & easy for maintenance",
+            "Logic Cartridges incorporate for high response time.",
+            "Proportional controlled Back pressure for Plasticisation. "
+        ],
+        "clampingUnit": [
+            "Unique Prefill Cylinder Design",
+            "Telescopic Piston design for fast clamping",
+            "Large tie bar distance",
+            "Better Day light",
+            "Very Precise Mould safety"
+        ],
+        "hmi": [
+            "B&R Smart Mould Plc.",
+            "10.2' Vertical TFT Colour Display",
+            "Easily Programmable & User friendly",
+            "Configure different level of passwords for different users",
+            "Mould data storage",
+            "Ethernet connection port for internet connectivity",
+            "I/O diagnosis for Analog & digital",
+            "High response time",
+            " Login Key for data safety"
+        ]
     },
-
     {
+        "id": 8,
         "title": "Euro Servo R Series",
-        "mainImg": ["images/productimages/EuroServoR.png","images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroRSeries/EuroServoRSeries.jpg",
         "description": "Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump",
         "features": [
             "PID Control System",
@@ -612,7 +647,6 @@
             "Automobile & More",
             "Moulding",
             "Automotive"
-            
         ],
         "clampingUnit": [
             "Unique Prefill Cylinder Design",
@@ -661,10 +695,9 @@
             "images/product-specification/slider/EuroPVCSeries/4.jpg"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroRSmart/2.jpg",
-            "images/product-specification/productoverview/EuroRSmart/2.jpg",
-            "images/product-specification/productoverview/EuroRSmart/3.jpg",
-            "images/product-specification/productoverview/EuroRSmart/4.jpg"
+            "images/product-specification/productoverview/EuroServoR/unit 1.jpg",
+            "images/product-specification/productoverview/EuroServoR/unit 3.jpg",
+            "images/product-specification/productoverview/EuroServoR/unit 4.jpg"
         ],
         "standardFeatures": [
             "10.2 vertical TFT colour display with alpha numeric keypad",
@@ -678,10 +711,10 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110 TONS TO 180 TONS "
     },
-
     {
+        "id": 9,
         "title": "Euro Servo R Smart Series",
-        "mainImg":[ "images/productimages/EuroServoR.png","images/product-specification/productoverview/EuroRSmart/EUROSERVORSMART.jpg"],
+        "mainImg": "images/product-specification/productoverview/EuroRSeries/EuroServoRSeries.jpg",
         "description": "Hydraulic clamping injection moulding machine 110 to 180 Energy efficient Servo Driven gear pump",
         "features": [
             "PID Control System",
@@ -701,10 +734,9 @@
             "Moulding"
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroRSmart/2.jpg",
-            "images/product-specification/productoverview/EuroRSmart/2.jpg",
-            "images/product-specification/productoverview/EuroRSmart/3.jpg",
-            "images/product-specification/productoverview/EuroRSmart/4.jpg"
+            "images/product-specification/productoverview/EuroRSmart/unit 1.jpg",
+            "images/product-specification/productoverview/EuroRSmart/unit 3.jpg",
+            "images/product-specification/productoverview/EuroRSmart/unit 4.jpg"
         ],
         "clampingUnit": [
             "Unique Prefill Cylinder Design",
@@ -764,14 +796,10 @@
         "DriveType": "Hydraulic",
         "ClampingForce": "110 TONS TO 180 TONS "
     },
-
-
-
-
     {
+        "id": 10,
         "title": "Euro Servo Smart Series",
-        "mainImg": ["images/product-specification/productoverview/EuroServoSeries/EuroServoImg.jpg","images/product-specification/productoverview/EuroServoSeries/EUROSERVOSMARTSERIES.jpg"],
-        
+        "mainImg": "images/product-specification/productoverview/EuroServoSeries/mainServoSeries.jpg",
         "description": "Toggle clamping machine 50 Tons to 550 Tons Energy Driven closed loop circuit Ergonomic hydraulic Layout for each approach",
         "features": [
             "Construction",
@@ -782,19 +810,18 @@
             "Five Point toggle clamp has reduced footprint",
             "10.2' Vertical TFT Colour Display",
             "Energy efficient Servo driven Closed loop Circuit."
-            
         ],
         "industry": [
             "CPVC Fittings",
             "Construction",
             "PVC Fittings"
-            
         ],
         "overviewImages": [
-            "images/product-specification/productoverview/EuroServoSmart/1.jpg",
-            "images/product-specification/productoverview/EuroServoSmart/1.jpg",
-            "images/product-specification/productoverview/EuroServoSmart/3.jpg",
-            "images/product-specification/productoverview/EuroServoSmart/4.jpg"
+            "images/product-specification/productoverview/EuroServoSmart/unit 1.jpg",
+            "images/product-specification/productoverview/EuroServoSmart/unit 2.jpg",
+            "images/product-specification/productoverview/EuroServoSmart/unit 3.jpg",
+            "images/product-specification/productoverview/EuroServoSmart/unit 4.jpg",
+            "images/product-specification/productoverview/EuroServoSmart/unit 5.jpg"
         ],
         "clampingUnit": [
             "Five Point toggle clamp has reduced footprint",
@@ -817,10 +844,10 @@
             " Login Key for data safety"
         ],
         "injectionUnit": [
-            "Nitrided screw & barrel, wear resistant screw tip assembly",
-            "Three option screw dia available for customer choice",
-            "Five stage injection speed & pressure control",
-            "Variable back pressure control",
+            "Distributes the load equally across screw centreline",
+            "Injection unit on Linear Guide & Roller skates",
+            "Nitrated screw % Barrel",
+            "Variable Back Pressure Proportional Control",
             "Linear position transducer for accurate injection position control",
             "Screw driven by high torque radial piston motor",
             "Injection decompression before/after refilling or both",

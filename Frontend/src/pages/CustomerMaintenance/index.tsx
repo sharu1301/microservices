@@ -48,7 +48,7 @@ const CustomerMaintenance = () => {
                 <h2 className="head">
                   Customer service & injection molding machine maintenance
                 </h2>
-                <p >Uncomplicated and fast – throughout the service life of the machine</p>
+                <p className="text-center">Uncomplicated and fast – throughout the service life of the machine</p>
               </div>
             </div>
             <div className="row text-center">

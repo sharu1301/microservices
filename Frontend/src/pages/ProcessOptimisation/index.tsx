@@ -72,7 +72,7 @@ export default function Process() {
           </div>
           <div className="row pt-4 ml-0">
             <div className="col-md-4">
-              <div className="step-card">
+              <div className="step-card h-100">
                 <h2>01</h2>
                 <h6>Application Engineering</h6>
                 <ul className="pl-3">
@@ -83,7 +83,7 @@ export default function Process() {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="step-card">
+              <div className="step-card h-100">
                 <h2>02</h2>
                 <h6>Plasticizing</h6>
                 <ul className="pl-3">
@@ -95,7 +95,7 @@ export default function Process() {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="step-card">
+              <div className="step-card h-100">
                 <h2>03</h2>
                 <h6>Digital Solutions</h6>
                 <ul className="pl-3">

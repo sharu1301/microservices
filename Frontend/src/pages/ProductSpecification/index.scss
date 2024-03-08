@@ -1,11 +1,13 @@
 @import '../../assets/sass/main.scss';
 
 .mainSectionContainer {
-    // border: 5px solid black;
-    // width: 100%;
 
     .imgSlider {
         width: 600px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
 
         .slick-slider {
             .slick-next {
@@ -18,9 +20,15 @@
         }
     }
 
+    .imgslider-section {
+        @media (max-width: 767px) {
+            display: block !important;
+        }
+    }
+
     display: flex;
     padding: 30px 95px 10px 50px;
-    justify-content: space-around;
+    justify-content: space-between;
     // align-items: center;
 
 
@@ -41,12 +49,12 @@
     }
 
     .image {
-        width: auto;
-        height: 40%;
+        width: '70%';
+        height: 50%;
 
 
         @media screen and (max-width: 1023px) {
-            width: 68%;
+            width: 50%;
             height: auto;
         }
 
@@ -277,9 +285,12 @@
         }
 
         img {
-            width: 100%;
+            width: auto;
             border-radius: 0;
             height: 100%;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+            }
         }
     }
 
@@ -317,9 +328,11 @@
         .image {
             width: 100px;
             cursor: pointer;
+            height: 100px;
 
             @media screen and (max-width: 500px) {
                 width: 100%;
+                height: auto;
             }
         }
 

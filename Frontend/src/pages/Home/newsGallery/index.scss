@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 112px 40px 106px;
+    // padding: 40px 112px 40px 106px;
 
     @media screen and (max-width: 1024px) {
         padding: 40px 36px;
@@ -29,7 +29,7 @@
     }
 
     .ourGallery {
-        width: 60%;
+        // width: 60%;
         height: 100%;
 
         @media screen and (max-width: 500px) {
@@ -44,6 +44,7 @@
             @media screen and (max-width: 500px) {
                 flex-direction: column;
                 width: 100%;
+                padding: 0;
             }
 
             .rectangleDiv {
@@ -98,7 +99,7 @@
     }
 
     .ourNews {
-        width: 40%;
+        // width: 40%;
         // height: 100%;
         @media screen and (max-width: 500px) {
             width: 90%;
@@ -115,7 +116,7 @@
             //     animation: scrollTestimonials 10s linear infinite;
             // }
             .news-detail {
-                padding: 20px;
+                padding: 10px 0 0 0;
                 background-color: $white;
                 box-shadow: 0px 0px 5px 2px #ccc;
                 margin: 10px 20px 20px 20px;
@@ -133,7 +134,7 @@
                 }
                 .close {
                     cursor: pointer;
-                    margin-left: 20px;
+                    padding: 0 6px 6px 6px;
                 }
 
                 .news-header {
@@ -168,9 +169,8 @@
                     }
 
                     .modalNewsImg {
-                        align-self: center;
-                        height: 200px;
-                        width: 200px;
+                        height:100%;
+                        width: 100%;
                     }
                 }
 
@@ -192,6 +192,7 @@
             width: 100%;
             margin-left: 10px;
             margin-top: 20px;
+            padding: 0;
         }
 
         .vertialContainer {
@@ -315,4 +316,12 @@
 .row.paused {
 
     animation-play-state: paused;
+}
+.md-none{
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+.md-block{
+    display: none;
 }

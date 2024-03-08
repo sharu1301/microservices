@@ -98,7 +98,7 @@ const News = ({ limit }: { limit: number }) => {
                   </div>
 
                   <div className="news-body">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <img
                         src={
                           selectedNews.cover === null
@@ -109,7 +109,7 @@ const News = ({ limit }: { limit: number }) => {
                         className="modalNewsImg"
                       />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-12 mt-3">
                       <p className="subtitle">{selectedNews.plaintext.slice(0, 180)}
                       </p>
                     </div>

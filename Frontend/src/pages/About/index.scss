@@ -255,6 +255,13 @@
     width: 100%;
     position: relative;
     // border: 1px solid black;
+    padding-left: 30px;
+    @include breakpoint(sm){
+      padding-left: 0;
+    }
+    @include breakpoint(md){
+      padding-left: 0;
+    }
 
     .profile-image {
       

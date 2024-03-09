@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ImageMapper from "react-img-mapper";
-import './index.scss'
-import { styled } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import './index.scss';
 import Modal from '@mui/material/Modal';
 
 interface ImageMapperProps {
@@ -52,9 +49,6 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
   }, []);
 
 
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-
 
 
   const calculatePercentX = (percentX: number) => {
@@ -65,44 +59,44 @@ const ImageMapperComponent: React.FC<ImageMapperProps> = ({
     return Math.round((percentY / 100) * imageDimensions.height);
   };
 
-  const scaledAreas = areas.map((area) => {
-    if (area.shape === "circle") {
-      return {
-        ...area,
-        coords: [
-          calculatePercentX(area.coords[0]),
-          calculatePercentY(area.coords[1]),
-          area.coords[2],
-        ],
-      };
-    } else if (area.shape === "rect") {
-      return {
-        ...area,
-        coords: [
-          calculatePercentX(area.coords[0]),
-          calculatePercentY(area.coords[1]),
-          calculatePercentX(area.coords[2]),
-          calculatePercentY(area.coords[3]),
-        ],
-        preFillColor: "transparent",
-        fillColor: "transaprent",
-        // responsive: true,
-        strokeColor: "red",
-      };
-    }
-    else if (area.shape === "poly") {
-      const scaledCoords = area.coords.map((coord, index) => {
-        return index % 2 === 0
-          ? calculatePercentX(coord)
-          : calculatePercentY(coord);
-      });
-      return {
-        ...area,
-        coords: scaledCoords,
-      };
-    }
-    return area;
-  });
+  // const scaledAreas = areas.map((area) => {
+  //   if (area.shape === "circle") {
+  //     return {
+  //       ...area,
+  //       coords: [
+  //         calculatePercentX(area.coords[0]),
+  //         calculatePercentY(area.coords[1]),
+  //         area.coords[2],
+  //       ],
+  //     };
+  //   } else if (area.shape === "rect") {
+  //     return {
+  //       ...area,
+  //       coords: [
+  //         calculatePercentX(area.coords[0]),
+  //         calculatePercentY(area.coords[1]),
+  //         calculatePercentX(area.coords[2]),
+  //         calculatePercentY(area.coords[3]),
+  //       ],
+  //       preFillColor: "transparent",
+  //       fillColor: "transaprent",
+  //       // responsive: true,
+  //       strokeColor: "red",
+  //     };
+  //   }
+  //   else if (area.shape === "poly") {
+  //     const scaledCoords = area.coords.map((coord, index) => {
+  //       return index % 2 === 0
+  //         ? calculatePercentX(coord)
+  //         : calculatePercentY(coord);
+  //     });
+  //     return {
+  //       ...area,
+  //       coords: scaledCoords,
+  //     };
+  //   }
+  //   return area;
+  // });
 
   const getImageByUnit = (unit: string, series: string) => {
     const seriesData = allData;

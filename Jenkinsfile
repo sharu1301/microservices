@@ -30,8 +30,8 @@ pipeline {
                             # Set up Node.js environment
                             export NVM_DIR="/var/lib/jenkins/.nvm"
                             . "$NVM_DIR/nvm.sh"
-                            nvm install v20.10.0
-                            nvm alias default v20.10.0
+                            nvm install v21.7.1
+                            nvm alias default v21.7.1
                             nvm use default
 
                             # Display Node.js and NPM versions

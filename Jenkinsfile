@@ -24,7 +24,7 @@ pipeline {
         // Stage 2: Build Artifact
         stage('Build Artifact') {
             steps {
-                dir('/var/lib/jenkins/workspace/Hinds Machine/Frontend') {
+                dir('/home/ubuntu/workspace/Hinds Machine/Frontend') {
                     script {
                         sh '''
                             # Set up Node.js environment
@@ -79,7 +79,7 @@ pipeline {
         // Stage 5: Upload to S3
         stage('Upload to S3') {
             steps {
-                dir("/var/lib/jenkins/workspace/Hinds Machine/Frontend/build") {
+                dir("/home/ubuntu/workspace/Hinds Machine/Frontend/build") {
                     script {
                         // Upload artifacts to S3 bucket
                         s3Upload(

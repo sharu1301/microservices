@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+     agent { label 'Node-js'}
 
     stages {
         // Stage 1: Handle GitLab Webhook

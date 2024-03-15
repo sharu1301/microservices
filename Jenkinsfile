@@ -28,7 +28,7 @@ pipeline {
                     script {
                         sh '''
                             # Set up Node.js environment
-                            export NVM_DIR="/home/ubuntu/workspace/.nvm"
+                            export NVM_DIR="/home/ubuntu/.nvm"
                             . "$NVM_DIR/nvm.sh"
                             nvm install v21.7.1
                             nvm alias default v21.7.1

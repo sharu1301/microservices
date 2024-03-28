@@ -125,7 +125,7 @@ pipeline {
                         body: 'This mail is from Jenkins. The build has failed. Error message: ${BUILD_LOG, maxLines=10}',
                         recipientProviders: [developers()],
                         subject: 'Hindsmachines Build Failure',
-                        to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                        to: 'shaik@insigniaconsultancy.com,sridhar@insignia.tech,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
                     )
                 }
 
@@ -143,7 +143,7 @@ pipeline {
                     // Existing email configuration
                     recipientProviders: [developers()],
                     subject: 'Hindsmachines Build successful',
-                    to: 'shaik@insigniaconsultancy.com,sridhar.k@insigniaconsultancy.com,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
+                    to: 'shaik@insigniaconsultancy.com,sridhar@insignia.tech,nikhil@insigniaconsultancy.com,rajesh@insigniaconsultancy.com,ramya@creativesabode.com'
                 )
             }
         }

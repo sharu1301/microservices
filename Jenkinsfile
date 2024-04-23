@@ -22,7 +22,7 @@ pipeline {
                                     sudo kill $pid
                                     echo "Process killed successfully."
                                 fi
-                                cd ics-test-hinds-machine
+                                cd ics-test-hinds-machine/Backend/
                                 npm install
                                 npm run dev
                         ''')

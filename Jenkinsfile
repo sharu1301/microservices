@@ -24,7 +24,7 @@ pipeline {
                                 fi
                                 cd ics-test-hinds-machine/Backend/
                                 npm install
-                                npm run dev
+                                pm2 start --name Hinds-test sudo "npm run dev" 
                         ''')
                 ], 
                 usePromotionTimestamp: false, 

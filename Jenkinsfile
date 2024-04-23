@@ -3,10 +3,15 @@ pipeline {
 
     stages {
         stage('Build'){
-            sh '''
-                Hello Guys
-            '''
+            steps{
+                script{
+                    sh '''
+                        echo "Hello Guys"
+                    '''
+                }
+            }
         }
+        
     }
 }
 

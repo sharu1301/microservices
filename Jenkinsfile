@@ -5,7 +5,7 @@ pipeline {
         stage('Build'){
             steps{
                 script{
-                    def runningProcesses = sh(script: 'sudo lsof -i:3002 | wc -l', returnStdout: true).trim()
+                    def runningProcesses = sh(script: 'sudo lsof -i:3002 | wc -l', returnStdout: true)
                     sh '''
                        echo ${runningProcesses}
                     '''

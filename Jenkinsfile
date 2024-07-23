@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     dir("${WORKING_DIR}") {
-                        sh 'sudo npm install'
+                        sh 'sudo apt-get install npm'
                     }
                 }
             }

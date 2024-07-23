@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenkins-slave' }
+    agent any
 
     environment {
         REPO_URL = 'https://github.com/sharu1301/microservices.git'

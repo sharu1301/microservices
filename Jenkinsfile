@@ -1,41 +1,67 @@
 pipeline {
-    agent { label 'jenkins-slave'}
+    agent { label 'jenkins-slave' }
+
+    environment {
+        REPO_URL = 'https://github.com/sharu1301/microservices.git'
+        WORKING_DIR = 'microservices'
+    }
+
+    parameters {
+        string(name: 'BRANCH_NAME', defaultValue: 'development', description: 'Branch to build')
+        choice(name: 'APPLICATION', choices: ['Dashboard-dev', 'Dashboard-stage', 'Rampsure', 'Hinds', 'ICS-dev', 'ICS-stage', 'ICS-prod'], description: 'Application to deploy')
+        string(name: 'PORT', defaultValue: '3001', description: 'Port number to check and stop the process if running')
+    }
 
     stages {
-        stage('SSH transfer'){
-            steps([$class: 'BapSshPromotionPublisherPlugin']) {
-                sshPublisher(
-                publishers: [
-                sshPublisherDesc(
-                configName: 'ics-dev-server', 
-                transfers: [
-                    sshTransfer(
-                        sourceFiles: 'Backend/',
-                        execCommand: '''
-                                #!/bin/bash
-
-                                # Run the command to find the process ID
-                                pid=$(sudo lsof -ti :3002)
-
-                                # Check if PID is not empty
-                                if [ -n "$pid" ]; then
-                                    sudo kill $pid
-                                    echo "Process killed successfully."
-                                fi
-                                cd ics-test-hinds-machine/Backend/
-                                npm install
-                                pm2 start --name Hinds-test "sudo npm run dev" 
-                        ''')
-                ], 
-                usePromotionTimestamp: false, 
-                useWorkspaceInPromotion: false, 
-                verbose: false)
-                ]
-            )
+        stage('Clone Repository') {
+            steps {
+                script {
+                    // Clone the specific branch
+                    sh "git clone -b ${params.BRANCH_NAME} ${REPO_URL} ${WORKING_DIR}"
+                    // Navigate into the repository directory
+                    dir("${WORKING_DIR}") {
+                        sh 'ls -la' // List files to ensure it's the correct directory
+                    }
+                }
+            }
         }
-      }
+
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    dir("${WORKING_DIR}") {
+                        sh 'sudo npm install'
+                    }
+                }
+            }
+        }
+
+        stage('Stop Existing Processes') {
+            steps {
+                script {
+                    sh """
+                        pid=\$(sudo lsof -ti :${params.PORT})
+                        if [ -n "\$pid" ]; then
+                            sudo kill -9 \$pid
+                            echo "Process on port ${params.PORT} killed successfully."
+                        fi
+                    """
+                }
+            }
+        }
+
+        stage('Deploy Application') {
+            steps {
+                script {
+                    dir("${WORKING_DIR}") {
+                        // Start the application using pm2
+                        sh """
+                            pm2 start --name ${params.APPLICATION} "sudo npm run dev"
+                            pm2 save
+                        """
+                    }
+                }
+            }
+        }
     }
 }
-
-
-

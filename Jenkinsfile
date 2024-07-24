@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     dir("${WORKING_DIR}") {
-                        sh 'sudo apt-get install npm'
+                        sh 'apt-get update && apt-get install -y npm'
                     }
                 }
             }
@@ -53,15 +53,13 @@ pipeline {
         stage('Stop Existing Processes') {
             steps {
                 script {
-                    sh """
-                        pid=\$(sudo lsof -ti :${params.PORT})
-                        if [ -n "\$pid" ]; then
-                            sudo kill -9 \$pid
-                            echo "Process on port ${params.PORT} killed successfully."
-                        else
-                            echo "No process is running on port ${params.PORT}."
-                        fi
-                    """ || true
+                    def pid = sh(script: "sudo lsof -ti :${params.PORT}", returnStdout: true).trim()
+                    if (pid) {
+                        sh "sudo kill -9 ${pid}"
+                        echo "Process on port ${params.PORT} killed successfully."
+                    } else {
+                        echo "No process is running on port ${params.PORT}."
+                    }
                 }
             }
         }

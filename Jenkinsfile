@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     dir("${WORKING_DIR}") {
-                        sh 'apt-get update && apt-get install -y npm'
+                        sh 'sudo apt-get update && sudo apt-get install -y npm'
                     }
                 }
             }

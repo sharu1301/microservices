@@ -56,6 +56,9 @@ pipeline {
             // Capture the PID of the process running on the specified port
             def pid = sh(script: "sudo lsof -ti :${params.PORT}", returnStdout: true).trim()
             
+            // Print PID for debugging
+            echo "Captured PID: ${pid}"
+            
             // Check if PID is not empty and stop the process if necessary
             if (pid) {
                 sh "sudo kill -9 ${pid}"

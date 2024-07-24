@@ -50,22 +50,18 @@ pipeline {
             }
         }
 
-        stage('Stop Existing Processes') {
+       stage('Stop Existing Processes') {
     steps {
         script {
-            // Capture the PID of the process running on the specified port
-            def pid = sh(script: "sudo lsof -ti :${params.PORT}", returnStdout: true).trim()
-            
-            // Print PID for debugging
-            echo "Captured PID: ${pid}"
-            
-            // Check if PID is not empty and stop the process if necessary
-            if (pid) {
-                sh "sudo kill -9 ${pid}"
-                echo "Process on port ${params.PORT} killed successfully."
-            } else {
-                echo "No process is running on port ${params.PORT}."
-            }
+            sh '''
+                pid=$(sudo lsof -ti :${PORT})
+                if [ -n "$pid" ]; then
+                    echo "Killing process $pid running on port ${PORT}"
+                    sudo kill -9 $pid
+                else
+                    echo "No process is running on port ${PORT}"
+                fi
+            '''
         }
     }
 }

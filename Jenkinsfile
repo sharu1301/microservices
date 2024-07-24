@@ -58,6 +58,8 @@ pipeline {
                         if [ -n "\$pid" ]; then
                             sudo kill -9 \$pid
                             echo "Process on port ${params.PORT} killed successfully."
+                        else
+                            echo "No process is running on port ${params.PORT}."
                         fi
                     """
                 }

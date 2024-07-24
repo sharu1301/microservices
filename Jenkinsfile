@@ -51,18 +51,21 @@ pipeline {
         }
 
         stage('Stop Existing Processes') {
-            steps {
-                script {
-                    def pid = sh(script: "sudo lsof -ti :${params.PORT}", returnStdout: true).trim()
-                    if (pid) {
-                        sh "sudo kill -9 ${pid}"
-                        echo "Process on port ${params.PORT} killed successfully."
-                    } else {
-                        echo "No process is running on port ${params.PORT}."
-                    }
-                }
+    steps {
+        script {
+            // Capture the PID of the process running on the specified port
+            def pid = sh(script: "sudo lsof -ti :${params.PORT}", returnStdout: true).trim()
+            
+            // Check if PID is not empty and stop the process if necessary
+            if (pid) {
+                sh "sudo kill -9 ${pid}"
+                echo "Process on port ${params.PORT} killed successfully."
+            } else {
+                echo "No process is running on port ${params.PORT}."
             }
         }
+    }
+}
 
         stage('Deploy Application') {
             steps {

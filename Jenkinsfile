@@ -61,7 +61,7 @@ pipeline {
                         else
                             echo "No process is running on port ${params.PORT}."
                         fi
-                    """
+                    """ || true
                 }
             }
         }

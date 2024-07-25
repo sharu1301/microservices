@@ -50,8 +50,8 @@ pipeline {
                     // Check if the public directory and index.html exist
                     dir("${WORKING_DIR}") {
                         sh """
-                            if [ ! -f "public/index.html" ]; then
-                                echo "Error: public/index.html not found."
+                            if [ ! -f "Frontend/public/index.html" ]; then
+                                echo "Error: Frontend/public/index.html not found."
                                 exit 1
                             fi
                         """

@@ -3,15 +3,10 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/sharu1301/microservices.git'
-        WORKING_DIR = 'microservices'
+        DIRECTORY = 'development'
+        PORT = '3003'
+        PM2_SERVICE_NAME = 'UniversalDashboard'
     }
-
-    parameters {
-        string(name: 'BRANCH_NAME', defaultValue: 'development', description: 'Branch to build')
-        choice(name: 'APPLICATION', choices: ['Dashboard-dev', 'Dashboard-stage', 'Rampsure', 'Hinds', 'ICS-dev', 'ICS-stage', 'ICS-prod'], description: 'Application to deploy')
-        string(name: 'PORT', defaultValue: '3001', description: 'Port number to check and stop the process if running')
-    }
-
     stages {
         stage('Clean Old Directory') {
             steps {
@@ -26,15 +21,22 @@ pipeline {
                 }
             }
         }
-
+    stages {
         stage('Clone Repository') {
             steps {
                 script {
-                    // Clone the specific branch
-                    sh "git clone -b ${params.BRANCH_NAME} ${REPO_URL} ${WORKING_DIR}"
-                    // Navigate into the repository directory
-                    dir("${WORKING_DIR}") {
-                        sh 'ls -la' // List files to ensure it's the correct directory
+                    // Clone the repository
+                    sh "git clone ${REPO_URL}"
+                }
+            }
+        }
+        
+        stage('Navigate to Directory') {
+            steps {
+                script {
+                    // Change to the directory containing package.json
+                    dir("${DIRECTORY}") {
+                        sh "ls -al"
                     }
                 }
             }
@@ -43,39 +45,81 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    dir("${WORKING_DIR}") {
-                        sh 'sudo apt-get update && sudo apt-get install -y npm'
+                    // Install npm dependencies
+                    dir("${DIRECTORY}") {
+                        sh "sudo npm install || npm install"
                     }
                 }
             }
         }
 
-       stage('Stop Existing Processes') {
-    steps {
-        script {
-            sh '''
-                pid=$(sudo lsof -ti :${PORT})
-                if [ -n "$pid" ]; then
-                    echo "Killing process $pid running on port ${PORT}"
-                    sudo kill -9 $pid
-                else
-                    echo "No process is running on port ${PORT}"
-                fi
-            '''
-        }
-    }
-}
-
-        stage('Deploy Application') {
+        stage('Stop and Delete Existing PM2 Service') {
             steps {
                 script {
-                    dir("${WORKING_DIR}") {
-                        // Start the application using pm2
+                    // Stop and delete existing PM2 service
+                    sh """
+                    pm2 stop ${PORT} || true
+                    pm2 delete ${PORT} || true
+                    """
+                }
+            }
+        }
+
+        stage('Check and Kill Process on Port') {
+            steps {
+                script {
+                    // Check and kill process on the port if running
+                    sh """
+                    sudo lsof -i :${PORT} || true
+                    if [ $? -eq 0 ]; then
+                        sudo kill -9 \$(sudo lsof -t -i :${PORT}) || true
+                    fi
+                    """
+                }
+            }
+        }
+
+        stage('Pull Latest Code') {
+            steps {
+                script {
+                    // Pull latest code
+                    dir("${DIRECTORY}") {
+                        sh "git pull"
+                    }
+                }
+            }
+        }
+
+        stage('Start Application') {
+            steps {
+                script {
+                    // Start the application using npm
+                    dir("${DIRECTORY}") {
+                        sh "sudo npm run dev"
+                    }
+                }
+            }
+        }
+
+        stage('Start PM2 Process') {
+            steps {
+                script {
+                    // Start the process using PM2 and save it
+                    dir("${DIRECTORY}") {
                         sh """
-                            pm2 start --name ${params.APPLICATION} "sudo npm run dev"
-                            pm2 save
+                        pm2 start --name ${PM2_SERVICE_NAME} "sudo npm run dev"
+                        pm2 save
                         """
                     }
+                }
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                script {
+                    // Verify the deployment by checking the port
+                    sh "curl -I http://localhost:${PORT}"
                 }
             }
         }

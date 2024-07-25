@@ -60,8 +60,12 @@ pipeline {
                 script {
                     // Stop and delete existing PM2 service
                     sh """
-                    pm2 stop ${PM2_SERVICE_NAME} || true
-                    pm2 delete ${PM2_SERVICE_NAME} || true
+                    if pm2 list | grep ${PM2_SERVICE_NAME}; then
+                        pm2 stop ${PM2_SERVICE_NAME}
+                        pm2 delete ${PM2_SERVICE_NAME}
+                    else
+                        echo "PM2 service ${PM2_SERVICE_NAME} not found"
+                    fi
                     """
                 }
             }
@@ -98,7 +102,7 @@ pipeline {
                 script {
                     // Start the application using npm
                     dir("${WORKING_DIR}") {
-                        sh "npm run dev"
+                        sh "npm start"
                     }
                 }
             }
@@ -110,7 +114,7 @@ pipeline {
                     // Start the process using PM2 and save it
                     dir("${WORKING_DIR}") {
                         sh """
-                        pm2 start --name ${PM2_SERVICE_NAME} "npm run dev"
+                        pm2 start --name ${PM2_SERVICE_NAME} "npm start"
                         pm2 save
                         """
                     }

@@ -60,8 +60,8 @@ pipeline {
                 script {
                     // Stop and delete existing PM2 service
                     sh """
-                    pm2 stop ${PORT} || true
-                    pm2 delete ${PORT} || true
+                    pm2 stop ${PM2_SERVICE_NAME} || true
+                    pm2 delete ${PM2_SERVICE_NAME} || true
                     """
                 }
             }
@@ -97,7 +97,7 @@ pipeline {
                 script {
                     // Start the application using npm
                     dir("${WORKING_DIR}") {
-                        sh "sudo npm run dev"
+                        sh "npm run dev"
                     }
                 }
             }
@@ -109,7 +109,7 @@ pipeline {
                     // Start the process using PM2 and save it
                     dir("${WORKING_DIR}") {
                         sh """
-                        pm2 start --name ${PM2_SERVICE_NAME} "sudo npm run dev"
+                        pm2 start --name ${PM2_SERVICE_NAME} "npm run dev"
                         pm2 save
                         """
                     }

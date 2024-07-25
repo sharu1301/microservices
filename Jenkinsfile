@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Navigate to Directory') {
             steps {
                 script {
@@ -49,7 +49,7 @@ pipeline {
                 script {
                     // Install npm dependencies
                     dir("${WORKING_DIR}") {
-                        sh "sudo npm install || npm install"
+                        sh "npm install"
                     }
                 }
             }
@@ -60,8 +60,8 @@ pipeline {
                 script {
                     // Stop and delete existing PM2 service
                     sh """
-                    pm2 stop ${PORT} || true
-                    pm2 delete ${PORT} || true
+                    pm2 stop ${PM2_SERVICE_NAME} || true
+                    pm2 delete ${PM2_SERVICE_NAME} || true
                     """
                 }
             }
@@ -72,9 +72,10 @@ pipeline {
                 script {
                     // Check and kill process on the port if running
                     sh """
-                    sudo lsof -i :${PORT} || true
-                    if [ \$? -eq 0 ]; then
+                    if sudo lsof -i :${PORT}; then
                         sudo kill -9 \$(sudo lsof -t -i :${PORT}) || true
+                    else
+                        echo "No process running on port ${PORT}"
                     fi
                     """
                 }
@@ -97,7 +98,7 @@ pipeline {
                 script {
                     // Start the application using npm
                     dir("${WORKING_DIR}") {
-                        sh "sudo npm run dev"
+                        sh "npm run dev"
                     }
                 }
             }
@@ -109,7 +110,7 @@ pipeline {
                     // Start the process using PM2 and save it
                     dir("${WORKING_DIR}") {
                         sh """
-                        pm2 start --name ${PM2_SERVICE_NAME} "sudo npm run dev"
+                        pm2 start --name ${PM2_SERVICE_NAME} "npm run dev"
                         pm2 save
                         """
                     }

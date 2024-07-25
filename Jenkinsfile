@@ -71,7 +71,7 @@ pipeline {
                     // Check and kill process on the port if running
                     sh """
                     sudo lsof -i :${PORT} || true
-                    if [ $? -eq 0 ]; then
+                    if [ \$? -eq 0 ]; then
                         sudo kill -9 \$(sudo lsof -t -i :${PORT}) || true
                     fi
                     """

@@ -32,7 +32,7 @@ pipeline {
                 }
             }
         }
-
+        
         stage('Navigate to Directory') {
             steps {
                 script {
@@ -44,28 +44,12 @@ pipeline {
             }
         }
 
-        stage('Verify Public Directory') {
-            steps {
-                script {
-                    // Check if the public directory and index.html exist
-                    dir("${WORKING_DIR}") {
-                        sh """
-                            if [ ! -f "Frontend/public/index.html" ]; then
-                                echo "Error: Frontend/public/index.html not found."
-                                exit 1
-                            fi
-                        """
-                    }
-                }
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 script {
                     // Install npm dependencies
                     dir("${WORKING_DIR}") {
-                        sh "npm install"
+                        sh "sudo npm install || npm install"
                     }
                 }
             }
@@ -76,12 +60,8 @@ pipeline {
                 script {
                     // Stop and delete existing PM2 service
                     sh """
-                    if pm2 list | grep ${PM2_SERVICE_NAME}; then
-                        pm2 stop ${PM2_SERVICE_NAME}
-                        pm2 delete ${PM2_SERVICE_NAME}
-                    else
-                        echo "PM2 service ${PM2_SERVICE_NAME} not found"
-                    fi
+                    pm2 stop ${PORT} || true
+                    pm2 delete ${PORT} || true
                     """
                 }
             }
@@ -92,10 +72,9 @@ pipeline {
                 script {
                     // Check and kill process on the port if running
                     sh """
-                    if sudo lsof -i :${PORT}; then
+                    sudo lsof -i :${PORT} || true
+                    if [ \$? -eq 0 ]; then
                         sudo kill -9 \$(sudo lsof -t -i :${PORT}) || true
-                    else
-                        echo "No process running on port ${PORT}"
                     fi
                     """
                 }
@@ -118,7 +97,7 @@ pipeline {
                 script {
                     // Start the application using npm
                     dir("${WORKING_DIR}") {
-                        sh "npm start"
+                        sh "sudo npm run dev"
                     }
                 }
             }
@@ -130,7 +109,7 @@ pipeline {
                     // Start the process using PM2 and save it
                     dir("${WORKING_DIR}") {
                         sh """
-                        pm2 start --name ${PM2_SERVICE_NAME} "npm start"
+                        pm2 start --name ${PM2_SERVICE_NAME} "sudo npm run dev"
                         pm2 save
                         """
                     }

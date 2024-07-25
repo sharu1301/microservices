@@ -3,7 +3,8 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/sharu1301/microservices.git'
-        WORKING_DIR = 'Microservices/Frontend'
+        REPO_DIR = 'microservices'
+        WORKING_DIR = 'microservices/development'
         PORT = '3003'
         PM2_SERVICE_NAME = 'UniversalDashboard'
     }
@@ -14,9 +15,9 @@ pipeline {
                 script {
                     // Clean the old microservices directory if it exists
                     sh """
-                        if [ -d "${WORKING_DIR}" ]; then
-                            rm -rf ${WORKING_DIR}
-                            echo "Old directory ${WORKING_DIR} cleaned."
+                        if [ -d "${REPO_DIR}" ]; then
+                            rm -rf ${REPO_DIR}
+                            echo "Old directory ${REPO_DIR} cleaned."
                         fi
                     """
                 }
@@ -27,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository
-                    sh "git clone ${REPO_URL}"
+                    sh "git clone ${REPO_URL} ${REPO_DIR}"
                 }
             }
         }

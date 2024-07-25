@@ -30,7 +30,6 @@
     "react-js-pagination": "^3.0.3",
     "react-player": "^2.14.1",
     "react-router-dom": "^6.20.0",
-    "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^4.3.0",
     "react-spinners": "^0.13.8",
@@ -41,6 +40,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

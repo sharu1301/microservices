@@ -44,6 +44,22 @@ pipeline {
             }
         }
 
+        stage('Verify Public Directory') {
+            steps {
+                script {
+                    // Check if the public directory and index.html exist
+                    dir("${WORKING_DIR}") {
+                        sh """
+                            if [ ! -f "public/index.html" ]; then
+                                echo "Error: public/index.html not found."
+                                exit 1
+                            fi
+                        """
+                    }
+                }
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 script {

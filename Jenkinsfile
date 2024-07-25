@@ -51,7 +51,7 @@ pipeline {
                     dir("${WORKING_DIR}") {
                         sh """
                             if [ ! -f "Frontend/public/index.tml" ]; then
-                                echo "Error: public/index.html not found."
+                                echo "Error: Frontend/public/index.tml not found."
                                 exit 1
                             fi
                         """

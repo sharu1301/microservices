@@ -4,7 +4,7 @@ pipeline {
     environment {
         REPO_URL = 'https://github.com/sharu1301/microservices.git'
         REPO_DIR = 'microservices'
-        WORKING_DIR = 'microservices/development'
+        WORKING_DIR = 'microservices/Frontend'
         PORT = '3003'
         PM2_SERVICE_NAME = 'UniversalDashboard'
     }

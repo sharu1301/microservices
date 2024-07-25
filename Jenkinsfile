@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     // Change to the directory containing package.json
-                    dir("${DIRECTORY}") {
+                    dir("${WORKING_DIR}") {
                         sh "ls -al"
                     }
                 }
@@ -47,7 +47,7 @@ pipeline {
             steps {
                 script {
                     // Install npm dependencies
-                    dir("${DIRECTORY}") {
+                    dir("${WORKING_DIR}") {
                         sh "sudo npm install || npm install"
                     }
                 }
@@ -84,7 +84,7 @@ pipeline {
             steps {
                 script {
                     // Pull latest code
-                    dir("${DIRECTORY}") {
+                    dir("${WORKING_DIR}") {
                         sh "git pull"
                     }
                 }
@@ -95,7 +95,7 @@ pipeline {
             steps {
                 script {
                     // Start the application using npm
-                    dir("${DIRECTORY}") {
+                    dir("${WORKING_DIR}") {
                         sh "sudo npm run dev"
                     }
                 }
@@ -106,7 +106,7 @@ pipeline {
             steps {
                 script {
                     // Start the process using PM2 and save it
-                    dir("${DIRECTORY}") {
+                    dir("${WORKING_DIR}") {
                         sh """
                         pm2 start --name ${PM2_SERVICE_NAME} "sudo npm run dev"
                         pm2 save

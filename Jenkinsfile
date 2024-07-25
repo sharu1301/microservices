@@ -7,6 +7,7 @@ pipeline {
         PORT = '3003'
         PM2_SERVICE_NAME = 'UniversalDashboard'
     }
+
     stages {
         stage('Clean Old Directory') {
             steps {
@@ -21,7 +22,7 @@ pipeline {
                 }
             }
         }
-    stages {
+
         stage('Clone Repository') {
             steps {
                 script {

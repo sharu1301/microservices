@@ -55,17 +55,20 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        if [ -z "${PORT}" ]; then
+                        if [ -z "${PORT}" ]; then 
                             echo "Error: PORT parameter is not set."
                             exit 1
                         fi
+
                         pid=$(sudo lsof -ti :${PORT})
-                        if [ -n "$pid" ]; then
-                            echo "Killing process $pid running on port ${PORT}"
-                            sudo kill -9 $pid
-                        else
+
+                        if [ -z "$pid" ]; then 
                             echo "No process is running on port ${PORT}"
+                            exit 0
                         fi
+
+                        echo "Killing process $pid running on port ${PORT}"
+                        sudo kill -9 $pid
                     '''
                 }
             }

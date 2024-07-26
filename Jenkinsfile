@@ -9,7 +9,7 @@ pipeline {
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'development', description: 'Branch to build')
         choice(name: 'APPLICATION', choices: ['Dashboard-dev', 'Dashboard-stage', 'Rampsure', 'Hinds', 'ICS-dev', 'ICS-stage', 'ICS-prod'], description: 'Application to deploy')
-        string(name: 'PORT', defaultValue: '3001', description: 'Port number to check and stop the process if running')
+        string(name: 'PORT', choices: ['0', '3001'], description: 'Port number to check and stop the process if running')
     }
 
     stages {

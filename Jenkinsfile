@@ -13,86 +13,18 @@ pipeline {
     }
 
     stages {
-        stage('Clean Old Directory') {
-            steps {
-                script {
-                    // Clean the old microservices directory if it exists
-                    sh """
-                        if [ -d "${WORKING_DIR}" ]; then
-                            sudo rm -rf ${WORKING_DIR}
-                            echo "Old directory ${WORKING_DIR} cleaned."
-                        fi
-                    """
-                }
-            }
-        }
-
-        stage('Clone Repository') {
-            steps {
-                script {
-                    // Clone the specific branch
-                    sh "git clone -b ${params.BRANCH_NAME} ${REPO_URL} ${WORKING_DIR}"
-                    // Navigate into the repository directory
-                    dir("${WORKING_DIR}") {
-                        sh 'ls -la' // List files to ensure it's the correct directory
-                    }
-                }
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                script {
-                    dir("${WORKING_DIR}") {
-                        sh 'sudo apt-get update && sudo apt-get install -y npm'
-                        sh 'sudo npm install || npm install'
-                    }
-                }
-            }
-        }
-
-        stage('Stop Existing Processes') {
-            steps {
-                script {
-                    sh '''
-                        if [ -z "${PORT}" ]; then 
-                            echo "Error: PORT parameter is not set."
-                            exit 1
-                        fi
-
-                        pid=$(sudo lsof -ti :${PORT})
-
-                        if [ -z "$pid" ]; then 
-                            echo "No process is running on port ${PORT}"
-                            exit 0
-                        fi
-
-                        echo "Killing process $pid running on port ${PORT}"
-                        sudo kill -9 $pid
-                    '''
-                }
-            }
-        }
-
         stage('Deploy Application') {
             steps {
                 script {
-                    dir("${WORKING_DIR}") {
-                        // Start the application using pm2
-                        sh """
-                            pm2 start --name ${params.APPLICATION} "sudo npm run dev"
-                            pm2 save
-                        """
-                    }
-                }
-            }
-        }
+                    sh '''
+                        export REPO_URL=${REPO_URL}
+                        export WORKING_DIR=${WORKING_DIR}
+                        export BRANCH_NAME=${params.BRANCH_NAME}
+                        export APPLICATION=${params.APPLICATION}
+                        export PORT=${params.PORT}
 
-        stage('Verify Deployment') {
-            steps {
-                script {
-                    // Verify the deployment by checking the port
-                    sh "curl -I http://localhost:${PORT}"
+                        ./deploy.sh
+                    '''
                 }
             }
         }

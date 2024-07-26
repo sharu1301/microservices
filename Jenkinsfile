@@ -23,7 +23,7 @@ pipeline {
                         export APPLICATION=${params.APPLICATION}
                         export PORT=${params.PORT}
 
-                        ./deploy.sh
+                        bash ./deploy.sh
                     '''
                 }
             }

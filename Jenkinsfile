@@ -19,7 +19,7 @@ pipeline {
                     // Clean the old microservices directory if it exists
                     sh """
                         if [ -d "${WORKING_DIR}" ]; then
-                            rm -rf ${WORKING_DIR}
+                            sudo rm -rf ${WORKING_DIR}
                             echo "Old directory ${WORKING_DIR} cleaned."
                         fi
                     """

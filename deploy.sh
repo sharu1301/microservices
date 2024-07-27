@@ -19,8 +19,13 @@ git clone -b "$BRANCH_NAME" "$REPO_URL" "$WORKING_DIR"
 cd "$WORKING_DIR" || exit
 ls -la # List files to ensure it's the correct directory
 
+# Navigate to the Frontend directory
+cd Frontend || exit
+ls -la # List files to ensure it's the correct directory
+
 # Install dependencies
 sudo apt-get update && sudo apt-get install -y npm
+sudo npm install -g react-scripts
 sudo npm install || npm install
 
 # Stop existing process if running on the specified port
@@ -33,16 +38,24 @@ else
 fi
 
 # Deploy the application using pm2
-pm2 start --name "$APPLICATION" "sudo npm run dev"
+pm2 start --name "$APPLICATION" "npm run start"
 pm2 save
+
+# Show PM2 processes
+echo "PM2 processes:"
+pm2 list
 
 # Show application logs
 echo "Application logs:"
 pm2 logs "$APPLICATION" --lines 50 --nostream
 
+# Check if the application is running on the specified port
+echo "Checking if the application is running on port $PORT..."
+netstat -tlnp | grep :$PORT
+
 # Wait for application to start
 echo "Waiting for application to start..."
-sleep 30
+sleep 60
 
 # Verify the deployment by checking the port with retries
 for i in {1..5}; do

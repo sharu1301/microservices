@@ -25,7 +25,6 @@ sudo npm install || npm install
 
 # Stop existing process if running on the specified port
 pid=$(sudo lsof -ti :"$PORT")
-
 if [ -z "$pid" ]; then 
     echo "No process is running on port $PORT"
 else 
@@ -37,5 +36,23 @@ fi
 pm2 start --name "$APPLICATION" "sudo npm run dev"
 pm2 save
 
-# Verify the deployment by checking the port
-curl -I "http://localhost:$PORT"
+# Show application logs
+echo "Application logs:"
+pm2 logs "$APPLICATION" --lines 50 --nostream
+
+# Wait for application to start
+echo "Waiting for application to start..."
+sleep 30
+
+# Verify the deployment by checking the port with retries
+for i in {1..5}; do
+    if curl -I "http://localhost:$PORT" || curl -I "http://0.0.0.0:$PORT"; then
+        echo "Application is running!"
+        exit 0
+    fi
+    echo "Attempt $i failed. Waiting..."
+    sleep 10
+done
+
+echo "Application failed to start after 5 attempts"
+exit 1

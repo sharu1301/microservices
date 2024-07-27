@@ -38,7 +38,7 @@ else
 fi
 
 # Deploy the application using pm2
-pm2 start --name "$APPLICATION" "npm run start"
+pm2 start --name "$APPLICATION" "npm run dev"
 pm2 save
 
 # Show PM2 processes

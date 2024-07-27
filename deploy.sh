@@ -25,7 +25,7 @@ ls -la # List files to ensure it's the correct directory
 
 # Install dependencies
 sudo apt-get update && sudo apt-get install -y npm
-sudo npm install -g react-scripts
+#sudo npm install -g react-scripts
 sudo npm install || npm install
 
 # Stop existing process if running on the specified port
